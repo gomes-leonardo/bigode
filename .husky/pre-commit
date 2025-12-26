@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
 
 npm run lint:eslint:check
 npm run lint:prettier:check

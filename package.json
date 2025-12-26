@@ -1,0 +1,49 @@
+{
+  "name": "bigode",
+  "version": "1.0.0",
+  "description": "Bigode - Um bot para agendamento de Barbearias via WhatsAPP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "lint:prettier:check": "prettier --check .",
+    "lint:prettier:fix": "prettier --write .",
+    "lint:eslint:check": "eslint .",
+    "lint:eslint:fix": "eslint --fix .",
+    "prepare": "husky",
+    "commit": "cz"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gomes-leonardo/bigode.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gomes-leonardo/bigode/issues"
+  },
+  "homepage": "https://github.com/gomes-leonardo/bigode#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^20.2.0",
+    "@commitlint/config-conventional": "^20.2.0",
+    "@commitlint/cz-commitlint": "^20.2.0",
+    "@eslint/js": "^9.39.2",
+    "@types/node": "^25.0.3",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "prettier": "^3.7.4",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.50.1"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "fastify": "^5.6.2",
+    "zod": "^4.2.1"
+  }
+}

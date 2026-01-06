@@ -1,12 +1,14 @@
 {
   "name": "bigode",
   "version": "1.0.0",
+  "type": "module",
   "description": "Bigode - Um bot para agendamento de Barbearias via WhatsAPP",
   "main": "index.js",
   "scripts": {
-    "test": "vitest run",
-    "test:watch": "vitest",
-    "dev": "tsx watch src/server.ts",
+    "test": "npm run services:up && npm run services:wait:database && vitest run",
+    "test:watch": "npm run services:up && npm run services:wait:database && vitest",
+    "pretest": "npm run services:up && npm run services:wait:database",
+    "dev": "npm run services:up && npm run services:wait:database && tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
     "lint:prettier:check": "prettier --check .",
@@ -16,6 +18,7 @@
     "services:up": "docker compose -f src/infra/compose.yaml up -d",
     "services:down": "docker compose -f src/infra/compose.yaml down",
     "services:stop": "docker compose -f src/infra/compose.yaml stop",
+    "services:wait:database": "tsx src/infra/scripts/wait-for-postgres.ts",
     "prepare": "husky",
     "commit": "cz"
   },
@@ -36,12 +39,15 @@
     "@commitlint/cz-commitlint": "^20.2.0",
     "@eslint/js": "^9.39.2",
     "@types/node": "^25.0.3",
+    "@types/pg": "^8.16.0",
     "@types/supertest": "^6.0.3",
     "eslint": "^9.39.2",
     "globals": "^16.5.0",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
+    "prisma": "^7.2.0",
     "supertest": "^7.1.4",
     "tsx": "^4.21.0",
     "typescript": "^5.9.3",
@@ -49,13 +55,25 @@
     "vitest": "^4.0.16"
   },
   "dependencies": {
+    "@prisma/adapter-pg": "^7.2.0",
+    "@prisma/client": "^7.2.0",
     "dotenv": "^17.2.3",
     "fastify": "^5.6.2",
+    "pg": "^8.16.3",
     "zod": "^4.2.1"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,mjs,cjs,mts,cts}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
   }
 }

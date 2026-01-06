@@ -15,5 +15,8 @@ export default defineConfig([
     "!node_modules/",
     "node_modules/*",
     "!node_modules/mylibrary/",
+    "src/generated/**",
+    "dist/**",
+    ".cursor/**",
   ]),
 ]);

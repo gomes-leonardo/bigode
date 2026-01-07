@@ -6,8 +6,8 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run services:up && npm run services:wait:database && vitest run",
+    "test:ci": "npm run services:up && npm run services:wait:database && vitest run",
     "test:watch": "npm run services:up && npm run services:wait:database && vitest",
-    "pretest": "npm run services:up && npm run services:wait:database",
     "dev": "npm run services:up && npm run services:wait:database && tsx watch src/server.ts",
     "build": "tsc",
     "start": "node dist/server.js",
@@ -66,14 +66,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,mjs,cjs,mts,cts}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,md,yml,yaml}": [
-      "prettier --write"
-    ]
   }
 }

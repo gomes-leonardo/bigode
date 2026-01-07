@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run services:up && npm run services:wait:database && vitest run",
-    "test:ci": "npm run services:up && npm run services:wait:database && vitest run",
+    "test:ci": "vitest run",
     "test:watch": "npm run services:up && npm run services:wait:database && vitest",
     "dev": "npm run services:up && npm run services:wait:database && tsx watch src/server.ts",
     "build": "tsc",

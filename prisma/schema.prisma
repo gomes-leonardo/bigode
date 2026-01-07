@@ -1,0 +1,172 @@
+
+generator client {
+  provider = "prisma-client-js" 
+  output   = "../src/generated/prisma" 
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Barbershop {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique 
+  phone       String   @unique 
+  timezone    String   @default("America/Sao_Paulo")
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  barbers     Barber[]
+  services    Service[]
+  appointments Appointment[]
+  queueItems   QueueItem[]
+  loyaltyCards LoyaltyCard[]
+}
+
+model Barber {
+  id           String     @id @default(uuid())
+  name         String
+  phone        String?    
+  barbershopId String
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+  
+  appointments Appointment[]
+  queueItems   QueueItem[] 
+  
+  @@index([barbershopId])
+}
+
+model Service {
+  id           String     @id @default(uuid())
+  name         String
+  durationMin  Int        // Ex: 30
+  price        Decimal    @db.Decimal(10, 2)
+  barbershopId String
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  appointments Appointment[]
+  
+  @@index([barbershopId])
+}
+
+model Customer {
+  id        String   @id @default(uuid())
+  phone     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  appointments Appointment[]
+  queueItems   QueueItem[]
+  loyaltyCards LoyaltyCard[]
+  
+  @@index([phone])
+}
+
+model Appointment {
+  id           String            @id @default(uuid())
+  startTime    DateTime
+  endTime      DateTime
+  status       AppointmentStatus @default(SCHEDULED)
+  
+  barbershopId String
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  
+  barberId     String
+  barber       Barber     @relation(fields: [barberId], references: [id])
+  
+  customerId   String
+  customer     Customer   @relation(fields: [customerId], references: [id])
+  
+  serviceId    String
+  service      Service    @relation(fields: [serviceId], references: [id])
+  
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+
+  reminders    Reminder[]
+  queueItem    QueueItem?
+
+  @@unique([barberId, startTime]) 
+  @@index([startTime])
+  @@index([barbershopId, status])
+  @@index([customerId])
+}
+
+model QueueItem {
+  id           String      @id @default(uuid())
+  joinedAt     DateTime    @default(now())
+  status       QueueStatus @default(WAITING)
+  
+  barbershopId String
+  barbershop   Barbershop  @relation(fields: [barbershopId], references: [id])
+  
+  customerId   String
+  customer     Customer    @relation(fields: [customerId], references: [id])
+  
+  preferredBarberId String?
+  preferredBarber   Barber? @relation(fields: [preferredBarberId], references: [id])
+  
+  appointmentId String?      @unique
+  appointment   Appointment? @relation(fields: [appointmentId], references: [id])
+  
+  updatedAt    DateTime    @updatedAt
+
+  @@index([barbershopId, status]) 
+  @@index([customerId])
+}
+
+model LoyaltyCard {
+  id           String   @id @default(uuid())
+  customerId   String
+  customer     Customer @relation(fields: [customerId], references: [id])
+  barbershopId String
+  barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
+  visitsCount  Int      @default(0)
+  lastVisit    DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@unique([customerId, barbershopId])
+  @@index([customerId])
+  @@index([barbershopId])
+}
+
+model Reminder {
+  id           String        @id @default(uuid())
+  appointmentId String
+  appointment   Appointment @relation(fields: [appointmentId], references: [id])
+  type         ReminderType
+  scheduledAt  DateTime
+  sentAt       DateTime?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+
+  @@index([appointmentId])
+  @@index([scheduledAt, sentAt])
+}
+
+enum ReminderType {
+  ONE_DAY_BEFORE
+  ONE_HOUR_BEFORE
+}
+
+enum AppointmentStatus {
+  SCHEDULED
+  COMPLETED
+  CANCELED
+  NO_SHOW
+}
+
+enum QueueStatus {
+  WAITING     
+  NOTIFIED   
+  IN_SERVICE  
+  CANCELED    
+  COMPLETED   
+}

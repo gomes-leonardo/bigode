@@ -1,7 +1,7 @@
 import { prisma } from "./client.js";
 import { env } from "../../env/env.js";
 
-export async function cleanDatabase() {
+export async function clearDatabase() {
   if (env.NODE_ENV === "production") {
     throw new Error("❌ YOU ARE TRYING TO CLEAN DB IN PRODUCTION!");
   }

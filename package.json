@@ -22,7 +22,8 @@
     "lint:prettier:check": "prettier --check .",
     "lint:prettier:fix": "prettier --write .",
     "lint:eslint:check": "eslint .",
-    "lint:eslint:fix": "eslint --fix ."
+    "lint:eslint:fix": "eslint --fix .",
+    "prepare": "husky"
   },
   "repository": {
     "type": "git",
@@ -68,5 +69,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,ts,json,md}": "prettier --write"
   }
 }

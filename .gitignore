@@ -1,2 +1,8 @@
 node_modules
 /src/generated/prisma
+dist
+
+# Environment files
+.env
+.env.*
+!.env.example

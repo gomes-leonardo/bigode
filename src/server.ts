@@ -1,12 +1,12 @@
-import { app } from "./app";
-import { env } from "./infra/env/env";
+import { app } from "./app.js";
+import { env } from "./infra/env/env.js";
 
 app
   .listen({ port: env.PORT, host: "0.0.0.0" })
   .then(() => {
     console.log(`🚀 Bigode ta rodando no http://localhost:${env.PORT}!`);
   })
-  .catch((error) => {
+  .catch((error: { code: string }) => {
     if (error.code === "EADDRINUSE") {
       console.error(
         `❌ Porta ${env.PORT} já está em uso. Encerre o processo que está usando essa porta ou use outra porta.`,

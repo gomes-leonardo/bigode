@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll, afterAll } from "vitest";
 import request from "supertest";
 import { app } from "../../../app.js";
+
 describe("Health Check (E2E)", () => {
   beforeAll(async () => {
     await app.ready();
@@ -10,14 +11,17 @@ describe("Health Check (E2E)", () => {
     await app.close();
   });
 
-  it("should be able to get health status", async () => {
+  it("should return healthy status when database is connected", async () => {
     const response = await request(app.server).get("/health").send();
 
     expect(response.statusCode).toEqual(200);
-    expect(response.body).toEqual(
-      expect.objectContaining({
-        status: "operational",
-      }),
-    );
+    expect(response.body).toMatchObject({
+      status: "healthy",
+      database: {
+        status: "connected",
+        openConnections: expect.any(Number),
+      },
+    });
+    expect(response.body.database.openConnections).toBeGreaterThanOrEqual(0);
   });
 });

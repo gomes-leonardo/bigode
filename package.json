@@ -19,8 +19,8 @@
     "services:down": "docker compose -f src/infra/compose.yaml down",
     "services:stop": "docker compose -f src/infra/compose.yaml stop",
     "services:wait:database": "tsx src/infra/scripts/wait-for-postgres.ts",
-    "lint:prettier:check": "prettier --check .",
-    "lint:prettier:fix": "prettier --write .",
+    "lint:prettier:check": "prettier --check --cache .",
+    "lint:prettier:fix": "prettier --write --cache .",
     "lint:eslint:check": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "prepare": "husky"
@@ -71,6 +71,6 @@
     }
   },
   "lint-staged": {
-    "*.{js,ts,json,md}": "prettier --write"
+    "*.{js,ts,json,md}": "prettier --write --cache"
   }
 }

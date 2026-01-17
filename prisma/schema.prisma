@@ -7,35 +7,142 @@ datasource db {
   provider = "postgresql"
 }
 
+// SaaS Subscription Tiers
+enum SubscriptionTier {
+  FREE    // Read-only access or limited trial
+  PREMIUM // Can use either Appointments OR Queue (one active module)
+  PRO     // Can use both modules simultaneously
+}
+
 model Barbershop {
   id          String   @id @default(uuid())
   name        String
-  slug        String   @unique 
-  phone       String   @unique 
+  slug        String   @unique
+  phone       String   @unique
   timezone    String   @default("America/Sao_Paulo")
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 
-  barbers     Barber[]
-  services    Service[]
-  appointments Appointment[]
-  queueItems   QueueItem[]
-  loyaltyCards LoyaltyCard[]
+  // Feature Toggles (Controlled by Admin)
+  isQueueEnabled        Boolean @default(false)
+  isAppointmentsEnabled Boolean @default(true)
+
+  // SaaS Status (Controlled by System/Stripe)
+  subscriptionTier      SubscriptionTier @default(FREE)
+  stripeCustomerId      String?          @unique // Link to Stripe Customer
+  stripeSubscriptionId  String?          @unique // Active Subscription ID
+
+  barbers       Barber[]
+  services      Service[]
+  appointments  Appointment[]
+  queueItems    QueueItem[]
+  loyaltyCards  LoyaltyCard[]
+  bookingTokens BookingToken[]
+  admins        Admin[]
+  messageTemplates MessageTemplate[]
+}
+
+// Admin users for barbershop management
+model Admin {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  phone         String    @unique  // WhatsApp number for OTP auth
+  name          String
+  role          AdminRole @default(MANAGER)
+
+  barbershopId  String
+  barbershop    Barbershop @relation(fields: [barbershopId], references: [id])
+
+  isActive      Boolean   @default(true)
+  lastLoginAt   DateTime?
+
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  otpCodes      AdminOTP[]
+
+  @@index([barbershopId])
+  @@index([email])
+  @@index([phone])
+}
+
+enum AdminRole {
+  OWNER    // Full access - can manage other admins
+  MANAGER  // Can manage appointments, barbers, services
+}
+
+// OTP codes for admin WhatsApp authentication
+model AdminOTP {
+  id          String   @id @default(uuid())
+
+  adminId     String
+  admin       Admin    @relation(fields: [adminId], references: [id], onDelete: Cascade)
+
+  codeHash    String   // SHA-256 hash of the OTP code (never store plain)
+  expiresAt   DateTime
+  usedAt      DateTime?
+
+  // Rate limiting
+  attempts    Int      @default(0)
+  lastAttemptAt DateTime?
+
+  createdAt   DateTime @default(now())
+
+  @@index([adminId])
+  @@index([expiresAt])
 }
 
 model Barber {
   id           String     @id @default(uuid())
   name         String
-  phone        String?    
+  phone        String?
   barbershopId String
   barbershop   Barbershop @relation(fields: [barbershopId], references: [id])
   createdAt    DateTime   @default(now())
   updatedAt    DateTime   @updatedAt
-  
-  appointments Appointment[]
-  queueItems   QueueItem[] 
-  
+
+  appointments   Appointment[]
+  queueItems     QueueItem[]
+  bookingTokens  BookingToken[]
+  schedules      BarberSchedule[]
+
   @@index([barbershopId])
+}
+
+// Barber-specific availability schedule
+// Each barber can have different working hours per day of the week
+model BarberSchedule {
+  id          String   @id @default(uuid())
+  barberId    String
+  barber      Barber   @relation(fields: [barberId], references: [id], onDelete: Cascade)
+
+  dayOfWeek   Int      // 0 = Sunday, 1 = Monday, ..., 6 = Saturday
+  startTime   String   // "09:00" format (HH:mm)
+  endTime     String   // "18:00" format (HH:mm)
+  isActive    Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  breaks      BarberBreak[]
+
+  @@unique([barberId, dayOfWeek])
+  @@index([barberId])
+}
+
+// Optional breaks during the work day (e.g., lunch breaks)
+model BarberBreak {
+  id         String         @id @default(uuid())
+  scheduleId String
+  schedule   BarberSchedule @relation(fields: [scheduleId], references: [id], onDelete: Cascade)
+
+  startTime  String   // "12:00" format (HH:mm)
+  endTime    String   // "13:00" format (HH:mm)
+
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@index([scheduleId])
 }
 
 model Service {
@@ -163,9 +270,109 @@ enum AppointmentStatus {
 }
 
 enum QueueStatus {
-  WAITING     
-  NOTIFIED   
-  IN_SERVICE  
-  CANCELED    
-  COMPLETED   
+  WAITING
+  NOTIFIED
+  IN_SERVICE
+  CANCELED
+  COMPLETED
+}
+
+// Secure booking token for client booking flow
+// Stores only the hash of the token, never the plain token
+model BookingToken {
+  id            String    @id @default(uuid())
+  tokenHash     String    @unique  // SHA-256 hash of the actual token
+
+  barbershopId  String
+  barbershop    Barbershop @relation(fields: [barbershopId], references: [id])
+
+  barberId      String?   // Optional - customer can choose later
+  barber        Barber?   @relation(fields: [barberId], references: [id])
+
+  customerPhone String    // For communication only, not identification
+
+  expiresAt     DateTime
+  usedAt        DateTime? // Null until token is used
+  singleUse     Boolean   @default(true)
+
+  // Rate limiting and security
+  validationAttempts Int  @default(0)
+  lastAttemptAt DateTime?
+
+  createdAt     DateTime  @default(now())
+
+  @@index([tokenHash])
+  @@index([barbershopId])
+  @@index([expiresAt])
+}
+
+// ==========================================
+// TWILIO / WHATSAPP INTEGRATION
+// ==========================================
+
+// Message templates for WhatsApp notifications
+model MessageTemplate {
+  id            String          @id @default(uuid())
+  barbershopId  String
+  barbershop    Barbershop      @relation(fields: [barbershopId], references: [id])
+
+  type          MessageType
+  name          String          // e.g., "booking_confirmation_pt"
+  content       String          // Template with placeholders: "Olá {{customerName}}, seu agendamento..."
+  language      String          @default("pt-BR")
+  isActive      Boolean         @default(true)
+
+  // Twilio template approval (for WhatsApp Business API)
+  twilioTemplateSid String?     // Twilio's template SID after approval
+
+  createdAt     DateTime        @default(now())
+  updatedAt     DateTime        @updatedAt
+
+  @@unique([barbershopId, type, language])
+  @@index([barbershopId])
+}
+
+enum MessageType {
+  BOOKING_LINK           // Link para agendamento
+  BOOKING_CONFIRMATION   // Confirmação de agendamento
+  REMINDER_24H           // Lembrete 24h antes
+  REMINDER_1H            // Lembrete 1h antes
+  CANCELLATION           // Cancelamento
+  RESCHEDULE             // Reagendamento
+  QUEUE_NOTIFICATION     // Notificação de fila
+}
+
+// Log of all sent messages (for debugging and analytics)
+model MessageLog {
+  id              String        @id @default(uuid())
+
+  // Twilio identifiers
+  twilioMessageSid String?      @unique
+  twilioStatus     String?      // queued, sent, delivered, read, failed
+
+  // Message details
+  toPhone         String
+  fromPhone       String
+  messageType     MessageType
+  content         String        // Actual sent content
+
+  // Related entities (optional)
+  appointmentId   String?
+  customerId      String?
+  barbershopId    String
+
+  // Delivery tracking
+  sentAt          DateTime      @default(now())
+  deliveredAt     DateTime?
+  readAt          DateTime?
+  failedAt        DateTime?
+  errorMessage    String?
+
+  // Webhook data
+  webhookPayload  Json?         // Store raw Twilio webhook for debugging
+
+  @@index([twilioMessageSid])
+  @@index([barbershopId])
+  @@index([toPhone])
+  @@index([sentAt])
 }

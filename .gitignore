@@ -9,3 +9,12 @@ dist
 
 # Cache
 node_modules/.cache
+
+# Git backups
+.git.backup*
+
+# Internal documentation (not for version control)
+FRONTEND_GUIDE.md
+
+# IDE
+.cursor/

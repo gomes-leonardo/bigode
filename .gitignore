@@ -15,6 +15,7 @@ node_modules/.cache
 
 # Internal documentation (not for version control)
 FRONTEND_GUIDE.md
+SETUP_PRODUCTION.md
 
 # IDE
 .cursor/

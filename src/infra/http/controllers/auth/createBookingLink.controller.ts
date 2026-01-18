@@ -41,10 +41,25 @@ export async function createBookingLinkController(
 
   const { barbershopId, barberId, customerPhone } = validationResult.data;
 
+  // #region agent log
+  fetch('http://127.0.0.1:7248/ingest/3008e511-cba3-4d24-8c66-d1ac8aeab855',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'createBookingLink.controller.ts:44',message:'Before barbershop.findUnique',data:{barbershopId},timestamp:Date.now(),sessionId:'debug-session',runId:'pre-fix',hypothesisId:'H1,H3,H4,H5'})}).catch(()=>{});
+  // #endregion
+
   // Verify barbershop exists
-  const barbershop = await prisma.barbershop.findUnique({
-    where: { id: barbershopId },
-  });
+  let barbershop;
+  try {
+    barbershop = await prisma.barbershop.findUnique({
+      where: { id: barbershopId },
+    });
+    // #region agent log
+    fetch('http://127.0.0.1:7248/ingest/3008e511-cba3-4d24-8c66-d1ac8aeab855',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'createBookingLink.controller.ts:51',message:'After barbershop.findUnique SUCCESS',data:{found:!!barbershop},timestamp:Date.now(),sessionId:'debug-session',runId:'pre-fix',hypothesisId:'H1,H3,H4,H5'})}).catch(()=>{});
+    // #endregion
+  } catch (error: any) {
+    // #region agent log
+    fetch('http://127.0.0.1:7248/ingest/3008e511-cba3-4d24-8c66-d1ac8aeab855',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({location:'createBookingLink.controller.ts:56',message:'After barbershop.findUnique ERROR',data:{errorMessage:error?.message,errorCode:error?.code,errorName:error?.name},timestamp:Date.now(),sessionId:'debug-session',runId:'pre-fix',hypothesisId:'H1,H2,H3,H4,H5'})}).catch(()=>{});
+    // #endregion
+    throw error;
+  }
 
   if (!barbershop) {
     return reply.status(404).send({

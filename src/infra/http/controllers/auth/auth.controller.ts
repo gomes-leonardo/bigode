@@ -22,6 +22,7 @@ export async function generateClientLinkController(
 
   const { customerPhone, barberId, barbershopId } = validationResult.data;
 
+  try {
   const token = req.server.jwt.sign(
     {
       sub: customerPhone,
@@ -36,4 +37,7 @@ export async function generateClientLinkController(
   const link = `http://localhost:3000/booking?token=${token}&barberId=${barberId}`;
 
   return reply.status(201).send({ link });
+  } catch (error) {
+    throw error; // Deixa o error handler tratar
+  }
 }

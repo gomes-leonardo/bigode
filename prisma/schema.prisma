@@ -342,6 +342,35 @@ enum MessageType {
   QUEUE_NOTIFICATION     // Notificação de fila
 }
 
+// Conversation session for WhatsApp bot
+// Tracks the state of each customer conversation
+model ConversationSession {
+  id              String              @id @default(uuid())
+
+  customerPhone   String
+  barbershopId    String?             // Associated barbershop (null until identified)
+
+  state           ConversationState   @default(INITIAL)
+  context         Json?               // Store additional context (selected service, etc.)
+
+  lastMessageAt   DateTime            @default(now())
+  expiresAt       DateTime            // Sessions expire after inactivity
+
+  createdAt       DateTime            @default(now())
+  updatedAt       DateTime            @updatedAt
+
+  @@unique([customerPhone, barbershopId])
+  @@index([customerPhone])
+  @@index([expiresAt])
+}
+
+enum ConversationState {
+  INITIAL           // First contact - ask what they want
+  AWAITING_ACTION   // Showed menu, waiting for choice
+  SENDING_LINK      // Generating booking link
+  COMPLETED         // Conversation finished
+}
+
 // Log of all sent messages (for debugging and analytics)
 model MessageLog {
   id              String        @id @default(uuid())

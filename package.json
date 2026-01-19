@@ -24,7 +24,7 @@
     "lint:eslint:check": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "seed:test": "tsx prisma/seed/test-barbershop.ts",
-    "prepare": "husky"
+    "prepare": "husky || true"
   },
   "repository": {
     "type": "git",

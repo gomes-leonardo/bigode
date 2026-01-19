@@ -24,7 +24,6 @@
     "lint:eslint:check": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "seed:test": "tsx prisma/seed/test-barbershop.ts",
-    "create:barbershop": "tsx scripts/create-barbershop.ts",
     "prepare": "husky"
   },
   "repository": {
@@ -38,9 +37,6 @@
     "url": "https://github.com/gomes-leonardo/bigode/issues"
   },
   "homepage": "https://github.com/gomes-leonardo/bigode#readme",
-  "engines": {
-    "node": ">=20.19.0 || >=22.12.0 || >=24.0.0"
-  },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",

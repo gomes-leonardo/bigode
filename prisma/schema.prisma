@@ -14,6 +14,15 @@ enum SubscriptionTier {
   PRO     // Can use both modules simultaneously
 }
 
+// SaaS Subscription Status (Trial & Payment State)
+enum SubscriptionStatus {
+  TRIAL      // 30 days free trial
+  ACTIVE     // Paying customer
+  PAST_DUE   // Payment failed (grace period)
+  CANCELED   // Subscription canceled
+  EXPIRED    // Trial/subscription expired
+}
+
 model Barbershop {
   id          String   @id @default(uuid())
   name        String
@@ -27,10 +36,15 @@ model Barbershop {
   isQueueEnabled        Boolean @default(false)
   isAppointmentsEnabled Boolean @default(true)
 
+  // Trial Period
+  trialStartedAt        DateTime?
+  trialEndsAt           DateTime?
+
   // SaaS Status (Controlled by System/Stripe)
-  subscriptionTier      SubscriptionTier @default(FREE)
-  stripeCustomerId      String?          @unique // Link to Stripe Customer
-  stripeSubscriptionId  String?          @unique // Active Subscription ID
+  subscriptionStatus    SubscriptionStatus @default(TRIAL)
+  subscriptionTier      SubscriptionTier   @default(FREE)
+  stripeCustomerId      String?            @unique // Link to Stripe Customer
+  stripeSubscriptionId  String?            @unique // Active Subscription ID
 
   barbers       Barber[]
   services      Service[]

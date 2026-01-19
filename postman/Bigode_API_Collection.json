@@ -1,0 +1,602 @@
+{
+  "info": {
+    "_postman_id": "bigode-api-collection",
+    "name": "Bigode API",
+    "description": "API collection for Bigode - WhatsApp Barbershop Scheduling Bot",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3333"
+    }
+  ],
+  "item": [
+    {
+      "name": "Health",
+      "item": [
+        {
+          "name": "Health Check",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Onboarding",
+      "description": "Public endpoints for barbershop registration",
+      "item": [
+        {
+          "name": "Create Barbershop (Signup)",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.barbershop) {",
+                  "    pm.environment.set('barbershopId', jsonData.barbershop.id);",
+                  "}",
+                  "if (jsonData.admin) {",
+                  "    pm.environment.set('adminId', jsonData.admin.id);",
+                  "    pm.environment.set('adminPhone', jsonData.admin.phone);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Barbearia do Zé\",\n  \"slug\": \"barbearia-do-ze\",\n  \"phone\": \"+5511999990000\",\n  \"ownerEmail\": \"ze@email.com\",\n  \"ownerPhone\": \"+5511999990001\",\n  \"ownerName\": \"José Silva\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/barbershops",
+              "host": ["{{baseUrl}}"],
+              "path": ["barbershops"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin Auth",
+      "description": "Admin authentication via WhatsApp OTP",
+      "item": [
+        {
+          "name": "Request OTP",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.devCode) {",
+                  "    pm.environment.set('otpCode', jsonData.devCode);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"{{adminPhone}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/auth/request-otp",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "auth", "request-otp"]
+            }
+          }
+        },
+        {
+          "name": "Verify OTP",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set('adminToken', jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"phone\": \"{{adminPhone}}\",\n  \"code\": \"{{otpCode}}\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/auth/verify-otp",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "auth", "verify-otp"]
+            }
+          }
+        },
+        {
+          "name": "Get Current Admin (/me)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/me",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "me"]
+            }
+          }
+        },
+        {
+          "name": "Logout",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/auth/logout",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "auth", "logout"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin - Barbershop",
+      "description": "Barbershop management endpoints",
+      "item": [
+        {
+          "name": "Get Barbershop",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbershop",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbershop"]
+            }
+          }
+        },
+        {
+          "name": "Update Barbershop",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Barbearia do Zé - Updated\",\n  \"isAppointmentsEnabled\": true,\n  \"isQueueEnabled\": false\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbershop",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbershop"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin - Barbers",
+      "description": "Barbers CRUD endpoints",
+      "item": [
+        {
+          "name": "List Barbers",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbers",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbers"]
+            }
+          }
+        },
+        {
+          "name": "Create Barber",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.barber) {",
+                  "    pm.environment.set('barberId', jsonData.barber.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Carlos Barbeiro\",\n  \"phone\": \"+5511988887777\",\n  \"schedules\": [\n    {\n      \"dayOfWeek\": 1,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"18:00\",\n      \"isActive\": true,\n      \"breaks\": [\n        { \"startTime\": \"12:00\", \"endTime\": \"13:00\" }\n      ]\n    },\n    {\n      \"dayOfWeek\": 2,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"18:00\",\n      \"isActive\": true\n    },\n    {\n      \"dayOfWeek\": 3,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"18:00\",\n      \"isActive\": true\n    },\n    {\n      \"dayOfWeek\": 4,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"18:00\",\n      \"isActive\": true\n    },\n    {\n      \"dayOfWeek\": 5,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"18:00\",\n      \"isActive\": true\n    },\n    {\n      \"dayOfWeek\": 6,\n      \"startTime\": \"09:00\",\n      \"endTime\": \"14:00\",\n      \"isActive\": true\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbers",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbers"]
+            }
+          }
+        },
+        {
+          "name": "Update Barber",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Carlos Barbeiro - Senior\",\n  \"phone\": \"+5511988887778\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbers/{{barberId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbers", "{{barberId}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Barber",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/barbers/{{barberId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "barbers", "{{barberId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin - Services",
+      "description": "Services CRUD endpoints",
+      "item": [
+        {
+          "name": "List Services",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/services",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "services"]
+            }
+          }
+        },
+        {
+          "name": "Create Service",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.service) {",
+                  "    pm.environment.set('serviceId', jsonData.service.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Corte Masculino\",\n  \"durationMin\": 30,\n  \"price\": 45.00\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/services",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "services"]
+            }
+          }
+        },
+        {
+          "name": "Update Service",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Corte Masculino Premium\",\n  \"price\": 55.00\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/services/{{serviceId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "services", "{{serviceId}}"]
+            }
+          }
+        },
+        {
+          "name": "Delete Service",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/services/{{serviceId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "services", "{{serviceId}}"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin - Subscription",
+      "description": "Subscription status endpoints",
+      "item": [
+        {
+          "name": "Get Subscription Status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/subscription",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "subscription"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Public - Booking Flow",
+      "description": "Public endpoints for client booking",
+      "item": [
+        {
+          "name": "Create Booking Link",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.token) {",
+                  "    pm.environment.set('bookingToken', jsonData.token);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"barbershopId\": \"{{barbershopId}}\",\n  \"customerPhone\": \"+5511977776666\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/booking/create-link",
+              "host": ["{{baseUrl}}"],
+              "path": ["booking", "create-link"]
+            }
+          }
+        },
+        {
+          "name": "Validate Booking Token",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/booking/validate?token={{bookingToken}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["booking", "validate"],
+              "query": [
+                {
+                  "key": "token",
+                  "value": "{{bookingToken}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Barbers by Barbershop",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/barbershops/{{barbershopId}}/barbers",
+              "host": ["{{baseUrl}}"],
+              "path": ["barbershops", "{{barbershopId}}", "barbers"]
+            }
+          }
+        },
+        {
+          "name": "Get Availability",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/availability?barbershopId={{barbershopId}}&barberId={{barberId}}&date=2026-01-20",
+              "host": ["{{baseUrl}}"],
+              "path": ["availability"],
+              "query": [
+                {
+                  "key": "barbershopId",
+                  "value": "{{barbershopId}}"
+                },
+                {
+                  "key": "barberId",
+                  "value": "{{barberId}}"
+                },
+                {
+                  "key": "date",
+                  "value": "2026-01-20"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Create Appointment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"bookingToken\": \"{{bookingToken}}\",\n  \"barberId\": \"{{barberId}}\",\n  \"serviceId\": \"{{serviceId}}\",\n  \"startTime\": \"2026-01-20T10:00:00.000Z\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/appointments",
+              "host": ["{{baseUrl}}"],
+              "path": ["appointments"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Admin Status",
+      "item": [
+        {
+          "name": "Admin Routes Status",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/admin/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "status"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

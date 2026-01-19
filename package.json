@@ -12,6 +12,7 @@
     "test": "vitest run",
     "posttest": "npm run services:stop",
     "test:watch": "vitest",
+    "build": "tsc",
     "prestart": "npx prisma migrate deploy && npx prisma generate",
     "start": "node dist/server.js",
     "test:ci": "npx prisma migrate deploy && npx prisma generate && vitest run",

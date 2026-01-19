@@ -1,0 +1,61 @@
+{
+  "id": "bigode-local-env",
+  "name": "Bigode - Local",
+  "values": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3333",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "adminToken",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "adminPhone",
+      "value": "+5511999990001",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "otpCode",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "barbershopId",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "adminId",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "barberId",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "serviceId",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "bookingToken",
+      "value": "",
+      "type": "default",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}

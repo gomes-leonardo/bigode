@@ -6,6 +6,7 @@ dist
 .env
 .env.*
 !.env.example
+!.env.development
 
 # Cache
 node_modules/.cache

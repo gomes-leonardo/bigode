@@ -6,6 +6,7 @@ import { barbershopRoutes } from "./barbershop.routes.js";
 import { adminRoutes } from "./admin.routes.js";
 import { webhookRoutes } from "./webhook.routes.js";
 import { queueRoutes } from "./queue.routes.js";
+import { onboardingRoutes } from "./onboarding.routes.js";
 
 export async function appRoutes(app: FastifyInstance) {
   await healthRoutes(app);
@@ -14,5 +15,6 @@ export async function appRoutes(app: FastifyInstance) {
   await barbershopRoutes(app);
   await adminRoutes(app);
   await queueRoutes(app);
+  await onboardingRoutes(app);
   app.register(webhookRoutes, { prefix: "/webhooks" });
 }

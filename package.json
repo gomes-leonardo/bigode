@@ -12,8 +12,7 @@
     "test": "vitest run",
     "posttest": "npm run services:stop",
     "test:watch": "vitest",
-    "build": "npx prisma generate && npx tsc",
-    "prestart": "npx prisma migrate deploy",
+    "prestart": "npx prisma migrate deploy && npx prisma generate",
     "start": "node dist/server.js",
     "test:ci": "npx prisma migrate deploy && npx prisma generate && vitest run",
     "services:up": "docker compose -f src/infra/compose.yaml up -d",
@@ -25,7 +24,6 @@
     "lint:eslint:check": "eslint .",
     "lint:eslint:fix": "eslint --fix .",
     "seed:test": "tsx prisma/seed/test-barbershop.ts",
-    "create:barbershop": "tsx scripts/create-barbershop.ts",
     "prepare": "husky"
   },
   "repository": {
@@ -62,7 +60,6 @@
   },
   "dependencies": {
     "@fastify/cookie": "^11.0.2",
-    "@fastify/formbody": "^8.0.2",
     "@fastify/jwt": "^10.0.0",
     "@prisma/adapter-pg": "^7.2.0",
     "@prisma/client": "^7.2.0",

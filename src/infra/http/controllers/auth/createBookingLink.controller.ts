@@ -78,8 +78,9 @@ export async function createBookingLinkController(
       }),
     }).catch(() => {});
     // #endregion
-  } catch (error: any) {
+  } catch (error: unknown) {
     // #region agent log
+    const err = error as Error & { code?: string };
     fetch("http://127.0.0.1:7248/ingest/3008e511-cba3-4d24-8c66-d1ac8aeab855", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -87,9 +88,9 @@ export async function createBookingLinkController(
         location: "createBookingLink.controller.ts:56",
         message: "After barbershop.findUnique ERROR",
         data: {
-          errorMessage: error?.message,
-          errorCode: error?.code,
-          errorName: error?.name,
+          errorMessage: err?.message,
+          errorCode: err?.code,
+          errorName: err?.name,
         },
         timestamp: Date.now(),
         sessionId: "debug-session",

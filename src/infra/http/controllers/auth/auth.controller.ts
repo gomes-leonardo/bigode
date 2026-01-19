@@ -22,22 +22,18 @@ export async function generateClientLinkController(
 
   const { customerPhone, barberId, barbershopId } = validationResult.data;
 
-  try {
-    const token = req.server.jwt.sign(
-      {
-        sub: customerPhone,
-        role: "CLIENT",
-        barbershopId,
-      },
-      {
-        expiresIn: "1h",
-      },
-    );
+  const token = req.server.jwt.sign(
+    {
+      sub: customerPhone,
+      role: "CLIENT",
+      barbershopId,
+    },
+    {
+      expiresIn: "1h",
+    },
+  );
 
-    const link = `http://localhost:3000/booking?token=${token}&barberId=${barberId}`;
+  const link = `http://localhost:3000/booking?token=${token}&barberId=${barberId}`;
 
-    return reply.status(201).send({ link });
-  } catch (error) {
-    throw error; // Deixa o error handler tratar
-  }
+  return reply.status(201).send({ link });
 }

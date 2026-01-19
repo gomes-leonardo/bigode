@@ -38,6 +38,9 @@
     "url": "https://github.com/gomes-leonardo/bigode/issues"
   },
   "homepage": "https://github.com/gomes-leonardo/bigode#readme",
+  "engines": {
+    "node": "22"
+  },
   "devDependencies": {
     "@commitlint/cli": "^20.2.0",
     "@commitlint/config-conventional": "^20.2.0",

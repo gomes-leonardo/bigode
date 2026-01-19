@@ -1,5 +1,2 @@
-[phases.setup]
-nixPkgs = ["nodejs_23"]
-
-[variables]
-NODE_VERSION = "23"
+# Nixpacks will use engines.node from package.json
+# No explicit nixPkgs needed - Railway/Nixpacks respects package.json engines

@@ -464,6 +464,196 @@
       ]
     },
     {
+      "name": "Admin - Appointments",
+      "description": "Appointment management endpoints",
+      "item": [
+        {
+          "name": "List Appointments (Today)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments"]
+            },
+            "description": "List appointments for today. Supports query params: startDate, endDate, barberId, status"
+          }
+        },
+        {
+          "name": "List Appointments (Date Range)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments?startDate=2026-01-20T00:00:00.000Z&endDate=2026-01-27T23:59:59.999Z",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments"],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-01-20T00:00:00.000Z"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-01-27T23:59:59.999Z"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Appointments (By Barber)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments?barberId={{barberId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments"],
+              "query": [
+                {
+                  "key": "barberId",
+                  "value": "{{barberId}}"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "List Appointments (By Status)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments?status=SCHEDULED",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments"],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "SCHEDULED"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Get Appointment Details",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments/{{appointmentId}}",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments", "{{appointmentId}}"]
+            }
+          }
+        },
+        {
+          "name": "Cancel Appointment",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"reason\": \"Cliente solicitou cancelamento\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments/{{appointmentId}}/cancel",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments", "{{appointmentId}}", "cancel"]
+            },
+            "description": "Cancel an appointment and send WhatsApp notification to customer"
+          }
+        },
+        {
+          "name": "Mark Appointment as Completed",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"COMPLETED\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments/{{appointmentId}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments", "{{appointmentId}}", "status"]
+            }
+          }
+        },
+        {
+          "name": "Mark Appointment as No-Show",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer {{adminToken}}"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"status\": \"NO_SHOW\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/admin/appointments/{{appointmentId}}/status",
+              "host": ["{{baseUrl}}"],
+              "path": ["admin", "appointments", "{{appointmentId}}", "status"]
+            }
+          }
+        }
+      ]
+    },
+    {
       "name": "Public - Booking Flow",
       "description": "Public endpoints for client booking",
       "item": [
@@ -560,6 +750,20 @@
         },
         {
           "name": "Create Appointment",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "exec": [
+                  "var jsonData = pm.response.json();",
+                  "if (jsonData.appointment) {",
+                  "    pm.environment.set('appointmentId', jsonData.appointment.id);",
+                  "}"
+                ],
+                "type": "text/javascript"
+              }
+            }
+          ],
           "request": {
             "method": "POST",
             "header": [
@@ -570,13 +774,14 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"bookingToken\": \"{{bookingToken}}\",\n  \"barberId\": \"{{barberId}}\",\n  \"serviceId\": \"{{serviceId}}\",\n  \"startTime\": \"2026-01-20T10:00:00.000Z\"\n}"
+              "raw": "{\n  \"bookingToken\": \"{{bookingToken}}\",\n  \"barberId\": \"{{barberId}}\",\n  \"serviceId\": \"{{serviceId}}\",\n  \"startTime\": \"2026-01-21T10:00:00.000Z\"\n}"
             },
             "url": {
               "raw": "{{baseUrl}}/appointments",
               "host": ["{{baseUrl}}"],
               "path": ["appointments"]
-            }
+            },
+            "description": "Create an appointment. Sends WhatsApp confirmation to customer."
           }
         }
       ]

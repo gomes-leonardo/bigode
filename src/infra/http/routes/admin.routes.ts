@@ -26,6 +26,12 @@ import { updateBarbershopController } from "../controllers/admin/barbershop/upda
 // Subscription
 import { getSubscriptionController } from "../controllers/admin/subscription/getSubscription.controller.js";
 
+// Appointments
+import { listAppointmentsController } from "../controllers/admin/appointments/listAppointments.controller.js";
+import { getAppointmentController } from "../controllers/admin/appointments/getAppointment.controller.js";
+import { cancelAppointmentController } from "../controllers/admin/appointments/cancelAppointment.controller.js";
+import { updateAppointmentStatusController } from "../controllers/admin/appointments/updateAppointmentStatus.controller.js";
+
 /**
  * Admin Routes
  *
@@ -262,24 +268,44 @@ export async function adminRoutes(app: FastifyInstance) {
   // APPOINTMENTS MANAGEMENT (Subscription required)
   // ==========================================
 
+  /**
+   * GET /admin/appointments
+   * List appointments with filters (date range, barber, status)
+   */
   app.get(
     "/admin/appointments",
     { preHandler: [adminAuthMiddleware, subscriptionGuardMiddleware] },
-    async (req, reply) => {
-      return reply.send({
-        message: "Appointments list - pending implementation",
-      });
-    },
+    listAppointmentsController,
   );
 
+  /**
+   * GET /admin/appointments/:id
+   * Get single appointment details
+   */
+  app.get(
+    "/admin/appointments/:id",
+    { preHandler: [adminAuthMiddleware, subscriptionGuardMiddleware] },
+    getAppointmentController,
+  );
+
+  /**
+   * POST /admin/appointments/:id/cancel
+   * Cancel an appointment and notify customer
+   */
+  app.post(
+    "/admin/appointments/:id/cancel",
+    { preHandler: [adminAuthMiddleware, subscriptionGuardMiddleware] },
+    cancelAppointmentController,
+  );
+
+  /**
+   * PATCH /admin/appointments/:id/status
+   * Update appointment status (complete, no-show)
+   */
   app.patch(
     "/admin/appointments/:id/status",
     { preHandler: [adminAuthMiddleware, subscriptionGuardMiddleware] },
-    async (req, reply) => {
-      return reply.send({
-        message: "Update appointment status - pending implementation",
-      });
-    },
+    updateAppointmentStatusController,
   );
 
   // ==========================================
@@ -350,6 +376,8 @@ export async function adminRoutes(app: FastifyInstance) {
           "GET /admin/dashboard",
           "GET /admin/agenda",
           "GET /admin/appointments",
+          "GET /admin/appointments/:id",
+          "POST /admin/appointments/:id/cancel",
           "PATCH /admin/appointments/:id/status",
         ],
         ownerOnly: ["GET /admin/admins", "POST /admin/admins"],

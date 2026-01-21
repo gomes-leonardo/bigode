@@ -1,2 +1,5 @@
-# Nixpacks will use engines.node from package.json
-# No explicit nixPkgs needed - Railway/Nixpacks respects package.json engines
+# Nixpacks configuration
+# Pin nixpkgsArchive to ensure Node.js 22.12+ is available
+# Commit 51ad838b03a05b1de6f9f2a0fffecee64a9788ee includes Node.js 22.13.1 (>=22.12.0)
+[phases.setup]
+nixpkgsArchive = "51ad838b03a05b1de6f9f2a0fffecee64a9788ee"

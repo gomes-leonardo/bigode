@@ -64,10 +64,12 @@ describe("Create Appointment (E2E)", () => {
       });
 
     expect(response.statusCode).toEqual(201);
-    expect(response.body).toHaveProperty("id");
+    expect(response.body).toHaveProperty("appointment");
+    expect(response.body.appointment).toHaveProperty("id");
+    expect(response.body).toHaveProperty("message");
 
     const onDb = await prisma.appointment.findFirst({
-      where: { id: response.body.id },
+      where: { id: response.body.appointment.id },
     });
     expect(onDb).toBeTruthy();
   });

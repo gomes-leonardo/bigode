@@ -1,5 +1,12 @@
 # Nixpacks configuration
 # Pin nixpkgsArchive to ensure Node.js 22.12+ is available
 # Commit 51ad838b03a05b1de6f9f2a0fffecee64a9788ee includes Node.js 22.13.1 (>=22.12.0)
+# This commit is from the release-24.11 branch and contains Node.js 22.13.1
+
+providers = ["node"]
+
 [phases.setup]
+# Pin to a specific nixpkgs commit that includes Node.js 22.13.1
 nixpkgsArchive = "51ad838b03a05b1de6f9f2a0fffecee64a9788ee"
+# Explicitly specify nodejs_22 to ensure it's used from the pinned archive
+nixPkgs = ["nodejs_22"]

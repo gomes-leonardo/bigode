@@ -10,6 +10,11 @@ const createMockRepository = (
   create: vi.fn(),
   findCustomerByPhone: vi.fn(),
   createCustomer: vi.fn(),
+  findById: vi.fn(),
+  findByIdAndBarbershop: vi.fn(),
+  updateStatus: vi.fn(),
+  listByBarbershop: vi.fn(),
+  findByCustomerPhone: vi.fn(),
 });
 
 // Helper to create dates in local timezone avoiding UTC parsing issues

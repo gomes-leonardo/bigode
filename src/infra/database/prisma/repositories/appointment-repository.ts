@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Appointment, AppointmentStatus } from "@prisma/client";
+import { Appointment, AppointmentStatus, Prisma } from "@prisma/client";
 import {
   AppointmentData,
   AppointmentWithDetails,
@@ -182,7 +182,7 @@ export class PrismaAppointmentRepository implements IAppointmentRepository {
   async listByBarbershop(
     filters: ListAppointmentsFilters,
   ): Promise<AppointmentWithDetails[]> {
-    const where: Parameters<typeof prisma.appointment.findMany>[0]["where"] = {
+    const where: Prisma.AppointmentWhereInput = {
       barbershopId: filters.barbershopId,
     };
 

@@ -50,7 +50,7 @@ export async function stripeWebhookController(
 
     // Get raw body for signature verification
     // Fastify stores raw body in request.rawBody (configured in app.ts)
-    const rawBody = request.rawBody;
+    const rawBody = (request as FastifyRequest & { rawBody?: string }).rawBody;
 
     if (!rawBody) {
       console.error("[STRIPE WEBHOOK] Missing raw body");

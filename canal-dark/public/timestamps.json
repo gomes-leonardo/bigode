@@ -1,0 +1,1918 @@
+{
+ "estimado": false,
+ "duracaoMs": 89757,
+ "blocos": [
+  {
+   "id": "bloco_01",
+   "arquivo": "audio/bloco_01.wav",
+   "inicioMs": 0,
+   "duracaoMs": 8490,
+   "legenda": [
+    {
+     "text": "11",
+     "startMs": 0,
+     "endMs": 320,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 320,
+     "endMs": 500,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "setembro,",
+     "startMs": 500,
+     "endMs": 1020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "dois",
+     "startMs": 1660,
+     "endMs": 2020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aviões",
+     "startMs": 2020,
+     "endMs": 2440,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "derrubaram",
+     "startMs": 2440,
+     "endMs": 2960,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "as",
+     "startMs": 2960,
+     "endMs": 3100,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Torres",
+     "startMs": 3100,
+     "endMs": 3360,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Gêmeas,",
+     "startMs": 3360,
+     "endMs": 3880,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "mas",
+     "startMs": 4380,
+     "endMs": 4480,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "um",
+     "startMs": 4480,
+     "endMs": 4660,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "terceiro",
+     "startMs": 4660,
+     "endMs": 5140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "prédio",
+     "startMs": 5140,
+     "endMs": 5600,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "também",
+     "startMs": 5600,
+     "endMs": 5760,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "caiu",
+     "startMs": 5760,
+     "endMs": 6380,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "e",
+     "startMs": 6380,
+     "endMs": 6840,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "nenhum",
+     "startMs": 6840,
+     "endMs": 7140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "avião",
+     "startMs": 7140,
+     "endMs": 7560,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "bateu",
+     "startMs": 7560,
+     "endMs": 7880,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "nele.",
+     "startMs": 7880,
+     "endMs": 8160,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_02",
+   "arquivo": "audio/bloco_02.wav",
+   "inicioMs": 8490,
+   "duracaoMs": 6490,
+   "legenda": [
+    {
+     "text": "Vinte",
+     "startMs": 8490,
+     "endMs": 9010,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "e",
+     "startMs": 9010,
+     "endMs": 9130,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "cinco",
+     "startMs": 9130,
+     "endMs": 9310,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "anos",
+     "startMs": 9310,
+     "endMs": 9490,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "depois,",
+     "startMs": 9490,
+     "endMs": 9810,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "milhões",
+     "startMs": 10250,
+     "endMs": 10670,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 10670,
+     "endMs": 10870,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "pessoas",
+     "startMs": 10870,
+     "endMs": 11270,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ainda",
+     "startMs": 11270,
+     "endMs": 11490,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "acreditam",
+     "startMs": 11490,
+     "endMs": 12030,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "que",
+     "startMs": 12030,
+     "endMs": 12130,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aquele",
+     "startMs": 12130,
+     "endMs": 12310,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "dia",
+     "startMs": 12310,
+     "endMs": 12690,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "não",
+     "startMs": 12690,
+     "endMs": 13290,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "foi",
+     "startMs": 13290,
+     "endMs": 13590,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 13590,
+     "endMs": 13690,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "que",
+     "startMs": 13690,
+     "endMs": 13790,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "contaram",
+     "startMs": 13790,
+     "endMs": 14170,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "pra",
+     "startMs": 14170,
+     "endMs": 14330,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "gente.",
+     "startMs": 14330,
+     "endMs": 14570,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_03",
+   "arquivo": "audio/bloco_03.wav",
+   "inicioMs": 14980,
+   "duracaoMs": 11780,
+   "legenda": [
+    {
+     "text": "A",
+     "startMs": 14980,
+     "endMs": 15520,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "primeira",
+     "startMs": 15520,
+     "endMs": 15720,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "teoria,",
+     "startMs": 15720,
+     "endMs": 16160,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "as",
+     "startMs": 16740,
+     "endMs": 16940,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Torres",
+     "startMs": 16940,
+     "endMs": 17180,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Gêmeas",
+     "startMs": 17180,
+     "endMs": 17600,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "não",
+     "startMs": 17600,
+     "endMs": 17780,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "caíram",
+     "startMs": 17780,
+     "endMs": 18240,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "por",
+     "startMs": 18240,
+     "endMs": 18420,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "causa",
+     "startMs": 18420,
+     "endMs": 18640,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "dos",
+     "startMs": 18640,
+     "endMs": 18840,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aviões,",
+     "startMs": 18840,
+     "endMs": 19260,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "teriam",
+     "startMs": 19780,
+     "endMs": 20080,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "sido",
+     "startMs": 20080,
+     "endMs": 20300,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "demolidas.",
+     "startMs": 20300,
+     "endMs": 20900,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "A",
+     "startMs": 21520,
+     "endMs": 21600,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "prova,",
+     "startMs": 21600,
+     "endMs": 21820,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "segundo",
+     "startMs": 22220,
+     "endMs": 22420,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "quem",
+     "startMs": 22420,
+     "endMs": 22620,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "acredita,",
+     "startMs": 22620,
+     "endMs": 23140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "jatos",
+     "startMs": 23560,
+     "endMs": 24020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 24020,
+     "endMs": 24140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "poeira",
+     "startMs": 24140,
+     "endMs": 24500,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "saindo",
+     "startMs": 24500,
+     "endMs": 24820,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 24820,
+     "endMs": 24960,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "andares",
+     "startMs": 24960,
+     "endMs": 25240,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "bem",
+     "startMs": 25240,
+     "endMs": 25600,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "abaixo",
+     "startMs": 25600,
+     "endMs": 26020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "do",
+     "startMs": 26020,
+     "endMs": 26120,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "impacto.",
+     "startMs": 26120,
+     "endMs": 26420,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_04",
+   "arquivo": "audio/bloco_04.wav",
+   "inicioMs": 26760,
+   "duracaoMs": 12000,
+   "legenda": [
+    {
+     "text": "Esse",
+     "startMs": 26760,
+     "endMs": 27260,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "terceiro",
+     "startMs": 27260,
+     "endMs": 27660,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "prédio",
+     "startMs": 27660,
+     "endMs": 28120,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "era",
+     "startMs": 28120,
+     "endMs": 28320,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 28320,
+     "endMs": 28480,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "World",
+     "startMs": 28480,
+     "endMs": 28700,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "Trade",
+     "startMs": 28700,
+     "endMs": 29000,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "Center",
+     "startMs": 29000,
+     "endMs": 29360,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "7,",
+     "startMs": 29360,
+     "endMs": 29800,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "47",
+     "startMs": 30180,
+     "endMs": 30740,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "andares,",
+     "startMs": 30740,
+     "endMs": 31440,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "do",
+     "startMs": 31720,
+     "endMs": 31780,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "lado",
+     "startMs": 31780,
+     "endMs": 32020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "das",
+     "startMs": 32020,
+     "endMs": 32240,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "torres.",
+     "startMs": 32240,
+     "endMs": 32720,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Ele",
+     "startMs": 33060,
+     "endMs": 33220,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "desabou",
+     "startMs": 33220,
+     "endMs": 33700,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "às",
+     "startMs": 33700,
+     "endMs": 33800,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "5",
+     "startMs": 33800,
+     "endMs": 34100,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "e",
+     "startMs": 34100,
+     "endMs": 34220,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "20",
+     "startMs": 34220,
+     "endMs": 34400,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "da",
+     "startMs": 34400,
+     "endMs": 34580,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "tarde",
+     "startMs": 34580,
+     "endMs": 34900,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "e",
+     "startMs": 34900,
+     "endMs": 35480,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "muita",
+     "startMs": 35480,
+     "endMs": 35820,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "gente",
+     "startMs": 35820,
+     "endMs": 36140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "jura",
+     "startMs": 36140,
+     "endMs": 36640,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "que",
+     "startMs": 36640,
+     "endMs": 36760,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aquilo",
+     "startMs": 36760,
+     "endMs": 37020,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "foi",
+     "startMs": 37020,
+     "endMs": 37220,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "uma",
+     "startMs": 37220,
+     "endMs": 37360,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "demolição",
+     "startMs": 37360,
+     "endMs": 37840,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "controlada.",
+     "startMs": 37840,
+     "endMs": 38520,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_05",
+   "arquivo": "audio/bloco_05.wav",
+   "inicioMs": 38760,
+   "duracaoMs": 5831,
+   "legenda": [
+    {
+     "text": "No",
+     "startMs": 38760,
+     "endMs": 39120,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Pentágono,",
+     "startMs": 39120,
+     "endMs": 39680,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "a",
+     "startMs": 39860,
+     "endMs": 39960,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "teoria",
+     "startMs": 39960,
+     "endMs": 40320,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "é",
+     "startMs": 40320,
+     "endMs": 40520,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ainda",
+     "startMs": 40520,
+     "endMs": 40760,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "mais",
+     "startMs": 40760,
+     "endMs": 41140,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ousada.",
+     "startMs": 41140,
+     "endMs": 41620,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Não",
+     "startMs": 42060,
+     "endMs": 42300,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "foi",
+     "startMs": 42300,
+     "endMs": 42620,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "um",
+     "startMs": 42620,
+     "endMs": 42780,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "avião.",
+     "startMs": 42780,
+     "endMs": 43120,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Foi",
+     "startMs": 43520,
+     "endMs": 43680,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "um",
+     "startMs": 43680,
+     "endMs": 43800,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "míssil.",
+     "startMs": 43800,
+     "endMs": 44300,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    }
+   ]
+  },
+  {
+   "id": "bloco_06",
+   "arquivo": "audio/bloco_06.wav",
+   "inicioMs": 44591,
+   "duracaoMs": 7740,
+   "legenda": [
+    {
+     "text": "E",
+     "startMs": 44591,
+     "endMs": 44771,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "tem",
+     "startMs": 44771,
+     "endMs": 44951,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 44951,
+     "endMs": 45031,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "dinheiro.",
+     "startMs": 45031,
+     "endMs": 45291,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Dias",
+     "startMs": 45931,
+     "endMs": 46331,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "antes",
+     "startMs": 46331,
+     "endMs": 46551,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "do",
+     "startMs": 46551,
+     "endMs": 46731,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ataque,",
+     "startMs": 46731,
+     "endMs": 47071,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "alguém",
+     "startMs": 47471,
+     "endMs": 47711,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "apostou",
+     "startMs": 47711,
+     "endMs": 48151,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "alto",
+     "startMs": 48151,
+     "endMs": 48431,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "na",
+     "startMs": 48431,
+     "endMs": 48611,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "queda",
+     "startMs": 48611,
+     "endMs": 48791,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "das",
+     "startMs": 48791,
+     "endMs": 49051,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ações",
+     "startMs": 49051,
+     "endMs": 49351,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "das",
+     "startMs": 49351,
+     "endMs": 49491,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "companhias",
+     "startMs": 49491,
+     "endMs": 50011,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aéreas.",
+     "startMs": 50011,
+     "endMs": 50471,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Coincidência?",
+     "startMs": 51471,
+     "endMs": 52031,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    }
+   ]
+  },
+  {
+   "id": "bloco_07",
+   "arquivo": "audio/bloco_07.wav",
+   "inicioMs": 52331,
+   "duracaoMs": 9130,
+   "legenda": [
+    {
+     "text": "Tudo",
+     "startMs": 52331,
+     "endMs": 52811,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "isso",
+     "startMs": 52811,
+     "endMs": 53111,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "leva",
+     "startMs": 53111,
+     "endMs": 53351,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "à",
+     "startMs": 53351,
+     "endMs": 53511,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "teoria",
+     "startMs": 53511,
+     "endMs": 53751,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "mais",
+     "startMs": 53751,
+     "endMs": 54031,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "famosa,",
+     "startMs": 54031,
+     "endMs": 54571,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Inside",
+     "startMs": 54971,
+     "endMs": 55411,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "Job.",
+     "startMs": 55411,
+     "endMs": 55911,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "Trabalho",
+     "startMs": 56391,
+     "endMs": 56891,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "interno.",
+     "startMs": 56891,
+     "endMs": 57431,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "O",
+     "startMs": 57811,
+     "endMs": 57931,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "governo",
+     "startMs": 57931,
+     "endMs": 58151,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "americano",
+     "startMs": 58151,
+     "endMs": 58611,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "sabia.",
+     "startMs": 58611,
+     "endMs": 58931,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Ou",
+     "startMs": 59551,
+     "endMs": 59811,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "pior,",
+     "startMs": 59811,
+     "endMs": 60071,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "participou.",
+     "startMs": 60551,
+     "endMs": 61231,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_08",
+   "arquivo": "audio/bloco_08.wav",
+   "inicioMs": 61461,
+   "duracaoMs": 15370,
+   "legenda": [
+    {
+     "text": "As",
+     "startMs": 61461,
+     "endMs": 61901,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "investigações",
+     "startMs": 61901,
+     "endMs": 62561,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "dizem",
+     "startMs": 62561,
+     "endMs": 62941,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "outra",
+     "startMs": 62941,
+     "endMs": 63141,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "coisa.",
+     "startMs": 63141,
+     "endMs": 63501,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "O",
+     "startMs": 64021,
+     "endMs": 64141,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "fogo",
+     "startMs": 64141,
+     "endMs": 64501,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "enfraqueceu",
+     "startMs": 64501,
+     "endMs": 65101,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 65101,
+     "endMs": 65281,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "aço",
+     "startMs": 65281,
+     "endMs": 65481,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "das",
+     "startMs": 65481,
+     "endMs": 65641,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "torres,",
+     "startMs": 65641,
+     "endMs": 66081,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 66401,
+     "endMs": 66521,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "incêndio",
+     "startMs": 66521,
+     "endMs": 66981,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 66981,
+     "endMs": 67081,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "horas",
+     "startMs": 67081,
+     "endMs": 67361,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "derrubou",
+     "startMs": 67361,
+     "endMs": 67881,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 67881,
+     "endMs": 67941,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "prédio",
+     "startMs": 67941,
+     "endMs": 68221,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "7",
+     "startMs": 68221,
+     "endMs": 68541,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "e",
+     "startMs": 68541,
+     "endMs": 69161,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "as",
+     "startMs": 69161,
+     "endMs": 69241,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "apostas",
+     "startMs": 69241,
+     "endMs": 69781,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "vieram",
+     "startMs": 69781,
+     "endMs": 70081,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "de",
+     "startMs": 70081,
+     "endMs": 70181,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "um",
+     "startMs": 70181,
+     "endMs": 70241,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "investidor",
+     "startMs": 70241,
+     "endMs": 70761,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "sem",
+     "startMs": 70761,
+     "endMs": 71061,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ligação",
+     "startMs": 71061,
+     "endMs": 71561,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "com",
+     "startMs": 71561,
+     "endMs": 71721,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "a",
+     "startMs": 71721,
+     "endMs": 71841,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Al-Qaeda,",
+     "startMs": 71841,
+     "endMs": 72341,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "mas",
+     "startMs": 72761,
+     "endMs": 72961,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "elas",
+     "startMs": 72961,
+     "endMs": 73121,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "também",
+     "startMs": 73121,
+     "endMs": 73521,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "admitiram",
+     "startMs": 73521,
+     "endMs": 74041,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "falhas",
+     "startMs": 74041,
+     "endMs": 74401,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "graves",
+     "startMs": 74401,
+     "endMs": 74781,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "de",
+     "startMs": 74781,
+     "endMs": 75041,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "inteligência",
+     "startMs": 75041,
+     "endMs": 75701,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "antes",
+     "startMs": 75701,
+     "endMs": 76041,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "do",
+     "startMs": 76041,
+     "endMs": 76241,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "ataque.",
+     "startMs": 76241,
+     "endMs": 76421,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  },
+  {
+   "id": "bloco_09",
+   "arquivo": "audio/bloco_09.wav",
+   "inicioMs": 76831,
+   "duracaoMs": 12926,
+   "legenda": [
+    {
+     "text": "E",
+     "startMs": 76831,
+     "endMs": 77231,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "existe",
+     "startMs": 77231,
+     "endMs": 77551,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "um",
+     "startMs": 77551,
+     "endMs": 77671,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "documento",
+     "startMs": 77671,
+     "endMs": 78171,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "real",
+     "startMs": 78171,
+     "endMs": 78411,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "assinado",
+     "startMs": 78411,
+     "endMs": 79251,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "por",
+     "startMs": 79251,
+     "endMs": 79411,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "militares",
+     "startMs": 79411,
+     "endMs": 79891,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "americanos",
+     "startMs": 79891,
+     "endMs": 80671,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "que",
+     "startMs": 80671,
+     "endMs": 80891,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "propunha",
+     "startMs": 80891,
+     "endMs": 81311,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "atacar",
+     "startMs": 81311,
+     "endMs": 81751,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 81751,
+     "endMs": 81811,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "próprio",
+     "startMs": 81811,
+     "endMs": 82171,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "país",
+     "startMs": 82171,
+     "endMs": 82531,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "para",
+     "startMs": 82531,
+     "endMs": 82771,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "começar",
+     "startMs": 82771,
+     "endMs": 83151,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "uma",
+     "startMs": 83151,
+     "endMs": 83331,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "guerra.",
+     "startMs": 83331,
+     "endMs": 83651,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "Ele",
+     "startMs": 84051,
+     "endMs": 84371,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "existe.",
+     "startMs": 84371,
+     "endMs": 84831,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "E",
+     "startMs": 85391,
+     "endMs": 85531,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "é",
+     "startMs": 85531,
+     "endMs": 85631,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "o",
+     "startMs": 85631,
+     "endMs": 85711,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "próximo",
+     "startMs": 85711,
+     "endMs": 86111,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "vídeo.",
+     "startMs": 86111,
+     "endMs": 86511,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": true
+    },
+    {
+     "text": "E",
+     "startMs": 87031,
+     "endMs": 87211,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "você",
+     "startMs": 87211,
+     "endMs": 87511,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "acredita",
+     "startMs": 87511,
+     "endMs": 88631,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "na",
+     "startMs": 88631,
+     "endMs": 88731,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "versão",
+     "startMs": 88731,
+     "endMs": 88971,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    },
+    {
+     "text": "oficial?",
+     "startMs": 88971,
+     "endMs": 89371,
+     "timestampMs": null,
+     "confidence": null,
+     "destaque": false
+    }
+   ]
+  }
+ ]
+}

@@ -9,5 +9,5 @@ import { Config } from "@remotion/cli/config";
 
 Config.setRspack(true);
 Config.setVideoImageFormat("jpeg");
-Config.setOverwriteOutput(true);
+Config.setOverwriteOutput(false); // versões novas em arquivos novos: nunca sobrescrever
 Config.setDefaultPremountInSeconds(2);

@@ -1,0 +1,66 @@
+{
+  "saida": "public/audio",
+  "lufs": -14,
+  "arquivos": [
+    {
+      "audio": "public/audio/originais/sete.mp3",
+      "inicio_blocos": [
+        0.0,
+        8.76,
+        15.36,
+        27.04,
+        38.98
+      ]
+    },
+    {
+      "audio": "public/audio/originais/narrador_v4.mp3",
+      "inicio_blocos": [
+        0.0,
+        8.04,
+        17.12,
+        32.48
+      ]
+    }
+  ],
+  "correcoes": [
+    [
+      "jatos de um poeira",
+      "jatos de poeira"
+    ],
+    [
+      "foi em míssil",
+      "foi um míssil"
+    ],
+    [
+      "Al -Qaeda",
+      "Al-Qaeda"
+    ],
+    [
+      "pentágono",
+      "Pentágono"
+    ],
+    [
+      "torres gêmeas",
+      "Torres Gêmeas"
+    ],
+    [
+      "terceiro pédio",
+      "terceiro prédio"
+    ]
+  ],
+  "destaques": [
+    "nenhum avião",
+    "demolidas",
+    "prédio sete",
+    "World Trade Center 7",
+    "míssil",
+    "Coincidência",
+    "inside job",
+    "falhas graves",
+    "documento real",
+    "próximo vídeo",
+    "prédio 7"
+  ],
+  "respiro_s": 0.0,
+  "fps": 30
+}

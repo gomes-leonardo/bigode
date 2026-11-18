@@ -84,7 +84,16 @@ for p in PLANOS:
     falas = []
     local = 0.25  # pequena entrada antes da primeira fala
     for i, (voz, pers, texto) in enumerate(p["falas"]):
-        wav = fala_wav(voz, pers, texto)
+        wav = f"teo/eleven/falas/{p['id']}_{i}.wav"  # gravação do ElevenLabs, quando existir
+        if os.path.exists(wav):
+            norm_wav = wav.replace("/falas/", "/norm/")
+            if not os.path.exists(norm_wav) or os.path.getmtime(norm_wav) < os.path.getmtime(wav):
+                os.makedirs(os.path.dirname(norm_wav), exist_ok=True)
+                ganho = -19.0 - lufs(wav)[0]
+                ff("-i", wav, "-af", f"volume={ganho:.2f}dB,alimiter=limit=0.9:level=false", "-ar", str(SR), "-ac", "1", norm_wav)
+            wav = norm_wav
+        else:
+            wav = fala_wav(voz, pers, texto)
         d = duracao(wav)
         falas.append({"voz": voz, "personagem": pers, "texto": texto, "inicio": round(local, 3), "duracao": round(d, 3)})
         pedacos.append((inicio + local, wav))

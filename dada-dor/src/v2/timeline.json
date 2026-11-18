@@ -1,0 +1,907 @@
+{
+ "duracao": 296.001,
+ "planos": [
+  {
+   "id": "c1_consultorio",
+   "cap": 1,
+   "inicio": 0.0,
+   "duracao": 4.793,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela terça, nada doía. E ninguém achou isso um problema. Ainda.",
+     "inicio": 0.25,
+     "duracao": 4.193
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_dedinho",
+   "cap": 1,
+   "inicio": 5.243,
+   "duracao": 5.662,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Três semanas antes. Você acorda, levanta... e bate o dedinho do pé na quina da cama.",
+     "inicio": 0.25,
+     "duracao": 4.762
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "quina",
+     "em": 4.112
+    }
+   ]
+  },
+  {
+   "id": "c1_nada",
+   "cap": 1,
+   "inicio": 11.955,
+   "duracao": 2.4,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Nada.",
+     "inicio": 0.25,
+     "duracao": 0.417
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_pecinha",
+   "cap": 1,
+   "inicio": 14.805,
+   "duracao": 6.806,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Pisa, de propósito, numa pecinha de montar do seu irmão.",
+     "inicio": 0.25,
+     "duracao": 2.815
+    },
+    {
+     "voz": "B",
+     "personagem": "caco",
+     "texto": "Isso aí dói mais que tudo nesse mundo!",
+     "inicio": 3.365,
+     "duracao": 1.992
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Nada de nada.",
+     "inicio": 5.657,
+     "duracao": 0.798
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_cascudo",
+   "cap": 1,
+   "inicio": 22.06,
+   "duracao": 5.457,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O Caco faz o teste científico dele.",
+     "inicio": 0.25,
+     "duracao": 1.935
+    },
+    {
+     "voz": "B",
+     "personagem": "caco",
+     "texto": "Mãe! A Gotinha quebrou!",
+     "inicio": 3.085,
+     "duracao": 2.021
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "coco",
+     "em": 2.35
+    }
+   ]
+  },
+  {
+   "id": "c1_raro",
+   "cap": 1,
+   "inicio": 27.967,
+   "duracao": 6.963,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Tem gente que nasce assim. É raríssimo. Você nasceu assim. Só que ninguém tinha percebido. Até aquela terça.",
+     "inicio": 0.25,
+     "duracao": 6.363
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_titulo",
+   "cap": 1,
+   "inicio": 35.88,
+   "duracao": 4.0,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "E se você parasse de sentir dor?",
+     "inicio": 0.25,
+     "duracao": 1.857
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_pena",
+   "cap": 2,
+   "inicio": 40.33,
+   "duracao": 3.2,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "Sente?",
+     "inicio": 0.25,
+     "duracao": 0.493
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Sinto.",
+     "inicio": 1.043,
+     "duracao": 0.438
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_clipe",
+   "cap": 2,
+   "inicio": 43.98,
+   "duracao": 6.183,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "E agora?",
+     "inicio": 0.25,
+     "duracao": 0.583
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Sinto que apertou.",
+     "inicio": 1.133,
+     "duracao": 0.98
+    },
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "O tato está perfeito. A dor, zero.",
+     "inicio": 2.413,
+     "duracao": 3.42
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_alarme",
+   "cap": 2,
+   "inicio": 50.613,
+   "duracao": 5.673,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Dor é um alarme. Você encosta na panela, o nervo manda o aviso, o cérebro toca a sirene.",
+     "inicio": 0.25,
+     "duracao": 5.073
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "sirene",
+     "em": 3.923
+    }
+   ]
+  },
+  {
+   "id": "c2_paquistao",
+   "cap": 2,
+   "inicio": 56.736,
+   "duracao": 7.684,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Em três famílias do Paquistão, quem nasceu assim tinha o mesmo gene quebrado. Esse gene é a receita de uma comporta que fica no nervo da dor.",
+     "inicio": 0.25,
+     "duracao": 7.084
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_comporta",
+   "cap": 2,
+   "inicio": 64.871,
+   "duracao": 4.092,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Sem a comporta, o aviso nasce... e morre no caminho.",
+     "inicio": 0.25,
+     "duracao": 3.492
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_interfone",
+   "cap": 2,
+   "inicio": 69.412,
+   "duracao": 9.492,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Interfone com o fio cortado. Aperta, aperta. Silêncio.",
+     "inicio": 0.25,
+     "duracao": 5.611
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sem alarme, as feridas passam sem avisar.",
+     "inicio": 6.661,
+     "duracao": 2.481
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_mae",
+   "cap": 2,
+   "inicio": 79.355,
+   "duracao": 3.405,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sua mãe fica branca.",
+     "inicio": 0.25,
+     "duracao": 1.142
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Posso ir pro futebol?",
+     "inicio": 1.992,
+     "duracao": 1.063
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_vacina",
+   "cap": 3,
+   "inicio": 83.209,
+   "duracao": 10.922,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Posto de saúde, dia de vacina. A fila inteira tremendo. Menos você. Você pede pra ver a agulha entrando.",
+     "inicio": 0.25,
+     "duracao": 6.533
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Pode pôr outra?",
+     "inicio": 7.083,
+     "duracao": 0.788
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Ganha o adesivo de corajosa sem fazer nada.",
+     "inicio": 8.171,
+     "duracao": 2.401
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_churrasco",
+   "cap": 3,
+   "inicio": 94.582,
+   "duracao": 9.452,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Churrasco de domingo. O Caco aposta o controle do videogame: pimenta dedo-de-moça inteira.",
+     "inicio": 0.25,
+     "duracao": 5.141
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você come duas. E pede farofa.",
+     "inicio": 6.991,
+     "duracao": 2.111
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_pimenta",
+   "cap": 3,
+   "inicio": 104.484,
+   "duracao": 5.945,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "A pimenta arde porque liga os mesmos nervos que avisam calor. Os seus não atendem.",
+     "inicio": 0.25,
+     "duracao": 5.345
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_bolada",
+   "cap": 3,
+   "inicio": 110.878,
+   "duracao": 10.42,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Futebol na rua. O Tião chuta de bico. A bola acerta a sua cara.",
+     "inicio": 0.25,
+     "duracao": 3.919
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A rua inteira congela. Você devolve a bola.",
+     "inicio": 5.369,
+     "duracao": 2.585
+    },
+    {
+     "voz": "B",
+     "personagem": "tiao",
+     "texto": "Você é de pedra?",
+     "inicio": 8.254,
+     "duracao": 0.918
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Sou de quê?",
+     "inicio": 9.472,
+     "duracao": 0.598
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "bola",
+     "em": 3.769
+    }
+   ]
+  },
+  {
+   "id": "c4_viral",
+   "cap": 4,
+   "inicio": 121.748,
+   "duracao": 4.757,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O Caco filma. Posta. Dá um milhão. Você vira a menina que não cai.",
+     "inicio": 0.25,
+     "duracao": 4.157
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "plim",
+     "em": 1.207
+    }
+   ]
+  },
+  {
+   "id": "c4_montagem",
+   "cap": 4,
+   "inicio": 126.955,
+   "duracao": 6.0,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Cada vídeo, um teste mais burro.",
+     "inicio": 0.25,
+     "duracao": 1.631
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_tiao_cai",
+   "cap": 4,
+   "inicio": 133.405,
+   "duracao": 4.095,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Até o dia em que o Tião tenta igual. Ele cai. Ele sente.",
+     "inicio": 0.25,
+     "duracao": 3.495
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "queda",
+     "em": 1.845
+    }
+   ]
+  },
+  {
+   "id": "c4_zefa",
+   "cap": 4,
+   "inicio": 138.75,
+   "duracao": 3.0,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "zefa",
+     "texto": "Acabou a brincadeira.",
+     "inicio": 0.25,
+     "duracao": 1.355
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pau",
+     "em": 1.005
+    }
+   ]
+  },
+  {
+   "id": "c4_final",
+   "cap": 4,
+   "inicio": 142.2,
+   "duracao": 7.825,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Mas nada te freia. Final do campeonato da rua. Você joga os dois tempos inteiros. Faz o gol. Dá a volta olímpica.",
+     "inicio": 0.25,
+     "duracao": 7.225
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "torcida",
+     "em": 4.875
+    }
+   ]
+  },
+  {
+   "id": "c4_manca",
+   "cap": 4,
+   "inicio": 150.475,
+   "duracao": 4.0,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Ninguém vê que você manca. Nem você.",
+     "inicio": 0.25,
+     "duracao": 2.189
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_entrevista",
+   "cap": 4,
+   "inicio": 154.925,
+   "duracao": 4.162,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "vizinho",
+     "texto": "Menina que não cai! O que você sente?",
+     "inicio": 0.25,
+     "duracao": 2.687
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Nada.",
+     "inicio": 3.437,
+     "duracao": 0.376
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_roxo",
+   "cap": 4,
+   "inicio": 159.537,
+   "duracao": 7.077,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "À noite, na sua canela, um roxo do tamanho de uma mão. Você nem olha.",
+     "inicio": 0.25,
+     "duracao": 3.87
+    },
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Ela não olha porque nada avisou pra olhar.",
+     "inicio": 4.42,
+     "duracao": 2.307
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_panela",
+   "cap": 5,
+   "inicio": 167.664,
+   "duracao": 3.753,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A Vó Zefa pede a panela do fogo. Você pega sem pano.",
+     "inicio": 0.25,
+     "duracao": 3.153
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_mao",
+   "cap": 5,
+   "inicio": 171.867,
+   "duracao": 4.0,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você sente que está quente. Nada manda soltar.",
+     "inicio": 0.25,
+     "duracao": 2.608
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_larga",
+   "cap": 5,
+   "inicio": 176.317,
+   "duracao": 2.6,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "lucia",
+     "texto": "Larga!",
+     "inicio": 0.25,
+     "duracao": 0.536
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_raiox",
+   "cap": 5,
+   "inicio": 179.367,
+   "duracao": 8.141,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "Você quebrou o pé na final e continuou jogando. E essas duas aqui são antigas. Nunca doeram.",
+     "inicio": 0.25,
+     "duracao": 7.541
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_inimiga",
+   "cap": 5,
+   "inicio": 187.958,
+   "duracao": 4.313,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "A dor não é sua inimiga. É a única que avisa.",
+     "inicio": 0.25,
+     "duracao": 3.713
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_olho",
+   "cap": 5,
+   "inicio": 192.721,
+   "duracao": 9.38,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Tem mais. Você pisca pouco, porque nada incomoda. O olho seca sozinho. E cheiro: nenhum. A mesma peça que falta no nervo da dor falta no nariz.",
+     "inicio": 0.25,
+     "duracao": 8.78
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_fresco",
+   "cap": 5,
+   "inicio": 202.551,
+   "duracao": 6.291,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E tem o pior. O Tião torce o pé e chora.",
+     "inicio": 0.25,
+     "duracao": 2.418
+    },
+    {
+     "voz": "B",
+     "personagem": "gotinha",
+     "texto": "Que exagero.",
+     "inicio": 2.968,
+     "duracao": 0.685
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você começa a achar todo mundo fresco.",
+     "inicio": 3.953,
+     "duracao": 1.988
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_muro",
+   "cap": 6,
+   "inicio": 210.092,
+   "duracao": 4.233,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sábado à noite. O Tião sobe no muro pra fazer igual a Gotinha.",
+     "inicio": 0.25,
+     "duracao": 3.633
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_queda",
+   "cap": 6,
+   "inicio": 214.775,
+   "duracao": 3.913,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Escorrega. Grita. Você ri. Todo mundo exagera.",
+     "inicio": 0.25,
+     "duracao": 3.313
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "queda",
+     "em": 0.8
+    }
+   ]
+  },
+  {
+   "id": "c6_rostos",
+   "cap": 6,
+   "inicio": 219.138,
+   "duracao": 5.692,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí você vê a mãe dele correndo. Vê o rosto da sua mãe. Vê a Vó Zefa com a mão na boca.",
+     "inicio": 0.25,
+     "duracao": 5.092
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_para",
+   "cap": 6,
+   "inicio": 225.279,
+   "duracao": 7.112,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você para de rir.",
+     "inicio": 0.25,
+     "duracao": 0.918
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Pela primeira vez, você sente a dor de alguém. Não no corpo. No rosto dos outros.",
+     "inicio": 2.168,
+     "duracao": 4.593
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_mao",
+   "cap": 6,
+   "inicio": 232.841,
+   "duracao": 7.813,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você senta do lado dele. Segura a mão.",
+     "inicio": 0.25,
+     "duracao": 2.383
+    },
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Ela nunca vai sentir a dor dele. Mas aprendeu a ler.",
+     "inicio": 3.433,
+     "duracao": 4.03
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_lab",
+   "cap": 7,
+   "inicio": 241.904,
+   "duracao": 3.0,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Agora pense no que você prova.",
+     "inicio": 0.25,
+     "duracao": 1.552
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_alvo",
+   "cap": 7,
+   "inicio": 245.354,
+   "duracao": 11.063,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Existe uma comporta que, desligada, apaga a dor. E quem nasce sem ela segue inteiro: pensa, anda, sente todo o resto.",
+     "inicio": 0.25,
+     "duracao": 6.399
+    },
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Para quem fabrica remédio, isso é a descrição de um alvo perfeito.",
+     "inicio": 6.949,
+     "duracao": 3.765
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_2025",
+   "cap": 7,
+   "inicio": 256.867,
+   "duracao": 18.921,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Em janeiro de 2025, os Estados Unidos aprovaram o suzetrigine. O primeiro analgésico não opioide pra dor aguda. O primeiro remédio de dor realmente novo desde 1998. Ele não fecha a sua comporta. Fecha uma prima dela.",
+     "inicio": 0.25,
+     "duracao": 14.52
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A pista que abriu esse caminho veio de quem nasceu sem sentir.",
+     "inicio": 15.47,
+     "duracao": 3.101
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_hospital",
+   "cap": 7,
+   "inicio": 276.238,
+   "duracao": 8.609,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela terça, nada doía. E hoje, em algum hospital, alguém acorda de uma cirurgia sem dor e sem opioide. Por causa de gente como você.",
+     "inicio": 0.25,
+     "duracao": 8.009
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_bike",
+   "cap": 7,
+   "inicio": 285.297,
+   "duracao": 6.554,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Que dor você deixaria de sentir?",
+     "inicio": 0.25,
+     "duracao": 1.848
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E qual você não trocaria por nada?",
+     "inicio": 2.998,
+     "duracao": 1.706
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_inscreva",
+   "cap": 7,
+   "inicio": 292.301,
+   "duracao": 3.5,
+   "falas": [],
+   "sfx": []
+  }
+ ]
+}

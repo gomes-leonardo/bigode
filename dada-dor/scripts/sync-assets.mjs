@@ -23,14 +23,16 @@ if (existsSync(limpo)) {
   for (const f of readdirSync(limpo)) if (f.endsWith(".png")) cpSync(join(limpo, f), join("public/assets/limpo", f));
 }
 // rig de recorte da Gotinha: partes -> public/assets/rig/gotinha/, parts.json -> src/rig/parts.json
-const rig = join("assets", "rig", "gotinha");
-if (existsSync(rig)) {
-  mkdirSync("public/assets/rig/gotinha", { recursive: true });
-  mkdirSync("src/rig", { recursive: true });
-  for (const f of readdirSync(rig)) {
-    if (f.endsWith(".png")) cpSync(join(rig, f), join("public/assets/rig/gotinha", f));
+// (e as variantes do elenco geradas por v2/rig_variantes.py: mesma geometria, outra cor)
+if (existsSync(join("assets", "rig"))) {
+  for (const variante of readdirSync(join("assets", "rig"))) {
+    const dir = join("assets", "rig", variante);
+    if (!existsSync(join(dir, "parts.json"))) continue;
+    mkdirSync(join("public/assets/rig", variante), { recursive: true });
+    for (const f of readdirSync(dir)) if (f.endsWith(".png")) cpSync(join(dir, f), join("public/assets/rig", variante, f));
   }
-  cpSync(join(rig, "parts.json"), "src/rig/parts.json");
+  mkdirSync("src/rig", { recursive: true });
+  cpSync(join("assets", "rig", "gotinha", "parts.json"), "src/rig/parts.json");
 }
 writeFileSync("src/assets-manifest.json", JSON.stringify(presentes, null, 1));
 console.log(`assets do Flow em uso: ${presentes.length ? presentes.join(", ") : "nenhum (tudo vetorial)"}`);

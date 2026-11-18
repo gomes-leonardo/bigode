@@ -1,0 +1,237 @@
+{
+ "pecas_do_desenho": "assets/rig/gotinha-partes.png",
+ "partes": {
+  "head": {
+   "arquivo": "head.png",
+   "largura": 222,
+   "altura": 287,
+   "pivo": [
+    110.3,
+    271.5
+   ],
+   "rosto": [
+    127.1,
+    164.9
+   ],
+   "_origem_folha": [
+    123,
+    82
+   ],
+   "repouso": 180.0,
+   "pai": [
+    "torso",
+    "pescoco"
+   ]
+  },
+  "torso": {
+   "arquivo": "torso.png",
+   "largura": 177,
+   "altura": 245,
+   "pivo": [
+    88.4,
+    125.7
+   ],
+   "pescoco": [
+    81.0,
+    26.2
+   ],
+   "ombro_R": [
+    41.5,
+    51.5
+   ],
+   "ombro_L": [
+    133.5,
+    45.5
+   ],
+   "quadril_R": [
+    53.5,
+    203.5
+   ],
+   "quadril_L": [
+    135.5,
+    207.5
+   ],
+   "_origem_folha": [
+    451,
+    122
+   ],
+   "pai": null
+  },
+  "arm_upper_R": {
+   "arquivo": "arm_upper_R.png",
+   "largura": 65,
+   "altura": 128,
+   "pivo": [
+    28.5,
+    30.5
+   ],
+   "ancora": [
+    43.5,
+    122.5
+   ],
+   "_origem_folha": [
+    157,
+    425
+   ],
+   "repouso": -9.3,
+   "pai": [
+    "torso",
+    "ombro_R"
+   ]
+  },
+  "arm_lower_R": {
+   "arquivo": "arm_lower_R.png",
+   "largura": 167,
+   "altura": 103,
+   "pivo": [
+    26.5,
+    26.5
+   ],
+   "ancora": [
+    150.9,
+    80.8
+   ],
+   "_origem_folha": [
+    174,
+    521
+   ],
+   "repouso": -66.4,
+   "pai": [
+    "arm_upper_R",
+    "ancora"
+   ]
+  },
+  "arm_upper_L": {
+   "arquivo": "arm_upper_L.png",
+   "largura": 68,
+   "altura": 124,
+   "pivo": [
+    25.7,
+    13.9
+   ],
+   "ancora": [
+    45.5,
+    115.5
+   ],
+   "_origem_folha": [
+    866,
+    131
+   ],
+   "repouso": -11.1,
+   "pai": [
+    "torso",
+    "ombro_L"
+   ]
+  },
+  "arm_lower_L": {
+   "arquivo": "arm_lower_L.png",
+   "largura": 169,
+   "altura": 101,
+   "pivo": [
+    25.5,
+    25.5
+   ],
+   "ancora": [
+    153.4,
+    78.6
+   ],
+   "_origem_folha": [
+    886,
+    221
+   ],
+   "repouso": -67.5,
+   "pai": [
+    "arm_upper_L",
+    "ancora"
+   ]
+  },
+  "leg_upper_R": {
+   "arquivo": "leg_upper_R.png",
+   "largura": 126,
+   "altura": 108,
+   "pivo": [
+    19.5,
+    22.0
+   ],
+   "ancora": [
+    104.5,
+    90.5
+   ],
+   "_origem_folha": [
+    625,
+    433
+   ],
+   "repouso": -51.1,
+   "pai": [
+    "torso",
+    "quadril_R"
+   ]
+  },
+  "leg_lower_R": {
+   "arquivo": "leg_lower_R.png",
+   "largura": 82,
+   "altura": 169,
+   "pivo": [
+    29.5,
+    29.5
+   ],
+   "ancora": [
+    48.9,
+    154.5
+   ],
+   "_origem_folha": [
+    700,
+    494
+   ],
+   "repouso": -8.8,
+   "pai": [
+    "leg_upper_R",
+    "ancora"
+   ]
+  },
+  "leg_upper_L": {
+   "arquivo": "leg_upper_L.png",
+   "largura": 126,
+   "altura": 109,
+   "pivo": [
+    19.1,
+    21.9
+   ],
+   "ancora": [
+    105.5,
+    92.5
+   ],
+   "_origem_folha": [
+    1081,
+    433
+   ],
+   "repouso": -50.8,
+   "pai": [
+    "torso",
+    "quadril_L"
+   ]
+  },
+  "leg_lower_L": {
+   "arquivo": "leg_lower_L.png",
+   "largura": 81,
+   "altura": 167,
+   "pivo": [
+    30.5,
+    30.5
+   ],
+   "ancora": [
+    47.4,
+    153.3
+   ],
+   "_origem_folha": [
+    1156,
+    495
+   ],
+   "repouso": -7.9,
+   "pai": [
+    "leg_upper_L",
+    "ancora"
+   ]
+  }
+ }
+}

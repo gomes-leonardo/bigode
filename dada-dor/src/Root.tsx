@@ -9,6 +9,7 @@ import { RigTest } from "./rig/RigTest";
 import { DURACAO_V2, VideoV2 } from "./v2/VideoV2";
 import { DURACAO_TEO_ESBOCO, TeoEsboco } from "./teo/TeoEsboco";
 import { DURACAO_TEO, VideoTeo } from "./teo/VideoTeo";
+import { DURACAO_MENTIRA, VideoMentira } from "./mentira/VideoMentira";
 import { TesteDada } from "./TesteDada";
 import { FPS, H, W } from "./theme";
 import { Video } from "./Video";
@@ -20,6 +21,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Cena05" component={Cena05} durationInFrames={DURACAO_CENA05} fps={FPS} width={W} height={H} />
     <Composition id="AcoesTeste" component={AcoesTeste} durationInFrames={3 * FPS} fps={FPS} width={W} height={H} />
     <Composition id="VideoV2" component={VideoV2} durationInFrames={DURACAO_V2} fps={FPS} width={W} height={H} />
+    <Composition id="VideoMentira" component={VideoMentira} durationInFrames={DURACAO_MENTIRA} fps={FPS} width={W} height={H} />
     <Composition id="VideoTeo" component={VideoTeo} durationInFrames={DURACAO_TEO} fps={FPS} width={W} height={H} />
     <Composition id="TeoEsboco" component={TeoEsboco} durationInFrames={DURACAO_TEO_ESBOCO} fps={FPS} width={W} height={H} />
     <Composition id="RigTest" component={RigTest} durationInFrames={12 * FPS} fps={FPS} width={W} height={H} />

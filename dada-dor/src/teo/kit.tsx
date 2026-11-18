@@ -4,10 +4,11 @@ import { AbsoluteFill, interpolate, random, useCurrentFrame, useVideoConfig } fr
 import { FONTE } from "../theme";
 import { ELENCO, type NomeElenco } from "./elenco";
 import { falando, piscando } from "./motor";
-import { Boneco, LINHA, pontos, type PoseTeo } from "./tira";
+import { Boneco, LINHA, pontos, type PoseTeo, type Visual } from "./tira";
 
 export type FalaT = { voz: string; personagem: string | null; texto: string; inicio: number; duracao: number };
-export type PlanoT = { id: string; cap: number; inicio: number; duracao: number; falas: FalaT[]; sfx: { nome: string; em: number }[] };
+export type BalaoT = { fala: number | null; k: number; n: number; tipo: string; rotulo: string | null; emite: number; fimFala: number; queda?: number; sobe?: number };
+export type PlanoT = { id: string; cap: number; inicio: number; duracao: number; falas: FalaT[]; sfx: { nome: string; em: number }[]; baloes?: BalaoT[] };
 export const PlanoCtx = createContext<PlanoT | null>(null);
 
 /** tempo local do plano e atalhos para as falas e efeitos */
@@ -27,11 +28,11 @@ export const usePlano = () => {
 };
 
 /** ator: aplica boca de fala e piscada natural à pose e desenha */
-export const Ator: React.FC<{ quem: NomeElenco; pose: PoseTeo; fala?: boolean; semPiscar?: boolean; semente?: number; esc?: number }> = ({ quem, pose, fala, semPiscar, semente = 0, esc }) => {
+export const Ator: React.FC<{ quem: NomeElenco; pose: PoseTeo; fala?: boolean; semPiscar?: boolean; semente?: number; esc?: number; v?: Visual }> = ({ quem, pose, fala, semPiscar, semente = 0, esc, v }) => {
   const { t } = usePlano();
   const m = ELENCO[quem];
   const p = { ...pose, falando: pose.falando ?? fala, piscar: pose.piscar ?? (!semPiscar && piscando(t, semente + quem.length)) };
-  return <Boneco pose={p} esc={esc ?? m.esc} v={m.v} />;
+  return <Boneco pose={p} esc={esc ?? m.esc} v={v ?? m.v} />;
 };
 export const pts = (quem: NomeElenco, pose: PoseTeo) => pontos(pose, ELENCO[quem].esc, ELENCO[quem].v);
 export const E = (quem: NomeElenco) => ELENCO[quem].esc;

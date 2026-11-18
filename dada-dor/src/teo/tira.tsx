@@ -5,7 +5,8 @@ import React, { useId } from "react";
 import type { Pose } from "../rig/types";
 
 export type Expr = "neutro" | "sono" | "curioso" | "rindo" | "triste" | "chorando" | "bravo" | "surpreso" | "preocupado" | "serio" | "fechado" | "grito" | "sorriso";
-export type Obj = "celular" | "celularFilma" | "colher" | "prancheta" | "caneta" | "algodao" | "seringa" | "pimenta" | "copo" | "lanterna" | "pano" | "prato" | "pecinha" | "bola";
+export type Obj = "celular" | "celularFilma" | "colher" | "prancheta" | "caneta" | "algodao" | "seringa" | "pimenta" | "copo" | "lanterna" | "pano" | "prato" | "pecinha" | "bola"
+  | "cartas" | "controle" | "microfone" | "papel" | "blusa" | "pizza" | "boina" | "convite" | "pote" | "acai" | "almofada";
 export type PoseTeo = Pose & {
   pe_R: number; // pé: 0 = sola reta, positivo = ponta para cima
   pe_L: number;
@@ -22,13 +23,16 @@ export type PoseTeo = Pose & {
   roxo?: number; // 0 a 1, roxo na canela direita
   maoQueimada?: number;
   falando?: boolean; // boca aberta (alterna enquanto fala)
+  cansado?: number; // olheiras
+  chocolate?: boolean; // boca suja de chocolate
+  semChapeu?: boolean;
 };
 export type Lado = "R" | "L";
 type P = [number, number];
 
 export type Visual = {
   pele: string;
-  cabelo: "espetado" | "bone" | "cacheado" | "coque" | "rabo" | "chanel" | "careca" | "curto" | "touca";
+  cabelo: "espetado" | "bone" | "cacheado" | "coque" | "rabo" | "chanel" | "careca" | "curto" | "touca" | "chiquinhas" | "lenco";
   corCabelo: string;
   camisa: string;
   listra?: string;
@@ -43,7 +47,15 @@ export type Visual = {
   avental?: string;
   vestido?: string;
   luvas?: string;
-  manga?: "curta" | "longa";
+  manga?: "curta" | "longa" | "nenhuma";
+  terno?: string; // paletó
+  gravata?: string;
+  brilho?: boolean; // terno brilhante
+  chapeu?: "boina" | "fedora";
+  corChapeu?: string;
+  lenco?: string;
+  barba?: boolean;
+  headset?: boolean;
   cinza?: boolean; // figurante apagado
   cabeca?: number; // proporção da cabeça (adulto < 1)
   tronco?: number; // proporção do tronco (adulto > 1)
@@ -202,7 +214,7 @@ const Traco: React.FC<{ pts: P[]; w: number; cor: string; contorno?: number }> =
   );
 };
 
-type Cores = { pele: string; peleL: string; camisa: string; listra?: string; baixo: string; baixoL: string; calcado: string; cabelo: string };
+type Cores = { pele: string; peleL: string; camisa: string; listra?: string; baixo: string; baixoL: string; calcado: string; cabelo: string; terno?: string };
 
 const Perna: React.FC<{ pose: PoseTeo; lado: Lado; v: Visual; c: Cores }> = ({ pose, lado, v, c }) => {
   const k = perna(pose, lado);
@@ -231,15 +243,16 @@ const Braco: React.FC<{ pose: PoseTeo; lado: Lado; v: Visual; c: Cores }> = ({ p
   const longe = lado === "L";
   const pele = longe ? c.peleL : c.pele;
   const queimada = lado === "R" ? pose.maoQueimada ?? 0 : 0;
-  const longa = v.manga === "longa" || v.jaleco;
+  const longa = v.manga === "longa" || v.jaleco || !!v.terno;
+  const semManga = v.manga === "nenhuma";
   const manga = longa ? [b.ombro, b.cotovelo, soma(b.cotovelo, [b.mao[0] - b.cotovelo[0], b.mao[1] - b.cotovelo[1]], 0.7)] : [b.ombro, soma(b.ombro, [b.cotovelo[0] - b.ombro[0], b.cotovelo[1] - b.ombro[1]], 0.47)];
-  const corManga = v.jaleco ? "#F4F6F8" : v.vestido ?? (v.listra ?? c.camisa);
+  const corManga = v.terno ? c.terno ?? v.terno : v.jaleco ? "#F4F6F8" : v.vestido ?? (v.listra ?? c.camisa);
   const obj = lado === "R" ? pose.objR : pose.objL;
   return (
     <g>
       <Traco pts={[b.ombro, b.cotovelo, b.mao]} w={20} cor={pele} />
       <circle cx={b.mao[0]} cy={b.mao[1]} r={14} fill={v.luvas ?? mistura(pele, "#E0503C", queimada * 0.7)} stroke={LINHA} strokeWidth={7} />
-      <Traco pts={manga as P[]} w={longa ? 30 : 36} cor={longe ? escurece(corManga, 0.92) : corManga} />
+      {!semManga && <Traco pts={manga as P[]} w={longa ? 30 : 36} cor={longe ? escurece(corManga, 0.92) : corManga} />}
       {obj && <Objeto obj={obj} x={b.mao[0]} y={b.mao[1]} ang={b.angMao} esq={!!pose.esq} />}
     </g>
   );
@@ -278,6 +291,28 @@ export const Objeto: React.FC<{ obj: Obj; x: number; y: number; ang: number; esq
       return <g transform={reto}><rect x={-4} y={-30} width={44} height={18} rx={3} fill="#E23B2E" stroke={LINHA} strokeWidth={5} /></g>;
     case "bola":
       return <Bola x={x + 10} y={y - 40} r={34} giro={0} />;
+    case "cartas":
+      return <g transform={reto}>{[-18, 0, 18].map((a, i) => <g key={i} transform={`rotate(${a}) translate(0 -46)`}><rect x={-16} y={-24} width={32} height={46} rx={5} fill="#FBFBF7" stroke={LINHA} strokeWidth={4} /><circle cx={0} cy={0} r={6} fill={i === 1 ? "#E23B2E" : LINHA} /></g>)}</g>;
+    case "controle":
+      return <g transform={reto}><rect x={-34} y={-24} width={68} height={36} rx={16} fill="#2E2A5C" stroke={LINHA} strokeWidth={5} /><circle cx={16} cy={-8} r={5} fill="#E23B2E" /><circle cx={-16} cy={-8} r={5} fill="#86DDBE" /><path d="M -20 10 q 10 8 22 2" stroke="#8A3FA0" strokeWidth={6} fill="none" opacity={0.85} /></g>;
+    case "microfone":
+      return <g transform={reto}><rect x={-7} y={-66} width={14} height={60} rx={6} fill="#2A2A35" stroke={LINHA} strokeWidth={4} /><circle cx={0} cy={-76} r={16} fill="#9AA0A8" stroke={LINHA} strokeWidth={5} /></g>;
+    case "papel":
+      return <g transform={reto}><rect x={-6} y={-78} width={64} height={84} rx={4} fill="#FBFBF7" stroke={LINHA} strokeWidth={5} />{[0, 1, 2, 3].map((i) => <line key={i} x1={4} y1={-64 + i * 16} x2={46} y2={-64 + i * 16} stroke="#9AA0A8" strokeWidth={4} />)}<path d="M 10 -6 q 10 -10 20 0 q 6 6 16 -4" stroke="#3B6FD6" strokeWidth={4} fill="none" /></g>;
+    case "blusa":
+      return <g transform={reto}><path d="M -70 -150 L -20 -170 Q 0 -150 20 -170 L 70 -150 L 100 -90 L 70 -76 L 60 -110 L 60 0 L -60 0 L -60 -110 L -70 -76 L -100 -90 Z" fill="#F2933A" stroke={LINHA} strokeWidth={6} strokeLinejoin="round" />{[0, 1, 2].map((i) => <path key={i} d={`M -50 ${-90 + i * 28} l 10 -10 l 10 10 l 10 -10 l 10 10 l 10 -10 l 10 10 l 10 -10 l 10 10 l 10 -10 l 10 10`} stroke="#8A5A1A" strokeWidth={5} fill="none" />)}</g>;
+    case "pizza":
+      return <g transform={reto}><path d="M -4 -10 L 70 -40 Q 76 -10 66 12 Z" fill="#F2C94C" stroke={LINHA} strokeWidth={5} strokeLinejoin="round" /><path d="M 70 -40 Q 76 -10 66 12" stroke="#C98450" strokeWidth={10} fill="none" /><circle cx={40} cy={-16} r={7} fill="#E23B2E" /><circle cx={56} cy={-6} r={6} fill="#E23B2E" /></g>;
+    case "boina":
+      return <g transform={reto}><path d="M -40 -6 Q -30 -44 16 -40 Q 50 -34 46 -10 Q 0 -18 -40 -6 Z" fill="#7A4E9A" stroke={LINHA} strokeWidth={5} strokeLinejoin="round" /></g>;
+    case "convite":
+      return <g transform={reto}><rect x={-10} y={-70} width={110} height={74} rx={6} fill="#F2C94C" stroke={LINHA} strokeWidth={5} /><path d="M -10 -70 L 45 -30 L 100 -70" stroke={LINHA} strokeWidth={4} fill="none" /><circle cx={45} cy={-30} r={10} fill="#E23B2E" stroke={LINHA} strokeWidth={3} /></g>;
+    case "pote":
+      return <g transform={reto}><rect x={-30} y={-80} width={64} height={80} rx={10} fill="rgba(220,240,255,0.85)" stroke={LINHA} strokeWidth={5} />{[0, 1, 2, 3, 4].map((i) => <ellipse key={i} cx={-14 + (i % 3) * 16} cy={-14 - Math.floor(i / 3) * 14} rx={9} ry={5} fill="#F2C94C" stroke={LINHA} strokeWidth={2} />)}</g>;
+    case "acai":
+      return <g transform={reto}><path d="M -26 -70 L 34 -70 L 26 6 L -18 6 Z" fill="#6A2A7A" stroke={LINHA} strokeWidth={5} strokeLinejoin="round" /><path d="M -28 -70 Q 4 -96 36 -70 Z" fill="#8A3FA0" stroke={LINHA} strokeWidth={4} /><line x1={8} y1={-90} x2={20} y2={-118} stroke="#FBFBF7" strokeWidth={6} /></g>;
+    case "almofada":
+      return <g transform={reto}><rect x={-46} y={-60} width={92} height={60} rx={22} fill="#E9707F" stroke={LINHA} strokeWidth={6} /></g>;
   }
   return null;
 };
@@ -313,6 +348,8 @@ const Cabelo: React.FC<{ v: Visual; r: number; cor: string; frente: boolean }> =
     if (v.cabelo === "curto" || v.cabelo === "coque" || v.cabelo === "rabo") return capa(1.02);
     if (v.cabelo === "chanel") return capa(1.08);
     if (v.cabelo === "cacheado") return <g>{[-200, -165, -130, -95, -62].map((a, i) => { const p = ponto(a, r * 0.95); return <circle key={i} cx={p[0]} cy={p[1]} r={r * 0.32} fill={cor} stroke={LINHA} strokeWidth={6} />; })}</g>;
+    if (v.cabelo === "chiquinhas") return capa(1.02);
+    if (v.cabelo === "lenco") return <g><path d={`M ${-r * 1.02} ${r * 0.05} Q ${-r * 1.1} ${-r * 1.15} ${r * 0.1} ${-r * 1.14} Q ${r * 1.02} ${-r * 1.05} ${r * 0.95} ${-r * 0.3} Q ${r * 0.2} ${-r * 0.62} ${-r * 0.6} ${-r * 0.2} Z`} fill={v.lenco ?? "#E9707F"} stroke={LINHA} strokeWidth={6} strokeLinejoin="round" />{[[-0.4, -0.7], [0.1, -0.85], [0.5, -0.6], [-0.7, -0.35]].map(([a, b], i) => <circle key={i} cx={r * a} cy={r * b} r={5} fill="#FBFBF7" />)}</g>;
     if (v.cabelo === "careca") return <path d={`M ${-r * 0.98} ${-r * 0.05} Q ${-r * 1.08} ${-r * 0.5} ${-r * 0.7} ${-r * 0.55} L ${-r * 0.55} ${r * 0.1} Z`} fill={cor} stroke={LINHA} strokeWidth={5} strokeLinejoin="round" />;
     return null;
   }
@@ -321,6 +358,10 @@ const Cabelo: React.FC<{ v: Visual; r: number; cor: string; frente: boolean }> =
       return <g>{[-200, -170, -140, -110, -80, -50, -25].map((a, i) => { const p = ponto(a, r * 0.92); return <circle key={i} cx={p[0]} cy={p[1]} r={r * 0.34} fill={cor} stroke={LINHA} strokeWidth={6} />; })}</g>;
     case "curto":
       return null;
+    case "chiquinhas":
+      return <g>{[[-r * 0.95, -r * 0.55], [-r * 0.2, -r * 1.05]].map(([x, y], i) => <g key={i}><circle cx={x - (i ? 0 : 14)} cy={y - (i ? 26 : 0)} r={r * 0.36} fill={cor} stroke={LINHA} strokeWidth={6} /><circle cx={x * 0.92} cy={y * 0.92} r={9} fill="#E9707F" stroke={LINHA} strokeWidth={4} /></g>)}</g>;
+    case "lenco":
+      return <g><path d={`M ${-r * 0.9} ${-r * 0.2} q ${-r * 0.5} ${r * 0.1} ${-r * 0.55} ${r * 0.5} q ${r * 0.3} ${-r * 0.1} ${r * 0.5} ${-r * 0.2} Z`} fill={v.lenco ?? "#E9707F"} stroke={LINHA} strokeWidth={5} strokeLinejoin="round" /><circle cx={r * 0.2} cy={r * 0.6} r={0} /><path d={`M ${-r * 0.75} ${r * 0.15} L ${-r * 0.6} ${r * 0.7}`} stroke={cor} strokeWidth={14} strokeLinecap="round" /></g>;
     case "coque":
       return <circle cx={-r * 0.55} cy={-r * 1.0} r={r * 0.36} fill={cor} stroke={LINHA} strokeWidth={6} />;
     case "rabo":
@@ -396,6 +437,13 @@ const Rosto: React.FC<{ expr: Expr; piscar: boolean; r: number; v: Visual; c: Co
   );
 };
 
+export const Chapeu: React.FC<{ tipo: "boina" | "fedora"; r: number; cor: string }> = ({ tipo, r, cor }) =>
+  tipo === "boina" ? (
+    <g><path d={`M ${-r * 1.0} ${-r * 0.55} Q ${-r * 0.6} ${-r * 1.25} ${r * 0.35} ${-r * 1.08} Q ${r * 0.95} ${-r * 0.92} ${r * 0.8} ${-r * 0.6} Q 0 ${-r * 0.75} ${-r * 1.0} ${-r * 0.55} Z`} fill={cor} stroke={LINHA} strokeWidth={6} strokeLinejoin="round" /><circle cx={-r * 0.1} cy={-r * 1.12} r={6} fill={cor} stroke={LINHA} strokeWidth={4} /></g>
+  ) : (
+    <g><path d={`M ${-r * 1.35} ${-r * 0.62} Q 0 ${-r * 0.82} ${r * 1.45} ${-r * 0.55} Q 0 ${-r * 0.5} ${-r * 1.35} ${-r * 0.62} Z`} fill={cor} stroke={LINHA} strokeWidth={6} strokeLinejoin="round" /><path d={`M ${-r * 0.75} ${-r * 0.66} L ${-r * 0.62} ${-r * 1.28} Q 0 ${-r * 1.42} ${r * 0.7} ${-r * 1.22} L ${r * 0.8} ${-r * 0.6} Z`} fill={cor} stroke={LINHA} strokeWidth={6} strokeLinejoin="round" /><path d={`M ${-r * 0.72} ${-r * 0.82} Q 0 ${-r * 0.95} ${r * 0.78} ${-r * 0.78}`} stroke="#E23B2E" strokeWidth={10} fill="none" /></g>
+  );
+
 const Cabeca: React.FC<{ pose: PoseTeo; v: Visual; c: Cores }> = ({ pose, v, c }) => {
   const r = G.cabeca * (v.cabeca ?? 1);
   const pele = mistura(c.pele, "#F2F0EC", (pose.palido ?? 0) * 0.85);
@@ -408,7 +456,19 @@ const Cabeca: React.FC<{ pose: PoseTeo; v: Visual; c: Cores }> = ({ pose, v, c }
       {v.cabelo === "espetado" && <Cabelo v={v} r={r} cor={c.cabelo} frente={false} />}
       <Cabelo v={v} r={r} cor={c.cabelo} frente />
       <path d={`M ${-r * 0.38} 2 Q ${-r * 0.3} 12 ${-r * 0.38} 18`} stroke={LINHA} strokeWidth={4} fill="none" strokeLinecap="round" />
+      {v.chapeu && !pose.semChapeu && <Chapeu tipo={v.chapeu} r={r} cor={v.corChapeu ?? "#3A3A48"} />}
+      {v.headset && (
+        <g>
+          <path d={`M ${-r * 0.55} ${-r * 0.1} Q ${-r * 0.4} ${-r * 1.35} ${r * 0.45} ${-r * 0.95}`} stroke="#2A2A35" strokeWidth={14} fill="none" strokeLinecap="round" />
+          <ellipse cx={-r / 3} cy={8} rx={r * 0.3} ry={r * 0.36} fill="#2A2A35" stroke={LINHA} strokeWidth={6} />
+          <path d={`M ${-r * 0.2} ${r * 0.3} Q ${r * 0.1} ${r * 0.7} ${r * 0.45} ${r * 0.5}`} stroke="#2A2A35" strokeWidth={7} fill="none" strokeLinecap="round" />
+          <circle cx={r * 0.47} cy={r * 0.5} r={7} fill="#3FAF63" stroke={LINHA} strokeWidth={3} />
+        </g>
+      )}
+      {v.barba && <path d={`M ${-r * 0.3} ${r * 0.35} Q ${-r * 0.1} ${r * 1.05} ${r * 0.55} ${r * 0.95} Q ${r * 0.98} ${r * 0.7} ${r * 0.98} ${r * 0.25} Q ${r * 0.6} ${r * 0.5} ${r * 0.3} ${r * 0.45} Q 0 ${r * 0.5} ${-r * 0.3} ${r * 0.35} Z`} fill={c.cabelo} stroke={LINHA} strokeWidth={5} strokeLinejoin="round" />}
       <Rosto expr={pose.expr ?? "neutro"} piscar={!!pose.piscar} r={r} v={v} c={cc} lagrima={pose.lagrima ?? 0} falando={!!pose.falando} />
+      {(pose.cansado ?? 0) > 0 && <g transform={`scale(${r / 78})`} opacity={pose.cansado}><path d="M 16 10 Q 26 18 36 10 M 48 8 Q 58 16 68 8" stroke="#6E4A5A" strokeWidth={5} fill="none" strokeLinecap="round" /></g>}
+      {pose.chocolate && <g transform={`scale(${r / 78})`}><path d="M 26 34 Q 46 30 66 36 Q 70 52 50 56 Q 30 56 26 34 Z" fill="#6B3E1F" opacity={0.85} /><circle cx={70} cy={30} r={5} fill="#6B3E1F" /></g>}
     </g>
   );
 };
@@ -442,6 +502,15 @@ const Camisa: React.FC<{ v: Visual; c: Cores; pose: PoseTeo }> = ({ v, c, pose }
           <rect x={20} y={y(-80)} width={18} height={22} rx={3} fill="#E8ECF0" stroke={LINHA} strokeWidth={4} />
         </g>
       )}
+      {v.terno && (
+        <g>
+          <path d={`M -40 30 L -42 ${y(-118)} Q -40 ${y(-158)} 2 ${y(-160)} Q 44 ${y(-158)} 44 ${y(-118)} L 42 30 Z`} fill={c.terno} stroke={LINHA} strokeWidth={7} strokeLinejoin="round" />
+          <path d={`M -6 ${y(-152)} L 16 ${y(-92)} L 34 ${y(-152)} Z`} fill={c.camisa} stroke={LINHA} strokeWidth={5} strokeLinejoin="round" />
+          <path d={`M 12 ${y(-146)} L 20 ${y(-146)} L 24 ${y(-100)} L 16 ${y(-90)} L 8 ${y(-100)} Z`} fill={v.gravata ?? "#E23B2E"} stroke={LINHA} strokeWidth={4} strokeLinejoin="round" />
+          <path d={`M -6 ${y(-152)} L 6 ${y(-112)} L -14 ${y(-120)} Z M 34 ${y(-152)} L 26 ${y(-112)} L 44 ${y(-122)} Z`} fill={escurece(c.terno ?? "#333333", 0.82)} stroke={LINHA} strokeWidth={4} strokeLinejoin="round" />
+          {v.brilho && <path d={`M -28 ${y(-120)} L -20 ${y(-60)} M 30 ${y(-100)} L 34 ${y(-40)}`} stroke="#FBFBF7" strokeWidth={6} strokeLinecap="round" opacity={0.7} />}
+        </g>
+      )}
       {v.vestido && <path d={`M -36 -10 L 38 -10 L 58 70 Q 2 84 -54 70 Z`} fill={v.vestido} stroke={LINHA} strokeWidth={7} strokeLinejoin="round" />}
       {pose.adesivo && <polygon points={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => { const rr = i % 2 ? 9 : 20; const a = rad(-90 + i * 36); return `${24 + Math.cos(a) * rr},${-96 * tr + Math.sin(a) * rr}`; }).join(" ")} fill="#FFD23F" stroke={LINHA} strokeWidth={4} strokeLinejoin="round" />}
       {v.fone && <path d={`M -30 ${y(-150)} Q 4 ${y(-122)} 40 ${y(-150)}`} stroke="#2A2A35" strokeWidth={12} fill="none" strokeLinecap="round" />}
@@ -457,7 +526,7 @@ export const Boneco: React.FC<{ pose: PoseTeo; esc?: number; v?: Visual }> = ({ 
   const cz = v.cinza ? CINZA : (x: string) => x;
   const c: Cores = {
     pele: cz(v.pele), peleL: cz(escurece(v.pele, 0.88)), camisa: cz(v.camisa), listra: v.listra && cz(v.listra), baixo: cz(v.corBaixo), baixoL: cz(escurece(v.corBaixo, 0.85)),
-    calcado: cz(v.calcado), cabelo: cz(v.corCabelo),
+    calcado: cz(v.calcado), cabelo: cz(v.corCabelo), terno: v.terno && cz(v.terno),
   };
   const vv: Visual = v.cinza ? { ...v, avental: v.avental && cz(v.avental), vestido: v.vestido && cz(v.vestido), bone: v.bone && cz(v.bone) } : v;
   const troncoT = `rotate(${torso.rot}) scale(${torso.scaleX} ${torso.scaleY})`;

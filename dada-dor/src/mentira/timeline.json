@@ -1,0 +1,2744 @@
+{
+ "duracao": 525.879,
+ "planos": [
+  {
+   "id": "c1_truco",
+   "cap": 1,
+   "inicio": 0.0,
+   "duracao": 5.719,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Tenho zap e sete.",
+     "inicio": 0.25,
+     "duracao": 0.969,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O balão sai da boca dele, fica cinza... e cai na mesa. Plóc.",
+     "inicio": 1.719,
+     "duracao": 3.636,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "dudu",
+     "emite": 0.25,
+     "fimFala": 1.219,
+     "queda": 4.919
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 4.919
+    },
+    {
+     "nome": "carta",
+     "em": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c1_viu",
+   "cap": 1,
+   "inicio": 6.169,
+   "duracao": 3.881,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Ninguém mais viu. Só você.",
+     "inicio": 0.25,
+     "duracao": 1.788,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Truco.",
+     "inicio": 2.638,
+     "duracao": 0.293,
+     "balao": "v"
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 2.638,
+     "fimFala": 2.931,
+     "sobe": 3.081
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "carta",
+     "em": 2.638
+    }
+   ]
+  },
+  {
+   "id": "c1_corro",
+   "cap": 1,
+   "inicio": 10.5,
+   "duracao": 4.948,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Corro.",
+     "inicio": 0.25,
+     "duracao": 0.353,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você vira as suas. Quatro de paus e um cinco. Nada.",
+     "inicio": 1.203,
+     "duracao": 3.394,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 0.25,
+     "fimFala": 0.603,
+     "sobe": 0.753
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 1.903
+    },
+    {
+     "nome": "carta",
+     "em": 1.523
+    }
+   ]
+  },
+  {
+   "id": "c1_grita",
+   "cap": 1,
+   "inicio": 15.898,
+   "duracao": 5.419,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Desde hoje de manhã, toda mentira que alguém te conta pesa e cai. A verdade flutua.",
+     "inicio": 0.25,
+     "duracao": 4.819,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "demoM",
+     "emite": 2.2,
+     "fimFala": 2.7,
+     "queda": 3.4
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "demoV",
+     "emite": 3.7,
+     "fimFala": 4.2,
+     "sobe": 4.3
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 3.4
+    },
+    {
+     "nome": "pop",
+     "em": 5.45
+    },
+    {
+     "nome": "torcida",
+     "em": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c1_montagem",
+   "cap": 1,
+   "inicio": 21.767,
+   "duracao": 5.8,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Funciona com qualquer pessoa. Amigo, estranho, gente no telefone, gente na televisão.",
+     "inicio": 0.25,
+     "duracao": 4.916,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "mae",
+     "emite": 0.3,
+     "fimFala": 0.8,
+     "queda": 1.5
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "tv",
+     "emite": 2.2,
+     "fimFala": 2.7,
+     "sobe": 3.2
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "celular",
+     "emite": 3.9,
+     "fimFala": 4.4,
+     "queda": 5.0
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 1.5
+    },
+    {
+     "nome": "pop",
+     "em": 4.35
+    },
+    {
+     "nome": "ploc",
+     "em": 5.0
+    }
+   ]
+  },
+  {
+   "id": "c1_futuro",
+   "cap": 1,
+   "inicio": 28.017,
+   "duracao": 9.706,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Até o fim do mês, você vai sentar numa sala com um delegado de verdade. E vai ouvir uma mentira pequena que pode machucar trinta pessoas. E aí a brincadeira acaba.",
+     "inicio": 0.25,
+     "duracao": 8.806,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c1_moedas",
+   "cap": 1,
+   "inicio": 38.173,
+   "duracao": 5.061,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Mas agora, você acabou de ganhar doze reais em moeda e o último pedaço da pizza.",
+     "inicio": 0.25,
+     "duracao": 4.461,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c1_livia",
+   "cap": 1,
+   "inicio": 43.684,
+   "duracao": 5.437,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "livia",
+     "texto": "Eu não peguei seu controle.",
+     "inicio": 0.25,
+     "duracao": 1.284,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. O controle está grudento. É suco de uva.",
+     "inicio": 2.134,
+     "duracao": 2.953,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "livia",
+     "emite": 0.25,
+     "fimFala": 1.534,
+     "queda": 2.134
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 2.134
+    }
+   ]
+  },
+  {
+   "id": "c1_titulo",
+   "cap": 1,
+   "inicio": 49.971,
+   "duracao": 5.0,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Já imaginou se você pudesse ver quem está mentindo pra você?",
+     "inicio": 0.25,
+     "duracao": 3.328,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "sino",
+     "em": 0.1
+    }
+   ]
+  },
+  {
+   "id": "c2_moeda",
+   "cap": 2,
+   "inicio": 55.421,
+   "duracao": 6.467,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Uma pessoa comum acerta se alguém está mentindo em 54% das vezes. Isso é quase jogar moeda.",
+     "inicio": 0.25,
+     "duracao": 5.867,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "moeda",
+     "em": 5.29
+    }
+   ]
+  },
+  {
+   "id": "c2_juiz",
+   "cap": 2,
+   "inicio": 62.338,
+   "duracao": 3.377,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Policial e juiz? Um pouquinho melhor que moeda.",
+     "inicio": 0.25,
+     "duracao": 2.777,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c2_pistas",
+   "cap": 2,
+   "inicio": 66.164,
+   "duracao": 6.36,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "As pessoas procuram olho fugindo, mão suada, perna balançando. Essas pistas estão quase todas erradas.",
+     "inicio": 0.25,
+     "duracao": 5.76,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c2_poligrafo",
+   "cap": 2,
+   "inicio": 72.974,
+   "duracao": 7.8,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Até o detector de mentiras só mede suor, coração e respiração. Gente honesta e nervosa reprova. Mentiroso calmo passa.",
+     "inicio": 0.25,
+     "duracao": 7.031,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "vendedor",
+     "emite": 6.0,
+     "fimFala": 6.5,
+     "queda": 7.0
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 7.0
+    }
+   ]
+  },
+  {
+   "id": "c2_balao",
+   "cap": 2,
+   "inicio": 81.224,
+   "duracao": 5.106,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você não precisa de pista. Você olha pro balão. Cem por cento. Toda vez.",
+     "inicio": 0.25,
+     "duracao": 4.506,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "vizinho",
+     "emite": 0.3,
+     "fimFala": 0.8,
+     "queda": 1.9
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 1.9
+    }
+   ]
+  },
+  {
+   "id": "c2_relogio",
+   "cap": 2,
+   "inicio": 86.78,
+   "duracao": 7.3,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E tem muito balão pra olhar. Uma pessoa comum conta uma ou duas mentiras por dia. Tem gente que conta bem mais.",
+     "inicio": 0.25,
+     "duracao": 6.201,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r1",
+     "emite": 1.6,
+     "fimFala": 2.1,
+     "queda": 2.4
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r2",
+     "emite": 3.1,
+     "fimFala": 3.6,
+     "queda": 3.9
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r3",
+     "emite": 4.6,
+     "fimFala": 5.1,
+     "queda": 5.2
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r4",
+     "emite": 5.2,
+     "fimFala": 5.7,
+     "queda": 5.7
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r5",
+     "emite": 5.6,
+     "fimFala": 6.1,
+     "queda": 6.1
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "r6",
+     "emite": 6.0,
+     "fimFala": 6.5,
+     "queda": 6.5
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 2.4
+    },
+    {
+     "nome": "ploc",
+     "em": 3.9
+    },
+    {
+     "nome": "ploc",
+     "em": 5.2
+    },
+    {
+     "nome": "ploc",
+     "em": 5.7
+    },
+    {
+     "nome": "ploc",
+     "em": 6.1
+    },
+    {
+     "nome": "ploc",
+     "em": 6.5
+    }
+   ]
+  },
+  {
+   "id": "c2_maos",
+   "cap": 2,
+   "inicio": 94.53,
+   "duracao": 3.0,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E você está prestes a descobrir todas.",
+     "inicio": 0.25,
+     "duracao": 2.0,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c3_eununca",
+   "cap": 3,
+   "inicio": 97.98,
+   "duracao": 10.939,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você começa pequeno. Eu nunca, na casa do Dudu.",
+     "inicio": 0.25,
+     "duracao": 2.764,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "menina",
+     "texto": "Eu nunca gostei de ninguém dessa sala.",
+     "inicio": 3.414,
+     "duracao": 1.994,
+     "balao": "v"
+    },
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Nem eu.",
+     "inicio": 5.708,
+     "duracao": 0.492,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. A sala inteira vira pra ele. Ele te acerta com uma almofada.",
+     "inicio": 6.7,
+     "duracao": 3.889,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "menina",
+     "emite": 3.414,
+     "fimFala": 5.408,
+     "sobe": 5.558
+    },
+    {
+     "fala": 2,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "dudu",
+     "emite": 5.708,
+     "fimFala": 6.2,
+     "queda": 6.7
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 6.708
+    },
+    {
+     "nome": "ploc",
+     "em": 6.7
+    },
+    {
+     "nome": "almofada",
+     "em": 10.22
+    }
+   ]
+  },
+  {
+   "id": "c3_online",
+   "cap": 3,
+   "inicio": 109.369,
+   "duracao": 13.346,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Depois, o jogo online. Oito jogadores, um é o traidor, e todo mundo tem que descobrir quem.",
+     "inicio": 0.25,
+     "duracao": 5.418,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "jogador",
+     "texto": "Eu tava consertando o motor, juro.",
+     "inicio": 6.069,
+     "duracao": 1.777,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. Você ganha trinta partidas seguidas. Três jogadores te denunciam por hack.",
+     "inicio": 8.345,
+     "duracao": 4.651,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "jogador",
+     "emite": 6.069,
+     "fimFala": 7.846,
+     "queda": 8.345
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 8.345
+    }
+   ]
+  },
+  {
+   "id": "c3_feira",
+   "cap": 3,
+   "inicio": 123.165,
+   "duracao": 8.113,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "marta",
+     "texto": "Manga docinha, colhida hoje, pode levar sem medo.",
+     "inicio": 0.25,
+     "duracao": 2.974,
+     "balao": "mmm"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. Plóc. Plóc. O chão da barraca some embaixo dos balões.",
+     "inicio": 3.624,
+     "duracao": 4.139,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 3,
+     "tipo": "m",
+     "rotulo": "marta",
+     "emite": 0.25,
+     "fimFala": 1.241,
+     "queda": 3.624
+    },
+    {
+     "fala": 0,
+     "k": 1,
+     "n": 3,
+     "tipo": "m",
+     "rotulo": "marta",
+     "emite": 1.241,
+     "fimFala": 2.233,
+     "queda": 4.164
+    },
+    {
+     "fala": 0,
+     "k": 2,
+     "n": 3,
+     "tipo": "m",
+     "rotulo": "marta",
+     "emite": 2.233,
+     "fimFala": 3.224,
+     "queda": 4.804
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 3.624
+    },
+    {
+     "nome": "ploc",
+     "em": 4.164
+    },
+    {
+     "nome": "ploc",
+     "em": 4.804
+    }
+   ]
+  },
+  {
+   "id": "c3_detras",
+   "cap": 3,
+   "inicio": 131.728,
+   "duracao": 7.245,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "E aquela ali de trás?",
+     "inicio": 0.25,
+     "duracao": 1.162,
+     "balao": "v"
+    },
+    {
+     "voz": "B",
+     "personagem": "marta",
+     "texto": "...Aquela é de hoje.",
+     "inicio": 2.112,
+     "duracao": 0.903,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua. Você sai com a manga boa e a Dona Marta te olhando torto.",
+     "inicio": 3.315,
+     "duracao": 3.58,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 0.25,
+     "fimFala": 1.412,
+     "sobe": 1.562
+    },
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "marta",
+     "emite": 2.112,
+     "fimFala": 3.015,
+     "sobe": 3.315
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 2.712
+    },
+    {
+     "nome": "pop",
+     "em": 4.465
+    }
+   ]
+  },
+  {
+   "id": "c3_carro",
+   "cap": 3,
+   "inicio": 139.423,
+   "duracao": 8.053,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí o seu pai precisa de um carro.",
+     "inicio": 0.25,
+     "duracao": 1.657,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "vendedor",
+     "texto": "Esse aqui nunca bateu.",
+     "inicio": 2.307,
+     "duracao": 1.171,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 3.778,
+     "duracao": 0.375,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "vendedor",
+     "texto": "Esse é o menor preço que eu consigo.",
+     "inicio": 4.453,
+     "duracao": 1.597,
+     "balao": "mM"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. Plóc grande.",
+     "inicio": 6.35,
+     "duracao": 1.353,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "vendedor",
+     "emite": 2.307,
+     "fimFala": 3.478,
+     "queda": 3.898
+    },
+    {
+     "fala": 3,
+     "k": 0,
+     "n": 2,
+     "tipo": "m",
+     "rotulo": "vendedor",
+     "emite": 4.453,
+     "fimFala": 5.252,
+     "queda": 6.35
+    },
+    {
+     "fala": 3,
+     "k": 1,
+     "n": 2,
+     "tipo": "M",
+     "rotulo": "vendedor",
+     "emite": 5.252,
+     "fimFala": 6.05,
+     "queda": 6.89
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 3.898
+    },
+    {
+     "nome": "ploc",
+     "em": 6.35
+    },
+    {
+     "nome": "ploc",
+     "em": 6.89
+    }
+   ]
+  },
+  {
+   "id": "c3_embaixo",
+   "cap": 3,
+   "inicio": 147.926,
+   "duracao": 4.999,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você cochicha. Seu pai olha embaixo. Tinta fresca em cima de um amassado.",
+     "inicio": 0.25,
+     "duracao": 4.399,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c3_preco",
+   "cap": 3,
+   "inicio": 153.375,
+   "duracao": 4.332,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O vendedor baixa cinco mil. Seu pai te compra um açaí na volta.",
+     "inicio": 0.25,
+     "duracao": 3.732,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c3_campinho",
+   "cap": 3,
+   "inicio": 158.157,
+   "duracao": 7.547,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Campinho. Três contra três. Vinte reais por time.",
+     "inicio": 0.25,
+     "duracao": 3.286,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "adversario",
+     "texto": "Foi fora. Bateu no seu pé.",
+     "inicio": 4.036,
+     "duracao": 2.29,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 6.627,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "adversario",
+     "emite": 4.036,
+     "fimFala": 6.326,
+     "queda": 6.747
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 6.747
+    }
+   ]
+  },
+  {
+   "id": "c3_aponta",
+   "cap": 3,
+   "inicio": 166.154,
+   "duracao": 8.906,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você não discute. Sorri e aponta pro chão. Ele te devolve a bola. No jogo seguinte, ninguém naquele campinho tenta roubar nada de você.",
+     "inicio": 0.25,
+     "duracao": 7.906,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c4_video",
+   "cap": 4,
+   "inicio": 175.51,
+   "duracao": 10.089,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí alguém posta um vídeo. Você apontando pra um cara na TV e dizendo:",
+     "inicio": 0.25,
+     "duracao": 4.004,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Ele tá mentindo.",
+     "inicio": 4.554,
+     "duracao": 0.935,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Dois dias depois, sai que ele estava. Cinco milhões de views.",
+     "inicio": 6.089,
+     "duracao": 3.65,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 4.554,
+     "fimFala": 5.489,
+     "sobe": 5.639
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "tv1",
+     "emite": 0.6,
+     "fimFala": 1.1,
+     "queda": 1.7
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "tv2",
+     "emite": 2.3,
+     "fimFala": 2.8,
+     "queda": 3.4
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 6.789
+    },
+    {
+     "nome": "ploc",
+     "em": 1.7
+    },
+    {
+     "nome": "ploc",
+     "em": 3.4
+    },
+    {
+     "nome": "plim",
+     "em": 9.149
+    }
+   ]
+  },
+  {
+   "id": "c4_cartela",
+   "cap": 4,
+   "inicio": 186.049,
+   "duracao": 3.6,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Começam a te chamar de o menino que vê mentira.",
+     "inicio": 0.25,
+     "duracao": 2.298,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c4_clube",
+   "cap": 4,
+   "inicio": 190.099,
+   "duracao": 10.763,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Um clube de futebol liga. Vão contratar um atacante por cinquenta milhões. Querem você na sala.",
+     "inicio": 0.25,
+     "duracao": 5.256,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "atacante",
+     "texto": "Meu joelho tá cem por cento. Nunca estive melhor.",
+     "inicio": 6.006,
+     "duracao": 3.537,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 9.843,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "atacante",
+     "emite": 6.006,
+     "fimFala": 9.543,
+     "queda": 9.963
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 9.963
+    }
+   ]
+  },
+  {
+   "id": "c4_medico",
+   "cap": 4,
+   "inicio": 201.312,
+   "duracao": 7.839,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O médico do clube examina de novo. Um rompimento que ninguém tinha visto. Não contratam. O clube te manda uma camisa com o seu nome.",
+     "inicio": 0.25,
+     "duracao": 7.239,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c4_fama",
+   "cap": 4,
+   "inicio": 209.601,
+   "duracao": 15.164,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Depois disso, todo mundo quer você. Uma empresa oferece um salário pra você só sentar nas reuniões. Um programa de auditório quer você de jurado.",
+     "inicio": 0.25,
+     "duracao": 8.041,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "reporter",
+     "texto": "Você consegue saber quando a sua mãe mente?",
+     "inicio": 8.691,
+     "duracao": 2.19,
+     "balao": "v"
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Toda vez.",
+     "inicio": 11.181,
+     "duracao": 0.694,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Em algum lugar, a sua mãe fica muito quieta.",
+     "inicio": 12.475,
+     "duracao": 2.339,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "reporter",
+     "emite": 8.691,
+     "fimFala": 10.881,
+     "sobe": 11.031
+    },
+    {
+     "fala": 2,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 11.181,
+     "fimFala": 11.875,
+     "sobe": 12.025
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 12.181
+    },
+    {
+     "nome": "pop",
+     "em": 13.175
+    }
+   ]
+  },
+  {
+   "id": "c4_convite",
+   "cap": 4,
+   "inicio": 225.215,
+   "duracao": 10.768,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí chega um convite. O maior blefador de truco do país quer jogar contra você ao vivo. Sem dinheiro, você é criança. Mas quem ganha escolhe uma instituição, e ela recebe cem mil.",
+     "inicio": 0.25,
+     "duracao": 10.168,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c4_blefe",
+   "cap": 4,
+   "inicio": 236.434,
+   "duracao": 9.856,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "campeao",
+     "texto": "Não tô blefando.",
+     "inicio": 0.25,
+     "duracao": 1.074,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 1.624,
+     "duracao": 0.375,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Eu também não.",
+     "inicio": 2.599,
+     "duracao": 0.793,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua. Você não está mesmo. Você vira zap, sete e ás. Dois milhões de pessoas assistindo.",
+     "inicio": 3.691,
+     "duracao": 5.814,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "campeao",
+     "emite": 0.25,
+     "fimFala": 1.324,
+     "queda": 1.744
+    },
+    {
+     "fala": 2,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 2.599,
+     "fimFala": 3.392,
+     "sobe": 3.691
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 1.744
+    },
+    {
+     "nome": "pop",
+     "em": 4.841
+    },
+    {
+     "nome": "carta",
+     "em": 5.991
+    },
+    {
+     "nome": "torcida",
+     "em": 8.791
+    }
+   ]
+  },
+  {
+   "id": "c4_campeao",
+   "cap": 4,
+   "inicio": 246.74,
+   "duracao": 4.025,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "campeao",
+     "texto": "Moleque, nunca me leram desse jeito na vida.",
+     "inicio": 0.25,
+     "duracao": 2.825,
+     "balao": "v"
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "campeao",
+     "emite": 0.25,
+     "fimFala": 3.075,
+     "sobe": 3.225
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_cientistas",
+   "cap": 4,
+   "inicio": 251.215,
+   "duracao": 14.438,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí vêm os cientistas. Te colocam numa sala branca com duzentos vídeos. Metade mente, metade fala a verdade. Você acerta os duzentos. Acertar isso na sorte é tirar cara duzentas vezes seguidas. A chance tem sessenta zeros.",
+     "inicio": 0.25,
+     "duracao": 13.438,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c5_delegacia",
+   "cap": 5,
+   "inicio": 266.103,
+   "duracao": 14.974,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A polícia fica sabendo. Um delegado pergunta se você senta numa entrevista. Sua mãe vai junto.",
+     "inicio": 0.25,
+     "duracao": 5.429,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "suspeito",
+     "texto": "Eu tava em casa a noite inteira.",
+     "inicio": 6.279,
+     "duracao": 1.67,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 8.249,
+     "duracao": 0.375,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "suspeito",
+     "texto": "Nunca pisei naquele galpão da Dutra.",
+     "inicio": 9.024,
+     "duracao": 1.941,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 11.265,
+     "duracao": 0.375,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "suspeito",
+     "texto": "Quero um advogado.",
+     "inicio": 12.14,
+     "duracao": 1.001,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua. Justo.",
+     "inicio": 13.44,
+     "duracao": 1.183,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "suspeito",
+     "emite": 6.279,
+     "fimFala": 7.949,
+     "queda": 8.369
+    },
+    {
+     "fala": 3,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "suspeito",
+     "emite": 9.024,
+     "fimFala": 10.965,
+     "queda": 11.385
+    },
+    {
+     "fala": 5,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "suspeito",
+     "emite": 12.14,
+     "fimFala": 13.141,
+     "sobe": 13.44
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 8.369
+    },
+    {
+     "nome": "ploc",
+     "em": 11.385
+    },
+    {
+     "nome": "pop",
+     "em": 14.59
+    }
+   ]
+  },
+  {
+   "id": "c5_galpao",
+   "cap": 5,
+   "inicio": 281.526,
+   "duracao": 4.363,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "No dia seguinte, o delegado acha o carro roubado no galpão da Dutra.",
+     "inicio": 0.25,
+     "duracao": 3.763,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c5_audio",
+   "cap": 5,
+   "inicio": 286.339,
+   "duracao": 18.412,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E às vezes isso salva gente. O celular da sua avó apita.",
+     "inicio": 0.25,
+     "duracao": 3.511,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "audio",
+     "texto": "Vó, sou eu, troquei de número. Tô numa enrascada, preciso de dois mil agora. Não conta pra mãe.",
+     "inicio": 4.161,
+     "duracao": 6.851,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A voz é igualzinha a do seu primo. Tem golpista que copia voz com computador. Mas o balão sai do celular... e cai.",
+     "inicio": 11.512,
+     "duracao": 6.418,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "audio",
+     "emite": 4.161,
+     "fimFala": 11.012,
+     "queda": 17.612
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 17.612
+    },
+    {
+     "nome": "plim",
+     "em": 3.33
+    }
+   ]
+  },
+  {
+   "id": "c5_cachorro",
+   "cap": 5,
+   "inicio": 305.201,
+   "duracao": 7.295,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Qual é o nome do meu cachorro?",
+     "inicio": 0.25,
+     "duracao": 1.468,
+     "balao": null
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Visto. Bloqueado. Esse golpe pega milhares de avós por ano. A sua, não.",
+     "inicio": 2.218,
+     "duracao": 4.727,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c5_bike",
+   "cap": 5,
+   "inicio": 312.946,
+   "duracao": 7.098,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí o Dudu cai da bike na ladeira. Levanta rindo.",
+     "inicio": 0.25,
+     "duracao": 2.9,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Tô bem. Nem bati a cabeça.",
+     "inicio": 3.55,
+     "duracao": 2.328,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 6.178,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "dudu",
+     "emite": 3.55,
+     "fimFala": 5.878,
+     "queda": 6.298
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 6.298
+    },
+    {
+     "nome": "queda",
+     "em": 1.57
+    }
+   ]
+  },
+  {
+   "id": "c5_guia",
+   "cap": 5,
+   "inicio": 320.494,
+   "duracao": 8.646,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você faz ele sentar e liga pra mãe dele. Pancada na cabeça pode parecer nada e piorar horas depois.",
+     "inicio": 0.25,
+     "duracao": 5.423,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "Vocês chegaram a tempo.",
+     "inicio": 6.373,
+     "duracao": 1.323,
+     "balao": "v"
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "helena",
+     "emite": 6.373,
+     "fimFala": 7.696,
+     "sobe": 7.846
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_blusa",
+   "cap": 6,
+   "inicio": 329.59,
+   "duracao": 10.071,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Mas tem uma coisa que ninguém te conta. A maioria das mentiras não é má. A maioria é gentil.",
+     "inicio": 0.25,
+     "duracao": 5.019,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Adorei a blusa, vó.",
+     "inicio": 5.769,
+     "duracao": 1.403,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. Esse balão saiu da sua boca.",
+     "inicio": 7.572,
+     "duracao": 2.149,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "teo",
+     "emite": 5.769,
+     "fimFala": 7.172,
+     "queda": 7.572
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 7.572
+    }
+   ]
+  },
+  {
+   "id": "c6_rose",
+   "cap": 6,
+   "inicio": 340.11,
+   "duracao": 2.764,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "rose",
+     "texto": "Tô bem, filho.",
+     "inicio": 0.25,
+     "duracao": 1.089,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 1.739,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "rose",
+     "emite": 0.25,
+     "fimFala": 1.339,
+     "queda": 1.859
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 1.859
+    }
+   ]
+  },
+  {
+   "id": "c6_violao",
+   "cap": 6,
+   "inicio": 343.324,
+   "duracao": 6.318,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Fala a verdade. Ficou boa?",
+     "inicio": 0.25,
+     "duracao": 2.321,
+     "balao": "v"
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Ficou.",
+     "inicio": 3.171,
+     "duracao": 0.383,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. E ele vê a sua cara.",
+     "inicio": 3.955,
+     "duracao": 1.713,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 0.25,
+     "fimFala": 2.571,
+     "sobe": 2.721
+    },
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "teo",
+     "emite": 3.171,
+     "fimFala": 3.554,
+     "queda": 3.955
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 3.871
+    },
+    {
+     "nome": "ploc",
+     "em": 3.955
+    }
+   ]
+  },
+  {
+   "id": "c6_conviver",
+   "cap": 6,
+   "inicio": 350.092,
+   "duracao": 6.897,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Os cientistas acham que mentira pequena e gentil é o que faz as pessoas conviverem. Sem ela, tudo fica com quina.",
+     "inicio": 0.25,
+     "duracao": 6.297,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "painel",
+     "emite": 1.2,
+     "fimFala": 1.7,
+     "queda": 2.4
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 2.4
+    }
+   ]
+  },
+  {
+   "id": "c6_crianca",
+   "cap": 6,
+   "inicio": 357.439,
+   "duracao": 9.996,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Criança começa a mentir com uns dois, três anos. É sinal de que o cérebro está crescendo. Todo mundo faz. Todo mundo. Só que agora você não consegue fingir que não viu.",
+     "inicio": 0.25,
+     "duracao": 9.396,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "crianca",
+     "emite": 0.4,
+     "fimFala": 0.9,
+     "queda": 1.6
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 1.6
+    }
+   ]
+  },
+  {
+   "id": "c6_segredo",
+   "cap": 6,
+   "inicio": 367.885,
+   "duracao": 9.891,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí vem a pior de todas. Você contou um segredo pro Dudu. Uma coisa que ninguém mais sabe.",
+     "inicio": 0.25,
+     "duracao": 5.014,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Eu não contei pra ninguém. Prometo.",
+     "inicio": 5.864,
+     "duracao": 2.503,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 8.767,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "dudu",
+     "emite": 5.864,
+     "fimFala": 8.367,
+     "queda": 8.887
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 8.887
+    }
+   ]
+  },
+  {
+   "id": "c6_sai",
+   "cap": 6,
+   "inicio": 378.226,
+   "duracao": 6.853,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você não fala nada. Não precisa. Ele sabe que você sabe. Vocês ficam duas semanas sem se falar.",
+     "inicio": 0.25,
+     "duracao": 5.853,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c6_esquecem",
+   "cap": 6,
+   "inicio": 385.529,
+   "duracao": 12.839,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E quem você pega não esquece. O vendedor te dá uma estrela no seu próprio vídeo. A Dona Marta conta pra feira inteira que você rouba no truco. Seus amigos começam a mandar mensagem em vez de falar, porque só funciona com voz.",
+     "inicio": 0.25,
+     "duracao": 12.239,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "marta1",
+     "emite": 6.4,
+     "fimFala": 6.9,
+     "queda": 7.2
+    },
+    {
+     "fala": null,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "marta2",
+     "emite": 7.0,
+     "fimFala": 7.5,
+     "queda": 7.7
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 7.2
+    },
+    {
+     "nome": "ploc",
+     "em": 7.7
+    }
+   ]
+  },
+  {
+   "id": "c6_festa",
+   "cap": 6,
+   "inicio": 398.819,
+   "duracao": 8.519,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "jorge",
+     "texto": "Esse ano a gente não planejou nada, filho.",
+     "inicio": 0.25,
+     "duracao": 2.578,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc. Você entra na festa surpresa e tem que fingir surpresa. Você é um péssimo ator.",
+     "inicio": 3.228,
+     "duracao": 4.941,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "jorge",
+     "emite": 0.25,
+     "fimFala": 2.828,
+     "queda": 3.228
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 3.228
+    },
+    {
+     "nome": "surpresa",
+     "em": 4.768
+    }
+   ]
+  },
+  {
+   "id": "c6_noite",
+   "cap": 6,
+   "inicio": 407.787,
+   "duracao": 7.495,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "jorge",
+     "texto": "Vai ficar tudo bem.",
+     "inicio": 0.25,
+     "duracao": 1.089,
+     "balao": "?"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você fecha os olhos pra não ver o balão. Porque tem noite que você quer muito acreditar.",
+     "inicio": 1.939,
+     "duracao": 4.405,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "?",
+     "rotulo": "jorge",
+     "emite": 0.25,
+     "fimFala": 1.339
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_laje",
+   "cap": 7,
+   "inicio": 415.732,
+   "duracao": 10.193,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Três meses depois. Réveillon na casa do Tio Beto. Trinta pessoas na laje pra ver os fogos. Sua irmã na beirada, de branco, pela primeira vez acordada até meia-noite.",
+     "inicio": 0.25,
+     "duracao": 9.593,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "musica",
+     "em": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c7_portao",
+   "cap": 7,
+   "inicio": 426.375,
+   "duracao": 9.228,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "vizinho",
+     "texto": "Beto, essa laje aguenta esse povo todo?",
+     "inicio": 0.25,
+     "duracao": 2.133,
+     "balao": "v"
+    },
+    {
+     "voz": "B",
+     "personagem": "beto",
+     "texto": "Aguenta! Eu mesmo fiz. Ferro dobrado, tudo certinho.",
+     "inicio": 2.783,
+     "duracao": 5.025,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 8.308,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "vizinho",
+     "emite": 0.25,
+     "fimFala": 2.383,
+     "sobe": 2.533
+    },
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "beto",
+     "emite": 2.783,
+     "fimFala": 7.808,
+     "queda": 8.428
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 3.683
+    },
+    {
+     "nome": "ploc",
+     "em": 8.428
+    },
+    {
+     "nome": "estalo",
+     "em": 8.308
+    }
+   ]
+  },
+  {
+   "id": "c7_racha",
+   "cap": 7,
+   "inicio": 436.053,
+   "duracao": 2.66,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Seu estômago cai junto com o balão.",
+     "inicio": 0.25,
+     "duracao": 1.76,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": []
+  },
+  {
+   "id": "c7_dez",
+   "cap": 7,
+   "inicio": 439.163,
+   "duracao": 13.785,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Dez segundos pra meia-noite. Ninguém mais viu. Ninguém vai acreditar numa criança. Se você estiver errado, estraga o Réveillon de trinta pessoas e vira piada do bairro pelo resto da vida. Se você estiver certo e não fizer nada...",
+     "inicio": 0.25,
+     "duracao": 12.685,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "tique",
+     "em": 0.25
+    },
+    {
+     "nome": "tique",
+     "em": 1.25
+    }
+   ]
+  },
+  {
+   "id": "c7_braco",
+   "cap": 7,
+   "inicio": 453.398,
+   "duracao": 3.579,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "jorge",
+     "texto": "Ei, aonde você vai?",
+     "inicio": 0.25,
+     "duracao": 1.474,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sem tempo pra explicar.",
+     "inicio": 2.024,
+     "duracao": 1.205,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "jorge",
+     "emite": 0.25,
+     "fimFala": 1.724,
+     "sobe": 1.874
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 3.024
+    },
+    {
+     "nome": "tique",
+     "em": 0.0
+    },
+    {
+     "nome": "tique",
+     "em": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c7_sobe",
+   "cap": 7,
+   "inicio": 457.427,
+   "duracao": 5.842,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "DESCE TODO MUNDO! AGORA!",
+     "inicio": 2.4,
+     "duracao": 2.492,
+     "balao": "v"
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 2.4,
+     "fimFala": 4.892,
+     "sobe": 5.042
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "tique",
+     "em": 0.0
+    },
+    {
+     "nome": "tique",
+     "em": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c7_silencio",
+   "cap": 7,
+   "inicio": 463.719,
+   "duracao": 8.071,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Ninguém se mexe. Você desliga a caixa de som. Silêncio.",
+     "inicio": 0.25,
+     "duracao": 3.736,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Tio, você fez a laje certinha?",
+     "inicio": 4.986,
+     "duracao": 2.135,
+     "balao": "v"
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "teo",
+     "emite": 4.986,
+     "fimFala": 7.121,
+     "sobe": 7.271
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "tique",
+     "em": 0.0
+    },
+    {
+     "nome": "tique",
+     "em": 6.921
+    },
+    {
+     "nome": "corta_musica",
+     "em": 1.92
+    }
+   ]
+  },
+  {
+   "id": "c7_confessa",
+   "cap": 7,
+   "inicio": 472.84,
+   "duracao": 5.155,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "beto",
+     "texto": "...Não. Faltou ferro. Eu ia terminar.",
+     "inicio": 0.25,
+     "duracao": 3.684,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua.",
+     "inicio": 4.334,
+     "duracao": 0.47,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "beto",
+     "emite": 0.25,
+     "fimFala": 3.934,
+     "sobe": 4.334
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "tique",
+     "em": 0.0
+    }
+   ]
+  },
+  {
+   "id": "c7_fogos",
+   "cap": 7,
+   "inicio": 478.444,
+   "duracao": 9.007,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Trinta pessoas descem resmungando. Meia-noite. Os fogos estouram em cima de um quintal lotado e de uma laje vazia. E a laje estala.",
+     "inicio": 0.25,
+     "duracao": 7.607,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "tique",
+     "em": 3.154
+    },
+    {
+     "nome": "fogos",
+     "em": 4.053
+    },
+    {
+     "nome": "estalo",
+     "em": 7.61
+    }
+   ]
+  },
+  {
+   "id": "c7_fake",
+   "cap": 7,
+   "inicio": 487.902,
+   "duracao": 7.573,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "De manhã, o vídeo de você gritando na laje tem vinte milhões de views. Por exatamente uma hora, os comentários dizem que é fake.",
+     "inicio": 0.25,
+     "duracao": 6.973,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "plim",
+     "em": 3.65
+    }
+   ]
+  },
+  {
+   "id": "c7_salvou",
+   "cap": 7,
+   "inicio": 495.924,
+   "duracao": 4.459,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "beto",
+     "texto": "Você salvou trinta pessoas ontem, moleque.",
+     "inicio": 0.25,
+     "duracao": 2.489,
+     "balao": "v"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua.",
+     "inicio": 3.139,
+     "duracao": 0.47,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 1,
+     "tipo": "v",
+     "rotulo": "beto",
+     "emite": 0.25,
+     "fimFala": 2.739,
+     "sobe": 3.139
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 4.289
+    }
+   ]
+  },
+  {
+   "id": "c8_dudu",
+   "cap": 8,
+   "inicio": 500.834,
+   "duracao": 6.165,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Desculpa. Eu nunca mais vou mentir pra você.",
+     "inicio": 0.25,
+     "duracao": 3.185,
+     "balao": "vvvv"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Flutua. Cada palavra.",
+     "inicio": 3.935,
+     "duracao": 1.48,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 0,
+     "k": 0,
+     "n": 4,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 0.25,
+     "fimFala": 1.046,
+     "sobe": 1.196
+    },
+    {
+     "fala": 0,
+     "k": 1,
+     "n": 4,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 1.046,
+     "fimFala": 1.843,
+     "sobe": 1.993
+    },
+    {
+     "fala": 0,
+     "k": 2,
+     "n": 4,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 1.843,
+     "fimFala": 2.639,
+     "sobe": 2.789
+    },
+    {
+     "fala": 0,
+     "k": 3,
+     "n": 4,
+     "tipo": "v",
+     "rotulo": "dudu",
+     "emite": 2.639,
+     "fimFala": 3.435,
+     "sobe": 3.935
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pop",
+     "em": 2.346
+    },
+    {
+     "nome": "pop",
+     "em": 3.143
+    },
+    {
+     "nome": "pop",
+     "em": 3.939
+    },
+    {
+     "nome": "pop",
+     "em": 5.085
+    }
+   ]
+  },
+  {
+   "id": "c8_quarto",
+   "cap": 8,
+   "inicio": 507.449,
+   "duracao": 10.28,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela noite, sozinho no quarto, você fala em voz alta, pra ninguém:",
+     "inicio": 0.25,
+     "duracao": 3.613,
+     "balao": null
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Eu queria que isso parasse.",
+     "inicio": 4.463,
+     "duracao": 1.492,
+     "balao": "m"
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Plóc.",
+     "inicio": 7.355,
+     "duracao": 0.375,
+     "balao": null
+    }
+   ],
+   "baloes": [
+    {
+     "fala": 1,
+     "k": 0,
+     "n": 1,
+     "tipo": "m",
+     "rotulo": "teo",
+     "emite": 4.463,
+     "fimFala": 5.955,
+     "queda": 7.475
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ploc",
+     "em": 7.475
+    }
+   ]
+  },
+  {
+   "id": "c8_final",
+   "cap": 8,
+   "inicio": 518.179,
+   "duracao": 7.5,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Você ia querer ver toda mentira?",
+     "inicio": 0.25,
+     "duracao": 1.991,
+     "balao": null
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Conta nos comentários. E se você também teria subido naquela laje, se inscreve.",
+     "inicio": 2.841,
+     "duracao": 4.22,
+     "balao": null
+    }
+   ],
+   "baloes": [],
+   "sfx": [
+    {
+     "nome": "sino",
+     "em": 0.1
+    }
+   ]
+  }
+ ]
+}

@@ -21,3 +21,10 @@ teo/_*
 teo/falas/
 teo/sfx/
 teo/eleven/norm/
+
+# trabalho intermediário do vídeo da mentira (o áudio final vai em mp3)
+mentira/_*
+mentira/falas/
+mentira/sfx/
+mentira/eleven/norm/
+public/mentira/audio.wav

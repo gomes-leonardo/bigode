@@ -3,7 +3,9 @@ Uso: .venv/bin/python teo/stills.py c1_noite:1.0 c1_quina:3.6 ... [--saida grade
 import json, os, subprocess as sp, sys
 args = [a for a in sys.argv[1:] if not a.startswith("--")]
 saida = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--saida=")), "/tmp/claude-0/-home-user-bigode/dfee3a3f-5c88-514e-9270-06ac83a27a69/scratchpad/teo/grade.png")
-tl = json.load(open("src/teo/timeline.json"))
+comp = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--comp=")), "VideoTeo")
+tlp = next((a.split("=", 1)[1] for a in sys.argv[1:] if a.startswith("--tl=")), "src/teo/timeline.json")
+tl = json.load(open(tlp))
 ini = {p["id"]: p["inicio"] for p in tl["planos"]}
 quadros = []
 for a in args:
@@ -13,7 +15,7 @@ d = os.path.dirname(saida)
 os.makedirs(d, exist_ok=True)
 lo, hi = min(quadros), max(quadros)
 vid = f"{d}/_trecho.mp4"
-sp.run(["npx", "remotion", "render", "VideoTeo", vid, f"--frames={lo}-{hi}", "--scale=0.4", "--concurrency=4", "--log=error", "--muted", "--overwrite"], check=True)
+sp.run(["npx", "remotion", "render", comp, vid, f"--frames={lo}-{hi}", "--scale=0.4", "--concurrency=4", "--log=error", "--muted", "--overwrite"], check=True)
 imgs = []
 for i, q in enumerate(quadros):
     out = f"{d}/_q{i}.png"

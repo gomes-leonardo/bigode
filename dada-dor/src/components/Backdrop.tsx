@@ -90,7 +90,7 @@ export const Backdrop: React.FC<{ nome: NomeBackdrop; camera: Camera; zoom?: [nu
   const dx = camera === "drift" ? interpolate(t, [0, 1], [20, -20]) : 0;
   // 1.06 de margem fixa (o blur escurece as bordas) x o zoom pedido pela cena
   const s = zoom ? 1.06 * interpolate(t, [0, 1], zoom) : camera === "pushIn" ? interpolate(t, [0, 1], [1.08, 1.11]) : 1.08;
-  const estilo: React.CSSProperties = { position: "absolute", inset: 0, filter: "blur(14px)", transform: `translateX(${dx}px) scale(${s})` };
+  const estilo: React.CSSProperties = { position: "absolute", inset: 0, filter: "blur(7px)", transform: `translateX(${dx}px) scale(${s})` };
   return (
     <AbsoluteFill>
       {(manifesto as string[]).includes(nome) ? (
@@ -101,7 +101,7 @@ export const Backdrop: React.FC<{ nome: NomeBackdrop; camera: Camera; zoom?: [nu
         </div>
       )}
       {/* escurece o cenário para o personagem e a legenda saltarem */}
-      <AbsoluteFill style={{ background: COR.fundo, opacity: 0.35 }} />
+      <AbsoluteFill style={{ background: COR.fundo, opacity: 0.22 }} />
     </AbsoluteFill>
   );
 };

@@ -12,7 +12,7 @@ import mapaArcos from "./arcos-poses.json";
 // Cena 01 (0 a 8 s): animação pose a pose com os PNGs do Flow (fundo removido em assets/personagens/limpo/).
 // Sem fade entre poses: sempre corte seco ou mola.
 
-type NomePose = "dada-bike" | "dada-queda" | "dada-sentada";
+export type NomePose = "dada-bike" | "dada-queda" | "dada-sentada";
 type InfoArcos = { centro: [number, number]; distancia: number; angulo: number; largura_arco: number; altura_arco: number; cor_cabeca: string };
 const ARCOS = mapaArcos as unknown as Record<NomePose, InfoArcos>;
 
@@ -57,7 +57,7 @@ const RostoAnimado: React.FC<{ pose: NomePose; mood: ArcMood; de?: ArcMood; troc
 };
 
 // PNG da pose + rosto, no sistema de coordenadas da imagem (1376x768), com transform próprio da pose.
-const Pose: React.FC<{ pose: NomePose; transform: string; origem: [number, number]; mood: ArcMood; de?: ArcMood; trocaEm?: number }> = ({ pose, transform, origem, mood, de, trocaEm }) => (
+export const Pose: React.FC<{ pose: NomePose; transform: string; origem: [number, number]; mood: ArcMood; de?: ArcMood; trocaEm?: number }> = ({ pose, transform, origem, mood, de, trocaEm }) => (
   <div style={{ position: "absolute", left: IMG_X, top: IMG_Y, width: IMG_W * K, height: IMG_H * K, transformOrigin: `${origem[0] * K}px ${origem[1] * K}px`, transform }}>
     <Img src={staticFile(`assets/limpo/${pose}.png`)} style={{ position: "absolute", inset: 0, width: "100%", height: "100%" }} />
     <svg viewBox={`0 0 ${IMG_W} ${IMG_H}`} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", overflow: "visible" }}>

@@ -44,7 +44,7 @@ export const scenes: Scene[] = [
     backdrop: "rua",
     camera: "pushIn",
     accent: "coral",
-    caption: "Dadá tem seis anos e acabou de ralar o joelho inteiro no asfalto. Ela levanta, olha o machucado, e volta a pedalar.",
+    caption: "Gotinha tem seis anos e acabou de ralar o joelho inteiro no asfalto. Ela levanta, olha o machucado, e volta a pedalar.",
     layers: [
       // derrapa e cai
       { kind: "prop", asset: "bicicleta", x: 420, y: 700, scale: 1.3, until: 1.6, toX: 820 },
@@ -63,7 +63,7 @@ export const scenes: Scene[] = [
     backdrop: "rua",
     camera: "pushIn",
     accent: "coral",
-    caption: "Isso não é coragem. Não é aquela criança durona que todo mundo conhece. Dadá simplesmente não sentiu nada.",
+    caption: "Isso não é coragem. Não é aquela criança durona que todo mundo conhece. Gotinha simplesmente não sentiu nada.",
     layers: [
       { kind: "prop", asset: "joelho-ralado", x: 700, y: 560, scale: 1.05 },
       { kind: "character", asset: "dada", pose: "neutral", x: 1400, y: 1280, scale: 1.7, arcs: "neutral" },
@@ -91,7 +91,7 @@ export const scenes: Scene[] = [
     backdrop: "cozinha",
     camera: "drift",
     accent: "coral",
-    caption: "Aos dois anos, Dadá mordeu a própria língua até sangrar enquanto comia. E continuou comendo.",
+    caption: "Aos dois anos, Gotinha mordeu a própria língua até sangrar enquanto comia. E continuou comendo.",
     layers: [
       { kind: "character", asset: "dada", pose: "sitting", x: 820, y: 790, scale: 1.25, arcs: "calm" },
       { kind: "prop", asset: "prato", x: 1280, y: 760, scale: 0.85 },
@@ -174,7 +174,7 @@ export const scenes: Scene[] = [
     backdrop: "cozinha",
     camera: "pushIn",
     accent: "coral",
-    caption: "Repare que não é anestesia. Dadá sente textura, sente pressão, sabe diferenciar quente de frio. O corpo dela responde a quase tudo.",
+    caption: "Repare que não é anestesia. Gotinha sente textura, sente pressão, sabe diferenciar quente de frio. O corpo dela responde a quase tudo.",
     layers: [
       { kind: "character", asset: "dada-adulta", pose: "holding", x: 820, y: CHAO, scale: 1.15, arcs: "calm" },
       { kind: "prop", asset: "xicara", x: 975, y: 600, scale: 0.34, at: 0.3 },

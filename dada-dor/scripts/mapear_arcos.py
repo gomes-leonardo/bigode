@@ -58,11 +58,26 @@ for pose, (x0, y0, x1, y1) in CAIXAS.items():
     vazado = zona & (a < 250)
     # pixels esverdeados do arco pintado que restam dentro da silhueta (arco encostado na borda da cabeça)
     cabeca_rgb = [int(cor[i:i + 2], 16) for i in (1, 3, 5)]
-    tingido = zona & (a >= 250) & (g - r > 25)
-    if vazado.any() or tingido.any():
+    dist_cabeca = np.sqrt(((im[..., :3] - np.array(cabeca_rgb)) ** 2).sum(axis=2))
+    tingido = zona & (a >= 250) & (dist_cabeca > 24)  # qualquer resto do arco (verde ou já misturado)
+    # silhueta da cabeça sem os arcos: região escura que contém o rosto, com os buracos (arcos) preenchidos.
+    # Na zona dos arcos, o que fica fora dela (arco que passava da borda + halo) vira transparente.
+    escuro, _ = ndimage.label((a >= 250) & (dist_cabeca < 40))
+    rotulo_cab = escuro[int(cy), int(cx)] or np.bincount(escuro[int(cy) - 20:int(cy) + 20, int(cx) - 20:int(cx) + 20].ravel())[1:].argmax() + 1
+    # fechamento com disco: fecha o entalhe onde o arco encostava na borda, seguindo a curva da cabeça
+    R = 32  # raio do fechamento (px); só tem efeito dentro da zona dos arcos
+    yy_, xx_ = np.ogrid[-R:R + 1, -R:R + 1]
+    disco = xx_ ** 2 + yy_ ** 2 <= R ** 2
+    cabeca_mask = ndimage.binary_fill_holes(ndimage.binary_closing(escuro == rotulo_cab, structure=disco))
+    fora = zona & ~cabeca_mask
+    dentro = zona & cabeca_mask & ((a < 250) | (dist_cabeca > 24))
+    vazado = (vazado & ~cabeca_mask) | fora
+    if vazado.any() or dentro.any():
         im2 = im.copy()
         im2[vazado, 3] = 0
-        im2[tingido, :3] = cabeca_rgb
+        im2[dentro, :3] = cabeca_rgb
+        im2[dentro, 3] = 255
+        tingido = dentro
         Image.fromarray(im2.astype(np.uint8), "RGBA").save(f"assets/personagens/limpo/{pose}.png")
         print(f"  {pose}: {int(vazado.sum())} px de brilho fora da cabeça removidos, {int(tingido.sum())} px repintados")
 import os

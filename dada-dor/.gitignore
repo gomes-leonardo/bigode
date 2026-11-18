@@ -1,0 +1,5 @@
+.venv
+narracao/cenas/*.wav
+narracao/cenas/_*
+node_modules
+exportacao/*.mp4

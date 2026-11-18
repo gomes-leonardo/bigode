@@ -1,0 +1,170 @@
+[
+ {
+  "id": 1,
+  "inicio_previsto": 0,
+  "duracao_prevista": 8,
+  "visual": "Dadá derrapa de bicicleta e cai no asfalto. Câmera baixa, poeira.",
+  "narracao": "Dadá tem seis anos e acabou de ralar o joelho inteiro no asfalto. Ela levanta, olha o machucado, e volta a pedalar."
+ },
+ {
+  "id": 2,
+  "inicio_previsto": 8,
+  "duracao_prevista": 7,
+  "visual": "Close no joelho ralado. Os arcos de luz dela continuam neutros.",
+  "narracao": "Isso não é coragem. Não é aquela criança durona que todo mundo conhece. Dadá simplesmente não sentiu nada."
+ },
+ {
+  "id": 3,
+  "inicio_previsto": 15,
+  "duracao_prevista": 10,
+  "visual": "Cartela de título sobre fundo escuro.",
+  "narracao": "E se você nunca, em nenhum momento da sua vida, sentisse dor? Parece o melhor superpoder da lista. É um dos diagnósticos mais perigosos que existem."
+ },
+ {
+  "id": 4,
+  "inicio_previsto": 25,
+  "duracao_prevista": 12,
+  "visual": "Bebê num berço, uma agulha de vacina entrando no braço. Nenhuma reação.",
+  "narracao": "Os primeiros sinais costumam aparecer muito cedo. O bebê não chora quando toma a vacina. Não reage ao tombo. Não reclama do que deveria doer."
+ },
+ {
+  "id": 5,
+  "inicio_previsto": 37,
+  "duracao_prevista": 11,
+  "visual": "Dadá pequena, sentada comendo, um fio de sangue no canto da boca.",
+  "narracao": "Aos dois anos, Dadá mordeu a própria língua até sangrar enquanto comia. E continuou comendo."
+ },
+ {
+  "id": 6,
+  "inicio_previsto": 48,
+  "duracao_prevista": 10,
+  "visual": "Mãe segurando a mão da filha, feridas nos dedos.",
+  "narracao": "Feridas na boca e nos dedos por mordida, e queimaduras repetidas, são justamente o que costuma levar a família ao médico."
+ },
+ {
+  "id": 7,
+  "inicio_previsto": 58,
+  "duracao_prevista": 8,
+  "visual": "Médica de jaleco, silêncio, prancheta.",
+  "narracao": "O nome disso é insensibilidade congênita à dor."
+ },
+ {
+  "id": 8,
+  "inicio_previsto": 66,
+  "duracao_prevista": 10,
+  "visual": "Silhueta de corpo humano com a rede nervosa acendendo em menta.",
+  "narracao": "Para entender o que falta nela, é mais fácil entender o que acontece em você."
+ },
+ {
+  "id": 9,
+  "inicio_previsto": 76,
+  "duracao_prevista": 13,
+  "visual": "Mão encostando numa panela quente. Um pulso de luz sobe pelo braço.",
+  "narracao": "Quando você encosta numa panela quente, o calor não dói na mão. A mão não sente nada por conta própria. Ela só dispara um aviso, e quem transforma esse aviso em sofrimento é o cérebro, lá em cima."
+ },
+ {
+  "id": 10,
+  "inicio_previsto": 89,
+  "duracao_prevista": 14,
+  "visual": "Zoom extremo até a membrana de um neurônio. Comportas se abrindo.",
+  "narracao": "Esse aviso viaja por neurônios especializados. E para ele sair do lugar, comportas microscópicas precisam se abrir na parede da célula, deixando sair uma corrente de sódio. São essas comportas que ligam o alarme."
+ },
+ {
+  "id": 11,
+  "inicio_previsto": 103,
+  "duracao_prevista": 12,
+  "visual": "Uma comporta destacada em menta, as outras apagadas.",
+  "narracao": "Uma delas se chama Nav1.7, e funciona como amplificador. Sem ela, o sinal até nasce, mas morre no caminho e nunca chega ao cérebro."
+ },
+ {
+  "id": 12,
+  "inicio_previsto": 115,
+  "duracao_prevista": 15,
+  "visual": "Fita de DNA, um trecho piscando em coral, depois apagando.",
+  "narracao": "Em boa parte dos casos, a origem é uma alteração no gene SCN9A, que é a receita dessa comporta. Quando as duas cópias do gene vêm com o mesmo defeito, a peça não é construída. O alarme existe, mas está mudo."
+ },
+ {
+  "id": 13,
+  "inicio_previsto": 130,
+  "duracao_prevista": 12,
+  "visual": "Campo de silhuetas em opacidade baixa, uma única acesa em menta.",
+  "narracao": "É raro. E vem com um detalhe estranho: boa parte das pessoas com a condição também não tem olfato nenhum, porque a mesma peça faz falta no nariz."
+ },
+ {
+  "id": 14,
+  "inicio_previsto": 142,
+  "duracao_prevista": 13,
+  "visual": "Dadá adolescente segurando uma xícara fumegante.",
+  "narracao": "Repare que não é anestesia. Dadá sente textura, sente pressão, sabe diferenciar quente de frio. O corpo dela responde a quase tudo."
+ },
+ {
+  "id": 15,
+  "inicio_previsto": 155,
+  "duracao_prevista": 11,
+  "visual": "Close na xícara, vapor, nenhum movimento no rosto.",
+  "narracao": "O que ela não sente é que aquele café está queimando a língua dela agora."
+ },
+ {
+  "id": 16,
+  "inicio_previsto": 166,
+  "duracao_prevista": 13,
+  "visual": "Raio-x do pé com uma fratura brilhando em coral.",
+  "narracao": "E é aí que a conta chega. Fraturas passam semanas sem ser percebidas, porque nada avisa que algo quebrou."
+ },
+ {
+  "id": 17,
+  "inicio_previsto": 179,
+  "duracao_prevista": 13,
+  "visual": "O mesmo osso, agora torto, com a marca da união falha.",
+  "narracao": "Um osso quebrado que continua sendo usado todos os dias não cola direito. Às vezes não cola nunca, e vira uma deformidade permanente."
+ },
+ {
+  "id": 18,
+  "inicio_previsto": 192,
+  "duracao_prevista": 14,
+  "visual": "Olho gigante em primeiro plano, a superfície secando.",
+  "narracao": "Até piscar vira problema. O que te faz piscar e lacrimejar o dia inteiro é um incomodozinho constante que você nem registra. Sem ele, a córnea seca e se machuca sozinha, aos poucos."
+ },
+ {
+  "id": 19,
+  "inicio_previsto": 206,
+  "duracao_prevista": 14,
+  "visual": "Linha de silhuetas, algumas apagando antes das outras.",
+  "narracao": "Somando tudo, a expectativa de vida é menor. Não pela condição em si, que não ataca nenhum órgão. Pelo acúmulo de estragos que ninguém avisou a tempo."
+ },
+ {
+  "id": 20,
+  "inicio_previsto": 220,
+  "duracao_prevista": 16,
+  "visual": "Silhueta de um senhor idoso, três vultos atrás dele.",
+  "narracao": "E mesmo assim não é sentença. Há o registro de um islandes de 73 anos, diagnosticado ainda criança junto com os dois irmãos, acompanhado a vida inteira. Dá para chegar lá. O preço é vigilância constante, porque o corpo nunca vai pedir socorro sozinho."
+ },
+ {
+  "id": 21,
+  "inicio_previsto": 236,
+  "duracao_prevista": 10,
+  "visual": "Laboratório, silhuetas de jaleco, luz menta.",
+  "narracao": "Agora a parte que vira o jogo."
+ },
+ {
+  "id": 22,
+  "inicio_previsto": 246,
+  "duracao_prevista": 18,
+  "visual": "A comporta Nav1.7 com uma mira se fechando em cima dela.",
+  "narracao": "Pense no que esses casos provam. Existe uma peça única que, desligada, apaga a dor por completo. E as pessoas que nascem sem ela seguem com o resto do sistema nervoso inteiro, raciocinando, se movendo, sentindo todo o resto. Para a indústria farmacêutica, isso é a descrição de um alvo perfeito."
+ },
+ {
+  "id": 23,
+  "inicio_previsto": 264,
+  "duracao_prevista": 18,
+  "visual": "Um comprimido girando, a data 2025 surgindo atrás.",
+  "narracao": "Em janeiro de 2025, os Estados Unidos aprovaram o suzetrigine, o primeiro analgésico não opioide da história para dor aguda intensa, e o primeiro remédio de dor realmente novo desde 1998. Ele não bloqueia o Nav1.7, bloqueia um primo próximo. Mas a pista que abriu essa linha inteira veio daqui, de quem nasceu sem sentir."
+ },
+ {
+  "id": 24,
+  "inicio_previsto": 282,
+  "duracao_prevista": 16,
+  "visual": "Dadá adulta, de costas, pedalando ao entardecer.",
+  "narracao": "A dor é insuportável e é por isso que todo mundo quer se livrar dela. A dor também é o único aviso que mantém você inteiro. O caminho para desligar a primeira sem perder o segundo começou com quem nunca teve a opção de escolher."
+ }
+]

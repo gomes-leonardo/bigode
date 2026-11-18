@@ -15,3 +15,8 @@ v2/sfx/
 v2/_mix*
 exportacao/v2/
 __pycache__/
+
+# trabalho intermediário do Téo
+teo/_*
+teo/falas/
+teo/sfx/

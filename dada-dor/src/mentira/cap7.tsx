@@ -175,7 +175,7 @@ const C7Sobe: React.FC = () => {
   const liv = t > t1 + 0.5 ? comBracos({ ...liv0, esq: true, head: { rot: 0, offsetY: 0 }, expr: "surpreso" }, maoEm({ ...liv0, esq: true }, "L", PK("teo", teo).maoL, EK("liviaBranco"), V("liviaBranco")), 1, "L") : liv0;
   return (
     <>
-      <Camera chaves={[{ t: 0, z: 1.5, cx: 1640, cy: 760 }, { t: t1, z: 2.0, cx: 1440, cy: 440 }, { t: dur, z: 2.1, cx: 1420, cy: 420 }]} fundo="#141C46">
+      <Camera chaves={[{ t: 0, z: 1.5, cx: 1640, cy: 760 }, { t: t1, z: 1.85, cx: 1400, cy: 380 }, { t: dur, z: 1.9, cx: 1380, cy: 360 }]} fundo="#141C46">
         <CenaPortao t={t} teo={teo} jorge={{ ...jorgePortao(t), expr: "surpreso" }} racha={1} liv={liv} viz={false} fala={{ teo: fala("teo") }} />
         <NoChao itens={BALAO_LAJE} />
         <Baloes emissor={porRotulo({ teo: daBocaK("teo", teoTopo, -1, TL, { esc: 1.0 }) })} />

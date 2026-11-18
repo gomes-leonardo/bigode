@@ -1,0 +1,1162 @@
+{
+ "duracao": 321.209,
+ "planos": [
+  {
+   "id": "c1_noite",
+   "cap": 1,
+   "inicio": 0.0,
+   "duracao": 4.689,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela terça, nada doía em você. E era isso que estava errado.",
+     "inicio": 0.25,
+     "duracao": 3.689
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_quina",
+   "cap": 1,
+   "inicio": 5.139,
+   "duracao": 4.5,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Terça de manhã. Você levanta e enfia o dedinho do pé na quina da cama.",
+     "inicio": 0.25,
+     "duracao": 3.9
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "toc",
+     "em": 3.6
+    }
+   ]
+  },
+  {
+   "id": "c1_nada",
+   "cap": 1,
+   "inicio": 10.388,
+   "duracao": 2.2,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Nada.",
+     "inicio": 0.25,
+     "duracao": 0.417
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_pecinha",
+   "cap": 1,
+   "inicio": 13.038,
+   "duracao": 3.722,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você pisa numa pecinha do seu irmão. Com força.",
+     "inicio": 0.25,
+     "duracao": 2.822
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "clac",
+     "em": 2.722
+    }
+   ]
+  },
+  {
+   "id": "c1_caco",
+   "cap": 1,
+   "inicio": 17.211,
+   "duracao": 2.794,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "caco",
+     "texto": "Isso aí é a coisa que mais dói no universo!",
+     "inicio": 0.25,
+     "duracao": 2.194
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_tira",
+   "cap": 1,
+   "inicio": 20.454,
+   "duracao": 3.6,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Nada de nada.",
+     "inicio": 0.25,
+     "duracao": 0.799
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_rose",
+   "cap": 1,
+   "inicio": 24.504,
+   "duracao": 2.311,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "rose",
+     "texto": "Que barulheira é essa a essa hora?",
+     "inicio": 0.25,
+     "duracao": 1.711
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_quebrou",
+   "cap": 1,
+   "inicio": 27.266,
+   "duracao": 1.954,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "caco",
+     "texto": "Mãe, o Téo quebrou.",
+     "inicio": 0.25,
+     "duracao": 1.154
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_belisco",
+   "cap": 1,
+   "inicio": 29.67,
+   "duracao": 4.019,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sua mãe aplica o teste oficial da casa.",
+     "inicio": 0.25,
+     "duracao": 2.119
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "belisco",
+     "em": 1.469
+    },
+    {
+     "nome": "belisco",
+     "em": 0.75
+    }
+   ]
+  },
+  {
+   "id": "c1_mao",
+   "cap": 1,
+   "inicio": 34.339,
+   "duracao": 4.2,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "rose",
+     "texto": "O beliscão tá funcionando. Você que não.",
+     "inicio": 0.25,
+     "duracao": 3.058
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_cartelas",
+   "cap": 1,
+   "inicio": 38.989,
+   "duracao": 4.868,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você não sente mais dor. Nem pancada. Nem queimadura. Nem agulhada.",
+     "inicio": 0.25,
+     "duracao": 4.268
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_raro",
+   "cap": 1,
+   "inicio": 44.307,
+   "duracao": 4.802,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Tem gente que nasce assim. É raríssimo. Com você, foi de uma terça pra outra.",
+     "inicio": 0.25,
+     "duracao": 4.202
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c1_titulo",
+   "cap": 1,
+   "inicio": 49.96,
+   "duracao": 4.0,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "E se você parasse de sentir dor?",
+     "inicio": 0.25,
+     "duracao": 1.857
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_consulta",
+   "cap": 2,
+   "inicio": 54.41,
+   "duracao": 3.152,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "rose",
+     "texto": "Doutora, nem beliscão pega mais nesse menino.",
+     "inicio": 0.25,
+     "duracao": 2.552
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_algodao",
+   "cap": 2,
+   "inicio": 58.011,
+   "duracao": 3.734,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "Sente?",
+     "inicio": 0.25,
+     "duracao": 0.493
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Sinto. Faz cócega.",
+     "inicio": 1.243,
+     "duracao": 2.141
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_caneta",
+   "cap": 2,
+   "inicio": 62.195,
+   "duracao": 5.25,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "E agora?",
+     "inicio": 0.25,
+     "duracao": 0.583
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Sinto que apertou.",
+     "inicio": 1.433,
+     "duracao": 0.981
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O tato, perfeito. A dor, zero.",
+     "inicio": 2.814,
+     "duracao": 2.086
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_alarme",
+   "cap": 2,
+   "inicio": 67.894,
+   "duracao": 5.909,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "A dor é um alarme. Você se machuca, o nervo manda o recado, o cérebro toca a sirene.",
+     "inicio": 0.25,
+     "duracao": 4.909
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "sirene",
+     "em": 3.859
+    }
+   ]
+  },
+  {
+   "id": "c2_mapa",
+   "cap": 2,
+   "inicio": 74.253,
+   "duracao": 7.235,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Em três famílias do Paquistão, quem nasceu assim tinha o mesmo gene quebrado. Esse gene é a receita de uma peça do nervo da dor.",
+     "inicio": 0.25,
+     "duracao": 6.635
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_interfone",
+   "cap": 2,
+   "inicio": 81.938,
+   "duracao": 8.285,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Quebrou a peça, é interfone com o fio cortado. Aperta, aperta. Ninguém atende.",
+     "inicio": 0.25,
+     "duracao": 7.085
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_curativo",
+   "cap": 2,
+   "inicio": 90.673,
+   "duracao": 3.342,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sem alarme, o machucado chega sem avisar.",
+     "inicio": 0.25,
+     "duracao": 2.442
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c2_branca",
+   "cap": 2,
+   "inicio": 94.465,
+   "duracao": 3.968,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sua mãe fica branca.",
+     "inicio": 0.25,
+     "duracao": 1.142
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Posso ir no campinho?",
+     "inicio": 2.192,
+     "duracao": 1.026
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_fila",
+   "cap": 3,
+   "inicio": 98.883,
+   "duracao": 4.436,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Dia de vacina na escola. A fila inteira tremendo. Menos você.",
+     "inicio": 0.25,
+     "duracao": 3.836
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_vacina",
+   "cap": 3,
+   "inicio": 103.969,
+   "duracao": 3.6,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Pode pôr outra? Eu nem vi.",
+     "inicio": 0.25,
+     "duracao": 2.276
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_adesivo",
+   "cap": 3,
+   "inicio": 108.019,
+   "duracao": 3.755,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você ganha o adesivo de corajoso sem fazer força nenhuma.",
+     "inicio": 0.25,
+     "duracao": 3.155
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_venda",
+   "cap": 3,
+   "inicio": 112.223,
+   "duracao": 3.122,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Na venda do Seu Nelson, o desafio da pimenta.",
+     "inicio": 0.25,
+     "duracao": 2.522
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_leite",
+   "cap": 3,
+   "inicio": 115.795,
+   "duracao": 3.191,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "nelson",
+     "texto": "Leite, menino! Água piora!",
+     "inicio": 0.25,
+     "duracao": 2.591
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_pimenta",
+   "cap": 3,
+   "inicio": 119.436,
+   "duracao": 4.588,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você come uma inteira. E outra. E pergunta se tem farofa.",
+     "inicio": 0.25,
+     "duracao": 3.488
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_nervo",
+   "cap": 3,
+   "inicio": 124.474,
+   "duracao": 6.656,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "A pimenta arde porque liga os mesmos nervos que avisam calor. Os seus não atendem o telefone.",
+     "inicio": 0.25,
+     "duracao": 6.056
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_bolada",
+   "cap": 3,
+   "inicio": 131.58,
+   "duracao": 3.863,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "No campinho, o Dudu chuta de bico. A bola para na sua cara.",
+     "inicio": 0.25,
+     "duracao": 3.263
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "bola",
+     "em": 2.763
+    }
+   ]
+  },
+  {
+   "id": "c3_doeu",
+   "cap": 3,
+   "inicio": 136.894,
+   "duracao": 2.256,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Não doeu?",
+     "inicio": 0.25,
+     "duracao": 0.531
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Doeu o quê?",
+     "inicio": 1.281,
+     "duracao": 0.625
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c3_gravando",
+   "cap": 3,
+   "inicio": 139.6,
+   "duracao": 3.502,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "caco",
+     "texto": "Pera, tô gravando. Faz de novo.",
+     "inicio": 0.25,
+     "duracao": 2.602
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_viral",
+   "cap": 4,
+   "inicio": 143.552,
+   "duracao": 4.109,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O vídeo viraliza. Te batizam de o menino de pedra.",
+     "inicio": 0.25,
+     "duracao": 2.909
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "plim",
+     "em": 0.45
+    }
+   ]
+  },
+  {
+   "id": "c4_montagem",
+   "cap": 4,
+   "inicio": 148.112,
+   "duracao": 6.3,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Cada vídeo, mais views. E mais burrice.",
+     "inicio": 0.25,
+     "duracao": 2.36
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_dudu",
+   "cap": 4,
+   "inicio": 154.862,
+   "duracao": 4.27,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Até o Dudu tentar igual. Você levanta rindo. Ele não.",
+     "inicio": 0.25,
+     "duracao": 3.27
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "trave",
+     "em": 1.55
+    }
+   ]
+  },
+  {
+   "id": "c4_vo",
+   "cap": 4,
+   "inicio": 160.181,
+   "duracao": 3.2,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "cida",
+     "texto": "Acabou a gravação.",
+     "inicio": 0.25,
+     "duracao": 1.298
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pau",
+     "em": 1.348
+    }
+   ]
+  },
+  {
+   "id": "c4_final",
+   "cap": 4,
+   "inicio": 163.831,
+   "duracao": 4.716,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Mas nada te segura. O time do bairro chega na final. E você vai pro gol.",
+     "inicio": 0.25,
+     "duracao": 4.116
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "torcida",
+     "em": 0.25
+    }
+   ]
+  },
+  {
+   "id": "c4_defesa",
+   "cap": 4,
+   "inicio": 168.997,
+   "duracao": 4.866,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "radio",
+     "texto": "Chutou! Defendeu com a cara! E tá rindo, minha gente!",
+     "inicio": 0.25,
+     "duracao": 4.266
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "bola",
+     "em": 1.0
+    }
+   ]
+  },
+  {
+   "id": "c4_trave",
+   "cap": 4,
+   "inicio": 174.313,
+   "duracao": 3.715,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Contra a trave. E levanta como se nada tivesse acontecido.",
+     "inicio": 0.25,
+     "duracao": 3.115
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "trave",
+     "em": 0.7
+    }
+   ]
+  },
+  {
+   "id": "c4_campeao",
+   "cap": 4,
+   "inicio": 178.477,
+   "duracao": 4.578,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "torcida",
+     "texto": "É campeão!",
+     "inicio": 0.25,
+     "duracao": 0.681
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Ninguém vê que você está mancando. Nem você.",
+     "inicio": 1.731,
+     "duracao": 2.497
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "torcida",
+     "em": 0.25
+    }
+   ]
+  },
+  {
+   "id": "c4_reporter",
+   "cap": 4,
+   "inicio": 183.505,
+   "duracao": 5.316,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "vizinho",
+     "texto": "Menino de pedra! Conta pra gente: o que você sente?",
+     "inicio": 0.25,
+     "duracao": 3.644
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Nada.",
+     "inicio": 4.594,
+     "duracao": 0.371
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c4_roxo",
+   "cap": 4,
+   "inicio": 189.271,
+   "duracao": 7.198,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela noite, tem um roxo enorme na sua perna. Você nem olha.",
+     "inicio": 0.25,
+     "duracao": 3.414
+    },
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Ele não olha porque nada mandou olhar.",
+     "inicio": 4.264,
+     "duracao": 2.084
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_panela",
+   "cap": 5,
+   "inicio": 196.919,
+   "duracao": 2.994,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "cida",
+     "texto": "Téo, tira a panela do fogo pra vó.",
+     "inicio": 0.25,
+     "duracao": 2.394
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_alca",
+   "cap": 5,
+   "inicio": 200.363,
+   "duracao": 4.924,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você pega sem pano. Sente que está quente. Mas nada em você manda soltar.",
+     "inicio": 0.25,
+     "duracao": 4.324
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "vapor",
+     "em": 0.35
+    }
+   ]
+  },
+  {
+   "id": "c5_vo",
+   "cap": 5,
+   "inicio": 207.537,
+   "duracao": 4.6,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sua mão.",
+     "inicio": 0.25,
+     "duracao": 0.504
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_raiox",
+   "cap": 5,
+   "inicio": 212.587,
+   "duracao": 3.385,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "Você quebrou o pé na final e continuou jogando.",
+     "inicio": 0.25,
+     "duracao": 2.785
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_antigas",
+   "cap": 5,
+   "inicio": 216.421,
+   "duracao": 9.395,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "helena",
+     "texto": "E essas duas são antigas. Nunca doeram. A dor não é sua inimiga, Téo. Ela é o único que avisa.",
+     "inicio": 0.25,
+     "duracao": 8.795
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_rua",
+   "cap": 5,
+   "inicio": 226.266,
+   "duracao": 6.278,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "No dia seguinte, o Dudu torce o pé e chora.",
+     "inicio": 0.25,
+     "duracao": 2.472
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Isso nem é nada. Levanta.",
+     "inicio": 3.522,
+     "duracao": 2.406
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c5_fresco",
+   "cap": 5,
+   "inicio": 232.995,
+   "duracao": 6.094,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você já não entende por que os outros reclamam tanto. E começa a achar que todo mundo é fresco.",
+     "inicio": 0.25,
+     "duracao": 4.894
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_muro",
+   "cap": 6,
+   "inicio": 239.539,
+   "duracao": 4.598,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sábado à noite. O Dudu sobe no muro pra fazer igual o menino de pedra.",
+     "inicio": 0.25,
+     "duracao": 3.998
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_cai",
+   "cap": 6,
+   "inicio": 244.587,
+   "duracao": 3.913,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Escorrega. Grita. Você ri. Todo mundo exagera.",
+     "inicio": 0.25,
+     "duracao": 3.313
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "queda",
+     "em": 1.15
+    }
+   ]
+  },
+  {
+   "id": "c6_rostos",
+   "cap": 6,
+   "inicio": 248.95,
+   "duracao": 5.874,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Aí você vê a mãe dele correndo. Vê o rosto da sua mãe. Vê a Vó Cida largar a colher de pau.",
+     "inicio": 0.25,
+     "duracao": 5.274
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "pau",
+     "em": 5.224
+    }
+   ]
+  },
+  {
+   "id": "c6_para",
+   "cap": 6,
+   "inicio": 255.774,
+   "duracao": 3.4,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Você para de rir.",
+     "inicio": 0.25,
+     "duracao": 0.918
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_mao",
+   "cap": 6,
+   "inicio": 259.624,
+   "duracao": 5.378,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Pela primeira vez, você sente a dor de alguém. Não na sua perna. No rosto dos outros.",
+     "inicio": 0.25,
+     "duracao": 4.778
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c6_ambulancia",
+   "cap": 6,
+   "inicio": 265.952,
+   "duracao": 5.146,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "dudu",
+     "texto": "Dói pra caramba, Téo.",
+     "inicio": 0.25,
+     "duracao": 1.399
+    },
+    {
+     "voz": "B",
+     "personagem": "teo",
+     "texto": "Eu sei. Agora eu sei.",
+     "inicio": 2.649,
+     "duracao": 2.148
+    }
+   ],
+   "sfx": [
+    {
+     "nome": "ambulancia",
+     "em": 0.25
+    }
+   ]
+  },
+  {
+   "id": "c6_abraco",
+   "cap": 6,
+   "inicio": 271.548,
+   "duracao": 4.961,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Sua mãe te abraça. A única coisa que dói em você é ver o Dudu assim.",
+     "inicio": 0.25,
+     "duracao": 3.761
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_cozinha",
+   "cap": 7,
+   "inicio": 276.959,
+   "duracao": 3.0,
+   "falas": [],
+   "sfx": [
+    {
+     "nome": "sino",
+     "em": 0.2
+    }
+   ]
+  },
+  {
+   "id": "c7_maos",
+   "cap": 7,
+   "inicio": 280.409,
+   "duracao": 5.4,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Na mesa da cozinha, as mãos da sua avó. Cheias de marcas de queimadura. Antigas.",
+     "inicio": 0.25,
+     "duracao": 4.8
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_vira",
+   "cap": 7,
+   "inicio": 286.659,
+   "duracao": 4.482,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "cida",
+     "texto": "Eu também não sinto, Téo. Nunca senti.",
+     "inicio": 0.25,
+     "duracao": 3.882
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_gene",
+   "cap": 7,
+   "inicio": 291.591,
+   "duracao": 6.023,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "O gene quebrado vem de família. A sua avó passou setenta anos sem alarme nenhum. Escondendo.",
+     "inicio": 0.25,
+     "duracao": 5.423
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_canela",
+   "cap": 7,
+   "inicio": 298.064,
+   "duracao": 8.906,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": "cida",
+     "texto": "Então agora você aprende comigo. Toda noite, você olha o corpo inteiro. Porque ninguém vai avisar.",
+     "inicio": 0.25,
+     "duracao": 8.306
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_lanterna",
+   "cap": 7,
+   "inicio": 307.82,
+   "duracao": 4.739,
+   "falas": [
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "Naquela terça, nada doía em você. E a sua avó já sabia.",
+     "inicio": 0.25,
+     "duracao": 3.539
+    }
+   ],
+   "sfx": []
+  },
+  {
+   "id": "c7_final",
+   "cap": 7,
+   "inicio": 313.009,
+   "duracao": 8.0,
+   "falas": [
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Que dor você deixaria de sentir?",
+     "inicio": 0.25,
+     "duracao": 1.848
+    },
+    {
+     "voz": "A",
+     "personagem": null,
+     "texto": "E qual você não trocaria por nada?",
+     "inicio": 2.698,
+     "duracao": 1.706
+    },
+    {
+     "voz": "B",
+     "personagem": null,
+     "texto": "Se inscreve.",
+     "inicio": 5.204,
+     "duracao": 0.759
+    }
+   ],
+   "sfx": []
+  }
+ ]
+}

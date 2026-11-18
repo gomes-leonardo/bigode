@@ -30,11 +30,11 @@ const Pecinha: React.FC<{ p: Peca; pulo?: number }> = ({ p, pulo = 0 }) => {
   );
 };
 
-const Janela: React.FC<{ x: number; y: number }> = ({ x, y }) => (
+const Janela: React.FC<{ x: number; y: number; noite?: boolean }> = ({ x, y, noite }) => (
   <g>
     <rect x={x - 26} y={y - 30} width={392} height={420} fill="#F3B6A0" stroke={LINHA} strokeWidth={W} />
-    <rect x={x} y={y} width={340} height={340} fill="#BFE6FF" stroke={LINHA} strokeWidth={W} />
-    <circle cx={x + 250} cy={y + 90} r={46} fill="#FFD95A" stroke={LINHA} strokeWidth={6} />
+    <rect x={x} y={y} width={340} height={340} fill={noite ? "#1E2A5A" : "#BFE6FF"} stroke={LINHA} strokeWidth={W} />
+    {noite ? <g><circle cx={x + 250} cy={y + 90} r={40} fill="#F4F1D0" stroke={LINHA} strokeWidth={6} /><circle cx={x + 268} cy={y + 78} r={34} fill="#1E2A5A" /></g> : <circle cx={x + 250} cy={y + 90} r={46} fill="#FFD95A" stroke={LINHA} strokeWidth={6} />}
     <path d={`M ${x} ${y + 270} Q ${x + 90} ${y + 220} ${x + 180} ${y + 262} Q ${x + 260} ${y + 230} ${x + 340} ${y + 266} L ${x + 340} ${y + 340} L ${x} ${y + 340} Z`} fill="#9BD47A" stroke={LINHA} strokeWidth={6} />
     <line x1={x + 170} y1={y} x2={x + 170} y2={y + 340} stroke={LINHA} strokeWidth={W} />
     <line x1={x} y1={y + 170} x2={x + 340} y2={y + 170} stroke={LINHA} strokeWidth={W} />
@@ -43,7 +43,7 @@ const Janela: React.FC<{ x: number; y: number }> = ({ x, y }) => (
 );
 
 /** tudo que fica atrás do Téo */
-export const QuartoFundo: React.FC<{ pecas: Peca[]; pulos?: number[] }> = ({ pecas, pulos = [] }) => (
+export const QuartoFundo: React.FC<{ pecas: Peca[]; pulos?: number[]; noite?: boolean }> = ({ pecas, pulos = [], noite }) => (
   <g>
     {/* parede e chão */}
     <rect x={0} y={0} width={Q.largura} height={Q.chao} fill="#F6ECDA" />
@@ -58,8 +58,8 @@ export const QuartoFundo: React.FC<{ pecas: Peca[]; pulos?: number[] }> = ({ pec
     <line x1={0} y1={Q.chao} x2={Q.largura} y2={Q.chao} stroke={LINHA} strokeWidth={9} />
 
     {/* plano 1: janela com sol de manhã, luz no chão, quadro */}
-    <Janela x={1440} y={230} />
-    <path d={`M 1440 ${Q.chao + 4} L 1780 ${Q.chao + 4} L 1900 1080 L 1380 1080 Z`} fill="#FFE9A8" opacity={0.55} />
+    <Janela x={1440} y={230} noite={noite} />
+    {!noite && <path d={`M 1440 ${Q.chao + 4} L 1780 ${Q.chao + 4} L 1900 1080 L 1380 1080 Z`} fill="#FFE9A8" opacity={0.55} />}
     <rect x={660} y={250} width={190} height={150} rx={6} fill="#FBFBF7" stroke={LINHA} strokeWidth={W} />
     <path d="M 680 380 L 730 300 L 770 350 L 800 320 L 830 380 Z" fill="#7FB7F0" stroke={LINHA} strokeWidth={5} strokeLinejoin="round" />
     <circle cx={810} cy={290} r={16} fill="#FFD95A" stroke={LINHA} strokeWidth={5} />

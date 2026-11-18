@@ -31,17 +31,18 @@ type Props = {
   de?: ArcMood; // mood anterior: a transição interpola os pontos de controle, nunca troca o path de uma vez
   trocaEm?: number; // quadro (relativo ao componente) em que a transição começa
   afastamento?: number; // distância entre os arcos
+  progresso?: number; // 0..1 da transição de/para, quando quem anima é a pose (rig); sobrepõe trocaEm
 };
 
 export const TRANSICAO = 10; // quadros
 
 // Transição entre moods em 10 quadros.
-export const Arcs: React.FC<Props> = ({ mood, de, trocaEm = 0, afastamento = 34, espessura = 7 }) => {
+export const Arcs: React.FC<Props> = ({ mood, de, trocaEm = 0, afastamento = 34, espessura = 7, progresso }) => {
   const f = useCurrentFrame();
   const origem = PRESETS[de ?? mood];
   const alvo = PRESETS[mood];
   // interpolate sobre os pontos de controle em 10 quadros, com ease in/out (nunca troca o path de uma vez)
-  const t = de ? interpolate(f, [trocaEm, trocaEm + TRANSICAO], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) }) : 1;
+  const t = !de ? 1 : progresso !== undefined ? Easing.inOut(Easing.cubic)(Math.min(1, Math.max(0, progresso))) : interpolate(f, [trocaEm, trocaEm + TRANSICAO], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) });
   const esq = lerpArco(origem.esq, alvo.esq, t);
   const dir = lerpArco(origem.dir, alvo.dir, t);
   const opacidade = interpolate(t, [0, 1], [origem.opacidade, alvo.opacidade]);

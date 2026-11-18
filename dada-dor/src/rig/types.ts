@@ -7,7 +7,7 @@ export type PoseArcos = { mood: ArcMood; de?: ArcMood; progresso?: number };
 
 export type Pose = {
   torso: PoseTorso;
-  head: { rot: number; offsetY: number };
+  head: { rot: number; offsetY: number; offsetX?: number };
   arm_upper_R: number;
   arm_lower_R: number;
   arm_upper_L: number;

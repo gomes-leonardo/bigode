@@ -22,11 +22,11 @@ const rotacaoLocal = (partes: Partes["partes"], nome: string, r: number) => {
   return -r - (p.repouso ?? 0) + repousoPai;
 };
 
-const ParteDiv: React.FC<{ p: Parte; em: [number, number]; rot: number; z: number; children?: React.ReactNode; dy?: number }> = ({ p, em, rot, z, children, dy = 0 }) => (
+const ParteDiv: React.FC<{ p: Parte; em: [number, number]; rot: number; z: number; children?: React.ReactNode; dy?: number; dx?: number }> = ({ p, em, rot, z, children, dy = 0, dx = 0 }) => (
   <div
     style={{
       position: "absolute",
-      left: em[0] - p.pivo[0],
+      left: em[0] - p.pivo[0] + dx,
       top: em[1] - p.pivo[1] + dy,
       width: p.largura,
       height: p.altura,
@@ -71,7 +71,7 @@ export const Puppet: React.FC<Props> = ({ parts, pose, escala = 1 }) => {
           {membro("arm_upper_L", "arm_lower_L", t.ombro_L!, -1)}
           <Img src={staticFile(`${PASTA}/${t.arquivo}`)} style={{ position: "absolute", inset: 0, width: t.largura, height: t.altura, zIndex: 0 }} />
           {membro("leg_upper_R", "leg_lower_R", t.quadril_R!, 1)}
-          <ParteDiv p={cab} em={t.pescoco!} rot={pose.head.rot} z={2} dy={pose.head.offsetY}>
+          <ParteDiv p={cab} em={t.pescoco!} rot={pose.head.rot} z={2} dy={pose.head.offsetY} dx={pose.head.offsetX ?? 0}>
             {/* arcos sobre a cabeça, seguindo a rotação dela (estão dentro do div da cabeça) */}
             <svg width={cab.largura} height={cab.altura} style={{ position: "absolute", inset: 0, overflow: "visible" }}>
               <g transform={`translate(${cab.rosto![0]} ${cab.rosto![1]}) scale(1.15)`}>

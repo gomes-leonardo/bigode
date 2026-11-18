@@ -1,0 +1,30 @@
+{
+ "duracao": 10.139,
+ "falas": [
+  {
+   "texto": "Terça de manhã. Você levanta e enfia o dedinho do pé na quina da cama.",
+   "inicio": 0.4,
+   "duracao": 3.9
+  },
+  {
+   "texto": "Nada.",
+   "inicio": 5.2,
+   "duracao": 0.417
+  },
+  {
+   "texto": "Você pisa numa pecinha do seu irmão. Com força.",
+   "inicio": 6.317,
+   "duracao": 2.822
+  }
+ ],
+ "sfx": [
+  {
+   "nome": "toc",
+   "em": 3.7
+  },
+  {
+   "nome": "clac",
+   "em": 8.9
+  }
+ ]
+}

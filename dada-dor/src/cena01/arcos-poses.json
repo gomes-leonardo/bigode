@@ -1,0 +1,83 @@
+{
+ "dada-bike": {
+  "centro": [
+   785.2,
+   224.2
+  ],
+  "distancia": 64.5,
+  "angulo": 10.3,
+  "largura_arco": 47,
+  "altura_arco": 31,
+  "cor_cabeca": "#1B173C",
+  "arcos": [
+   {
+    "x": 753.5,
+    "y": 218.5,
+    "w": 47,
+    "h": 31,
+    "rotulo": 3
+   },
+   {
+    "x": 817.0,
+    "y": 230.0,
+    "w": 36,
+    "h": 28,
+    "rotulo": 4
+   }
+  ]
+ },
+ "dada-queda": {
+  "centro": [
+   436.0,
+   216.8
+  ],
+  "distancia": 91.0,
+  "angulo": -32.2,
+  "largura_arco": 53,
+  "altura_arco": 46,
+  "cor_cabeca": "#1F1B40",
+  "arcos": [
+   {
+    "x": 397.5,
+    "y": 241.0,
+    "w": 53,
+    "h": 46,
+    "rotulo": 3
+   },
+   {
+    "x": 474.5,
+    "y": 192.5,
+    "w": 53,
+    "h": 41,
+    "rotulo": 2
+   }
+  ]
+ },
+ "dada-sentada": {
+  "centro": [
+   727.8,
+   340.0
+  ],
+  "distancia": 85.5,
+  "angulo": 8.7,
+  "largura_arco": 67,
+  "altura_arco": 49,
+  "cor_cabeca": "#1E183A",
+  "arcos": [
+   {
+    "x": 685.5,
+    "y": 333.5,
+    "w": 67,
+    "h": 49,
+    "rotulo": 2
+   },
+   {
+    "x": 770.0,
+    "y": 346.5,
+    "w": 42,
+    "h": 41,
+    "rotulo": 3
+   }
+  ]
+ }
+}

@@ -82,13 +82,14 @@ const Formas: React.FC<{ nome: NomeBackdrop }> = ({ nome }) => {
   }
 };
 
-export const Backdrop: React.FC<{ nome: NomeBackdrop; camera: Camera }> = ({ nome, camera }) => {
+export const Backdrop: React.FC<{ nome: NomeBackdrop; camera: Camera; zoom?: [number, number] }> = ({ nome, camera, zoom }) => {
   const f = useCurrentFrame();
   const { durationInFrames } = useVideoConfig();
   const t = f / Math.max(1, durationInFrames);
   // parallax: o fundo anda menos que o primeiro plano
   const dx = camera === "drift" ? interpolate(t, [0, 1], [20, -20]) : 0;
-  const s = camera === "pushIn" ? interpolate(t, [0, 1], [1.08, 1.11]) : 1.08;
+  // 1.06 de margem fixa (o blur escurece as bordas) x o zoom pedido pela cena
+  const s = zoom ? 1.06 * interpolate(t, [0, 1], zoom) : camera === "pushIn" ? interpolate(t, [0, 1], [1.08, 1.11]) : 1.08;
   const estilo: React.CSSProperties = { position: "absolute", inset: 0, filter: "blur(14px)", transform: `translateX(${dx}px) scale(${s})` };
   return (
     <AbsoluteFill>

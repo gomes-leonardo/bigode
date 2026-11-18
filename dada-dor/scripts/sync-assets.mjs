@@ -11,9 +11,16 @@ for (const p of pastas) {
   if (!existsSync(dir)) continue;
   for (const f of readdirSync(dir)) {
     if (!f.endsWith(".png") || f === "dada-folha.png") continue; // a folha é só referência
+    if (existsSync(join(dir, "limpo", f))) continue; // tem versão sem fundo: usa a de limpo/
     cpSync(join(dir, f), join("public/assets", f));
     presentes.push(f.replace(/\.png$/, ""));
   }
+}
+// poses com fundo removido (scripts/remover_fundo.py) -> public/assets/limpo/
+const limpo = join("assets", "personagens", "limpo");
+if (existsSync(limpo)) {
+  mkdirSync("public/assets/limpo", { recursive: true });
+  for (const f of readdirSync(limpo)) if (f.endsWith(".png")) cpSync(join(limpo, f), join("public/assets/limpo", f));
 }
 writeFileSync("src/assets-manifest.json", JSON.stringify(presentes, null, 1));
 console.log(`assets do Flow em uso: ${presentes.length ? presentes.join(", ") : "nenhum (tudo vetorial)"}`);

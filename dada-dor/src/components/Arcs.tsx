@@ -1,6 +1,6 @@
 import React from "react";
-import { interpolate, spring as springFn, useCurrentFrame, useVideoConfig } from "remotion";
-import { COR, spring } from "../theme";
+import { Easing, interpolate, useCurrentFrame } from "remotion";
+import { COR } from "../theme";
 
 export type ArcMood = "neutral" | "curious" | "worried" | "calm" | "none";
 
@@ -27,25 +27,28 @@ const caminho = ([x0, y0, cx, cy, x1, y1]: Arco, ox: number) => `M ${x0 + ox} ${
 
 type Props = {
   mood: ArcMood;
+  espessura?: number;
   de?: ArcMood; // mood anterior: a transição interpola os pontos de controle, nunca troca o path de uma vez
   trocaEm?: number; // quadro (relativo ao componente) em que a transição começa
   afastamento?: number; // distância entre os arcos
 };
 
-// Transição entre moods em 10 quadros, com a mola do theme.
-export const Arcs: React.FC<Props> = ({ mood, de, trocaEm = 0, afastamento = 34 }) => {
+export const TRANSICAO = 10; // quadros
+
+// Transição entre moods em 10 quadros.
+export const Arcs: React.FC<Props> = ({ mood, de, trocaEm = 0, afastamento = 34, espessura = 7 }) => {
   const f = useCurrentFrame();
-  const { fps } = useVideoConfig();
   const origem = PRESETS[de ?? mood];
   const alvo = PRESETS[mood];
-  const t = de ? springFn({ frame: f - trocaEm, fps, config: spring, durationInFrames: 10 }) : 1;
+  // interpolate sobre os pontos de controle em 10 quadros, com ease in/out (nunca troca o path de uma vez)
+  const t = de ? interpolate(f, [trocaEm, trocaEm + TRANSICAO], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp", easing: Easing.inOut(Easing.cubic) }) : 1;
   const esq = lerpArco(origem.esq, alvo.esq, t);
   const dir = lerpArco(origem.dir, alvo.dir, t);
   const opacidade = interpolate(t, [0, 1], [origem.opacidade, alvo.opacidade]);
   return (
     <g opacity={opacidade} style={{ filter: `drop-shadow(0 0 6px ${COR.menta})` }}>
-      <path d={caminho(esq, -afastamento)} stroke={COR.menta} strokeWidth={7} strokeLinecap="round" fill="none" />
-      <path d={caminho(dir, afastamento)} stroke={COR.menta} strokeWidth={7} strokeLinecap="round" fill="none" />
+      <path d={caminho(esq, -afastamento)} stroke={COR.menta} strokeWidth={espessura} strokeLinecap="round" fill="none" />
+      <path d={caminho(dir, afastamento)} stroke={COR.menta} strokeWidth={espessura} strokeLinecap="round" fill="none" />
     </g>
   );
 };

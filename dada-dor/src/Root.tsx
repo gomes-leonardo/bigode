@@ -5,6 +5,7 @@ import { Cena05, DURACAO_CENA05 } from "./cena05/Cena05";
 import { DURACAO_TOTAL_S } from "./scenes";
 import { AcoesTeste } from "./rig/AcoesTeste";
 import { PuppetTeste } from "./rig/PuppetTeste";
+import { RigTest } from "./rig/RigTest";
 import { TesteDada } from "./TesteDada";
 import { FPS, H, W } from "./theme";
 import { Video } from "./Video";
@@ -15,6 +16,7 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Cena01" component={Cena01} durationInFrames={8 * FPS} fps={FPS} width={W} height={H} />
     <Composition id="Cena05" component={Cena05} durationInFrames={DURACAO_CENA05} fps={FPS} width={W} height={H} />
     <Composition id="AcoesTeste" component={AcoesTeste} durationInFrames={3 * FPS} fps={FPS} width={W} height={H} />
+    <Composition id="RigTest" component={RigTest} durationInFrames={12 * FPS} fps={FPS} width={W} height={H} />
     <Still id="PuppetTeste" component={PuppetTeste} width={W} height={H} />
     <Still id="TesteDada" component={TesteDada} width={W} height={H} />
   </>

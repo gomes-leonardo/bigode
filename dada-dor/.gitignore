@@ -3,3 +3,6 @@ narracao/cenas/*.wav
 narracao/cenas/_*
 node_modules
 exportacao/*.mp4
+public/narracao.mp3
+public/assets
+exportacao/stills/

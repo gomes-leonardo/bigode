@@ -112,3 +112,8 @@ export const ESTRANHO: Ator = {
   hair: "curto", hairColor: "#1E1A18", glasses: "escuro", hood: "#8A8F98", expr: "neutro",
   outfit: { camiseta: "#8A8F98", calca: ESCURA, tenis: "#2A2A35", sola: "#141414" },
 };
+export const DIRETOR: Ator = {
+  nome: "diretor da escola", desc: "careca com laterais, óculos, bigode",
+  hair: "laterais", hairColor: "#8A857C", glasses: true, mustache: "#5A4636", expr: "bravo",
+  outfit: { camiseta: "#7A6A52", calca: "#4A4A4E", tenis: "#2A2A35", sola: "#141414" }, wide: 1.1,
+};

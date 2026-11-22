@@ -337,3 +337,49 @@ export const IconePredio: React.FC<{ andares?: number; cor?: string; w?: number 
     </g>
   );
 };
+
+// ------------------------------------------------------------------ capítulo 4: telas, console, jatinho, cachorro, avião
+export const IconeTV: React.FC<{ w?: number; h?: number; cor?: string; children?: React.ReactNode }> = ({ w = 220, h = 130, cor = "#3A3F4B", children }) => (
+  <g>
+    <rect x={-w / 2 + 6} y={-h / 2 + 7} width={w} height={h} rx={10} fill={PAPEL} />
+    <rect x={-w / 2} y={-h / 2} width={w} height={h} rx={10} fill={cor} stroke={LINHA} strokeWidth={SW} />
+    <rect x={-w / 2 + 12} y={-h / 2 + 12} width={w - 24} height={h - 24} rx={4} fill="#9ED8F5" />
+    <g>{children}</g>
+  </g>
+);
+export const IconeConsole: React.FC = () => (
+  <g>
+    <rect x={-56} y={-22} width={112} height={44} rx={10} fill="#2A2A35" stroke={LINHA} strokeWidth={SW} />
+    <rect x={-40} y={-6} width={50} height={6} rx={3} fill="#5AA5B8" />
+    <circle cx={34} cy={0} r={7} fill="#7FD18C" />
+  </g>
+);
+export const IconeJatinho: React.FC<{ cor?: string }> = ({ cor = "#F4F1EA" }) => (
+  <g>
+    <path d="M -150 6 Q -150 -26 -100 -30 L 110 -30 Q 160 -26 168 0 Q 160 18 110 20 L -100 20 Q -150 18 -150 6 Z" fill={cor} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+    <path d="M -110 -28 L -150 -84 L -118 -84 L -70 -28 Z" fill="#2F6E9E" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <path d="M -10 12 L -70 70 L -30 70 L 40 12 Z" fill="#2F6E9E" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    {[-60, -30, 0, 30, 60, 90].map((x) => <circle key={x} cx={x} cy={-10} r={8} fill="#9ED8F5" stroke={LINHA} strokeWidth={3} />)}
+    <path d="M 134 -20 Q 156 -14 160 -2 L 132 -2 Z" fill="#9ED8F5" stroke={LINHA} strokeWidth={3} />
+    <line x1={-140} y1={2} x2={150} y2={2} stroke="#2F6E9E" strokeWidth={5} />
+  </g>
+);
+export const IconeCachorro: React.FC<{ cor?: string }> = ({ cor = "#C9955E" }) => (
+  <g>
+    <ellipse cx={0} cy={10} rx={44} ry={30} fill={cor} stroke={LINHA} strokeWidth={SW} />
+    <circle cx={34} cy={-22} r={28} fill={cor} stroke={LINHA} strokeWidth={SW} />
+    <path d="M 18 -44 q -16 -6 -14 22 q 12 -4 14 -22 Z" fill={"#8A5E3F"} stroke={LINHA} strokeWidth={3} />
+    <circle cx={42} cy={-26} r={4} fill={LINHA} />
+    <ellipse cx={60} cy={-16} rx={7} ry={5} fill={LINHA} />
+    <path d="M 46 -6 q 8 6 14 0" stroke={LINHA} strokeWidth={3} fill="none" />
+    <path d="M -44 0 q -24 -10 -20 -30" stroke={LINHA} strokeWidth={9} fill="none" strokeLinecap="round" />
+    <path d="M -44 0 q -24 -10 -20 -30" stroke={cor} strokeWidth={4} fill="none" strokeLinecap="round" />
+  </g>
+);
+export const IconeCaixaCorreio: React.FC = () => (
+  <g>
+    <rect x={-6} y={0} width={12} height={90} fill="#6E4B35" stroke={LINHA} strokeWidth={3} />
+    <path d="M -50 0 L -50 -46 Q -50 -76 0 -76 Q 50 -76 50 -46 L 50 0 Z" fill="#2F6E9E" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <rect x={50} y={-70} width={8} height={40} fill="#C0504D" stroke={LINHA} strokeWidth={3} />
+  </g>
+);

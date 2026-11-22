@@ -1,0 +1,76 @@
+Vamos montar um estúdio de animação 2D 100% em código, com Remotion (React + SVG), 1920x1080, 30 fps. Nada de imagem gerada por IA: personagens, cenários e objetos são SVG desenhados e parametrizados em código. Trabalhe só nesta pasta. Pare ao fim de cada fase, me mostre o resultado (frame PNG ou MP4 curto) e espere eu aprovar.
+
+ESTILO GERAL
+- Traço preto grosso (#141414, 7px no contorno, 4 a 5px nas linhas internas como dobras e bainhas).
+- "Sombra de papel": toda forma tem uma cópia #D6D2CA deslocada 5px à direita e 6px pra baixo, atrás dela.
+- Pele branca com contorno preto. Roupas em cores chapadas, cada cor com uma versão 25% mais escura pra dobras e bainhas.
+- Fundo creme #EAE6DE com granulado leve por cima (pontinhos pretos e brancos, opacidade de 3 a 7%).
+- Nada pode parecer robô: sem membro reto com cotovelo de boneco, sem tronco quadrado, sem simetria perfeita, sem orelhas.
+
+FASE 1: PROTAGONISTA (src/components/Person.tsx)
+Homem adulto, pele branca, careca, cabeça redonda, sem orelhas. Vibe "sigma" sutil: confiante, olhar de canto, meio sorriso. Nada de pose de meme.
+Roupa padrão: camiseta mostarda #E3A23B, calça jeans #3C5A8A, tênis branco com sola vermelha #C9452F.
+Proporções (chão em y=0, escala 1):
+- Cabeça: elipse rx=84 ry=82, centro em y=-330, escala 0.92. Reflexo da careca: arco cinza fino no alto à esquerda, opacidade 30%.
+- Pescoço: trapézio branco de y=-270 a y=-236, largura de 34 a 38.
+- Tronco (camiseta) em formato de feijão, ombros largos e cintura um pouco mais estreita: path "M -24 -246 C -52 -244 -68 -232 -66 -206 C -64 -178 -58 -156 -54 -134 Q 0 -122 54 -134 C 58 -156 64 -178 66 -206 C 68 -232 52 -244 24 -246 Z". Gola em V suave em branco e duas dobras curtas na cor escura.
+- Cós da calça de y=-144 a y=-110, com costura central.
+- Ombros em (±54, -224). Quadris em (±24, -112).
+- CONTRAPPOSTO: parâmetro hip desnivela o quadril e o ombro inclina pro lado oposto (ombro = -hip*1.4). O tronco gira junto. Isso tira a rigidez.
+- BRAÇOS "MANGUEIRA": cada braço é UMA curva quadrática do ombro até o ALVO da mão, arqueada por bend (px, perpendicular ao meio do segmento). A pele vai do ombro à mão com largura 20. Por cima, nos primeiros 42% da curva, vem a manga na cor da camiseta com largura 34, e uma linha de bainha na ponta da manga. Resultado: o braço afina até o pulso.
+- PERNAS: mesma técnica, do quadril até o pé, largura 38 na cor da calça, com vinco no joelho e barra.
+- Tênis: forma arredondada com bico, sola colorida e dois riscos de cadarço.
+- Desenho de cada membro: stroke preto de (largura+14) e por cima stroke da cor, com linecap round. Sem emenda.
+- A mão é posicionada por COORDENADA ALVO (handL, handR) e orientada pela tangente final da curva. Isso é obrigatório: é o que faz ele pegar objetos com precisão.
+- Tipos de mão: "open" (luva: palma elipse 19x16, polegar elipse 7x11 inclinado, 3 riscos de dedo), "fist" (círculo r=17 com 3 curvas de dedo), "point" (punho com indicador em retângulo arredondado), "none" (mão no bolso, escondida).
+- Sombra no chão: elipse preta com 13% de opacidade, que encolhe quando ele sobe.
+Props do componente: x, y, scale, expr, headTilt, lean, hip, handL, handR, bendL, bendR, gripL, gripR, footL, footR, kneeL, kneeR, lookAt, blink, outfit, e slots propsBehind/propsFront pra objetos.
+
+ROSTO (src/components/Face.tsx): sobrancelhas grossas (stroke 12, round) fazem a maior parte da atuação. Expressões:
+- sigma (padrão): pálpebras caídas (metade de cima do olho coberta, com linha da pálpebra), pupilas olhando pro lado, sobrancelhas retas, meio sorriso torto pra um lado.
+- convencido: uma sobrancelha bem levantada, um olho semicerrado e outro aberto, sorriso de lado.
+- chocado: olhos enormes brancos com pupila pequena, sobrancelhas lá em cima, boca oval aberta.
+- rindo: olhos fechados em arco ^ ^, boca grande aberta com língua.
+- bravo: sobrancelhas em V grossas, olhos semicerrados, dentes cerrados (retângulo com divisões).
+- triste: sobrancelhas caídas pra fora, olhos pequenos, boca curva pra baixo.
+- olhar-lateral: olhos grandes brancos com as pupilas no canto, boca reta.
+- nojo: um olho mais fechado que o outro, boca ondulada.
+- neutro.
+Toda troca de expressão interpola os pontos (sobrancelha, pálpebra, boca) em 6 a 10 frames. Nunca troca seca. Piscar automático a cada 3 a 5 s (2 frames fechando, 3 abrindo). Os olhos viram pro lookAt 4 frames antes da cabeça.
+Renderize uma folha com as 9 expressões e 6 poses (mão no bolso, braços cruzados, dando de ombros, apontando, andando, susto).
+
+FASE 2: AÇÕES E MANUSEIO DE OBJETOS (src/rig/)
+1. actions.ts: idle (respira, corpo de 1.0 a 1.015, cabeça balança 1 grau), walk (pés por alvo, quadril sobe e desce, braços em contrafase), pocket, crossArms, shrug, point, wave, celebrate, scared, sit, fall, hug, lookAtPhone.
+2. Regra de manuseio, obrigatória em toda interação com objeto, sempre em 3 tempos:
+   a) ALCANÇA: a mão "open" viaja até o ponto de pega do objeto por um arco (não em linha reta), com antecipação de 3 frames na direção contrária e spring com overshoot pequeno na chegada.
+   b) PEGA: no frame do contato, troca pra "fist" e o punho é desenhado POR CIMA do objeto (a alça passa por baixo dos dedos). Squash de 2 frames no punho.
+   c) MOVE: a partir daí o objeto é filho da mão (segue a posição e a rotação dela). Braço e tronco acompanham o peso: objeto pesado = lean maior e movimento mais lento.
+   Soltar é o inverso: a mão abre e o objeto ganha gravidade ou fica apoiado onde caiu.
+3. Cada objeto (src/objects/) tem um "ponto de pega" definido (alça da panela, asa da xícara, lateral do celular).
+4. Objetos: xícara de café com vapor, celular, panela, prato, bola, chinelo, copo, controle de videogame, mochila.
+5. Renderize exportacao/teste-manuseio.mp4 (12 s): ele parado respirando com a mão no bolso, olha pro lado, vai até um fogão, alcança, pega e levanta a panela, faz cara de chocado e coloca de volta. Depois pega a xícara e o celular e fica olhando o celular tomando café.
+
+FASE 3: ELENCO
+O mesmo componente gera todos, só com parâmetros: hair (careca, curto, cacheado, coque, rabo, longo, laterais, bone), hairColor, glasses, mustache, beard, wide (largura do corpo, de 1.0 a 1.25), scale (altura; criança 0.62 com headScale 1.08, ou seja, cabeça proporcionalmente maior), skirt (cor da saia, com as pernas aparecendo por baixo), apron (avental com bolso), coat (jaleco branco longo com lapela). Ninguém tem orelha.
+Personagens fixos:
+- Protagonista: careca, camiseta mostarda, jeans, tênis branco com sola vermelha. Expressão padrão "sigma".
+- Mãe: coque castanho, blusa #C0504D, saia jeans.
+- Vó: coque grisalho, óculos, blusa lilás #8E7CC3, saia cinza, avental amarelo #F2D16B, wide 1.15, scale 0.82.
+- Melhor amigo: boné azul #2F6E9E, camiseta verde #4F8A6B, calça escura, expressão padrão "rindo".
+- Irmã: criança, rabo de cavalo castanho, blusa rosa #E37BA1.
+- Médica: cabelo longo preto, óculos, jaleco, blusa #5AA5B8.
+- Padeiro: calvo com laterais grisalhas, bigode, camiseta e avental brancos, wide 1.25.
+Figurantes: combinação aleatória (com semente fixa) de cabelo, cor de cabelo e roupa, sempre com scale 0.74 e expressão neutra. Só piscam e respiram.
+Me mostre uma folha com todos lado a lado.
+
+FASE 4: CENÁRIOS EM CÓDIGO
+Cada cenário é um componente em 3 camadas (fundo, meio, frente) pra parallax, no mesmo traço preto grosso com sombra de papel e cores chapadas suaves. Profundidade obrigatória: camada de fundo com desfoque leve, luz direcional (um polígono claro com baixa opacidade), vinheta e granulado. Cada cenário tem um set.json com ÂNCORAS: linha do chão, assento da cadeira, tampo da mesa, boca do fogão, quina da cama, maca. O personagem é sempre posicionado por âncora, nunca por x,y solto, pra nunca flutuar.
+Crie: cozinha, quarto, sala, consultório, padaria, rua, campinho.
+Me mostre 1 frame de cada com o personagem apoiado na âncora certa.
+
+FASE 5: CÂMERA, RITMO E GUIA
+Componente Camera com push-in lento (de 1.0 a 1.05 por cena), corte seco, zoom rápido de reação (de 1.0 a 1.15 em 6 frames) e parallax por camada.
+Regras pra todos os vídeos: 3 a 4 eventos visuais a cada 8 s (mudança de pose, expressão, objeto ou câmera), nenhum plano parado por mais de 3 s, troca de plano só nas pausas da fala. Toda fala com verbo físico (bater, pisar, comer, pegar, cair) tem que mostrar o verbo na imagem.
+Grave todas as regras deste prompt em GUIA_DE_ESTILO.md. Quando eu mandar o roteiro depois, você vai seguir esse guia.
+
+Comece pela Fase 1.

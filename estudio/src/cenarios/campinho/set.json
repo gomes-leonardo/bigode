@@ -1,0 +1,10 @@
+{
+  "id": "campinho",
+  "nome": "Campinho",
+  "escala": 1.0,
+  "luz": { "pontos": [[-300, -300], [700, -300], [1600, 1400], [500, 1400]], "cor": "#FFF6DE", "opacidade": 0.12 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 966, "yFundo": 880, "x0": 40, "x1": 1880 },
+    "banco": { "tipo": "assento", "x": 300, "y": 900, "chao": 960 }
+  }
+}

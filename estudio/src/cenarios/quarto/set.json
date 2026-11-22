@@ -1,0 +1,13 @@
+{
+  "id": "quarto",
+  "nome": "Quarto",
+  "escala": 1.35,
+  "luz": { "pontos": [[1230, 160], [1530, 160], [1250, 1400], [680, 1400]], "cor": "#FFF3D6", "opacidade": 0.15 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 962, "yFundo": 924, "x0": 60, "x1": 1860 },
+    "quina_cama": { "tipo": "quina", "x": 900, "y": 862, "chao": 960 },
+    "criado_mudo": { "tipo": "tampo", "y": 790, "x0": 104, "x1": 220 },
+    "escrivaninha": { "tipo": "tampo", "y": 788, "x0": 1336, "x1": 1750 },
+    "cadeira": { "tipo": "assento", "x": 1525, "y": 872, "chao": 962 }
+  }
+}

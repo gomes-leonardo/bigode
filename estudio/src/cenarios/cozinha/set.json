@@ -1,0 +1,12 @@
+{
+  "id": "cozinha",
+  "nome": "Cozinha",
+  "escala": 1.35,
+  "luz": { "pontos": [[330, 170], [650, 170], [1090, 1400], [520, 1400]], "cor": "#FFF6DA", "opacidade": 0.15 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 962, "yFundo": 924, "x0": 60, "x1": 1860 },
+    "bancada": { "tipo": "tampo", "y": 758, "x0": 262, "x1": 1140 },
+    "boca_fogao_1": { "tipo": "boca", "x": 1252, "y": 750 },
+    "boca_fogao_2": { "tipo": "boca", "x": 1392, "y": 750 }
+  }
+}

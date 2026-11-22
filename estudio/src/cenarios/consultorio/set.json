@@ -1,0 +1,12 @@
+{
+  "id": "consultorio",
+  "nome": "Consultório",
+  "escala": 1.35,
+  "luz": { "pontos": [[1440, 170], [1750, 170], [1500, 1400], [960, 1400]], "cor": "#F4FBFF", "opacidade": 0.15 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 962, "yFundo": 924, "x0": 60, "x1": 1860 },
+    "maca": { "tipo": "maca", "x": 610, "y": 832, "chao": 920 },
+    "cadeira_medica": { "tipo": "assento", "x": 1110, "y": 872, "chao": 962 },
+    "mesa": { "tipo": "tampo", "y": 790, "x0": 1262, "x1": 1700 }
+  }
+}

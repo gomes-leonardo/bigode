@@ -1,0 +1,11 @@
+{
+  "id": "padaria",
+  "nome": "Padaria",
+  "escala": 1.35,
+  "luz": { "pontos": [[40, 180], [280, 180], [980, 1400], [380, 1400]], "cor": "#FFF1D2", "opacidade": 0.15 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 966, "yFundo": 958, "x0": 60, "x1": 1860 },
+    "chao_balcao": { "tipo": "chao", "y": 905, "x0": 540, "x1": 1400 },
+    "balcao": { "tipo": "tampo", "y": 758, "x0": 470, "x1": 1460 }
+  }
+}

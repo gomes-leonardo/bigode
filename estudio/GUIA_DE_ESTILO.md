@@ -75,6 +75,14 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 - Componente em 3 camadas (fundo, meio, frente) para parallax, mesmo traço preto grosso com sombra de papel e cores chapadas suaves.
 - Profundidade obrigatória: fundo com desfoque leve, luz direcional (polígono claro com baixa opacidade), vinheta e granulado.
 - Cada cenário tem um `set.json` com ÂNCORAS (linha do chão, assento, tampo da mesa, boca do fogão, quina da cama, maca). O personagem é sempre posicionado por âncora, nunca por x,y solto, para nunca flutuar.
+- Cenários prontos (`src/cenarios/<nome>/`): cozinha, quarto, sala, consultório, padaria, rua, campinho.
+- Implementação:
+  - `Cena` (`src/cenarios/Cena.tsx`) desenha, nesta ordem: fundo (desfoque 2.4 px) > meio (piso e móveis) > `noMeio` (objetos e personagens) > balcão (opcional: mesa de centro, balcão da padaria) > `naFrente` > luz direcional > frente > vinheta; o granulado vem do Palco. Parallax: fundo 0.5, meio 1, frente 1.35.
+  - Os móveis são desenhados a partir das próprias âncoras (o tampo da bancada é desenhado no y da âncora), então objeto e personagem sempre encostam.
+  - Funções de âncora (`src/cenarios/ancoras.ts`): `emPe(set, "chao", x, prof)` (o x corre ao longo do chão; prof 0 = frente, 1 = perto da parede), `sentadoEm(set, "sofa_meio")` (devolve pés e altura do assento para a ação sit), `apoioEm(set, "bancada", x)` (apoio de objeto: tampo, boca do fogão, chão).
+  - Quem fica atrás de um móvel (padeiro atrás do balcão) entra em `noMeio`; quem está na frente entra em `naFrente`.
+  - Escala do set: interiores 1.35; rua 0.9 (plano aberto, porta ~ 1.2x a altura do personagem); campinho 1.0. Elementos de fundo (grafite, quadro cheio de detalhe) não ficam atrás das cabeças.
+  - `mostrarAncoras` desenha as âncoras por cima para conferência.
 
 ## Câmera, ritmo e regras dos vídeos
 - Câmera: push-in lento (1.0 a 1.05 por cena), corte seco, zoom rápido de reação (1.0 a 1.15 em 6 quadros), parallax por camada.

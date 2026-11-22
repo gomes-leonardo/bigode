@@ -1,0 +1,66 @@
+{
+  "id": "sala",
+  "nome": "Sala",
+  "escala": 1.35,
+  "luz": {
+    "pontos": [
+      [
+        1330,
+        150
+      ],
+      [
+        1690,
+        150
+      ],
+      [
+        1420,
+        1400
+      ],
+      [
+        820,
+        1400
+      ]
+    ],
+    "cor": "#FFF4DA",
+    "opacidade": 0.15
+  },
+  "ancoras": {
+    "chao": {
+      "tipo": "chao",
+      "y": 966,
+      "yFundo": 926,
+      "x0": 60,
+      "x1": 1860
+    },
+    "sofa_esq": {
+      "tipo": "assento",
+      "x": 650,
+      "y": 872,
+      "chao": 958
+    },
+    "sofa_meio": {
+      "tipo": "assento",
+      "x": 850,
+      "y": 872,
+      "chao": 958
+    },
+    "sofa_dir": {
+      "tipo": "assento",
+      "x": 1050,
+      "y": 872,
+      "chao": 958
+    },
+    "mesa_centro": {
+      "tipo": "tampo",
+      "y": 945,
+      "x0": 700,
+      "x1": 1000
+    },
+    "mesinha": {
+      "tipo": "tampo",
+      "y": 800,
+      "x0": 1222,
+      "x1": 1318
+    }
+  }
+}

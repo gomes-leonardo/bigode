@@ -38,7 +38,7 @@ const Msg: React.FC<{ y: number; nome?: string; destaque?: boolean; apaga?: bool
   </g>
 );
 /** flash de câmera (estrela branca) */
-const Flash: React.FC<{ x: number; y: number; k: number }> = ({ x, y, k }) => (k <= 0 || k >= 1 ? null : (
+export const Flash: React.FC<{ x: number; y: number; k: number }> = ({ x, y, k }) => (k <= 0 || k >= 1 ? null : (
   <g transform={`translate(${x} ${y}) scale(${0.4 + k * 1.2})`} opacity={1 - k}>
     <path d="M 0 -60 L 14 -14 L 60 0 L 14 14 L 0 60 L -14 14 L -60 0 L -14 -14 Z" fill="#FFFFFF" stroke={L} strokeWidth={4} />
   </g>
@@ -56,7 +56,7 @@ const Nuvem: React.FC<{ s: number; f: number }> = ({ s, f }) => (
   </g>
 );
 /** caixa de presente */
-const Presente: React.FC<{ cor?: string }> = ({ cor = "#E37BA1" }) => (
+export const Presente: React.FC<{ cor?: string }> = ({ cor = "#E37BA1" }) => (
   <g>
     <rect x={-44 + 5} y={-80 + 6} width={88} height={80} rx={6} fill="#D6D2CA" />
     <rect x={-44} y={-80} width={88} height={80} rx={6} fill={cor} stroke={L} strokeWidth={6} />

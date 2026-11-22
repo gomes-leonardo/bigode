@@ -28,14 +28,14 @@ import { Cronometro } from "./cronometro";
 const L = "#141414";
 const terno = (a: Ator, cor: string): Ator => ({ ...a, outfit: { camiseta: cor, calca: "#2B2B35", tenis: "#2B2B35", sola: "#141414" } });
 /** celular na orelha (mão direita) */
-const naOrelha = (p: PersonProps, lado: "L" | "R" = "R"): PersonProps => {
+export const naOrelha = (p: PersonProps, lado: "L" | "R" = "R"): PersonProps => {
   const a = p.abaixa ?? 0;
   const m: [number, number] = lado === "R" ? [94, -318 + a] : [-94, -318 + a];
   const tel = <g transform={`translate(${m[0]} ${m[1] - 26}) rotate(${lado === "R" ? 12 : -12})`}><rect x={-13} y={-26} width={26} height={50} rx={6} fill="#2A2A35" stroke={L} strokeWidth={4} /></g>;
   return lado === "R" ? { ...p, handR: m, gripR: "fist", bendR: -10, propsHands: <>{p.propsHands}{tel}</> } : { ...p, handL: m, gripL: "fist", bendL: -10, propsHands: <>{p.propsHands}{tel}</> };
 };
 /** rosto de um ator dentro de um selo redondo */
-const RostoSelo: React.FC<{ ator: Ator; id: string; x: number; y: number; f: number; de: number; ate?: number; rotulo: string; expr?: PersonProps["expr"] }> = ({ ator, id, x, y, f, de, ate, rotulo, expr }) => (
+export const RostoSelo: React.FC<{ ator: Ator; id: string; x: number; y: number; f: number; de: number; ate?: number; rotulo: string; expr?: PersonProps["expr"] }> = ({ ator, id, x, y, f, de, ate, rotulo, expr }) => (
   <Selo x={x} y={y} f={f} de={de} ate={ate} r={100} rotulo={rotulo}>
     <defs><clipPath id={`selo-${id}`}><circle r={94} /></clipPath></defs>
     <g clipPath={`url(#selo-${id})`}><Person {...props(ator)} x={0} y={175} scale={0.6} expr={expr ?? ator.expr} handL={[-72, -110]} handR={[74, -108]} semente={3} /></g>
@@ -140,7 +140,7 @@ const p78: PlanoV = {
 };
 
 // ------------------------------------------------------------------ 79. consertar tudo: a dívida pública de trilhões; você paga tudo, cada centavo, em uma tarde
-const Conta: React.FC<{ k: number; zerada: boolean }> = ({ k, zerada }) => {
+export const Conta: React.FC<{ k: number; zerada: boolean }> = ({ k, zerada }) => {
   const h = 60 + 520 * k;
   return (
     <g>

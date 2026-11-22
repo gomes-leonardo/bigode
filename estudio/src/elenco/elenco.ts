@@ -117,3 +117,13 @@ export const DIRETOR: Ator = {
   hair: "laterais", hairColor: "#8A857C", glasses: true, mustache: "#5A4636", expr: "bravo",
   outfit: { camiseta: "#7A6A52", calca: "#4A4A4E", tenis: "#2A2A35", sola: "#141414" }, wide: 1.1,
 };
+export const SEGURANCA: Ator = {
+  nome: "segurança", desc: "boné e camiseta pretos",
+  hair: "bone", hairColor: "#141414", beard: "#2B1D16", expr: "bravo",
+  outfit: { camiseta: "#2A2A35", calca: "#2A2A35", tenis: "#2A2A35", sola: "#141414" }, wide: 1.2,
+};
+export const CRAQUE: Ator = {
+  nome: "craque", desc: "melhor atacante do mundo",
+  hair: "cacheado", hairColor: "#1E1A18", expr: "convencido",
+  outfit: { camiseta: "#F2D16B", calca: "#2F6E9E", tenis: "#FFFFFF", sola: "#C0504D" },
+};

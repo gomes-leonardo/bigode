@@ -383,3 +383,55 @@ export const IconeCaixaCorreio: React.FC = () => (
     <rect x={50} y={-70} width={8} height={40} fill="#C0504D" stroke={LINHA} strokeWidth={3} />
   </g>
 );
+
+// ------------------------------------------------------------------ capítulo 5: estádio, contrato, guindaste, cheque, globo, prancheta
+export const IconeEstadio: React.FC<{ cor?: string }> = ({ cor = "#B9BEC6" }) => (
+  <g>
+    <path d="M -150 40 L -150 -30 Q 0 -90 150 -30 L 150 40 Z" fill={cor} stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <path d="M -130 -20 Q 0 -70 130 -20" stroke={LINHA} strokeWidth={4} fill="none" />
+    {[-110, -60, -10, 40, 90].map((x) => <rect key={x} x={x} y={-6} width={30} height={30} fill="#5A6170" stroke={LINHA} strokeWidth={3} />)}
+    {[-140, 140].map((x) => <line key={x} x1={x} y1={-30} x2={x} y2={-96} stroke={LINHA} strokeWidth={6} />)}
+    {[-140, 140].map((x) => <rect key={`l${x}`} x={x - 16} y={-110} width={32} height={18} fill="#F2D16B" stroke={LINHA} strokeWidth={3} />)}
+  </g>
+);
+export const IconeContrato: React.FC = () => (
+  <g>
+    <rect x={-46} y={-60} width={92} height={120} rx={6} fill="#FFFFFF" stroke={LINHA} strokeWidth={SW} />
+    {[-38, -20, -2, 16].map((y) => <line key={y} x1={-32} y1={y} x2={32} y2={y} stroke="#B9B4AA" strokeWidth={5} strokeLinecap="round" />)}
+    <path d="M -28 40 q 10 -16 20 0 q 10 14 22 -6" stroke="#2F6E9E" strokeWidth={5} fill="none" strokeLinecap="round" />
+  </g>
+);
+export const IconeGuindaste: React.FC = () => (
+  <g>
+    <path d="M -20 60 L -20 -70 L 80 -70" stroke={LINHA} strokeWidth={14} fill="none" strokeLinejoin="round" />
+    <path d="M -20 60 L -20 -70 L 80 -70" stroke="#F2D16B" strokeWidth={7} fill="none" strokeLinejoin="round" />
+    <line x1={60} y1={-70} x2={60} y2={0} stroke={LINHA} strokeWidth={4} />
+    <rect x={40} y={0} width={40} height={24} fill="#B9BEC6" stroke={LINHA} strokeWidth={4} />
+    <path d="M -80 60 L -80 20 L 20 20 L 20 60" fill="#E9E4DA" stroke={LINHA} strokeWidth={SW} />
+  </g>
+);
+export const IconeCheque: React.FC<{ texto?: string }> = ({ texto = "R$ 999.999.999" }) => (
+  <g>
+    <rect x={-150} y={-56} width={300} height={112} rx={10} fill="#DFF2D8" stroke={LINHA} strokeWidth={SW} />
+    <text x={0} y={-10} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={34} fill={LINHA}>{texto}</text>
+    <line x1={-120} y1={26} x2={120} y2={26} stroke="#B9B4AA" strokeWidth={4} />
+    <path d="M 40 22 q 10 -14 20 0 q 10 12 22 -4" stroke="#2F6E9E" strokeWidth={4} fill="none" />
+  </g>
+);
+export const IconeGlobo: React.FC<{ giro?: number }> = ({ giro = 0 }) => (
+  <g>
+    <circle r={80} fill="#5AA5B8" stroke={LINHA} strokeWidth={SW + 1} />
+    <path d={`M ${-50 + (giro % 60)} -40 q 30 -20 50 0 q 10 30 -20 40 q -30 0 -30 -40 Z M ${10 + (giro % 60) * 0.6} 20 q 30 -10 40 10 q -10 30 -40 20 Z`} fill="#7AA35B" stroke={LINHA} strokeWidth={3} />
+    <ellipse rx={80} ry={30} fill="none" stroke="#FFFFFF" strokeWidth={3} opacity={0.6} />
+  </g>
+);
+export const IconePrancheta: React.FC<{ linhas: string[]; destaque?: number }> = ({ linhas, destaque }) => (
+  <g>
+    <rect x={-120} y={-160} width={240} height={320} rx={14} fill="#A9714E" stroke={LINHA} strokeWidth={SW} />
+    <rect x={-100} y={-130} width={200} height={276} fill="#FFFFFF" stroke={LINHA} strokeWidth={4} />
+    <rect x={-40} y={-172} width={80} height={30} rx={8} fill="#B9BEC6" stroke={LINHA} strokeWidth={4} />
+    {linhas.map((l, i) => (
+      <text key={i} x={-84} y={-96 + i * 34} fontFamily={FONTE} fontWeight={i === destaque ? 900 : 700} fontSize={i === destaque ? 22 : 19} fill={i === destaque ? "#C0504D" : LINHA}>{l}</text>
+    ))}
+  </g>
+);

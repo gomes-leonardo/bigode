@@ -14,7 +14,7 @@ const PAREDE = 890;
 const mesa = ancora(set, "mesa", "tampo");
 const cadE = ancora(set, "cadeira_esq", "assento"), cadD = ancora(set, "cadeira_dir", "assento");
 
-const Fundo: React.FC<{ t: number }> = () => (
+const fundo = (placa: string, corPlaca: string): React.FC<{ t: number }> => () => (
   <g>
     <Parede cor="#DDE3EA" base={PAREDE} />
     <Rect x={-400} y={560} width={2800} height={PAREDE - 560} fill="#C9D2DC" semSombra />
@@ -25,10 +25,14 @@ const Fundo: React.FC<{ t: number }> = () => (
         <Rect key={i} x={x as number} y={y as number} width={w as number} height={300} fill={c as string} stroke={LINHA} strokeWidth={INTERNA} />
       ))}
     </Janela>
-    <Papel>
-      <Rect x={260} y={180} width={520} height={110} rx={10} fill="#2B3447" stroke={LINHA} strokeWidth={CONTORNO} />
-    </Papel>
-    <text x={520} y={252} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={50} fill="#E3B95B" letterSpacing={4}>BANCO CENTRAL</text>
+    {placa && (
+      <g>
+        <Papel>
+          <Rect x={260} y={180} width={520} height={110} rx={10} fill={corPlaca} stroke={LINHA} strokeWidth={CONTORNO} />
+        </Papel>
+        <text x={520} y={252} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={placa.length > 12 ? 50 : 60} fill="#E3B95B" letterSpacing={4}>{placa}</text>
+      </g>
+    )}
   </g>
 );
 
@@ -61,4 +65,6 @@ const Balcao: React.FC<{ t: number }> = () => (
 
 const Frente: React.FC<{ t: number }> = () => null;
 
-export const ESCRITORIO: CenarioDef = { set, Fundo, Meio, Balcao, Frente };
+/** mesma sala com outra placa (clube, Congresso...) */
+export const escritorioCom = (placa: string, corPlaca = "#2B3447"): CenarioDef => ({ set, Fundo: fundo(placa, corPlaca), Meio, Balcao, Frente });
+export const ESCRITORIO: CenarioDef = escritorioCom("BANCO CENTRAL");

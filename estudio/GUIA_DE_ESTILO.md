@@ -8,6 +8,7 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 - O texto do roteiro é sagrado: nenhuma fala é mudada, cortada ou reordenada.
 - A encenação segue a descrição do roteiro. Qualquer acréscimo ou mudança de encenação é avisado antes da entrega, nunca escondido.
 - Referência: o roteiro original fica salvo em `roteiros/`, palavra por palavra.
+- Gancho de subida de clímax nunca se repete: cada nova etapa ganha uma frase própria, mais forte que a anterior (no cartão infinito, as cinco repetições de "E fica ainda mais louco." viraram cinco ganchos diferentes, a pedido). A cartela mostra o gancho lido do próprio roteiro, então mudar o texto no roteiro muda a tela junto.
 
 ## Estilo geral
 - Traço preto grosso: `#141414`, 7 px no contorno, 4 a 5 px nas linhas internas (dobras, bainhas).

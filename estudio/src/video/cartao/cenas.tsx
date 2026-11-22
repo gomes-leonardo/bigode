@@ -175,3 +175,38 @@ export const LAB: CenarioDef = (() => {
   const Frente: React.FC<{ t: number }> = () => null;
   return { set, Fundo, Meio, Balcao, Frente };
 })();
+
+// ------------------------------------------------------------------ plenário (Congresso): parede de madeira, bancada comprida com microfones
+export const PLENARIO: CenarioDef = (() => {
+  const set = lisoSet(1.3);
+  set.id = "plenario";
+  set.nome = "Plenário";
+  set.ancoras = { chao: { tipo: "chao", y: 962, yFundo: 900, x0: 40, x1: 1880 }, bancada: { tipo: "tampo", y: 800, x0: 80, x1: 1840 } };
+  const Fundo: React.FC<{ t: number }> = () => (
+    <g>
+      <rect x={-MARGEM} y={-MARGEM} width={LARGO} height={1200} fill="#B98A5E" />
+      {Array.from({ length: 12 }, (_, i) => <rect key={i} x={-MARGEM + i * 200} y={-MARGEM} width={14} height={1200} fill="#A67A50" />)}
+      <rect x={-MARGEM} y={560} width={LARGO} height={30} fill="#8E6440" />
+    </g>
+  );
+  const Meio: React.FC<{ t: number }> = () => (
+    <g>
+      <Rect x={-MARGEM} y={900} width={LARGO} height={200} fill="#5E7A5A" stroke={LINHA} strokeWidth={CONTORNO} semSombra />
+    </g>
+  );
+  const Balcao: React.FC<{ t: number }> = () => (
+    <Papel>
+      <Rect x={-MARGEM} y={800} width={LARGO} height={36} rx={6} fill="#8E6440" stroke={LINHA} strokeWidth={CONTORNO} />
+      <Rect x={-MARGEM} y={836} width={LARGO} height={140} fill="#A67A50" stroke={LINHA} strokeWidth={CONTORNO} />
+      {Array.from({ length: 7 }, (_, i) => <Rect key={i} x={-60 + i * 300} y={856} width={260} height={100} rx={6} fill="none" stroke={escura("#A67A50")} strokeWidth={INTERNA} />)}
+      {[330, 790, 1250, 1710].map((x) => (
+        <g key={x}>
+          <Path d={`M ${x} 800 L ${x} 740 Q ${x} 712 ${x - 24} 700`} stroke={LINHA} strokeWidth={7} fill="none" strokeLinecap="round" />
+          <Rect x={x - 40} y={690} width={22} height={22} rx={8} fill="#3A3F4B" stroke={LINHA} strokeWidth={INTERNA} />
+        </g>
+      ))}
+    </Papel>
+  );
+  const Frente: React.FC<{ t: number }> = () => null;
+  return { set, Fundo, Meio, Balcao, Frente };
+})();

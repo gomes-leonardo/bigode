@@ -5,7 +5,7 @@
 // 4) toda fala com verbo físico mostra o verbo na imagem (um evento marcado com aquele verbo durante a fala).
 export type TipoEvento = "pose" | "expressao" | "objeto" | "camera" | "corte";
 export type Evento = { f: number; tipo: TipoEvento; desc: string; verbo?: string };
-export type Fala = { de: number; ate: number; texto: string };
+export type Fala = { de: number; ate: number; texto: string; ignorar?: string[] }; // ignorar: verbos em sentido figurado nesta fala
 export type Problema = { regra: 1 | 2 | 3 | 4; f: number; msg: string; grave: boolean };
 
 /** eventos a menos de 6 quadros um do outro contam como uma batida só (ex.: zoom de reação + troca de expressão) */
@@ -72,7 +72,7 @@ export const verificaRitmo = (o: { duracao: number; fps?: number; eventos: Event
   }
   // 4) verbo físico na fala precisa aparecer na imagem durante a fala
   for (const fl of o.falas ?? []) {
-    for (const v of verbosNaFala(fl.texto)) {
+    for (const v of verbosNaFala(fl.texto).filter((v) => !(fl.ignorar ?? []).includes(v))) {
       const mostrado = o.eventos.some((e) => e.verbo === v && e.f >= fl.de - 15 && e.f <= fl.ate + 15);
       if (!mostrado) problemas.push({ regra: 4, f: fl.de, msg: `"${fl.texto}" (${s(fl.de)}): verbo "${v}" não aparece na imagem (conferir se é sentido físico)`, grave: true });
     }

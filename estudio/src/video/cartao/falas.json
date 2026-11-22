@@ -1,0 +1,2648 @@
+[
+ {
+  "id": 0,
+  "texto": "Você passa o seu cartão.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Bip.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 4,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Aprovado.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "É sempre aprovado.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Você compra todos os pares de tênis da loja.",
+  "paragrafo": 3,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "Todos os 312 pares.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 6,
+  "texto": "Bip.",
+  "paragrafo": 4,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 4,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "Aprovado.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Você compra uma Lamborghini.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "Você tem 15 anos.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "Não sabe dirigir.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "Então, contrata um motorista.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 1
+ },
+ {
+  "id": 12,
+  "texto": "Bip.",
+  "paragrafo": 6,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 4,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "Aprovado.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "O cara no caixa encara o recibo.",
+  "paragrafo": 7,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "Depois olha para você.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "Quem é você?",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 17,
+  "texto": "Honestamente, eu ainda estou tentando descobrir.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 1
+ },
+ {
+  "id": 18,
+  "texto": "Um jovem de 15 anos normal precisa ganhar dinheiro lentamente.",
+  "paragrafo": 10,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 0
+ },
+ {
+  "id": 19,
+  "texto": "Cortando grama, cuidando de crianças, ajudando no mercadinho do bairro.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 71,
+  "virgulas": 2
+ },
+ {
+  "id": 20,
+  "texto": "Mesmo quando você cresce, um trabalhador brasileiro típico passa boa parte da vida trabalhando para pagar aluguel, comida, contas, prestações do carro e, com o que sobra, talvez algumas férias.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 193,
+  "virgulas": 6
+ },
+ {
+  "id": 21,
+  "texto": "As chances de ganhar na Mega-Sena são de aproximadamente 1 em 50 milhões.",
+  "paragrafo": 12,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 81,
+  "virgulas": 0
+ },
+ {
+  "id": 22,
+  "texto": "E mesmo isso acaba.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 23,
+  "texto": "O seu nunca acaba.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 24,
+  "texto": "Então, e se você tivesse dinheiro infinito?",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 1
+ },
+ {
+  "id": 25,
+  "texto": "Aqui está como funciona.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "Você tem um cartão preto, sem nome, sem limite.",
+  "paragrafo": 16,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 47,
+  "virgulas": 2
+ },
+ {
+  "id": 27,
+  "texto": "Nenhum banco consegue explicar sua origem, e só existe um.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 1
+ },
+ {
+  "id": 28,
+  "texto": "Se você perder, ele desaparece.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 1
+ },
+ {
+  "id": 29,
+  "texto": "Quando você paga, o dinheiro simplesmente aparece na conta da loja, novinho em folha.",
+  "paragrafo": 18,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 85,
+  "virgulas": 2
+ },
+ {
+  "id": 30,
+  "texto": "Ninguém perde um centavo.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 0
+ },
+ {
+  "id": 31,
+  "texto": "Então, é dinheiro grátis.",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 1
+ },
+ {
+  "id": 32,
+  "texto": "Qual é o problema?",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 33,
+  "texto": "Bem, o que realmente é dinheiro?",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 1
+ },
+ {
+  "id": 34,
+  "texto": "No Brasil, boa parte do dinheiro não existe em moedas ou notas.",
+  "paragrafo": 22,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 63,
+  "virgulas": 1
+ },
+ {
+  "id": 35,
+  "texto": "São apenas números nas telas dos bancos.",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 0
+ },
+ {
+  "id": 36,
+  "texto": "Dinheiro é uma promessa, uma maneira de dizer: “Eu troco isso por aquilo”.",
+  "paragrafo": 23,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 72,
+  "virgulas": 2
+ },
+ {
+  "id": 37,
+  "texto": "Mas dinheiro não é uma coisa física.",
+  "paragrafo": 24,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 38,
+  "texto": "Criar mais dinheiro não faz surgir mais pão.",
+  "paragrafo": 24,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 39,
+  "texto": "Imagine uma ilha.",
+  "paragrafo": 25,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 40,
+  "texto": "Existem 100 pães e R$ 100 em toda a ilha.",
+  "paragrafo": 25,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 41,
+  "texto": "Um pão custa aproximadamente R$ 1.",
+  "paragrafo": 25,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 0
+ },
+ {
+  "id": 42,
+  "texto": "Agora dobre a quantidade de dinheiro.",
+  "paragrafo": 26,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 43,
+  "texto": "Ainda existem apenas 100 pães.",
+  "paragrafo": 26,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 44,
+  "texto": "Então, agora cada pão custa R$ 2.",
+  "paragrafo": 27,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 39,
+  "virgulas": 1
+ },
+ {
+  "id": 45,
+  "texto": "Isso é inflação.",
+  "paragrafo": 28,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 46,
+  "texto": "Dinheiro demais perseguindo as mesmas coisas.",
+  "paragrafo": 28,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 0
+ },
+ {
+  "id": 47,
+  "texto": "O Banco Central tenta manter a inflação sob controle, buscando uma meta de 3% ao ano.",
+  "paragrafo": 29,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 97,
+  "virgulas": 1
+ },
+ {
+  "id": 48,
+  "texto": "Lento, constante e chato.",
+  "paragrafo": 29,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 1
+ },
+ {
+  "id": 49,
+  "texto": "Exatamente como eles gostam.",
+  "paragrafo": 29,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 50,
+  "texto": "Então, aqui está a regra: seu cartão nunca acaba, mas cada real que ele cria é novo.",
+  "paragrafo": 30,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 84,
+  "virgulas": 3
+ },
+ {
+  "id": 51,
+  "texto": "Gaste um pouco e ninguém percebe.",
+  "paragrafo": 31,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 52,
+  "texto": "Gaste muito e cada preço do país sobe para todos.",
+  "paragrafo": 31,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 0
+ },
+ {
+  "id": 53,
+  "texto": "Seu dinheiro é infinito.",
+  "paragrafo": 32,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 54,
+  "texto": "As coisas do mundo não são.",
+  "paragrafo": 32,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 55,
+  "texto": "Mas, honestamente, o primeiro mês é incrível.",
+  "paragrafo": 33,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 2
+ },
+ {
+  "id": 56,
+  "texto": "Você nunca mais olha para uma etiqueta de preço.",
+  "paragrafo": 34,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 0
+ },
+ {
+  "id": 57,
+  "texto": "Nem uma vez.",
+  "paragrafo": 34,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 58,
+  "texto": "Você paga a casa da sua mãe.",
+  "paragrafo": 35,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 59,
+  "texto": "Ela chora.",
+  "paragrafo": 35,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 60,
+  "texto": "Depois, confere o aplicativo do banco.",
+  "paragrafo": 35,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 1
+ },
+ {
+  "id": 61,
+  "texto": "E chora de novo.",
+  "paragrafo": 35,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 62,
+  "texto": "Você transforma seu quarto em uma sala de jogos.",
+  "paragrafo": 36,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 0
+ },
+ {
+  "id": 63,
+  "texto": "Todo console, todo jogo, seis telas e uma cadeira que custa mais do que a maioria dos carros.",
+  "paragrafo": 36,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 93,
+  "virgulas": 2
+ },
+ {
+  "id": 64,
+  "texto": "Você compra camarotes para todos os jogos do Brasileirão.",
+  "paragrafo": 37,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 57,
+  "virgulas": 0
+ },
+ {
+  "id": 65,
+  "texto": "Depois compra os camarotes ao lado para seus amigos.",
+  "paragrafo": 37,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 0
+ },
+ {
+  "id": 66,
+  "texto": "Você compra pizza para toda a sua escola.",
+  "paragrafo": 38,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 67,
+  "texto": "Cada aluno, cada professor, até o diretor que te deu suspensão.",
+  "paragrafo": 38,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 63,
+  "virgulas": 2
+ },
+ {
+  "id": 68,
+  "texto": "Seu melhor amigo ainda compra a pizza às sextas-feiras, todas as vezes.",
+  "paragrafo": 39,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 71,
+  "virgulas": 1
+ },
+ {
+  "id": 69,
+  "texto": "“Minha vez.”",
+  "paragrafo": 40,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 70,
+  "texto": "É sempre a vez dele.",
+  "paragrafo": 41,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 71,
+  "texto": "Ele não deixa você pagar.",
+  "paragrafo": 42,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 0
+ },
+ {
+  "id": 72,
+  "texto": "Nem uma vez.",
+  "paragrafo": 42,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 73,
+  "texto": "Você viaja de primeira classe.",
+  "paragrafo": 43,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 74,
+  "texto": "Depois compra um jatinho particular.",
+  "paragrafo": 43,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 75,
+  "texto": "O carro velho da sua mãe quebra.",
+  "paragrafo": 44,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 76,
+  "texto": "Você compra um novo para ela, um para o vizinho e outro para o cachorro do vizinho, só por precaução.",
+  "paragrafo": 44,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 101,
+  "virgulas": 2
+ },
+ {
+  "id": 77,
+  "texto": "E cada conta que chega pelo correio é paga antes mesmo de você abrir.",
+  "paragrafo": 45,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 69,
+  "virgulas": 0
+ },
+ {
+  "id": 78,
+  "texto": "Mas onde fica realmente louco é quando você pensa maior.",
+  "paragrafo": 46,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 56,
+  "virgulas": 0
+ },
+ {
+  "id": 79,
+  "texto": "Você quer uma Ferrari.",
+  "paragrafo": 47,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 80,
+  "texto": "Fácil.",
+  "paragrafo": 47,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 6,
+  "virgulas": 0
+ },
+ {
+  "id": 81,
+  "texto": "Você quer todas as Ferraris novas.",
+  "paragrafo": 48,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 82,
+  "texto": "Não é tão fácil.",
+  "paragrafo": 48,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 83,
+  "texto": "Eles fabricam apenas uma quantidade limitada por ano.",
+  "paragrafo": 49,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 0
+ },
+ {
+  "id": 84,
+  "texto": "Dinheiro infinito e você ainda está em uma lista de espera.",
+  "paragrafo": 50,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 59,
+  "virgulas": 0
+ },
+ {
+  "id": 85,
+  "texto": "Dinheiro pode comprar coisas.",
+  "paragrafo": 51,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 86,
+  "texto": "Não pode fazê-las acontecer mais rápido.",
+  "paragrafo": 51,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 0
+ },
+ {
+  "id": 87,
+  "texto": "E fica ainda mais louco.",
+  "paragrafo": 52,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 88,
+  "texto": "Futebol.",
+  "paragrafo": 53,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 89,
+  "texto": "Você quer seu próprio time.",
+  "paragrafo": 54,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 90,
+  "texto": "Não um time de várzea.",
+  "paragrafo": 55,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 91,
+  "texto": "Um gigante do futebol brasileiro.",
+  "paragrafo": 55,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 92,
+  "texto": "Você quer comprar o Flamengo.",
+  "paragrafo": 56,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 93,
+  "texto": "O Palmeiras.",
+  "paragrafo": 56,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 94,
+  "texto": "O Corinthians.",
+  "paragrafo": 56,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 95,
+  "texto": "Você poderia gastar bilhões e ainda assim não conseguir simplesmente aparecer na Gávea, no Allianz Parque ou na Neo Química Arena e dizer que agora é o dono.",
+  "paragrafo": 57,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 157,
+  "virgulas": 1
+ },
+ {
+  "id": 96,
+  "texto": "Os clubes têm estruturas associativas, conselhos, sócios e regras próprias.",
+  "paragrafo": 58,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 2
+ },
+ {
+  "id": 97,
+  "texto": "Você pode financiar contratações, construir um estádio novo e oferecer salários absurdos.",
+  "paragrafo": 59,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 89,
+  "virgulas": 1
+ },
+ {
+  "id": 98,
+  "texto": "Mas não pode simplesmente comprar a história de um clube.",
+  "paragrafo": 60,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 57,
+  "virgulas": 0
+ },
+ {
+  "id": 99,
+  "texto": "Imagine aparecer no Flamengo oferecendo dinheiro infinito para contratar qualquer jogador do planeta.",
+  "paragrafo": 61,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 101,
+  "virgulas": 0
+ },
+ {
+  "id": 100,
+  "texto": "Você quer o melhor atacante do mundo?",
+  "paragrafo": 62,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 101,
+  "texto": "Contratado.",
+  "paragrafo": 62,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 11,
+  "virgulas": 0
+ },
+ {
+  "id": 102,
+  "texto": "Quer montar um elenco inteiro de estrelas?",
+  "paragrafo": 63,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 103,
+  "texto": "Feito.",
+  "paragrafo": 63,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 6,
+  "virgulas": 0
+ },
+ {
+  "id": 104,
+  "texto": "Mas ainda precisa convencer o jogador a vir, negociar com o clube e esperar a janela de transferências.",
+  "paragrafo": 64,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 103,
+  "virgulas": 1
+ },
+ {
+  "id": 105,
+  "texto": "Dinheiro pode comprar jogadores.",
+  "paragrafo": 65,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 106,
+  "texto": "Não pode garantir uma Libertadores.",
+  "paragrafo": 65,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 35,
+  "virgulas": 0
+ },
+ {
+  "id": 107,
+  "texto": "E fica ainda mais louco.",
+  "paragrafo": 66,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 108,
+  "texto": "Espaço.",
+  "paragrafo": 67,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 7,
+  "virgulas": 0
+ },
+ {
+  "id": 109,
+  "texto": "Uma viagem para a estação espacial custa dezenas de milhões de dólares por assento.",
+  "paragrafo": 68,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 83,
+  "virgulas": 0
+ },
+ {
+  "id": 110,
+  "texto": "Você compra cada assento no foguete.",
+  "paragrafo": 69,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 111,
+  "texto": "Leva sua mãe e seu melhor amigo.",
+  "paragrafo": 70,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 112,
+  "texto": "Sua mãe flutua perto da janela comendo um biscoito.",
+  "paragrafo": 71,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 51,
+  "virgulas": 0
+ },
+ {
+  "id": 113,
+  "texto": "Nem ouse deixar migalhas nos dutos de ar.",
+  "paragrafo": 72,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 114,
+  "texto": "E fica ainda mais louco.",
+  "paragrafo": 73,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 115,
+  "texto": "Ouro.",
+  "paragrafo": 74,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 5,
+  "virgulas": 0
+ },
+ {
+  "id": 116,
+  "texto": "Todo o ouro já extraído da Terra caberia em um cubo de aproximadamente 22 metros de largura, tão alto quanto um prédio de sete andares.",
+  "paragrafo": 75,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 145,
+  "virgulas": 1
+ },
+ {
+  "id": 117,
+  "texto": "Aos preços atuais, vale dezenas de trilhões de reais.",
+  "paragrafo": 76,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 1
+ },
+ {
+  "id": 118,
+  "texto": "Então, você começa a comprar.",
+  "paragrafo": 77,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 1
+ },
+ {
+  "id": 119,
+  "texto": "E toda vez que compra, o preço sobe.",
+  "paragrafo": 78,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 1
+ },
+ {
+  "id": 120,
+  "texto": "Quanto mais você quer algo, mais caro fica, até mesmo para você.",
+  "paragrafo": 79,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 2
+ },
+ {
+  "id": 121,
+  "texto": "E fica ainda mais louco.",
+  "paragrafo": 80,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 122,
+  "texto": "Contagem.",
+  "paragrafo": 81,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 123,
+  "texto": "Seu saldo não tem um número, apenas um oito deitado.",
+  "paragrafo": 82,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 1
+ },
+ {
+  "id": 124,
+  "texto": "Se você contasse R$ 1 a cada segundo, levaria 11 dias para chegar a um milhão.",
+  "paragrafo": 83,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 84,
+  "virgulas": 1
+ },
+ {
+  "id": 125,
+  "texto": "Um bilhão levaria 32 anos.",
+  "paragrafo": 84,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 126,
+  "texto": "Um trilhão levaria 32 mil anos.",
+  "paragrafo": 85,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 127,
+  "texto": "Você teria que ter começado a contar muito antes de alguém construir uma cidade.",
+  "paragrafo": 86,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 80,
+  "virgulas": 0
+ },
+ {
+  "id": 128,
+  "texto": "E fica ainda mais louco.",
+  "paragrafo": 87,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 129,
+  "texto": "Casas.",
+  "paragrafo": 88,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 6,
+  "virgulas": 0
+ },
+ {
+  "id": 130,
+  "texto": "Você compra todas as casas da sua rua.",
+  "paragrafo": 89,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 0
+ },
+ {
+  "id": 131,
+  "texto": "Depois, entrega as propriedades para as pessoas que moram nelas.",
+  "paragrafo": 89,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 1
+ },
+ {
+  "id": 132,
+  "texto": "Chaves para todos.",
+  "paragrafo": 90,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 133,
+  "texto": "Uma festa no quarteirão.",
+  "paragrafo": 91,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 134,
+  "texto": "Balões, bolo e muita comemoração.",
+  "paragrafo": 91,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 1
+ },
+ {
+  "id": 135,
+  "texto": "Então, algo estranho acontece.",
+  "paragrafo": 92,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 1
+ },
+ {
+  "id": 136,
+  "texto": "As casas da próxima rua ficam 20% mais caras.",
+  "paragrafo": 93,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 57,
+  "virgulas": 0
+ },
+ {
+  "id": 137,
+  "texto": "Em apenas um mês.",
+  "paragrafo": 94,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 138,
+  "texto": "Como assim?",
+  "paragrafo": 95,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 11,
+  "virgulas": 0
+ },
+ {
+  "id": 139,
+  "texto": "Então, o Brasil percebe.",
+  "paragrafo": 96,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 1
+ },
+ {
+  "id": 140,
+  "texto": "Os bancos testam o cartão.",
+  "paragrafo": 97,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 141,
+  "texto": "Cada chip, cada camada.",
+  "paragrafo": 97,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 1
+ },
+ {
+  "id": 142,
+  "texto": "É apenas plástico.",
+  "paragrafo": 98,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 143,
+  "texto": "Um cartão normal.",
+  "paragrafo": 98,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 144,
+  "texto": "Exceto que não é.",
+  "paragrafo": 99,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 145,
+  "texto": "O governo te adora no começo.",
+  "paragrafo": 100,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 146,
+  "texto": "A maioria das compras gera impostos.",
+  "paragrafo": 101,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 147,
+  "texto": "Então, toda vez que você gasta bilhões de reais, uma parte vai para os cofres públicos.",
+  "paragrafo": 101,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 87,
+  "virgulas": 2
+ },
+ {
+  "id": 148,
+  "texto": "Você se torna um dos maiores contribuintes da história, mesmo sem nunca ter tido um emprego.",
+  "paragrafo": 102,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 92,
+  "virgulas": 1
+ },
+ {
+  "id": 149,
+  "texto": "Instituições de caridade fazem fila na sua porta.",
+  "paragrafo": 103,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 0
+ },
+ {
+  "id": 150,
+  "texto": "Você decide acabar com a fome no Brasil.",
+  "paragrafo": 104,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 0
+ },
+ {
+  "id": 151,
+  "texto": "Financia programas de alimentação, constrói hospitais, compra ambulâncias e investe em escolas.",
+  "paragrafo": 105,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 95,
+  "virgulas": 2
+ },
+ {
+  "id": 152,
+  "texto": "Você paga tudo no primeiro dia.",
+  "paragrafo": 106,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 153,
+  "texto": "Mas dinheiro não pode construir uma estrada através de uma guerra.",
+  "paragrafo": 107,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 0
+ },
+ {
+  "id": 154,
+  "texto": "Não pode fazer uma colheita crescer mais rápido.",
+  "paragrafo": 108,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 0
+ },
+ {
+  "id": 155,
+  "texto": "Não pode resolver sozinho a falta de profissionais em um hospital.",
+  "paragrafo": 109,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 0
+ },
+ {
+  "id": 156,
+  "texto": "Parte ajuda.",
+  "paragrafo": 110,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 157,
+  "texto": "Muito disso fica preso.",
+  "paragrafo": 111,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 158,
+  "texto": "Então vem a fama.",
+  "paragrafo": 112,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 159,
+  "texto": "100 milhões de seguidores.",
+  "paragrafo": 113,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 160,
+  "texto": "Seu rosto em um mural.",
+  "paragrafo": 114,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 161,
+  "texto": "As pessoas começam a te chamar de “o sem fundo”.",
+  "paragrafo": 115,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 46,
+  "virgulas": 0
+ },
+ {
+  "id": 162,
+  "texto": "Você recebe 4.000 mensagens por dia.",
+  "paragrafo": 116,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 163,
+  "texto": "Duas delas são de pessoas que você realmente conhece.",
+  "paragrafo": 117,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 0
+ },
+ {
+  "id": 164,
+  "texto": "Então vêm as regras.",
+  "paragrafo": 118,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 165,
+  "texto": "O Banco Central te convida para uma reunião.",
+  "paragrafo": 119,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 166,
+  "texto": "Biscoitos.",
+  "paragrafo": 120,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 167,
+  "texto": "Xícaras de café muito pequenas.",
+  "paragrafo": 120,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 168,
+  "texto": "Seus gastos agora são maiores do que os de alguns países.",
+  "paragrafo": 121,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 57,
+  "virgulas": 0
+ },
+ {
+  "id": 169,
+  "texto": "“Por favor, diminua o ritmo.”",
+  "paragrafo": 122,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 27,
+  "virgulas": 1
+ },
+ {
+  "id": 170,
+  "texto": "O Congresso discute por horas uma lei para te impedir.",
+  "paragrafo": 123,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 0
+ },
+ {
+  "id": 171,
+  "texto": "Alguns parlamentares querem estabelecer um limite.",
+  "paragrafo": 124,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 172,
+  "texto": "Outros querem que você financie um novo hospital primeiro.",
+  "paragrafo": 124,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 0
+ },
+ {
+  "id": 173,
+  "texto": "Eles ainda estão discutindo.",
+  "paragrafo": 125,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 174,
+  "texto": "Alguns países deixam de aceitar reais completamente.",
+  "paragrafo": 126,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 0
+ },
+ {
+  "id": 175,
+  "texto": "“Obrigado.",
+  "paragrafo": 127,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 176,
+  "texto": "Estamos bem.”",
+  "paragrafo": 127,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 177,
+  "texto": "E existe um custo.",
+  "paragrafo": 128,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 178,
+  "texto": "No começo, é pequeno.",
+  "paragrafo": 129,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 1
+ },
+ {
+  "id": 179,
+  "texto": "Você compra um presente de aniversário para sua mãe.",
+  "paragrafo": 130,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 0
+ },
+ {
+  "id": 180,
+  "texto": "Então percebe que pode comprar qualquer coisa.",
+  "paragrafo": 131,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 0
+ },
+ {
+  "id": 181,
+  "texto": "E, por isso, nada parece ter o mesmo significado.",
+  "paragrafo": 132,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 2
+ },
+ {
+  "id": 182,
+  "texto": "Ela sorri ao receber o colar de diamantes.",
+  "paragrafo": 133,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 183,
+  "texto": "Mas chorou de verdade com o cartão de macarrão que você fez para ela quando tinha seis anos.",
+  "paragrafo": 134,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 92,
+  "virgulas": 0
+ },
+ {
+  "id": 184,
+  "texto": "Seu telefone nunca para de tocar.",
+  "paragrafo": 135,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 185,
+  "texto": "Todos querem alguma coisa.",
+  "paragrafo": 136,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 186,
+  "texto": "Velhos amigos, novos amigos, crianças da escola que nunca falaram com você antes.",
+  "paragrafo": 137,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 81,
+  "virgulas": 2
+ },
+ {
+  "id": 187,
+  "texto": "Seu melhor amigo fica quieto.",
+  "paragrafo": 138,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 188,
+  "texto": "Ele ainda compra a pizza, mas agora ela esfria.",
+  "paragrafo": 139,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 47,
+  "virgulas": 1
+ },
+ {
+  "id": 189,
+  "texto": "“Não é que eu esteja com ciúmes.",
+  "paragrafo": 140,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 190,
+  "texto": "É só que não sei mais o que posso te dar.”",
+  "paragrafo": 140,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 191,
+  "texto": "E então vem a parte mais silenciosa.",
+  "paragrafo": 141,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 192,
+  "texto": "Você está na padaria da esquina.",
+  "paragrafo": 142,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 193,
+  "texto": "Sua mãe está contando moedas para comprar pão.",
+  "paragrafo": 143,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 0
+ },
+ {
+  "id": 194,
+  "texto": "Um pão custava aproximadamente R$ 2.",
+  "paragrafo": 144,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 195,
+  "texto": "Agora custa R$ 3.",
+  "paragrafo": 145,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 196,
+  "texto": "Ela não diz nada.",
+  "paragrafo": 146,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 197,
+  "texto": "Não precisa.",
+  "paragrafo": 147,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 198,
+  "texto": "Você fez isso.",
+  "paragrafo": 148,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 199,
+  "texto": "Um ano depois, os preços estão subindo mais rápido do que em décadas.",
+  "paragrafo": 149,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 69,
+  "virgulas": 1
+ },
+ {
+  "id": 200,
+  "texto": "As economias estão derretendo.",
+  "paragrafo": 150,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 201,
+  "texto": "O dinheiro da aposentadoria está perdendo valor.",
+  "paragrafo": 151,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 0
+ },
+ {
+  "id": 202,
+  "texto": "Todos os canais de notícias mostram seu rosto.",
+  "paragrafo": 152,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 0
+ },
+ {
+  "id": 203,
+  "texto": "Então você decide consertar tudo de uma vez.",
+  "paragrafo": 153,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 204,
+  "texto": "O Brasil tem uma dívida pública de trilhões de reais.",
+  "paragrafo": 154,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 0
+ },
+ {
+  "id": 205,
+  "texto": "Você paga tudo.",
+  "paragrafo": 155,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 15,
+  "virgulas": 0
+ },
+ {
+  "id": 206,
+  "texto": "Cada centavo.",
+  "paragrafo": 156,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 207,
+  "texto": "Em uma tarde.",
+  "paragrafo": 157,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 208,
+  "texto": "Por um momento, o país inteiro comemora.",
+  "paragrafo": 158,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 1
+ },
+ {
+  "id": 209,
+  "texto": "Então o dinheiro chega ao sistema.",
+  "paragrafo": 159,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 210,
+  "texto": "Trilhões de reais novos.",
+  "paragrafo": 160,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 211,
+  "texto": "Uma quantidade absurda de dinheiro criada em uma única tarde.",
+  "paragrafo": 161,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 0
+ },
+ {
+  "id": 212,
+  "texto": "E as pessoas entram em pânico.",
+  "paragrafo": 162,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 213,
+  "texto": "Não por causa do que aconteceu agora, mas pelo que pode acontecer depois.",
+  "paragrafo": 163,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 73,
+  "virgulas": 1
+ },
+ {
+  "id": 214,
+  "texto": "Se você pode fazer isso uma vez, pode fazer de novo.",
+  "paragrafo": 164,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 1
+ },
+ {
+  "id": 215,
+  "texto": "E de novo.",
+  "paragrafo": 164,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 216,
+  "texto": "Ao redor do mundo, investidores começam a vender reais.",
+  "paragrafo": 165,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 55,
+  "virgulas": 1
+ },
+ {
+  "id": 217,
+  "texto": "A moeda perde valor.",
+  "paragrafo": 166,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 218,
+  "texto": "5%.",
+  "paragrafo": 167,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 219,
+  "texto": "10%.",
+  "paragrafo": 168,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 220,
+  "texto": "15%.",
+  "paragrafo": 169,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 221,
+  "texto": "Na vitrine da padaria da esquina, o preço do pão é riscado e escrito novamente.",
+  "paragrafo": 170,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 79,
+  "virgulas": 1
+ },
+ {
+  "id": 222,
+  "texto": "O Brasil já conhece a sensação de ver os preços mudarem de uma semana para outra.",
+  "paragrafo": 171,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 81,
+  "virgulas": 0
+ },
+ {
+  "id": 223,
+  "texto": "Mas agora é diferente.",
+  "paragrafo": 171,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 224,
+  "texto": "O dinheiro perde valor tão rápido que ninguém sabe quanto vai custar alguma coisa amanhã.",
+  "paragrafo": 172,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 89,
+  "virgulas": 0
+ },
+ {
+  "id": 225,
+  "texto": "Seu telefone toca.",
+  "paragrafo": 173,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 226,
+  "texto": "É o presidente do Banco Central.",
+  "paragrafo": 174,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 227,
+  "texto": "“O mercado abre em 60 segundos.",
+  "paragrafo": 175,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 228,
+  "texto": "Se as pessoas acharem que existe mais dinheiro vindo, o real está acabado.",
+  "paragrafo": 175,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 74,
+  "virgulas": 1
+ },
+ {
+  "id": 229,
+  "texto": "Cada fundo de aposentadoria, cada conta poupança, inclusive a da sua mãe.”",
+  "paragrafo": 175,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 73,
+  "virgulas": 2
+ },
+ {
+  "id": 230,
+  "texto": "“A menos que eles saibam que nunca mais haverá dinheiro novo.”",
+  "paragrafo": 176,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 231,
+  "texto": "Você olha para o cartão.",
+  "paragrafo": 177,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 232,
+  "texto": "Preto, brilhante, único.",
+  "paragrafo": 178,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 2
+ },
+ {
+  "id": 233,
+  "texto": "Na televisão, uma câmera está apontada para a porta da sua casa.",
+  "paragrafo": 179,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 1
+ },
+ {
+  "id": 234,
+  "texto": "Ao vivo.",
+  "paragrafo": 179,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 235,
+  "texto": "O país inteiro está assistindo.",
+  "paragrafo": 180,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 236,
+  "texto": "Mantenha o cartão e você nunca mais desejará nada.",
+  "paragrafo": 181,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 237,
+  "texto": "Você pode ir embora.",
+  "paragrafo": 182,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 238,
+  "texto": "Comprar uma ilha.",
+  "paragrafo": 182,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 239,
+  "texto": "Comprar um país que ainda aceite seu dinheiro.",
+  "paragrafo": 182,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 0
+ },
+ {
+  "id": 240,
+  "texto": "Ou pode cortá-lo e voltar a ser apenas você.",
+  "paragrafo": 183,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 241,
+  "texto": "50 segundos.",
+  "paragrafo": 184,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 242,
+  "texto": "Sua mãe está na cozinha segurando um pão.",
+  "paragrafo": 185,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 243,
+  "texto": "R$ 3,80.",
+  "paragrafo": 186,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 244,
+  "texto": "40 segundos.",
+  "paragrafo": 187,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 245,
+  "texto": "Tesoura.",
+  "paragrafo": 188,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 246,
+  "texto": "Gaveta da cozinha.",
+  "paragrafo": 189,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 247,
+  "texto": "Segunda gaveta de cima.",
+  "paragrafo": 190,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 248,
+  "texto": "30 segundos.",
+  "paragrafo": 191,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 249,
+  "texto": "Porta da frente.",
+  "paragrafo": 192,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 250,
+  "texto": "Câmeras.",
+  "paragrafo": 193,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 251,
+  "texto": "Flashes.",
+  "paragrafo": 194,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 252,
+  "texto": "Você segura o cartão.",
+  "paragrafo": 195,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 253,
+  "texto": "Sua mão está tremendo.",
+  "paragrafo": 196,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 254,
+  "texto": "10 segundos.",
+  "paragrafo": 197,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 255,
+  "texto": "Bip.",
+  "paragrafo": 198,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 4,
+  "virgulas": 0
+ },
+ {
+  "id": 256,
+  "texto": "Silêncio.",
+  "paragrafo": 199,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 257,
+  "texto": "Duas metades de um cartão preto estão caídas na varanda.",
+  "paragrafo": 200,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 56,
+  "virgulas": 0
+ },
+ {
+  "id": 258,
+  "texto": "Então os mercados abrem.",
+  "paragrafo": 201,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 259,
+  "texto": "O real oscila, cai e depois se estabiliza.",
+  "paragrafo": 202,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 1
+ },
+ {
+  "id": 260,
+  "texto": "Na hora do almoço, começa a subir.",
+  "paragrafo": 203,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 1
+ },
+ {
+  "id": 261,
+  "texto": "No final da semana, está de volta ao patamar de um mês atrás.",
+  "paragrafo": 204,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 1
+ },
+ {
+  "id": 262,
+  "texto": "Os preços continuam altos por algum tempo, mas param de subir.",
+  "paragrafo": 205,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 1
+ },
+ {
+  "id": 263,
+  "texto": "Lentamente, o pânico desaparece.",
+  "paragrafo": 206,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 1
+ },
+ {
+  "id": 264,
+  "texto": "E então vem a revelação.",
+  "paragrafo": 207,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 265,
+  "texto": "A dívida pública do Brasil ainda foi paga.",
+  "paragrafo": 208,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 266,
+  "texto": "Cada centavo.",
+  "paragrafo": 209,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 267,
+  "texto": "Você pagou tudo.",
+  "paragrafo": 210,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 268,
+  "texto": "E ninguém pode desfazer isso.",
+  "paragrafo": 211,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 269,
+  "texto": "Naquela noite, o presidente do Banco Central liga novamente.",
+  "paragrafo": 212,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 1
+ },
+ {
+  "id": 270,
+  "texto": "“Todo rei, todo imperador e todo bilionário da história queria mais.",
+  "paragrafo": 213,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 67,
+  "virgulas": 1
+ },
+ {
+  "id": 271,
+  "texto": "Você tinha tudo e desistiu em 10 segundos.”",
+  "paragrafo": 213,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 43,
+  "virgulas": 0
+ },
+ {
+  "id": 272,
+  "texto": "Na sexta-feira, seu melhor amigo aparece com duas caixas de pizza.",
+  "paragrafo": 214,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 1
+ },
+ {
+  "id": 273,
+  "texto": "“Minha vez.”",
+  "paragrafo": 215,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 274,
+  "texto": "Você ri.",
+  "paragrafo": 216,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 275,
+  "texto": "“É sempre sua vez.”",
+  "paragrafo": 217,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 276,
+  "texto": "“Não mais.",
+  "paragrafo": 218,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 277,
+  "texto": "Na próxima semana é por sua conta.",
+  "paragrafo": 218,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 278,
+  "texto": "É melhor conseguir um emprego.”",
+  "paragrafo": 218,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 279,
+  "texto": "Uma semana depois, alguém bate à porta.",
+  "paragrafo": 219,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 39,
+  "virgulas": 1
+ },
+ {
+  "id": 280,
+  "texto": "Um estranho.",
+  "paragrafo": 220,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 281,
+  "texto": "Moletom cinza, óculos escuros e um pequeno envelope branco.",
+  "paragrafo": 221,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 59,
+  "virgulas": 1
+ },
+ {
+  "id": 282,
+  "texto": "“Você desistiu de dinheiro infinito em 10 segundos.",
+  "paragrafo": 222,
+  "fimParagrafo": false,
+  "citacao": true,
+  "caracteres": 51,
+  "virgulas": 0
+ },
+ {
+  "id": 283,
+  "texto": "Isso faz de você a única pessoa no planeta em quem podemos confiar.”",
+  "paragrafo": 222,
+  "fimParagrafo": true,
+  "citacao": true,
+  "caracteres": 67,
+  "virgulas": 0
+ },
+ {
+  "id": 284,
+  "texto": "Dentro do envelope, há um cartão.",
+  "paragrafo": 223,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 1
+ },
+ {
+  "id": 285,
+  "texto": "Branco desta vez.",
+  "paragrafo": 224,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 286,
+  "texto": "Sem nome.",
+  "paragrafo": 225,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 287,
+  "texto": "Sem limite.",
+  "paragrafo": 225,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 11,
+  "virgulas": 0
+ },
+ {
+  "id": 288,
+  "texto": "E, em vez de um cifrão, existe um pequeno relógio.",
+  "paragrafo": 226,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 2
+ },
+ {
+  "id": 289,
+  "texto": "Dinheiro foi o teste.",
+  "paragrafo": 227,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 290,
+  "texto": "Este cartão não imprime dinheiro.",
+  "paragrafo": 228,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 291,
+  "texto": "Então, o que ele imprime?",
+  "paragrafo": 229,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 1
+ },
+ {
+  "id": 292,
+  "texto": "Tempo.",
+  "paragrafo": 230,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 6,
+  "virgulas": 0
+ },
+ {
+  "id": 293,
+  "texto": "Então, você cortaria o cartão?",
+  "paragrafo": 231,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 1
+ }
+]

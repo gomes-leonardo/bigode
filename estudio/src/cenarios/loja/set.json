@@ -1,0 +1,12 @@
+{
+  "id": "loja",
+  "nome": "Loja de tênis",
+  "escala": 1.35,
+  "luz": { "pontos": [[1640, 160], [1880, 160], [1500, 1400], [980, 1400]], "cor": "#FFF6E0", "opacidade": 0.13 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 966, "yFundo": 958, "x0": 60, "x1": 1860 },
+    "chao_balcao": { "tipo": "chao", "y": 905, "x0": 640, "x1": 1300 },
+    "balcao": { "tipo": "tampo", "y": 758, "x0": 600, "x1": 1340 },
+    "banco": { "tipo": "assento", "x": 300, "y": 878, "chao": 964 }
+  }
+}

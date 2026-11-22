@@ -50,6 +50,18 @@ export const PADEIRO: Ator = {
 };
 export const ELENCO: Ator[] = [PROTAGONISTA, MAE, VO, AMIGO, IRMA, MEDICA, PADEIRO];
 
+// ---- coadjuvantes de um vídeo (atuam, então não são figurantes)
+export const ATENDENTE: Ator = {
+  nome: "atendente", desc: "caixa da loja de tênis",
+  hair: "curto", hairColor: "#2B1D16", beard: "#2B1D16", expr: "neutro",
+  outfit: { camiseta: "#3E8E7E", calca: ESCURA, tenis: "#FFFFFF", sola: SOLA },
+};
+export const MOTORISTA: Ator = {
+  nome: "motorista", desc: "boné e terno escuros",
+  hair: "bone", hairColor: "#2A2A35", mustache: "#3A2A20", expr: "neutro",
+  outfit: { camiseta: "#2B3447", calca: "#2B3447", tenis: "#2A2A35", sola: "#141414" },
+};
+
 // ------------------------------------------------------------------ figurantes
 /** gerador pseudoaleatório com semente fixa (mulberry32): a mesma semente sempre dá o mesmo figurante */
 const sorteio = (semente: number) => {

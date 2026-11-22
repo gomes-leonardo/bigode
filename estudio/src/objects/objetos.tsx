@@ -7,7 +7,13 @@ import type { P } from "../components/Person";
 
 /** t = segundos (anima vapor etc.); vira = celular: 0 deitado com a tela para cima, 0.5 de lado, 1 em pé com as costas para a câmera;
  * quente = 0 a 1 (vapor da panela); vapor = 0 a 1 (some o vapor da xícara, ex.: durante o gole) */
-export type EstadoObj = { t: number; vira?: number; quente?: number; vapor?: number };
+export type EstadoObj = {
+  t: number; vira?: number; quente?: number; vapor?: number;
+  tela?: "nada" | "bip" | "aprovado"; // maquininha
+  comprimento?: number; // recibo (px locais)
+  brilho?: number; // cartão (0 a 1)
+  cor?: string; // variação de cor (tênis, caixa, carro)
+};
 export type ObjetoDef = { nome: string; pega: (e: EstadoObj) => P; peso: number; Desenho: React.FC<EstadoObj> };
 const W = 6;
 

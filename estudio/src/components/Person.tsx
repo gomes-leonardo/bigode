@@ -59,6 +59,7 @@ export type PersonProps = {
   skirt?: string; // cor da saia; as pernas aparecem por baixo
   apron?: string; // cor do avental (com bolso)
   coat?: boolean; // jaleco branco longo com lapela
+  fala?: number; // 0 a 1: abertura da boca falando (anima de fora, quadro a quadro)
   propsBehind?: React.ReactNode; // objetos atrás do corpo (espaço do personagem)
   propsFront?: React.ReactNode; // objetos na frente do corpo e atrás dos braços
   propsHands?: React.ReactNode; // objetos que ficam por baixo dos dedos (desenhados antes das mãos)
@@ -248,7 +249,10 @@ export const Person: React.FC<PersonProps> = (pr) => {
   const camE = escura(roupa.camiseta);
   const calcaE = escura(roupa.calca);
   const ordem = pr.frente === "L" ? [bR, bL] : [bL, bR];
-  const rosto = typeof pr.expr === "object" ? pr.expr : rostoDe(pr.expr ?? "sigma");
+  const rosto0 = typeof pr.expr === "object" ? pr.expr : rostoDe(pr.expr ?? "sigma");
+  // falando: a boca abre e fecha (0 a 1), por cima da expressão
+  const fala = pr.fala ?? 0;
+  const rosto = fala > 0.01 ? { ...rosto0, boca: { ...rosto0.boca, lx: rosto0.boca.lx + 3 * fala, rx: rosto0.boca.rx - 3 * fala, baixo: Math.max(rosto0.boca.baixo, rosto0.boca.cima + 20 * fala) } } : rosto0;
   const fechar = pr.blink ?? piscada(f, pr.semente ?? 0);
   const centroCab = doTronco([CABECA[0], cabY - ombros * 0.6]);
   const alvo = pr.lookAt;

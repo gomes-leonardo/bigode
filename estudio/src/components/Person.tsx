@@ -6,6 +6,8 @@ import { useCurrentFrame } from "remotion";
 import { CONTORNO, INTERNA, LINHA, PELE, escura } from "../estilo";
 import { Face, piscada, rostoDe, type Expr, type RostoP } from "./Face";
 import { Circle, Ellipse, EscalaCtx, Line, Papel, Path, Rect } from "./prim";
+import { Barba, Bigode, CabeloAtras, CabeloFrente, Oculos, type Cabelo } from "./Cabelo";
+import { Avental, Jaleco, Saia } from "./Roupas";
 
 export type P = [number, number];
 export type Mao = "open" | "fist" | "point" | "none";
@@ -46,6 +48,17 @@ export type PersonProps = {
   sentado?: number; // 0 a 1: a coxa aponta para a câmera (escorço), então a perna encurta em vez de dobrar o joelho para fora
   giro?: number; // graus: gira o corpo inteiro em volta da cintura (cair)
   outfit?: Partial<Roupa>;
+  // ---- elenco (Fase 3): o mesmo componente gera todo mundo só com parâmetros
+  hair?: Cabelo; // careca (padrão), curto, cacheado, coque, rabo, longo, laterais, bone
+  hairColor?: string; // no boné, é a cor do boné
+  glasses?: boolean;
+  mustache?: boolean | string; // true = cor do cabelo; ou uma cor
+  beard?: boolean | string;
+  wide?: number; // largura do corpo, 1.0 a 1.25 (os alvos de mão e pé acompanham a largura)
+  headScale?: number; // criança: 1.08 (cabeça proporcionalmente maior)
+  skirt?: string; // cor da saia; as pernas aparecem por baixo
+  apron?: string; // cor do avental (com bolso)
+  coat?: boolean; // jaleco branco longo com lapela
   propsBehind?: React.ReactNode; // objetos atrás do corpo (espaço do personagem)
   propsFront?: React.ReactNode; // objetos na frente do corpo e atrás dos braços
   propsHands?: React.ReactNode; // objetos que ficam por baixo dos dedos (desenhados antes das mãos)
@@ -168,15 +181,18 @@ export const geometria = (pr: PersonProps) => {
   const ombros = pr.ombros ?? 0;
   const abaixa = pr.abaixa ?? 0;
   const resp = 1 + 0.015 * (pr.respira ?? 0);
+  const W = pr.wide ?? 1;
+  const hs = pr.headScale ?? 1;
+  const larg = (p: P): P => [p[0] * W, p[1]]; // alvos de pose são de um corpo de largura 1
   const cint: P = [0, -128 + abaixa];
   const giro = -hip * 1.4 + lean; // o tronco gira com a inclinação dos ombros e com o lean
   const doTronco = (p: P): P => rot([p[0], cint[1] + (p[1] + abaixa - cint[1]) * resp], giro, cint);
-  const ombroL = doTronco([-OMBRO[0], OMBRO[1] - ombros]);
-  const ombroR = doTronco([OMBRO[0], OMBRO[1] - ombros * 0.9]);
-  const quadL = rot([-QUADRIL[0], QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
-  const quadR = rot([QUADRIL[0], QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
-  const footL = pr.footL ?? [-30, 0];
-  const footR = pr.footR ?? [32, 0];
+  const ombroL = doTronco([-OMBRO[0] * W, OMBRO[1] - ombros]);
+  const ombroR = doTronco([OMBRO[0] * W, OMBRO[1] - ombros * 0.9]);
+  const quadL = rot([-QUADRIL[0] * W, QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
+  const quadR = rot([QUADRIL[0] * W, QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
+  const footL = larg(pr.footL ?? [-30, 0]);
+  const footR = larg(pr.footR ?? [32, 0]);
   const braco = (o: P, m0: P, bend: number, lado: number, tipo: Mao) => {
     const { c, b: m } = curvaMembro(o, m0, bend, lado, BRACO);
     const tg = tang(o, c, m, 1);
@@ -191,8 +207,8 @@ export const geometria = (pr: PersonProps) => {
       bainha: [[fim[0] - nM[1] * 17, fim[1] + nM[0] * 17], [fim[0] + nM[1] * 17, fim[1] - nM[0] * 17]] as P[],
     };
   };
-  const bL = braco(ombroL, pr.handL ?? [-72, -110], pr.bendL ?? 6, -1, pr.gripL ?? "open");
-  const bR = braco(ombroR, pr.handR ?? [74, -108], pr.bendR ?? 6, 1, pr.gripR ?? "open");
+  const bL = braco(ombroL, larg(pr.handL ?? [-72, -110]), pr.bendL ?? 6, -1, pr.gripL ?? "open");
+  const bR = braco(ombroR, larg(pr.handR ?? [74, -108]), pr.bendR ?? 6, 1, pr.gripR ?? "open");
   if (pr.pulsoL !== undefined) bL.ang = pr.pulsoL;
   if (pr.pulsoR !== undefined) bR.ang = pr.pulsoR;
   const perna = (q: P, pe: P, knee: number, lado: number) => {
@@ -206,7 +222,8 @@ export const geometria = (pr: PersonProps) => {
   };
   const pL = perna(quadL, footL, pr.kneeL ?? 2, -1);
   const pR = perna(quadR, footR, pr.kneeR ?? 2, 1);
-  return { roupa, hip, lean, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR };
+  const cabY = CABECA[1] - (hs - 1) * 80; // cabeça maior sobe para continuar apoiada no pescoço
+  return { roupa, hip, lean, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR, W, hs, cabY };
 };
 /** onde está a mão (alvo depois do limite de alcance) e para que lado ela aponta, no espaço do personagem */
 export const maoInfo = (pr: PersonProps, lado: "L" | "R") => {
@@ -219,13 +236,21 @@ export const Person: React.FC<PersonProps> = (pr) => {
   const f = useCurrentFrame();
   const sc = pr.scale ?? 1;
   const pulo = pr.pulo ?? 0;
-  const { roupa, hip, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR } = geometria(pr);
+  const { roupa, hip, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR, W, hs, cabY } = geometria(pr);
+  const cabelo = pr.hair ?? "careca";
+  const corCabelo = pr.hairColor ?? (cabelo === "bone" ? "#2F6E9E" : "#4A2E1E");
+  const kCab = 0.92 * hs; // escala do grupo da cabeça
+  const pernaCor = pr.skirt ? PELE : roupa.calca;
+  const corPelo = (v: boolean | string | undefined) => (typeof v === "string" ? v : corCabelo);
+  const f1 = (n: number) => n.toFixed(1);
+  const troncoT = `rotate(${giro} ${cint[0]} ${cint[1]}) translate(0 ${cint[1]}) scale(1 ${resp}) translate(0 ${-cint[1] + abaixa})`;
+  const cabecaT = `translate(0 ${-ombros * 0.6}) rotate(${pr.headTilt ?? 0} 0 -254) translate(${CABECA[0]} ${cabY}) scale(${kCab})`;
   const camE = escura(roupa.camiseta);
   const calcaE = escura(roupa.calca);
   const ordem = pr.frente === "L" ? [bR, bL] : [bL, bR];
   const rosto = typeof pr.expr === "object" ? pr.expr : rostoDe(pr.expr ?? "sigma");
   const fechar = pr.blink ?? piscada(f, pr.semente ?? 0);
-  const centroCab = doTronco([CABECA[0], CABECA[1] - ombros * 0.6]);
+  const centroCab = doTronco([CABECA[0], cabY - ombros * 0.6]);
   const alvo = pr.lookAt;
   const olhar: [number, number] = alvo ? [Math.max(-1, Math.min(1, (alvo[0] - centroCab[0]) / 300)), Math.max(-1, Math.min(1, (alvo[1] - centroCab[1] + pulo) / 300))] : [0, 0];
   const subida = pulo + Math.max(0, -Math.max(footL[1], footR[1]));
@@ -235,40 +260,55 @@ export const Person: React.FC<PersonProps> = (pr) => {
     <EscalaCtx.Provider value={sc}>
       <g transform={`translate(${pr.x} ${pr.y}) scale(${(pr.flip ? -1 : 1) * sc} ${sc})`}>
         {/* sombra no chão: fica no chão e encolhe quando ele sobe */}
-        <Ellipse cx={(footL[0] + footR[0]) / 2} cy={0} rx={88 * sombraChao} ry={11 * sombraChao} fill="#000" opacity={0.13} />
+        <Ellipse cx={(footL[0] + footR[0]) / 2} cy={0} rx={88 * W * sombraChao} ry={11 * sombraChao} fill="#000" opacity={0.13} />
         <g transform={`translate(0 ${-pulo}) rotate(${pr.giro ?? 0} 0 -60)`}>
           {pr.propsBehind}
           {/* pernas + cós num grupo só (sombra de papel na silhueta), tênis por cima */}
           <Papel>
             {[pL, pR].map((p, i) => (
               <g key={i}>
-                <Tubo d={p.d} w={38} cor={roupa.calca} />
-                <Path d={`M ${p.j[0] + p.dj[1] * 10 * p.lado} ${p.j[1] - p.dj[0] * 10 * p.lado} q ${p.dj[0] * 7 - p.dj[1] * 4 * p.lado} ${p.dj[1] * 7 + p.dj[0] * 4 * p.lado} ${p.dj[0] * 12} ${p.dj[1] * 12}`} stroke={calcaE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />
-                <Line x1={p.br[0] - p.db[1] * 19} y1={p.br[1] + p.db[0] * 19} x2={p.br[0] + p.db[1] * 19} y2={p.br[1] - p.db[0] * 19} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />
+                <Tubo d={p.d} w={pr.skirt ? 30 : 38} cor={pernaCor} />
+                {!pr.skirt && <Path d={`M ${p.j[0] + p.dj[1] * 10 * p.lado} ${p.j[1] - p.dj[0] * 10 * p.lado} q ${p.dj[0] * 7 - p.dj[1] * 4 * p.lado} ${p.dj[1] * 7 + p.dj[0] * 4 * p.lado} ${p.dj[0] * 12} ${p.dj[1] * 12}`} stroke={calcaE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />}
+                {!pr.skirt && <Line x1={p.br[0] - p.db[1] * 19} y1={p.br[1] + p.db[0] * 19} x2={p.br[0] + p.db[1] * 19} y2={p.br[1] - p.db[0] * 19} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />}
               </g>
             ))}
             <g transform={`translate(0 ${abaixa}) rotate(${hip} 0 -120)`}>
-              <Path d="M -55 -144 Q 0 -150 55 -144 L 52 -110 Q 26 -100 0 -104 Q -26 -100 -52 -110 Z" fill={roupa.calca} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
-              <Line x1={0} y1={-138} x2={1} y2={-104} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />
+              {pr.skirt ? (
+                <Saia cor={pr.skirt} W={W} />
+              ) : (
+                <>
+                  <Path d={`M ${f1(-55 * W)} -144 Q 0 -150 ${f1(55 * W)} -144 L ${f1(52 * W)} -110 Q ${f1(26 * W)} -100 0 -104 Q ${f1(-26 * W)} -100 ${f1(-52 * W)} -110 Z`} fill={roupa.calca} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+                  <Line x1={0} y1={-138} x2={1} y2={-104} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />
+                </>
+              )}
             </g>
           </Papel>
           <Papel><Tenis p={footL} lado={-1} cor={roupa.tenis} sola={roupa.sola} /></Papel>
           <Papel><Tenis p={footR} lado={1} cor={roupa.tenis} sola={roupa.sola} /></Papel>
           {/* contorno das mangas atrás do tronco + tronco + pescoço + cabeça: uma silhueta só */}
           <Papel>
+            <g transform={troncoT}>
+              <g transform={cabecaT}>
+                <CabeloAtras tipo={cabelo} cor={corCabelo} k={kCab} />
+              </g>
+            </g>
             {[bL, bR].map((b, i) => <Path key={i} d={b.manga} stroke={LINHA} strokeWidth={34 + 14} fill="none" strokeLinecap="round" />)}
-            <g transform={`rotate(${giro} ${cint[0]} ${cint[1]}) translate(0 ${cint[1]}) scale(1 ${resp}) translate(0 ${-cint[1] + abaixa})`}>
+            <g transform={troncoT}>
               <Path d="M -17 -270 L 17 -270 L 19 -236 L -19 -236 Z" transform={`translate(0 ${-ombros * 0.6})`} fill={PELE} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
-              <Path d={`M -24 ${-246 - ombros} C -52 ${-244 - ombros} -68 -232 -66 -206 C -64 -178 -58 -156 -54 -134 Q 0 -122 54 -134 C 58 -156 64 -178 66 -206 C 68 -232 52 ${-244 - ombros} 24 ${-246 - ombros} Z`} fill={roupa.camiseta} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+              <Path d={`M ${f1(-24 * (1 + (W - 1) / 2))} ${-246 - ombros} C ${f1(-52 * W)} ${-244 - ombros} ${f1(-68 * W)} -232 ${f1(-66 * W)} -206 C ${f1(-64 * W)} -178 ${f1(-58 * W)} -156 ${f1(-54 * W)} -134 Q 0 -122 ${f1(54 * W)} -134 C ${f1(58 * W)} -156 ${f1(64 * W)} -178 ${f1(66 * W)} -206 C ${f1(68 * W)} -232 ${f1(52 * W)} ${-244 - ombros} ${f1(24 * (1 + (W - 1) / 2))} ${-246 - ombros} Z`} fill={roupa.camiseta} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
               <Path d={`M -22 ${-245 - ombros} Q -6 ${-226 - ombros} 2 ${-222 - ombros} Q 10 ${-228 - ombros} 23 ${-245 - ombros} Z`} fill={PELE} stroke={LINHA} strokeWidth={INTERNA} strokeLinejoin="round" />
-              <Path d="M -38 -176 q 8 6 6 16" stroke={camE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />
-              <Path d="M 30 -150 q 9 -3 14 6" stroke={camE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />
-              <g transform={`translate(0 ${-ombros * 0.6}) rotate(${pr.headTilt ?? 0} 0 -254)`}>
-                <g transform={`translate(${CABECA[0]} ${CABECA[1]}) scale(0.92)`}>
-                  <Ellipse cx={0} cy={0} rx={84} ry={82} fill={PELE} stroke={LINHA} strokeWidth={CONTORNO / 0.92} />
-                  <Path d="M -58 -34 A 66 64 0 0 1 -24 -62" stroke={LINHA} strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.3} />
-                  <Face p={rosto} fechar={fechar} olhar={olhar} />
-                </g>
+              <Path d={`M ${f1(-38 * W)} -176 q 8 6 6 16`} stroke={camE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />
+              <Path d={`M ${f1(30 * W)} -150 q 9 -3 14 6`} stroke={camE} strokeWidth={INTERNA} fill="none" strokeLinecap="round" />
+              {pr.coat && <Jaleco blusa={roupa.camiseta} W={W} ombros={ombros} />}
+              {pr.apron && <Avental cor={pr.apron} W={W} />}
+              <g transform={cabecaT}>
+                <Ellipse cx={0} cy={0} rx={84} ry={82} fill={PELE} stroke={LINHA} strokeWidth={CONTORNO / kCab} />
+                <Path d="M -58 -34 A 66 64 0 0 1 -24 -62" stroke={LINHA} strokeWidth={5} fill="none" strokeLinecap="round" opacity={0.3} />
+                {pr.beard && <Barba cor={corPelo(pr.beard)} k={kCab} />}
+                <CabeloFrente tipo={cabelo} cor={corCabelo} k={kCab} />
+                <Face p={rosto} fechar={fechar} olhar={olhar} />
+                {pr.mustache && <Bigode cor={corPelo(pr.mustache)} k={kCab} />}
+                {pr.glasses && <Oculos k={kCab} />}
               </g>
             </g>
           </Papel>

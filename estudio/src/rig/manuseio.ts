@@ -48,6 +48,7 @@ export const cai = (f: number, fSolta: number, y0: number, chao: number, fps = 3
   const t = Math.max(0, (f - fSolta) / fps);
   return Math.min(chao, y0 + 0.5 * g * t * t);
 };
-/** mundo -> espaço do personagem (sem flip) */
-export const paraLocal = (w: P, x: number, y: number, s: number): P => [(w[0] - x) / s, (w[1] - y) / s];
+/** mundo -> alvo de pose no espaço do personagem (sem flip). `wide`: o Person multiplica o x dos alvos pela largura */
+export const paraLocal = (w: P, x: number, y: number, s: number, wide = 1): P => [(w[0] - x) / s / wide, (w[1] - y) / s];
+/** posição real (já com a largura aplicada, ex.: maoInfo().pos) -> mundo */
 export const paraMundo = (p: P, x: number, y: number, s: number): P => [x + p[0] * s, y + p[1] * s];

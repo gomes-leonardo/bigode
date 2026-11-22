@@ -56,6 +56,20 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 ## Elenco
 - O mesmo componente gera todos, só com parâmetros: hair (careca, curto, cacheado, coque, rabo, longo, laterais, bone), hairColor, glasses, mustache, beard, wide (1.0 a 1.25), scale (criança 0.62 com headScale 1.08), skirt, apron, coat. Ninguém tem orelha.
 - Figurantes: combinação aleatória com semente fixa, scale 0.74, expressão neutra; só piscam e respiram.
+- Personagens fixos (`src/elenco/elenco.ts`), sempre os mesmos parâmetros:
+  - Protagonista: careca, camiseta mostarda #E3A23B, jeans, tênis branco com sola vermelha. Padrão "sigma".
+  - Mãe: coque castanho, blusa #C0504D, saia jeans. Padrão "convencido".
+  - Vó: coque grisalho, óculos, blusa lilás #8E7CC3, saia cinza, avental amarelo #F2D16B, wide 1.15, scale 0.82. Padrão "neutro".
+  - Melhor amigo: boné azul #2F6E9E, camiseta verde #4F8A6B, calça escura. Padrão "rindo".
+  - Irmã: criança (scale 0.62, headScale 1.08), rabo de cavalo castanho, blusa rosa #E37BA1, jeans. Padrão "olhar-lateral".
+  - Médica: cabelo longo preto, óculos, jaleco branco até o joelho com lapela, blusa #5AA5B8 (aparece no decote e nas mangas). Padrão "neutro".
+  - Padeiro: calvo com laterais grisalhas, bigode grisalho, camiseta e avental brancos, calça cinza-escura, wide 1.25. Padrão "convencido".
+  - Todo mundo menos o protagonista: tênis branco com sola cinza clara.
+- Implementação:
+  - Cabelo em duas camadas: atrás (coque, rabo de cavalo, cabelo comprido; fica atrás do tronco) e frente (por cima da cabeça, por baixo do rosto). Barba antes do rosto (a boca fica por cima), bigode e óculos depois.
+  - Saia: as pernas viram pele (sem vinco de calça) e aparecem abaixo da saia. Avental e jaleco são desenhados por cima do tronco e cobrem o alto das pernas.
+  - `wide` alarga ombros, quadril, tronco e pés; os alvos de mão e pé das poses são de um corpo de largura 1 e são multiplicados pela largura. Para alvo exato no mundo (pegar objeto), use `paraLocal(..., wide)`; o `walk` já divide pela largura.
+  - Na cena, escala final = escala da cena x `scale` do personagem (ex.: figurante = 0.74 da escala do protagonista).
 
 ## Cenários
 - Componente em 3 camadas (fundo, meio, frente) para parallax, mesmo traço preto grosso com sombra de papel e cores chapadas suaves.

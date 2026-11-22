@@ -4,7 +4,7 @@ import type { P } from "../components/Person";
 import { FPS, rampa, suave, type Pose } from "./pose";
 
 const TAU = Math.PI * 2;
-export type Base = { x: number; y: number; scale?: number; expr?: Pose["expr"]; lookAt?: P };
+export type Base = { x: number; y: number; scale?: number; wide?: number; expr?: Pose["expr"]; lookAt?: P };
 
 /** idle: respira (tronco 1.0 a 1.015, ciclo de 3 s), cabeça balança 1°, braços com leve balanço */
 export const idle = (b: Base) => (f: number): Pose => {
@@ -78,12 +78,13 @@ export const lookAtPhone = (b: Base) => (f: number): Pose => ({ ...idle(b)(f), h
  * O pé da frente abre o passo e o de trás acompanha, sem cruzar as pernas. xa, xb no mundo; f0 = quadro de início. */
 export const walk = (b: Base & { xa: number; xb: number; f0: number; passo?: number; quadros?: number }) => {
   const s = b.scale ?? 1;
+  const W = b.wide ?? 1; // o Person multiplica o x dos alvos pela largura: aqui divide, para o pé de apoio não escorregar
   const dir = b.xb >= b.xa ? 1 : -1;
   const q = b.quadros ?? 10;
   const dist = Math.abs(b.xb - b.xa);
   const n = Math.max(1, Math.round(dist / ((b.passo ?? 88) * s)));
   const d = dist / n;
-  const pes: { L: number; R: number }[] = [{ L: b.xa - 30 * s, R: b.xa + 32 * s }];
+  const pes: { L: number; R: number }[] = [{ L: b.xa - 30 * s * W, R: b.xa + 32 * s * W }];
   for (let i = 1; i <= 2 * n; i++) {
     const ant = pes[i - 1];
     const lider = i % 2 === 1; // passo ímpar: o pé da frente abre; par: o de trás acompanha
@@ -102,15 +103,15 @@ export const walk = (b: Base & { xa: number; xb: number; f0: number; passo?: num
     const moveR = andando && a.R !== c.R;
     const moveL = andando && a.L !== c.L;
     const lift = -20 * Math.sin(Math.PI * fase);
-    const corpoX = (fL + fR) / 2 - 1 * s;
+    const corpoX = (fL + fR) / 2 - 1 * s * W;
     const bal = andando ? Math.sin(Math.PI * fase) * (moveR ? 1 : -1) : 0;
     const base = idle({ ...b, x: corpoX })(f);
     return {
       ...base,
       x: corpoX,
       pulo: andando ? 6 * Math.sin(Math.PI * fase) : 0,
-      footL: [(fL - corpoX) / s, moveL ? lift : 0],
-      footR: [(fR - corpoX) / s, moveR ? lift : 0],
+      footL: [(fL - corpoX) / s / W, moveL ? lift : 0],
+      footR: [(fR - corpoX) / s / W, moveR ? lift : 0],
       kneeL: moveL ? 8 : 2,
       kneeR: moveR ? 8 : 2,
       handL: [-72 + 14 * bal, -110 - 4 * Math.abs(bal)],

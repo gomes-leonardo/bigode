@@ -110,3 +110,13 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 - Sem áudio, a legenda mostra o texto exato de cada fala (fala de personagem em amarelo) e pode ser desligada.
 - Verbo em sentido figurado ("passa boa parte da vida") é registrado na lista de figurados do capítulo, para o verificador não cobrar o gesto.
 - Gráficos na tela (onomatopeia, número que conta, selo com ícone, painel) seguem o mesmo traço: contorno preto grosso, sombra de papel, cores chapadas, entrada com pulo.
+- Um corte com verbo (ex.: o corte que já abre na compra) conta como evento para o verificador: o plano que entra mostra a ação.
+- Marcas e clubes reais só aparecem como texto (nomes de estádios ditos no roteiro); camisas, prédios e logos são genéricos.
+
+## Recursos criados no vídeo do cartão infinito
+- Cenários (`src/video/cartao/cenas.tsx`): rua de casas (plano aberto, escala 0.7, duas paletas: a sua rua e a rua vizinha), varanda com a porta da frente (a porta abre como retângulo escuro), laboratório do banco (bancada na altura do quadril, técnicos atrás) e plenário (bancada comprida com microfones). Estação espacial, loja em outro país, areia do cubo de ouro e fundo de noite com foguete ficam dentro do próprio capítulo.
+- Tela dividida: duas cenas inteiras recortadas ao meio (`clip-path`), cada uma com a sua câmera, e um filete creme no meio. Usada nos dois telefonemas do Banco Central; à noite, um véu azul multiplica as duas metades.
+- Cena dentro de tela (TV): a cena inteira reduzida e recortada dentro da moldura (`NaTela`), por exemplo a varanda ao vivo na televisão.
+- Cronômetro da reta final (`cronometro.tsx`): mostra os segundos anunciados no roteiro (60, 50, 40, 30, 10, Bip) e anda entre um anúncio e outro; fica no canto e vai grande para o centro em cada anúncio, sem cobrir rosto.
+- Passagem de tempo: clarão branco curto (um ano, 32 anos, 32 mil anos) e troca de fundo; lembrança em sépia com moldura clara.
+- Perda de significado: tons de cinza (`grayscale`) sobre a cena e os gráficos; silêncio depois do Bip também tira a cor.

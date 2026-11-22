@@ -12,12 +12,13 @@ import { CAP2, FIGURADOS_CAP2 } from "./cap2";
 import { CAP3, FIGURADOS_CAP3 } from "./cap3";
 import { CAP4, FIGURADOS_CAP4 } from "./cap4";
 import { CAP5, FIGURADOS_CAP5 } from "./cap5";
-import { CAP6, FIGURADOS_CAP6, FIM_CAP6 } from "./cap6";
+import { CAP6, FIGURADOS_CAP6 } from "./cap6";
+import { CAP7, FIGURADOS_CAP7, FIM_CAP7 } from "./cap7";
 import { FALAS, falaNoQuadro } from "./tempo";
 
-export const PLANOS: PlanoV[] = [...CAP1, ...CAP2, ...CAP3, ...CAP4, ...CAP5, ...CAP6];
-const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1, ...FIGURADOS_CAP2, ...FIGURADOS_CAP3, ...FIGURADOS_CAP4, ...FIGURADOS_CAP5, ...FIGURADOS_CAP6 };
-export const FIM = FIM_CAP6;
+export const PLANOS: PlanoV[] = [...CAP1, ...CAP2, ...CAP3, ...CAP4, ...CAP5, ...CAP6, ...CAP7];
+const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1, ...FIGURADOS_CAP2, ...FIGURADOS_CAP3, ...FIGURADOS_CAP4, ...FIGURADOS_CAP5, ...FIGURADOS_CAP6, ...FIGURADOS_CAP7 };
+export const FIM = FIM_CAP7;
 
 export const ritmo = (planos: PlanoV[], ate: number) =>
   verificaRitmo({

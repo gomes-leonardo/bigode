@@ -27,6 +27,7 @@ const p11: PlanoV = {
   nome: "o que é dinheiro", de: FIM_CAP2, ate: CORTE(36), enquadra: { x: 960, y: 560, zoom: 1.0 },
   eventos: [
     { f: FIM_CAP2, tipo: "corte", desc: "pergunta" },
+    { f: T(34), tipo: "objeto", desc: "moeda e nota" },
     { f: T(34, fracDe(34, "não existe")), tipo: "objeto", desc: "moedas e notas riscadas" },
     { f: T(35), tipo: "objeto", desc: "números na tela do banco" },
     { f: T(36), tipo: "pose", desc: "chega o padeiro" },
@@ -186,6 +187,8 @@ const p14: PlanoV = {
   nome: "banco central", de: CORTE(46), ate: CORTE(49), enquadra: { x: 960, y: 560, zoom: 1.05 },
   eventos: [
     { f: CORTE(46), tipo: "corte", desc: "Banco Central" },
+    { f: T(47, fracDe(47, "inflação")), tipo: "objeto", desc: "INFLAÇÃO" },
+    { f: T(47, fracDe(47, "sob controle")), tipo: "objeto", desc: "SOB CONTROLE" },
     { f: T(47, fracDe(47, "3%")), tipo: "objeto", desc: "meta de 3%" },
     { f: T(48), tipo: "objeto", desc: "gráfico lento e reto" },
     { f: T(49), tipo: "expressao", desc: "ele sorri" },
@@ -201,6 +204,8 @@ const p14: PlanoV = {
     const k = entre(f, T(48), T(49, 1));
     return (
       <>
+        <TextoPop x={1300} y={330} f={f} de={T(47, fracDe(47, "inflação"))} ate={T(47, fracDe(47, "3%"))} texto="INFLAÇÃO" tam={96} cor="#E0826E" rot={-3} />
+        <TextoPop x={1300} y={440} f={f} de={T(47, fracDe(47, "sob controle"))} ate={T(47, fracDe(47, "3%"))} texto="SOB CONTROLE" tam={60} rot={2} />
         <Selo x={1300} y={420} f={f} de={T(47, fracDe(47, "3%"))} ate={T(48)} r={150} cor="#FFFFFF">
           <Texto texto="3%" tam={120} y={30} cor="#4F8A6B" />
           <Texto texto="AO ANO" tam={34} y={90} />
@@ -220,7 +225,7 @@ const p15: PlanoV = {
     { f: CORTE(49), tipo: "corte", desc: "a regra" },
     { f: T(50, fracDe(50, "cada real")), tipo: "objeto", desc: "notas novas saindo do cartão" },
     { f: T(51), tipo: "objeto", desc: "uma etiqueta quase não mexe" },
-    { f: T(52), tipo: "objeto", desc: "todas as etiquetas sobem" },
+    { f: T(52), tipo: "objeto", desc: "todas as etiquetas sobem", verbo: "subir" },
     { f: T(53), tipo: "objeto", desc: "infinito" },
     { f: T(54), tipo: "objeto", desc: "as coisas acabam: estoque limitado" },
   ],
@@ -269,5 +274,5 @@ const p15: PlanoV = {
 
 export const CAP3: PlanoV[] = [p11, p12, p13, p14, p15];
 export const FIM_CAP3 = CORTE(54);
-export const FIGURADOS_CAP3: Record<number, string[]> = {};
+export const FIGURADOS_CAP3: Record<number, string[]> = { 49: ["comer"] }; // "como eles gostam"
 

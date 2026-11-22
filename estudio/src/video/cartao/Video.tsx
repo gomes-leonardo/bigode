@@ -11,17 +11,19 @@ import { CAP1, FIGURADOS_CAP1 } from "./cap1";
 import { CAP2, FIGURADOS_CAP2 } from "./cap2";
 import { CAP3, FIGURADOS_CAP3 } from "./cap3";
 import { CAP4, FIGURADOS_CAP4 } from "./cap4";
-import { CAP5, FIGURADOS_CAP5, FIM_CAP5 } from "./cap5";
+import { CAP5, FIGURADOS_CAP5 } from "./cap5";
+import { CAP6, FIGURADOS_CAP6, FIM_CAP6 } from "./cap6";
 import { FALAS, falaNoQuadro } from "./tempo";
 
-export const PLANOS: PlanoV[] = [...CAP1, ...CAP2, ...CAP3, ...CAP4, ...CAP5];
-const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1, ...FIGURADOS_CAP2, ...FIGURADOS_CAP3, ...FIGURADOS_CAP4, ...FIGURADOS_CAP5 };
-export const FIM = FIM_CAP5;
+export const PLANOS: PlanoV[] = [...CAP1, ...CAP2, ...CAP3, ...CAP4, ...CAP5, ...CAP6];
+const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1, ...FIGURADOS_CAP2, ...FIGURADOS_CAP3, ...FIGURADOS_CAP4, ...FIGURADOS_CAP5, ...FIGURADOS_CAP6 };
+export const FIM = FIM_CAP6;
 
 export const ritmo = (planos: PlanoV[], ate: number) =>
   verificaRitmo({
     duracao: ate,
-    eventos: planos.flatMap((p) => p.eventos.filter((e) => e.tipo !== "corte")),
+    // um corte com verbo mostra a ação no plano que entra: conta como evento
+    eventos: planos.flatMap((p) => p.eventos.filter((e) => e.tipo !== "corte" || e.verbo).map((e) => (e.tipo === "corte" ? { ...e, tipo: "objeto" as const } : e))),
     cortes: planos.slice(1).map((p) => p.de),
     falas: FALAS.filter((x) => x.ini < ate).map((x) => ({ de: x.ini, ate: x.fim, texto: x.texto, ignorar: FIGURADOS[x.id] })),
   });

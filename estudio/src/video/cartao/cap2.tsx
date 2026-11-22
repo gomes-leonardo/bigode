@@ -117,4 +117,4 @@ const p10: PlanoV = {
 
 export const CAP2: PlanoV[] = [p9, p10];
 export const FIM_CAP2 = CORTE(32);
-export const FIGURADOS_CAP2: Record<number, string[]> = {};
+export const FIGURADOS_CAP2: Record<number, string[]> = { 25: ["comer"] }; // "como funciona"

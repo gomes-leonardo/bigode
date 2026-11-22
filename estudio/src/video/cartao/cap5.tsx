@@ -38,7 +38,7 @@ const p25: PlanoV = {
     { f: T(82), tipo: "objeto", desc: "não é tão fácil" },
     { f: T(83), tipo: "objeto", desc: "fábrica: quantidade limitada por ano" },
     { f: T(84), tipo: "objeto", desc: "lista de espera" },
-    { f: T(85), tipo: "objeto", desc: "dinheiro compra coisas" },
+    { f: T(85), tipo: "objeto", desc: "dinheiro compra coisas", verbo: "comprar" },
     { f: T(86), tipo: "objeto", desc: "relógio: não acelera" },
   ],
   Cena: ({ f, cam }) => {
@@ -141,10 +141,13 @@ const p30: PlanoV = {
 };
 
 // ------------------------------------------------------------------ 31. bilhões e não dá para aparecer nos estádios e dizer que é o dono
+const ANDA31 = walk({ ...emPe(CINZA.set, "chao", 300), xa: 300, xb: 820, f0: CORTE(94) + 2, quadros: 8 });
 const p31: PlanoV = {
   nome: "o dono que não entra", de: CORTE(94), ate: CORTE(95), enquadra: { x: 960, y: 560, zoom: 1.0 },
   eventos: [
     { f: CORTE(94), tipo: "corte", desc: "chega com bilhões" },
+    { f: CORTE(94) + 4, tipo: "objeto", desc: "BILHÕES" },
+    { f: ANDA31.fim, tipo: "pose", desc: "para diante do segurança" },
     { f: T(95, fracDe(95, "na Gávea")), tipo: "objeto", desc: "estádio 1" },
     { f: T(95, fracDe(95, "no Allianz")), tipo: "objeto", desc: "estádio 2" },
     { f: T(95, fracDe(95, "na Neo")), tipo: "objeto", desc: "estádio 3" },
@@ -152,7 +155,7 @@ const p31: PlanoV = {
   ],
   Cena: ({ f, cam }) => {
     const set = CINZA.set;
-    const anda = walk({ ...emPe(set, "chao", 300), xa: 300, xb: 820, f0: CORTE(94) + 2, quadros: 8 });
+    const anda = ANDA31;
     let p: PersonProps = { ...props(PROTAGONISTA), ...(f < anda.fim ? anda(f) : idle(emPe(set, "chao", 820))(f)), expr: expressaoNoQuadro([[0, "convencido"], [T(95, fracDe(95, "e dizer")), "chocado"]], f, 6) };
     p = segura(p, "L", [-110, -190], SACO, { t: 0, comprimento: 1 }, 0);
     p.lookAt = olhar(p, [1300, 500]);
@@ -211,7 +214,7 @@ const p33: PlanoV = {
     { f: CORTE(96), tipo: "corte", desc: "contratações" },
     { f: T(97, fracDe(97, "construir")), tipo: "objeto", desc: "estádio novo" },
     { f: T(97, fracDe(97, "oferecer")), tipo: "objeto", desc: "salários absurdos" },
-    { f: T(98), tipo: "objeto", desc: "a história não está à venda" },
+    { f: T(98), tipo: "objeto", desc: "a história não está à venda", verbo: "comprar" },
   ],
   Cena: ({ f, cam }) => {
     const set = CINZA.set;
@@ -243,6 +246,8 @@ const p35: PlanoV = {
   nome: "contratações", de: CORTE(98), ate: CORTE(104), enquadra: { x: 960, y: 560, zoom: 1.0 },
   eventos: [
     { f: CORTE(98), tipo: "corte", desc: "oferta com dinheiro infinito" },
+    { f: CORTE(98) + 3, tipo: "objeto", desc: "o globo: o mundo todo" },
+    { f: T(99, fracDe(99, "qualquer jogador")), tipo: "objeto", desc: "QUALQUER JOGADOR" },
     { f: T(100), tipo: "pose", desc: "o melhor atacante do mundo" },
     { f: T(101), tipo: "objeto", desc: "contratado" },
     { f: T(102), tipo: "pose", desc: "elenco de estrelas" },
@@ -286,7 +291,7 @@ const p35: PlanoV = {
 const p36: PlanoV = {
   nome: "a taça fora de alcance", de: CORTE(104), ate: CORTE(106), enquadra: { x: 960, y: 560, zoom: 1.0 },
   eventos: [
-    { f: CORTE(104), tipo: "corte", desc: "jogadores comprados" },
+    { f: CORTE(104), tipo: "corte", desc: "jogadores comprados", verbo: "comprar" },
     { f: T(106), tipo: "pose", desc: "tenta alcançar a taça" },
   ],
   Cena: ({ f, cam }) => {

@@ -435,3 +435,43 @@ export const IconePrancheta: React.FC<{ linhas: string[]; destaque?: number }> =
     ))}
   </g>
 );
+
+// ------------------------------------------------------------------ capítulo 6: foguete, assento, cubo de ouro, pedra com tracinhos
+export const IconeFoguete: React.FC<{ fogo?: number }> = ({ fogo = 0 }) => (
+  <g>
+    {fogo > 0 && <path d={`M -26 120 Q 0 ${170 + fogo * 60} 26 120 Z`} fill="#F2D16B" stroke={LINHA} strokeWidth={5} />}
+    <path d="M -40 60 L -80 120 L -40 110 Z M 40 60 L 80 120 L 40 110 Z" fill="#C0504D" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <path d="M 0 -150 Q 52 -90 46 40 L 40 120 L -40 120 L -46 40 Q -52 -90 0 -150 Z" fill="#F4F1EA" stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+    <circle cx={0} cy={-40} r={22} fill="#9ED8F5" stroke={LINHA} strokeWidth={SW} />
+    <path d="M -30 -110 Q 0 -150 30 -110 Z" fill="#C0504D" stroke={LINHA} strokeWidth={4} />
+  </g>
+);
+export const IconeAssento: React.FC<{ vendido?: boolean }> = ({ vendido }) => (
+  <g>
+    <rect x={-30} y={-50} width={60} height={70} rx={14} fill={vendido ? "#7FD18C" : "#5AA5B8"} stroke={LINHA} strokeWidth={SW} />
+    <rect x={-38} y={14} width={76} height={20} rx={8} fill={vendido ? "#5FB26E" : "#3A7DB0"} stroke={LINHA} strokeWidth={SW} />
+    {vendido && <path d="M -14 -16 l 10 10 l 18 -20" stroke="#FFFFFF" strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />}
+  </g>
+);
+/** cubo de ouro em perspectiva; lado = largura da frente em px */
+export const CuboOuro: React.FC<{ lado: number }> = ({ lado }) => {
+  const d = lado * 0.32;
+  return (
+    <g>
+      <path d={`M 0 0 L ${lado} 0 L ${lado} ${-lado} L 0 ${-lado} Z`} fill="#E3B95B" stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+      <path d={`M 0 ${-lado} L ${d} ${-lado - d} L ${lado + d} ${-lado - d} L ${lado} ${-lado} Z`} fill="#F2D47E" stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+      <path d={`M ${lado} 0 L ${lado + d} ${-d} L ${lado + d} ${-lado - d} L ${lado} ${-lado} Z`} fill="#C99A3E" stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+      <path d={`M ${lado * 0.15} ${-lado * 0.8} L ${lado * 0.45} ${-lado * 0.8}`} stroke="#FFF0B8" strokeWidth={10} strokeLinecap="round" />
+    </g>
+  );
+};
+export const PedraTracinhos: React.FC<{ n: number }> = ({ n }) => (
+  <g>
+    <path d="M -130 90 L -150 -60 Q -120 -110 0 -110 Q 130 -110 150 -50 L 130 90 Z" fill="#9A958C" stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
+    {Array.from({ length: n }, (_, i) => {
+      const g = Math.floor(i / 5), j = i % 5;
+      const x = -100 + (g % 5) * 46 + j * 8, y = -70 + Math.floor(g / 5) * 52;
+      return j === 4 ? <line key={i} x1={x - 34} y1={y + 30} x2={x + 2} y2={y} stroke={LINHA} strokeWidth={5} /> : <line key={i} x1={x} y1={y} x2={x} y2={y + 34} stroke={LINHA} strokeWidth={5} />;
+    })}
+  </g>
+);

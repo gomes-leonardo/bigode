@@ -66,9 +66,9 @@ const p17: PlanoV = {
   eventos: [
     { f: CORTE(57), tipo: "corte", desc: "a casa da mãe" },
     { f: T(58, 0.2), tipo: "objeto", desc: "paga a casa: QUITADA", verbo: "pagar" },
-    { f: T(59), tipo: "expressao", desc: "ela chora" },
+    { f: T(59), tipo: "expressao", desc: "ela chora", verbo: "chorar" },
     { f: T(60), tipo: "objeto", desc: "confere o aplicativo do banco" },
-    { f: T(61), tipo: "camera", desc: "chora de novo: zoom de reação" },
+    { f: T(61), tipo: "camera", desc: "chora de novo: zoom de reação", verbo: "chorar" },
   ],
   Cena: ({ f, cam }) => {
     const set = SALA.set;
@@ -252,6 +252,8 @@ const p21: PlanoV = {
   nome: "sala: minha vez", de: CORTE(67), ate: CORTE(72), enquadra: { x: 980, y: 600, zoom: 1.3 },
   eventos: [
     { f: CORTE(67), tipo: "corte", desc: "o amigo chega com a pizza", verbo: "comprar" },
+    { f: CORTE(67) + 3, tipo: "objeto", desc: "calendário: sexta" },
+    { f: T(68, fracDe(68, "todas as vezes")), tipo: "objeto", desc: "as sextas passam no calendário" },
     { f: T(69), tipo: "pose", desc: "minha vez" },
     { f: T(71), tipo: "pose", desc: "oferece o cartão, o amigo empurra de volta", verbo: "pagar" },
     { f: T(72), tipo: "objeto", desc: "nem uma vez" },
@@ -270,7 +272,7 @@ const p21: PlanoV = {
   },
   Sobre: ({ f }) => (
     <>
-      <Selo x={300} y={250} f={f} de={CORTE(67) + 3} ate={T(69)} r={1}><g transform="scale(1.7)"><IconeCalendario texto="SEXTA" cor="#4F8A6B" /></g></Selo>
+      <Selo x={300} y={250} f={f} de={CORTE(67) + 3} ate={T(69)} r={1}><g transform="scale(1.7)"><IconeCalendario texto="SEXTA" sub={f >= T(68, fracDe(68, "todas as vezes")) ? `${Math.min(52, 1 + Math.floor((f - T(68, fracDe(68, "todas as vezes"))) / 2))}ª` : undefined} cor="#4F8A6B" /></g></Selo>
       <TextoPop x={1500} y={220} f={f} de={T(69)} ate={T(70, 0.7)} texto="“MINHA VEZ.”" tam={72} cor="#F2D16B" rot={4} />
       <TextoPop x={960} y={160} f={f} de={T(72)} ate={CORTE(72)} texto="NEM UMA VEZ" tam={90} cor="#F2D16B" rot={-3} />
     </>
@@ -318,7 +320,7 @@ const p23: PlanoV = {
   nome: "rua: carros novos", de: CORTE(74), ate: CORTE(76), enquadra: { x: 940, y: 640, zoom: 1.25 },
   eventos: [
     { f: CORTE(74), tipo: "corte", desc: "o carro velho" },
-    { f: T(75, 0.4), tipo: "objeto", desc: "o carro quebra: fumaça" },
+    { f: T(75, 0.4), tipo: "objeto", desc: "o carro quebra: fumaça", verbo: "quebrar" },
     { f: T(76), tipo: "objeto", desc: "carro novo para a mãe", verbo: "comprar" },
     { f: T(76, fracDe(76, "um para o vizinho")), tipo: "objeto", desc: "para o vizinho" },
     { f: T(76, fracDe(76, "outro para o cachorro")), tipo: "objeto", desc: "para o cachorro" },
@@ -395,5 +397,5 @@ const p24: PlanoV = {
 
 export const CAP4: PlanoV[] = [p16, p17, p18, p19, p20, p21, p22, p23, p24];
 export const FIM_CAP4 = CORTE(77);
-export const FIGURADOS_CAP4: Record<number, string[]> = {};
+export const FIGURADOS_CAP4: Record<number, string[]> = { 63: ["jogar"] }; // "todo jogo" (substantivo)
 export const _x = [naTela, sentadoEm, apoioEm, Texto];

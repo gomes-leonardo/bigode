@@ -61,6 +61,7 @@ export type PersonProps = {
   coat?: boolean; // jaleco branco longo com lapela
   fala?: number; // 0 a 1: abertura da boca falando (anima de fora, quadro a quadro)
   hood?: string; // cor do capuz do moletom (atrás da cabeça)
+  semSombraChao?: boolean; // flutuando (espaço): sem a sombra no chão
   propsBehind?: React.ReactNode; // objetos atrás do corpo (espaço do personagem)
   propsFront?: React.ReactNode; // objetos na frente do corpo e atrás dos braços
   propsHands?: React.ReactNode; // objetos que ficam por baixo dos dedos (desenhados antes das mãos)
@@ -265,7 +266,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
     <EscalaCtx.Provider value={sc}>
       <g transform={`translate(${pr.x} ${pr.y}) scale(${(pr.flip ? -1 : 1) * sc} ${sc})`}>
         {/* sombra no chão: fica no chão e encolhe quando ele sobe */}
-        <Ellipse cx={(footL[0] + footR[0]) / 2} cy={0} rx={88 * W * sombraChao} ry={11 * sombraChao} fill="#000" opacity={0.13} />
+        {!pr.semSombraChao && <Ellipse cx={(footL[0] + footR[0]) / 2} cy={0} rx={88 * W * sombraChao} ry={11 * sombraChao} fill="#000" opacity={0.13} />}
         <g transform={`translate(0 ${-pulo}) rotate(${pr.giro ?? 0} 0 -60)`}>
           {pr.propsBehind}
           {/* pernas + cós num grupo só (sombra de papel na silhueta), tênis por cima */}

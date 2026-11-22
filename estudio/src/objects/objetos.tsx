@@ -13,6 +13,7 @@ export type EstadoObj = {
   comprimento?: number; // recibo (px locais)
   brilho?: number; // cartão (0 a 1)
   cor?: string; // variação de cor (tênis, caixa, carro)
+  texto?: string; // etiqueta de preço, placa
 };
 export type ObjetoDef = { nome: string; pega: (e: EstadoObj) => P; peso: number; Desenho: React.FC<EstadoObj> };
 const W = 6;

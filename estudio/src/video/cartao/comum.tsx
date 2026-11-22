@@ -1,6 +1,7 @@
 // Peças comuns dos planos do vídeo do cartão infinito.
 import React from "react";
-import type { P, PersonProps } from "../../components/Person";
+import { maoInfo, type P, type PersonProps } from "../../components/Person";
+import { ObjetoNaMao, type EstadoObj, type ObjetoDef } from "../../objects/objetos";
 import { Cena, type Camera, type CenarioDef } from "../../cenarios/Cena";
 import type { Plano } from "../../camera/Camera";
 import type { Evento } from "../../camera/ritmo";
@@ -37,3 +38,15 @@ export const naTela = (cam: Camera, w: P): P => {
   return [x, y];
 };
 export type Pessoa = PersonProps;
+
+/** põe um objeto na mão (lado L = esquerda da tela, R = direita): a mão vai para `alvo` e fecha no ponto de pega */
+export const segura = (p: PersonProps, lado: "L" | "R", alvo: P, def: ObjetoDef, e: EstadoObj, ang = 0): PersonProps => {
+  const q: PersonProps = lado === "L" ? { ...p, handL: alvo, gripL: "fist" } : { ...p, handR: alvo, gripR: "fist" };
+  const m = maoInfo(q, lado);
+  return { ...q, propsHands: <>{p.propsHands}<ObjetoNaMao def={def} mao={m.pos} ang={ang} e={e} /></> };
+};
+/** centro do rosto no mundo (para lágrimas, zoom de reação) */
+export const rostoNoMundo = (p: PersonProps): P => {
+  const s = p.scale ?? 1;
+  return [p.x, p.y - (330 + ((p.headScale ?? 1) - 1) * 80 - (p.abaixa ?? 0) + (p.pulo ?? 0)) * s];
+};

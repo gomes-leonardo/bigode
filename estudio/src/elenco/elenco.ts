@@ -102,3 +102,13 @@ export const figurante = (semente: number): Ator => {
     scale: 0.74, expr: "neutro", semente,
   };
 };
+export const PRESIDENTE_BC: Ator = {
+  nome: "presidente do Banco Central", desc: "grisalho, óculos, terno",
+  hair: "curto", hairColor: "#A9A49C", glasses: true, expr: "neutro",
+  outfit: { camiseta: "#2B3447", calca: "#2B3447", tenis: "#2A2A35", sola: "#141414" }, wide: 1.08,
+};
+export const ESTRANHO: Ator = {
+  nome: "estranho", desc: "moletom cinza, óculos escuros",
+  hair: "curto", hairColor: "#1E1A18", glasses: "escuro", hood: "#8A8F98", expr: "neutro",
+  outfit: { camiseta: "#8A8F98", calca: ESCURA, tenis: "#2A2A35", sola: "#141414" },
+};

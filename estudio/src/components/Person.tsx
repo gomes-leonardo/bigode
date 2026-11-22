@@ -6,7 +6,7 @@ import { useCurrentFrame } from "remotion";
 import { CONTORNO, INTERNA, LINHA, PELE, escura } from "../estilo";
 import { Face, piscada, rostoDe, type Expr, type RostoP } from "./Face";
 import { Circle, Ellipse, EscalaCtx, Line, Papel, Path, Rect } from "./prim";
-import { Barba, Bigode, CabeloAtras, CabeloFrente, Oculos, type Cabelo } from "./Cabelo";
+import { Barba, Bigode, CabeloAtras, CabeloFrente, Capuz, Oculos, type Cabelo } from "./Cabelo";
 import { Avental, Jaleco, Saia } from "./Roupas";
 
 export type P = [number, number];
@@ -51,7 +51,7 @@ export type PersonProps = {
   // ---- elenco (Fase 3): o mesmo componente gera todo mundo só com parâmetros
   hair?: Cabelo; // careca (padrão), curto, cacheado, coque, rabo, longo, laterais, bone
   hairColor?: string; // no boné, é a cor do boné
-  glasses?: boolean;
+  glasses?: boolean | "escuro"; // "escuro" = óculos escuros
   mustache?: boolean | string; // true = cor do cabelo; ou uma cor
   beard?: boolean | string;
   wide?: number; // largura do corpo, 1.0 a 1.25 (os alvos de mão e pé acompanham a largura)
@@ -60,6 +60,7 @@ export type PersonProps = {
   apron?: string; // cor do avental (com bolso)
   coat?: boolean; // jaleco branco longo com lapela
   fala?: number; // 0 a 1: abertura da boca falando (anima de fora, quadro a quadro)
+  hood?: string; // cor do capuz do moletom (atrás da cabeça)
   propsBehind?: React.ReactNode; // objetos atrás do corpo (espaço do personagem)
   propsFront?: React.ReactNode; // objetos na frente do corpo e atrás dos braços
   propsHands?: React.ReactNode; // objetos que ficam por baixo dos dedos (desenhados antes das mãos)
@@ -293,6 +294,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
           <Papel>
             <g transform={troncoT}>
               <g transform={cabecaT}>
+                {pr.hood && <Capuz cor={pr.hood} k={kCab} />}
                 <CabeloAtras tipo={cabelo} cor={corCabelo} k={kCab} />
               </g>
             </g>
@@ -312,7 +314,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
                 <CabeloFrente tipo={cabelo} cor={corCabelo} k={kCab} />
                 <Face p={rosto} fechar={fechar} olhar={olhar} />
                 {pr.mustache && <Bigode cor={corPelo(pr.mustache)} k={kCab} />}
-                {pr.glasses && <Oculos k={kCab} />}
+                {pr.glasses && <Oculos k={kCab} escuro={pr.glasses === "escuro"} />}
               </g>
             </g>
           </Papel>

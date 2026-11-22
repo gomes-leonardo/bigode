@@ -182,3 +182,158 @@ export const Legenda: React.FC<{ texto?: string; citacao?: boolean }> = ({ texto
     </g>
   );
 };
+
+// ------------------------------------------------------------------ mais ícones (capítulos 2 em diante)
+const SW = INTERNA + 1;
+export const IconeBanco: React.FC<{ cor?: string }> = ({ cor = "#E9E4DA" }) => (
+  <g>
+    <path d="M -56 -20 L 0 -54 L 56 -20 Z" fill={cor} stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    {[-36, -12, 12, 36].map((x) => <rect key={x} x={x - 6} y={-16} width={12} height={44} fill={cor} stroke={LINHA} strokeWidth={3} />)}
+    <rect x={-58} y={28} width={116} height={14} fill={cor} stroke={LINHA} strokeWidth={SW} />
+  </g>
+);
+export const IconePao: React.FC<{ s?: number }> = ({ s = 1 }) => (
+  <g transform={`scale(${s})`}>
+    <ellipse cx={0} cy={0} rx={44} ry={20} fill="#D99A4E" stroke={LINHA} strokeWidth={SW} />
+    <path d="M -26 -6 q 10 -10 20 0 M -2 -8 q 10 -10 20 0 M 20 -6 q 8 -8 14 0" stroke="#F2D9A6" strokeWidth={5} fill="none" strokeLinecap="round" />
+  </g>
+);
+/** celular grande na tela, com conteúdo (children em coordenadas da tela do celular: 0..160 x 0..280) */
+export const IconeCelular: React.FC<{ children?: React.ReactNode; s?: number }> = ({ children, s = 1 }) => (
+  <g transform={`scale(${s})`}>
+    <rect x={-96} y={-170} width={192} height={340} rx={28} fill="#2A2A35" stroke={LINHA} strokeWidth={CONTORNO} />
+    <rect x={-80} y={-140} width={160} height={280} rx={10} fill="#F4F1EA" />
+    <g transform="translate(-80 -140)">{children}</g>
+    <circle cx={0} cy={-156} r={5} fill="#555" />
+  </g>
+);
+/** gráfico de linha; pontos em 0..1 (x da esquerda para a direita, y de baixo para cima); k = quanto já foi desenhado */
+export const Grafico: React.FC<{ pontos: [number, number][]; k?: number; w?: number; h?: number; cor?: string; rotulos?: string[] }> = ({ pontos, k = 1, w = 520, h = 300, cor = "#C0504D" }) => {
+  const pts = pontos.map(([x, y]) => `${(x * w - w / 2).toFixed(1)},${(h / 2 - y * h).toFixed(1)}`).join(" ");
+  return (
+    <g>
+      <rect x={-w / 2 - 30 + 6} y={-h / 2 - 30 + 7} width={w + 60} height={h + 60} rx={18} fill={PAPEL} />
+      <rect x={-w / 2 - 30} y={-h / 2 - 30} width={w + 60} height={h + 60} rx={18} fill="#FFFFFF" stroke={LINHA} strokeWidth={CONTORNO} />
+      {[0.25, 0.5, 0.75].map((y) => <line key={y} x1={-w / 2} y1={h / 2 - y * h} x2={w / 2} y2={h / 2 - y * h} stroke="#E4DED2" strokeWidth={3} />)}
+      <line x1={-w / 2} y1={h / 2} x2={w / 2} y2={h / 2} stroke={LINHA} strokeWidth={4} />
+      <polyline points={pts} fill="none" stroke={cor} strokeWidth={12} strokeLinecap="round" strokeLinejoin="round" pathLength={1} strokeDasharray={`${Math.max(0, Math.min(1, k))} 1`} />
+    </g>
+  );
+};
+export const IconeRelogio: React.FC<{ giro?: number; cor?: string }> = ({ giro = 0, cor = "#FFFFFF" }) => (
+  <g>
+    <circle r={56} fill={cor} stroke={LINHA} strokeWidth={SW + 1} />
+    {[0, 90, 180, 270].map((a) => <line key={a} x1={0} y1={-44} x2={0} y2={-36} stroke={LINHA} strokeWidth={5} transform={`rotate(${a})`} />)}
+    <line x1={0} y1={0} x2={0} y2={-40} stroke={LINHA} strokeWidth={7} strokeLinecap="round" transform={`rotate(${giro})`} />
+    <line x1={0} y1={0} x2={0} y2={-26} stroke="#C0504D" strokeWidth={7} strokeLinecap="round" transform={`rotate(${giro / 12})`} />
+    <circle r={6} fill={LINHA} />
+  </g>
+);
+export const IconeHospital: React.FC = () => (
+  <g>
+    <rect x={-54} y={-40} width={108} height={84} fill="#F4F1EA" stroke={LINHA} strokeWidth={SW} />
+    <rect x={-14} y={-30} width={28} height={28} fill="#C0504D" />
+    <rect x={-6} y={-38} width={12} height={44} fill="#FFFFFF" transform="translate(0 2)" />
+    <rect x={-18} y={-22} width={36} height={12} fill="#FFFFFF" />
+    <rect x={-12} y={14} width={24} height={30} fill="#9ED8F5" stroke={LINHA} strokeWidth={3} />
+  </g>
+);
+export const IconeAmbulancia: React.FC = () => (
+  <g>
+    <path d="M -60 24 L -60 -24 L 20 -24 L 20 -8 L 44 -8 L 60 10 L 60 24 Z" fill="#FFFFFF" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <rect x={-40} y={-16} width={12} height={28} fill="#C0504D" /><rect x={-48} y={-8} width={28} height={12} fill="#C0504D" />
+    <rect x={-6} y={-30} width={16} height={8} rx={3} fill="#5AA5B8" stroke={LINHA} strokeWidth={3} />
+    {[-36, 36].map((x) => <circle key={x} cx={x} cy={26} r={12} fill="#2A2A35" stroke={LINHA} strokeWidth={3} />)}
+  </g>
+);
+export const IconeEscola: React.FC = () => (
+  <g>
+    <path d="M -60 -6 L 0 -48 L 60 -6 Z" fill="#C0504D" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <rect x={-50} y={-8} width={100} height={52} fill="#F2D16B" stroke={LINHA} strokeWidth={SW} />
+    <rect x={-10} y={14} width={20} height={30} fill="#8A5E3F" stroke={LINHA} strokeWidth={3} />
+    {[-34, 22].map((x) => <rect key={x} x={x} y={2} width={14} height={14} fill="#9ED8F5" stroke={LINHA} strokeWidth={3} />)}
+    <circle cx={0} cy={-20} r={8} fill="#FFFFFF" stroke={LINHA} strokeWidth={3} />
+  </g>
+);
+export const IconeCesta: React.FC = () => (
+  <g>
+    <circle cx={-20} cy={-24} r={14} fill="#C0504D" stroke={LINHA} strokeWidth={3} />
+    <circle cx={6} cy={-30} r={14} fill="#7AA35B" stroke={LINHA} strokeWidth={3} />
+    <ellipse cx={26} cy={-22} rx={16} ry={10} fill="#D99A4E" stroke={LINHA} strokeWidth={3} />
+    <path d="M -50 -14 L 50 -14 L 38 34 L -38 34 Z" fill="#C9955E" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+  </g>
+);
+export const IconeFabrica: React.FC = () => (
+  <g>
+    <path d="M -60 40 L -60 -10 L -30 -30 L -30 -10 L 0 -30 L 0 -10 L 30 -30 L 30 40 Z" fill="#B9BEC6" stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+    <rect x={36} y={-56} width={18} height={96} fill="#8A9099" stroke={LINHA} strokeWidth={SW} />
+    {[-46, -16, 14].map((x) => <rect key={x} x={x} y={6} width={18} height={14} fill="#F2D16B" stroke={LINHA} strokeWidth={3} />)}
+  </g>
+);
+export const IconeX: React.FC<{ r?: number }> = ({ r = 60 }) => (
+  <g>
+    <path d={`M ${-r} ${-r} L ${r} ${r} M ${r} ${-r} L ${-r} ${r}`} stroke={LINHA} strokeWidth={30} strokeLinecap="round" />
+    <path d={`M ${-r} ${-r} L ${r} ${r} M ${r} ${-r} L ${-r} ${r}`} stroke="#E0242C" strokeWidth={16} strokeLinecap="round" />
+  </g>
+);
+export const SetaCima: React.FC<{ cor?: string; s?: number }> = ({ cor = "#C0504D", s = 1 }) => (
+  <g transform={`scale(${s})`}>
+    <path d="M 0 -50 L 36 -10 L 14 -10 L 14 44 L -14 44 L -14 -10 L -36 -10 Z" fill={cor} stroke={LINHA} strokeWidth={SW} strokeLinejoin="round" />
+  </g>
+);
+/** camisa de time genérica (listras opcionais, sem escudo) */
+export const IconeCamisa: React.FC<{ cor?: string; cor2?: string; listras?: "vertical" | "horizontal" | "nenhuma" }> = ({ cor = "#C0504D", cor2 = "#141414", listras = "nenhuma" }) => {
+  const d = "M -30 -60 L -60 -44 L -76 -12 L -52 0 L -46 -12 L -46 60 L 46 60 L 46 -12 L 52 0 L 76 -12 L 60 -44 L 30 -60 Q 0 -40 -30 -60 Z";
+  const id = `camisa-${cor.slice(1)}${cor2.slice(1)}${listras}`;
+  return (
+    <g>
+      <defs><clipPath id={id}><path d={d} /></clipPath></defs>
+      <path d={d} fill={cor} />
+      <g clipPath={`url(#${id})`}>
+        {listras === "vertical" && [-60, -20, 20, 60].map((x) => <rect key={x} x={x - 10} y={-70} width={20} height={140} fill={cor2} />)}
+        {listras === "horizontal" && [-40, -8, 24, 56].map((y) => <rect key={y} x={-80} y={y - 9} width={160} height={18} fill={cor2} />)}
+      </g>
+      <path d={d} fill="none" stroke={LINHA} strokeWidth={SW + 1} strokeLinejoin="round" />
+    </g>
+  );
+};
+export const IconeCalendario: React.FC<{ texto: string; sub?: string; cor?: string }> = ({ texto, sub, cor = "#C0504D" }) => (
+  <g>
+    <rect x={-60} y={-56} width={120} height={116} rx={12} fill="#FFFFFF" stroke={LINHA} strokeWidth={SW} />
+    <rect x={-60} y={-56} width={120} height={34} rx={12} fill={cor} stroke={LINHA} strokeWidth={SW} />
+    {[-30, 30].map((x) => <rect key={x} x={x - 5} y={-70} width={10} height={24} rx={5} fill={LINHA} />)}
+    <text x={0} y={sub ? 22 : 34} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={texto.length > 3 ? 30 : 48} fill={LINHA}>{texto}</text>
+    {sub && <text x={0} y={48} textAnchor="middle" fontFamily={FONTE} fontWeight={800} fontSize={18} fill={LINHA}>{sub}</text>}
+  </g>
+);
+/** nuvem de "puf" (sumiço) que cresce e some ao longo de k (0..1) */
+export const Puf: React.FC<{ k: number; r?: number }> = ({ k, r = 80 }) => (
+  <g opacity={k < 0.7 ? 1 : 1 - (k - 0.7) / 0.3} transform={`scale(${0.4 + k})`}>
+    {[0, 60, 120, 180, 240, 300].map((a) => (
+      <circle key={a} cx={Math.cos((a * Math.PI) / 180) * r * 0.5} cy={Math.sin((a * Math.PI) / 180) * r * 0.5} r={r * 0.42} fill="#FFFFFF" stroke={LINHA} strokeWidth={5} />
+    ))}
+    <circle r={r * 0.5} fill="#FFFFFF" />
+  </g>
+);
+/** lágrimas caindo de um ponto (no mundo ou na tela) */
+export const Lagrimas: React.FC<{ x: number; y: number; f: number; s?: number }> = ({ x, y, f, s = 1 }) => (
+  <g>
+    {[0, 1, 2].flatMap((i) => [-1, 1].map((lado) => {
+      const k = ((f + i * 9) % 27) / 27;
+      return (
+        <path key={`${i}${lado}`} d="M 0 -8 Q 7 4 0 8 Q -7 4 0 -8 Z" fill="#7FC7EA" stroke={LINHA} strokeWidth={2.5}
+          transform={`translate(${x + lado * (26 + k * 22) * s} ${y + k * 70 * s}) scale(${s})`} opacity={1 - k * 0.6} />
+      );
+    }))}
+  </g>
+);
+/** prédio genérico (andares) */
+export const IconePredio: React.FC<{ andares?: number; cor?: string; w?: number }> = ({ andares = 7, cor = "#D9CFE8", w = 120 }) => {
+  const h = andares * 44 + 20;
+  return (
+    <g>
+      <rect x={-w / 2} y={-h} width={w} height={h} fill={cor} stroke={LINHA} strokeWidth={SW} />
+      {Array.from({ length: andares }, (_, i) => [-w / 4, w / 4].map((x) => <rect key={`${i}${x}`} x={x - 14} y={-h + 18 + i * 44} width={28} height={24} fill="#CFE6F0" stroke={LINHA} strokeWidth={3} />))}
+    </g>
+  );
+};

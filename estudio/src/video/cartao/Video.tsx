@@ -7,12 +7,14 @@ import { cameraNoQuadro, planoNoQuadro } from "../../camera/Camera";
 import { verificaRitmo } from "../../camera/ritmo";
 import { Legenda } from "../graficos";
 import type { PlanoV } from "./comum";
-import { CAP1, FIGURADOS_CAP1, FIM_CAP1 } from "./cap1";
+import { CAP1, FIGURADOS_CAP1 } from "./cap1";
+import { CAP2, FIGURADOS_CAP2 } from "./cap2";
+import { CAP3, FIGURADOS_CAP3, FIM_CAP3 } from "./cap3";
 import { FALAS, falaNoQuadro } from "./tempo";
 
-export const PLANOS: PlanoV[] = [...CAP1];
-const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1 };
-export const FIM = FIM_CAP1;
+export const PLANOS: PlanoV[] = [...CAP1, ...CAP2, ...CAP3];
+const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_CAP1, ...FIGURADOS_CAP2, ...FIGURADOS_CAP3 };
+export const FIM = FIM_CAP3;
 
 export const ritmo = (planos: PlanoV[], ate: number) =>
   verificaRitmo({

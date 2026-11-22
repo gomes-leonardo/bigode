@@ -96,14 +96,16 @@ export const CabeloFrente: React.FC<P> = ({ tipo, cor, k }) => {
 };
 
 /** óculos redondos: aro preto, lente transparente, hastes até a lateral da cabeça */
-export const Oculos: React.FC<{ k: number }> = ({ k }) => {
+export const Oculos: React.FC<{ k: number; escuro?: boolean }> = ({ k, escuro }) => {
   const sw = 5 / k;
+  const lente = escuro ? "#20232B" : "none";
   return (
     <g>
       <Line x1={-47} y1={-5} x2={-83} y2={-12} stroke={LINHA} strokeWidth={sw} strokeLinecap="round" />
       <Line x1={47} y1={-6} x2={83} y2={-12} stroke={LINHA} strokeWidth={sw} strokeLinecap="round" />
-      <Circle cx={-27} cy={-1} r={20} fill="none" stroke={LINHA} strokeWidth={sw} />
-      <Circle cx={27} cy={-2} r={20} fill="none" stroke={LINHA} strokeWidth={sw} />
+      <Circle cx={-27} cy={-1} r={20} fill={lente} stroke={LINHA} strokeWidth={sw} />
+      <Circle cx={27} cy={-2} r={20} fill={lente} stroke={LINHA} strokeWidth={sw} />
+      {escuro && <Path d="M -38 -10 q 6 -6 12 -6 M 16 -11 q 6 -6 12 -6" stroke="#FFFFFF" strokeWidth={3 / k} fill="none" strokeLinecap="round" opacity={0.6} />}
       <Path d="M -7 -4 Q 0 -10 7 -4" stroke={LINHA} strokeWidth={sw} fill="none" strokeLinecap="round" />
     </g>
   );
@@ -126,4 +128,9 @@ export const Barba: React.FC<{ cor: string; k: number }> = ({ cor, k }) => (
     />
     <Path d="M -48 52 q 6 8 4 16 M 46 50 q -6 8 -4 16" stroke={escura(cor)} strokeWidth={INTERNA / k} fill="none" strokeLinecap="round" />
   </g>
+);
+
+/** capuz de moletom (atrás da cabeça, aparecendo em volta) */
+export const Capuz: React.FC<{ cor: string; k: number }> = ({ cor, k }) => (
+  <Path d="M -104 40 C -116 -60 -70 -118 0 -118 C 70 -118 116 -60 104 40 C 100 80 80 100 60 110 L -60 110 C -80 100 -100 80 -104 40 Z" fill={cor} stroke={LINHA} strokeWidth={CONTORNO / k} strokeLinejoin="round" />
 );

@@ -1,0 +1,10 @@
+{
+  "id": "ilha",
+  "nome": "Ilha",
+  "escala": 1.1,
+  "luz": { "pontos": [[-300, -300], [700, -300], [1500, 1400], [400, 1400]], "cor": "#FFF6DE", "opacidade": 0.12 },
+  "ancoras": {
+    "chao": { "tipo": "chao", "y": 950, "yFundo": 880, "x0": 260, "x1": 1660 },
+    "barraca": { "tipo": "tampo", "y": 780, "x0": 760, "x1": 1160 }
+  }
+}

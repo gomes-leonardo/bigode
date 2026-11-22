@@ -19,26 +19,26 @@ import { PADARIA } from "../cenarios/padaria/Padaria";
 import { RUA } from "../cenarios/rua/Rua";
 import { CAMPINHO } from "../cenarios/campinho/Campinho";
 
-const props = (a: Ator) => {
+export const props = (a: Ator) => {
   const { nome: _n, desc: _d, expr: _e, scale: _s, ...resto } = a;
   return resto;
 };
 /** ator em pé numa linha de chão (o y vem da âncora) */
-const emPeNa = (a: Ator, set: SetJson, ancora: string, x: number, f: number, extra: Partial<Pose> = {}, prof = 0): PersonProps => {
+export const emPeNa = (a: Ator, set: SetJson, ancora: string, x: number, f: number, extra: Partial<Pose> = {}, prof = 0): PersonProps => {
   const base = emPe(set, ancora, x, prof, a.scale ?? 1);
   return { ...props(a), ...idle({ ...base, wide: a.wide })(f), expr: a.expr, ...extra };
 };
 /** ator sentado num assento / quina da cama / maca (o y e a altura vêm da âncora) */
-const sentadoNa = (a: Ator, set: SetJson, ancora: string, f: number, extra: Partial<Pose> = {}): PersonProps => {
+export const sentadoNa = (a: Ator, set: SetJson, ancora: string, f: number, extra: Partial<Pose> = {}): PersonProps => {
   const { assento, ...base } = sentadoEm(set, ancora, a.scale ?? 1);
   return { ...props(a), ...sit({ ...base, wide: a.wide, assento })(f + 30), expr: a.expr, ...extra };
 };
 /** objeto apoiado numa âncora */
-const Obj: React.FC<{ def: ObjetoDef; set: SetJson; ancora: string; x?: number; e: EstadoObj }> = ({ def, set, ancora, x, e }) => (
+export const Obj: React.FC<{ def: ObjetoDef; set: SetJson; ancora: string; x?: number; e: EstadoObj }> = ({ def, set, ancora, x, e }) => (
   <ObjetoNoMundo def={def} em={apoioEm(set, ancora, x)} s={set.escala} e={e} />
 );
 /** segura o celular na mão esquerda na frente do peito e olha para ele (abaixa = quanto o tronco desceu ao sentar) */
-const comCelular = (p: PersonProps, t: number): PersonProps => {
+export const comCelular = (p: PersonProps, t: number): PersonProps => {
   const ab = p.abaixa ?? 0;
   const q: PersonProps = { ...p, handL: [-22, -202 + ab], gripL: "fist", headTilt: -5 };
   const m = maoInfo(q, "L");
@@ -47,7 +47,7 @@ const comCelular = (p: PersonProps, t: number): PersonProps => {
   return { ...q, lookAt: [c[0] * 2.2, cab + (c[1] - cab) * 2.2], propsHands: <ObjetoNaMao def={CELULAR} mao={m.pos} ang={8} e={{ t, vira: 1 }} /> };
 };
 /** alvo do olhar (mundo -> local do ator) */
-const olhar = (p: PersonProps, w: P): P => paraLocal(w, p.x, p.y, p.scale ?? 1);
+export const olhar = (p: PersonProps, w: P): P => paraLocal(w, p.x, p.y, p.scale ?? 1);
 
 const AncorasCtx = React.createContext(false);
 const Quadro: React.FC<{ cenario: CenarioDef; f: number; children: (t: number, f: number) => { noMeio?: React.ReactNode; naFrente?: React.ReactNode } }> = ({ cenario, f, children }) => {

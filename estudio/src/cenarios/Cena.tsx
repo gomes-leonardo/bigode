@@ -15,8 +15,9 @@ export type CenarioDef = {
   Frente: React.FC<{ t: number }>;
 };
 
-/** câmera: centro do enquadramento no mundo (padrão 960, 540) e zoom (padrão 1) */
-export type Camera = { x?: number; y?: number; zoom?: number };
+/** câmera: centro do enquadramento no mundo (padrão 960, 540) e zoom de dolly (padrão 1, com parallax por camada).
+ * `otico` é o zoom rápido de reação: escala a imagem inteira em volta de um ponto da tela (sem parallax). */
+export type Camera = { x?: number; y?: number; zoom?: number; otico?: { z: number; px: number; py: number } };
 /** quanto cada camada acompanha a câmera: o fundo anda menos, a frente anda mais */
 export const PARALLAX = { fundo: 0.5, meio: 1, frente: 1.35 };
 
@@ -92,6 +93,7 @@ export const Cena: React.FC<{
           <feGaussianBlur stdDeviation={desfoque} />
         </filter>
       </defs>
+      <g transform={camera.otico ? `translate(${camera.otico.px.toFixed(2)} ${camera.otico.py.toFixed(2)}) scale(${camera.otico.z.toFixed(5)}) translate(${(-camera.otico.px).toFixed(2)} ${(-camera.otico.py).toFixed(2)})` : undefined}>
       <g transform={transformCamada(camera, PARALLAX.fundo)}>
         <g filter={`url(#desf-${id})`}>
           <Fundo t={t} />
@@ -107,12 +109,13 @@ export const Cena: React.FC<{
       <g transform={transformCamada(camera, PARALLAX.frente)}>
         <Frente t={t} />
       </g>
-      <Vinheta />
       {mostrarAncoras && (
         <g transform={transformCamada(camera, PARALLAX.meio)}>
           <MostraAncoras set={set} />
         </g>
       )}
+      </g>
+      <Vinheta />
     </Palco>
   );
 };

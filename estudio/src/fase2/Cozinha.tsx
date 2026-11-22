@@ -70,10 +70,19 @@ export const Fogao: React.FC<{ x0: number; x1: number; topo: number; base: numbe
     ))}
     {/* corpo + forno */}
     <Rect x={x0} y={topo + 6} width={x1 - x0} height={base - topo - 6} rx={6} fill={FOGAO} stroke={LINHA} strokeWidth={CONTORNO} />
-    <Rect x={x0 + 34} y={topo + 66} width={x1 - x0 - 68} height={base - topo - 118} rx={10} fill={escura(FOGAO, 0.9)} stroke={LINHA} strokeWidth={INTERNA} />
-    <Rect x={x0 + 58} y={topo + 96} width={x1 - x0 - 116} height={base - topo - 176} rx={8} fill="#3A3A44" stroke={LINHA} strokeWidth={INTERNA} />
-    <Path d={`M ${x0 + 70} ${topo + 110} l 30 0`} stroke="#6A6A78" strokeWidth={4} strokeLinecap="round" />
-    <Rect x={x0 + 60} y={topo + 34} width={x1 - x0 - 120} height={12} rx={6} fill="#B9BEC6" stroke={LINHA} strokeWidth={INTERNA} />
+    {(() => {
+      // porta do forno proporcional à altura do fogão (serve para fogão alto ou baixo)
+      const H = base - topo;
+      const p0 = topo + 0.3 * H, p1 = base - 0.08 * H, ph = p1 - p0;
+      return (
+        <>
+          <Rect x={x0 + 34} y={p0} width={x1 - x0 - 68} height={ph} rx={10} fill={escura(FOGAO, 0.9)} stroke={LINHA} strokeWidth={INTERNA} />
+          <Rect x={x0 + 58} y={p0 + 0.18 * ph} width={x1 - x0 - 116} height={Math.max(8, 0.62 * ph)} rx={8} fill="#3A3A44" stroke={LINHA} strokeWidth={INTERNA} />
+          <Path d={`M ${x0 + 70} ${p0 + 0.18 * ph + 14} l 30 0`} stroke="#6A6A78" strokeWidth={4} strokeLinecap="round" />
+          <Rect x={x0 + 60} y={topo + 0.16 * H} width={x1 - x0 - 120} height={12} rx={6} fill="#B9BEC6" stroke={LINHA} strokeWidth={INTERNA} />
+        </>
+      );
+    })()}
     {/* tampo do fogão */}
     <Path d={`M ${x0 + 8} ${topo - 12} L ${x1 - 8} ${topo - 12} L ${x1} ${topo + 8} L ${x0} ${topo + 8} Z`} fill={escura(FOGAO, 0.92)} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
     {bocas.map((bx, i) => (

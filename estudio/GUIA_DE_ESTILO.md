@@ -89,3 +89,16 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 - 3 a 4 eventos visuais a cada 8 s (pose, expressão, objeto ou câmera). Nenhum plano parado por mais de 3 s.
 - Troca de plano só nas pausas da fala.
 - Toda fala com verbo físico (bater, pisar, comer, pegar, cair) mostra o verbo na imagem.
+- Implementação da câmera (`src/camera/Camera.ts`):
+  - O vídeo é uma lista de PLANOS `{ de, ate, enquadra: { x, y, zoom }, pushIn, viagem, reacoes }`. `cameraNoQuadro(plano, f)` dá a câmera; `planoNoQuadro(planos, f)` escolhe o plano. Corte seco = troca de plano no quadro `de`, sem transição.
+  - Push-in: de 1.0 a 1.05 ao longo de cada plano (curva suave). É movimento de câmera (dolly), então tem parallax: fundo 0.5x, meio 1x, frente 1.35x.
+  - Zoom de reação: de 1.0 a 1.15 em 6 quadros, em volta do rosto de quem reage (ponto no mundo). É zoom ótico: a imagem inteira escala igual, sem parallax. Fica até o fim do plano ou volta em 8 quadros a partir de `solta`.
+  - Travelling (`viagem`): a câmera anda pelo cenário; é ele que mostra o parallax entre fundo, meio e frente.
+  - A câmera nunca mostra a borda do que foi desenhado (fica dentro da folga de 320 px).
+- Verificação de ritmo (`src/camera/ritmo.ts`), obrigatória antes de renderizar qualquer vídeo: `verificaRitmo({ duracao, eventos, falas, cortes })`.
+  - Eventos: `{ f, tipo: pose | expressao | objeto | camera | corte, desc, verbo? }`. Eventos a menos de 6 quadros um do outro contam como uma batida só.
+  - Regra 1: toda janela de 8 s tem 3 ou 4 batidas (menos de 3 é erro; mais de 4 é aviso de ritmo corrido).
+  - Regra 2: nunca mais de 3 s sem batida (cortes contam).
+  - Regra 3: nenhum corte dentro de uma fala (tolerância de 2 quadros).
+  - Regra 4: fala com verbo físico (lista em `VERBOS_FISICOS`, com as conjugações) precisa de um evento com aquele `verbo` durante a fala. Sentido figurado ("o tempo passa") aparece no relatório para conferir à mão.
+- Fluxo de um vídeo novo: tempos das falas da narração > planos com os cortes nas pausas > eventos de cada plano (pose, expressão, objeto, câmera, com os verbos físicos marcados) > verificação de ritmo sem erro > render.

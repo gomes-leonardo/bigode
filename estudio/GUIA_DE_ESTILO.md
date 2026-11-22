@@ -45,6 +45,13 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
   3. MOVE: o objeto vira filho da mão (posição e rotação). Braço e tronco acompanham o peso: objeto pesado = lean maior e movimento mais lento.
   - Soltar é o inverso: a mão abre e o objeto ganha gravidade ou fica apoiado onde caiu.
 - Cada objeto tem um "ponto de pega" definido (alça da panela, asa da xícara, lateral do celular).
+- Notas de implementação (Fase 2):
+  - O alcance começa devagar, acelera e passa uns 5% do alvo antes de assentar no quadro do contato (`alcance` em `src/rig/manuseio.ts`).
+  - Enquanto segura, o punho gira junto com o objeto (`pulsoL` / `pulsoR`): xícara e copo ficam em pé e só inclinam no gole; panela cede uns graus com o peso.
+  - Andar com o corpo de frente é passo lateral: o pé de apoio fica plantado, as pernas não cruzam, passo máximo de 88 px locais.
+  - Estados de objeto: `vira` (celular deitado com a tela para cima vira de lado e mostra as costas quando ele olha), `quente` (vapor da panela), `vapor` (o vapor da xícara some durante o gole).
+  - Segurar algo na frente do peito: o alvo da mão fica abaixo e para dentro do ombro, assim o cotovelo aponta para baixo (nunca asa de frango).
+  - Sentar de frente: `sentado` encurta a perna (a coxa aponta para a câmera) em vez de abrir os joelhos; o assento aparece dos dois lados do quadril.
 
 ## Elenco
 - O mesmo componente gera todos, só com parâmetros: hair (careca, curto, cacheado, coque, rabo, longo, laterais, bone), hairColor, glasses, mustache, beard, wide (1.0 a 1.25), scale (criança 0.62 com headScale 1.08), skirt, apron, coat. Ninguém tem orelha.

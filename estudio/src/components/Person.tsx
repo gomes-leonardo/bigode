@@ -37,6 +37,14 @@ export type PersonProps = {
   blink?: number; // força a pálpebra (0 a 1); sem isso pisca sozinho a cada 3 a 5 s
   semente?: number;
   pulo?: number; // px acima do chão: o corpo sobe, a sombra fica no chão e encolhe
+  respira?: number; // 0 a 1: o tronco vai de 1.0 a 1.015 de altura (a partir da cintura)
+  squashL?: number; // 0 a 1: squash do punho no quadro da pega
+  squashR?: number;
+  pulsoL?: number; // graus: gira a mão (punho) junto com o objeto que ela segura; sem isso a mão segue a tangente do braço
+  pulsoR?: number;
+  abaixa?: number; // px: abaixa o quadril e o tronco (sentar, agachar); os pés ficam no chão
+  sentado?: number; // 0 a 1: a coxa aponta para a câmera (escorço), então a perna encurta em vez de dobrar o joelho para fora
+  giro?: number; // graus: gira o corpo inteiro em volta da cintura (cair)
   outfit?: Partial<Roupa>;
   propsBehind?: React.ReactNode; // objetos atrás do corpo (espaço do personagem)
   propsFront?: React.ReactNode; // objetos na frente do corpo e atrás dos braços
@@ -152,26 +160,23 @@ const Tenis: React.FC<{ p: P; lado: number; cor: string; sola: string }> = ({ p,
 );
 
 // ---------------------------------------------------------------- personagem
-export const Person: React.FC<PersonProps> = (pr) => {
-  const f = useCurrentFrame();
+/** geometria do personagem (sem desenhar): ombros, braços, mãos e pernas, no espaço do personagem */
+export const geometria = (pr: PersonProps) => {
   const roupa: Roupa = { ...ROUPA_PADRAO, ...pr.outfit };
-  const sc = pr.scale ?? 1;
   const hip = pr.hip ?? 0;
   const lean = pr.lean ?? 0;
   const ombros = pr.ombros ?? 0;
-  const pulo = pr.pulo ?? 0;
-  const cint: P = [0, -128];
+  const abaixa = pr.abaixa ?? 0;
+  const resp = 1 + 0.015 * (pr.respira ?? 0);
+  const cint: P = [0, -128 + abaixa];
   const giro = -hip * 1.4 + lean; // o tronco gira com a inclinação dos ombros e com o lean
-  const doTronco = (p: P): P => rot(p, giro, cint);
+  const doTronco = (p: P): P => rot([p[0], cint[1] + (p[1] + abaixa - cint[1]) * resp], giro, cint);
   const ombroL = doTronco([-OMBRO[0], OMBRO[1] - ombros]);
   const ombroR = doTronco([OMBRO[0], OMBRO[1] - ombros * 0.9]);
-  const quadL = rot([-QUADRIL[0], QUADRIL[1]], hip, [0, -112]);
-  const quadR = rot([QUADRIL[0], QUADRIL[1]], hip, [0, -112]);
+  const quadL = rot([-QUADRIL[0], QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
+  const quadR = rot([QUADRIL[0], QUADRIL[1] + abaixa], hip, [0, -112 + abaixa]);
   const footL = pr.footL ?? [-30, 0];
   const footR = pr.footR ?? [32, 0];
-  const camE = escura(roupa.camiseta);
-  const calcaE = escura(roupa.calca);
-
   const braco = (o: P, m0: P, bend: number, lado: number, tipo: Mao) => {
     const { c, b: m } = curvaMembro(o, m0, bend, lado, BRACO);
     const tg = tang(o, c, m, 1);
@@ -188,17 +193,36 @@ export const Person: React.FC<PersonProps> = (pr) => {
   };
   const bL = braco(ombroL, pr.handL ?? [-72, -110], pr.bendL ?? 6, -1, pr.gripL ?? "open");
   const bR = braco(ombroR, pr.handR ?? [74, -108], pr.bendR ?? 6, 1, pr.gripR ?? "open");
-  const ordem = pr.frente === "L" ? [bR, bL] : [bL, bR];
-
+  if (pr.pulsoL !== undefined) bL.ang = pr.pulsoL;
+  if (pr.pulsoR !== undefined) bR.ang = pr.pulsoR;
   const perna = (q: P, pe: P, knee: number, lado: number) => {
-    const { c, b: tor } = curvaMembro(q, [pe[0] - 4 * lado, pe[1] - 20], knee, lado, PERNA);
+    const tornozelo: P = [pe[0] - 4 * lado, pe[1] - 20];
+    const corda = Math.hypot(tornozelo[0] - q[0], tornozelo[1] - q[1]);
+    const natural = PERNA + (Math.min(PERNA, corda) - PERNA) * (pr.sentado ?? 0);
+    const { c, b: tor } = curvaMembro(q, tornozelo, knee, lado, natural);
     const j = quad(q, c, tor, 0.52), dj = unit(tang(q, c, tor, 0.52));
     const br = quad(q, c, tor, 0.9), db = unit(tang(q, c, tor, 0.9));
     return { d: caminho(q, c, tor), j, dj, br, db, lado };
   };
   const pL = perna(quadL, footL, pr.kneeL ?? 2, -1);
   const pR = perna(quadR, footR, pr.kneeR ?? 2, 1);
+  return { roupa, hip, lean, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR };
+};
+/** onde está a mão (alvo depois do limite de alcance) e para que lado ela aponta, no espaço do personagem */
+export const maoInfo = (pr: PersonProps, lado: "L" | "R") => {
+  const g = geometria(pr);
+  const b = lado === "L" ? g.bL : g.bR;
+  return { pos: b.m, ang: b.ang };
+};
 
+export const Person: React.FC<PersonProps> = (pr) => {
+  const f = useCurrentFrame();
+  const sc = pr.scale ?? 1;
+  const pulo = pr.pulo ?? 0;
+  const { roupa, hip, ombros, abaixa, resp, cint, giro, doTronco, footL, footR, bL, bR, pL, pR } = geometria(pr);
+  const camE = escura(roupa.camiseta);
+  const calcaE = escura(roupa.calca);
+  const ordem = pr.frente === "L" ? [bR, bL] : [bL, bR];
   const rosto = typeof pr.expr === "object" ? pr.expr : rostoDe(pr.expr ?? "sigma");
   const fechar = pr.blink ?? piscada(f, pr.semente ?? 0);
   const centroCab = doTronco([CABECA[0], CABECA[1] - ombros * 0.6]);
@@ -212,7 +236,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
       <g transform={`translate(${pr.x} ${pr.y}) scale(${(pr.flip ? -1 : 1) * sc} ${sc})`}>
         {/* sombra no chão: fica no chão e encolhe quando ele sobe */}
         <Ellipse cx={(footL[0] + footR[0]) / 2} cy={0} rx={88 * sombraChao} ry={11 * sombraChao} fill="#000" opacity={0.13} />
-        <g transform={`translate(0 ${-pulo})`}>
+        <g transform={`translate(0 ${-pulo}) rotate(${pr.giro ?? 0} 0 -60)`}>
           {pr.propsBehind}
           {/* pernas + cós num grupo só (sombra de papel na silhueta), tênis por cima */}
           <Papel>
@@ -223,7 +247,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
                 <Line x1={p.br[0] - p.db[1] * 19} y1={p.br[1] + p.db[0] * 19} x2={p.br[0] + p.db[1] * 19} y2={p.br[1] - p.db[0] * 19} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />
               </g>
             ))}
-            <g transform={`rotate(${hip} 0 -120)`}>
+            <g transform={`translate(0 ${abaixa}) rotate(${hip} 0 -120)`}>
               <Path d="M -55 -144 Q 0 -150 55 -144 L 52 -110 Q 26 -100 0 -104 Q -26 -100 -52 -110 Z" fill={roupa.calca} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
               <Line x1={0} y1={-138} x2={1} y2={-104} stroke={calcaE} strokeWidth={INTERNA} strokeLinecap="round" />
             </g>
@@ -233,7 +257,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
           {/* contorno das mangas atrás do tronco + tronco + pescoço + cabeça: uma silhueta só */}
           <Papel>
             {[bL, bR].map((b, i) => <Path key={i} d={b.manga} stroke={LINHA} strokeWidth={34 + 14} fill="none" strokeLinecap="round" />)}
-            <g transform={`rotate(${giro} ${cint[0]} ${cint[1]})`}>
+            <g transform={`rotate(${giro} ${cint[0]} ${cint[1]}) translate(0 ${cint[1]}) scale(1 ${resp}) translate(0 ${-cint[1] + abaixa})`}>
               <Path d="M -17 -270 L 17 -270 L 19 -236 L -19 -236 Z" transform={`translate(0 ${-ombros * 0.6})`} fill={PELE} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
               <Path d={`M -24 ${-246 - ombros} C -52 ${-244 - ombros} -68 -232 -66 -206 C -64 -178 -58 -156 -54 -134 Q 0 -122 54 -134 C 58 -156 64 -178 66 -206 C 68 -232 52 ${-244 - ombros} 24 ${-246 - ombros} Z`} fill={roupa.camiseta} stroke={LINHA} strokeWidth={CONTORNO} strokeLinejoin="round" />
               <Path d={`M -22 ${-245 - ombros} Q -6 ${-226 - ombros} 2 ${-222 - ombros} Q 10 ${-228 - ombros} 23 ${-245 - ombros} Z`} fill={PELE} stroke={LINHA} strokeWidth={INTERNA} strokeLinejoin="round" />
@@ -266,7 +290,7 @@ export const Person: React.FC<PersonProps> = (pr) => {
           ))}
           {pr.propsHands}
           {[bL, bR].map((b, i) => (
-            <Papel key={i} transform={`translate(${b.m[0]} ${b.m[1]}) rotate(${b.ang})`}>
+            <Papel key={i} transform={`translate(${b.m[0]} ${b.m[1]}) rotate(${b.ang}) scale(${1 + 0.16 * ((b.lado < 0 ? pr.squashL : pr.squashR) ?? 0)} ${1 - 0.16 * ((b.lado < 0 ? pr.squashL : pr.squashR) ?? 0)})`}>
               <MaoD tipo={b.tipo} lado={b.lado} />
             </Papel>
           ))}

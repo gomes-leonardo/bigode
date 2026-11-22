@@ -102,3 +102,11 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
   - Regra 3: nenhum corte dentro de uma fala (tolerância de 2 quadros).
   - Regra 4: fala com verbo físico (lista em `VERBOS_FISICOS`, com as conjugações) precisa de um evento com aquele `verbo` durante a fala. Sentido figurado ("o tempo passa") aparece no relatório para conferir à mão.
 - Fluxo de um vídeo novo: tempos das falas da narração > planos com os cortes nas pausas > eventos de cada plano (pose, expressão, objeto, câmera, com os verbos físicos marcados) > verificação de ritmo sem erro > render.
+
+## Vídeo sem narração (provisório)
+- Enquanto não há áudio, o tempo de cada fala é estimado pelo tamanho falado da frase (números por extenso), no ritmo da voz usada no vídeo do Téo (15,6 caracteres por segundo, 0,42 s entre frases, 0,2 s nas vírgulas, 0,7 s no fim de parágrafo), acelerado por um fator único para caber na duração pedida.
+- O texto das falas é extraído do roteiro e conferido automaticamente: juntando as falas, o texto é idêntico ao roteiro.
+- Todos os tempos dos planos são presos às falas (`T(fala, fração)` e `CORTE(fala)`), então quando a narração chegar basta trocar os tempos das falas pelos do áudio e o vídeo inteiro acompanha.
+- Sem áudio, a legenda mostra o texto exato de cada fala (fala de personagem em amarelo) e pode ser desligada.
+- Verbo em sentido figurado ("passa boa parte da vida") é registrado na lista de figurados do capítulo, para o verificador não cobrar o gesto.
+- Gráficos na tela (onomatopeia, número que conta, selo com ícone, painel) seguem o mesmo traço: contorno preto grosso, sombra de papel, cores chapadas, entrada com pulo.

@@ -48,7 +48,7 @@ const PlacaVendido: React.FC<{ s: number; texto?: string; cor?: string }> = ({ s
   </g>
 );
 /** carimbo retangular (PAGO, NORMAL, PRESO) */
-const Carimbo: React.FC<{ x: number; y: number; f: number; de: number; ate?: number; texto: string; cor: string; rot?: number; tam?: number }> = ({ x, y, f, de, ate, texto, cor, rot = -10, tam = 50 }) => {
+export const Carimbo: React.FC<{ x: number; y: number; f: number; de: number; ate?: number; texto: string; cor: string; rot?: number; tam?: number }> = ({ x, y, f, de, ate, texto, cor, rot = -10, tam = 50 }) => {
   const s = escalaPop(f, de, ate, 6);
   if (s <= 0) return null;
   const w = texto.length * tam * 0.72 + 50;
@@ -60,7 +60,7 @@ const Carimbo: React.FC<{ x: number; y: number; f: number; de: number; ate?: num
   );
 };
 /** confete caindo (coordenadas da tela) */
-const Confete: React.FC<{ f: number; de: number }> = ({ f, de }) => {
+export const Confete: React.FC<{ f: number; de: number }> = ({ f, de }) => {
   if (f < de) return null;
   const k = f - de;
   return (

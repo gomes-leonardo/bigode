@@ -119,14 +119,15 @@ export const Bigode: React.FC<{ cor: string; k: number }> = ({ cor, k }) => (
   />
 );
 
-/** barba cheia: bochechas e queixo, com a boca desenhada por cima */
+/** barba: mandíbula e queixo, abaixo da boca. Começa abaixo das maçãs do rosto, então sobra pele entre o cabelo e a
+ * barba dos dois lados (barba alta encostando no cabelo escuro fechava o rosto e parecia uma balaclava). */
 export const Barba: React.FC<{ cor: string; k: number }> = ({ cor, k }) => (
   <g>
     <Path
-      d="M -85 -6 C -87 42 -60 90 0 94 C 60 90 87 42 85 -6 C 77 6 70 18 56 26 C 40 34 26 22 0 24 C -26 22 -40 34 -56 26 C -70 18 -77 6 -85 -6 Z"
+      d="M -79 28 C -80 58 -54 92 0 95 C 54 92 80 58 79 28 C 68 40 56 48 42 48 C 30 48 20 42 0 44 C -20 42 -30 48 -42 48 C -56 48 -68 40 -79 28 Z"
       fill={cor} stroke={LINHA} strokeWidth={CONTORNO / k} strokeLinejoin="round"
     />
-    <Path d="M -48 52 q 6 8 4 16 M 46 50 q -6 8 -4 16" stroke={escura(cor)} strokeWidth={INTERNA / k} fill="none" strokeLinecap="round" />
+    <Path d="M -46 62 q 6 7 4 14 M 44 60 q -6 7 -4 14" stroke={escura(cor)} strokeWidth={INTERNA / k} fill="none" strokeLinecap="round" />
   </g>
 );
 

@@ -30,18 +30,22 @@ export const FIM = FIM_CAP11;
 // Com a narração real, alguns trechos ficam mais de 3 s sem acontecimento. Neles entra um zoom de corte no quadro
 // inteiro (cena e gráficos; a legenda não): aproxima 6% e, no respiro seguinte, volta. De preferência no começo de
 // uma fala, como um corte de edição.
-const MAX_PARADO = 86; // quadros (2,9 s)
+const MAX_PARADO = 74; // quadros (2,5 s: folga para eventos colados que o verificador junta numa batida só)
 const ZOOM_CORTE = 1.06;
 const pontosDeRespiro = (p: PlanoV): number[] => {
   const pts = [p.de, ...p.eventos.filter((e) => e.f > p.de && e.f < p.ate).map((e) => e.f), p.ate].sort((a, b) => a - b);
   const novos: number[] = [];
   for (let i = 0; i + 1 < pts.length; i++) {
-    const a = pts[i], b = pts[i + 1];
-    const n = Math.ceil((b - a) / MAX_PARADO) - 1;
-    for (let k = 1; k <= n; k++) {
-      const ideal = a + ((b - a) * k) / (n + 1);
-      const fala = FALAS.filter((x) => x.ini > a + 24 && x.ini < b - 24).sort((x, y) => Math.abs(x.ini - ideal) - Math.abs(y.ini - ideal))[0];
-      novos.push(fala && Math.abs(fala.ini - ideal) < (b - a) / (2 * (n + 1)) ? fala.ini : Math.round(ideal));
+    const b = pts[i + 1];
+    let cur = pts[i];
+    // anda de pedaço em pedaço: cada um com no máximo MAX_PARADO quadros, de preferência num começo de fala
+    while (b - cur > MAX_PARADO) {
+      const ideal = cur + (b - cur) / Math.ceil((b - cur) / MAX_PARADO);
+      const fala = FALAS.filter((x) => x.ini >= cur + 24 && x.ini <= cur + MAX_PARADO && b - x.ini >= 20)
+        .sort((x, y) => Math.abs(x.ini - ideal) - Math.abs(y.ini - ideal))[0];
+      const q = fala && Math.abs(fala.ini - ideal) <= 20 ? fala.ini : Math.round(ideal);
+      novos.push(q);
+      cur = q;
     }
   }
   return novos.sort((a, b) => a - b);
@@ -82,7 +86,7 @@ export const VideoCartao: React.FC<{ legenda?: boolean }> = ({ legenda = true })
   const z = zoomDeCorte(p, f);
   return (
     <AbsoluteFill>
-      <Sequence from={Math.round(ENTRADA * FPS)} layout="none"><Audio src={staticFile("audio/narracao.wav")} /></Sequence>
+      <Sequence from={Math.round(ENTRADA * FPS)} layout="none"><Audio src={staticFile("audio/narracao.mp3")} /></Sequence>
       <Efeitos />
       <AbsoluteFill style={{ transform: z !== 1 ? `scale(${z.toFixed(4)})` : undefined, transformOrigin: "50% 50%" }}>
         <p.Cena f={f} cam={cam} />

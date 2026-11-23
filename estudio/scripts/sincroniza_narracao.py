@@ -36,14 +36,23 @@ def envelope(x, hop=0.01):
     r = np.sqrt(np.mean(x[: k * n].reshape(k, n) ** 2, axis=1) + 1e-12)
     return 20 * np.log10(r), hop
 
+# cada parte é reconhecida pelo começo do texto (os arquivos podem chegar fora de ordem)
+def parecido(a, b):
+    return difflib.SequenceMatcher(None, norm(a)[:60], norm(b)[:60], autojunk=False).ratio()
+ordem = []
+for p in range(5):
+    primeira = next(f["texto"] for f in falas[cortes[p]:] if f["id"] not in SO_SOM)
+    ordem.append(max(asr, key=lambda k: parecido(" ".join(s[2] for s in asr[k]["segmentos"][:3]), primeira)))
+assert len(set(ordem)) == 5, ordem
+
 trilha, tempos, relatorio = [], {}, []
 pos = 0.0  # segundos já escritos na trilha final
 for p in range(5):
-    dados = asr[str(p + 1)]
+    dados = asr[ordem[p]]
     x = decodifica(dados["arquivo"])
     db, hop = envelope(x)
     piso = np.percentile(db, 10)
-    voz = db > piso + 14
+    voz = db > piso + 10
     ids = [i for i in range(cortes[p], cortes[p + 1]) if i not in SO_SOM]
     # --- alinhamento por caracteres: roteiro x transcrição
     S, donoS = [], []
@@ -92,11 +101,13 @@ for p in range(5):
     while q > 0 and not voz[q]: q -= 1
     fim[ids[-1]] = (q + 1) * hop
     # --- monta: cada fala com uma folga, pausas encurtadas, respiro dos bips
-    PRE, POS = 0.04, 0.10
+    PRE, POS = 0.08, 0.12
     if p > 0:
         trilha.append(np.zeros(int(ENTRE_PARTES * SR), np.float32)); pos += ENTRE_PARTES
+    copiado = 0.0  # até onde o áudio desta parte já foi copiado (nada se repete)
     for k, i in enumerate(ids):
-        a, b = max(0.0, ini[i] - PRE), min(len(x) / SR, fim[i] + POS)
+        a, b = max(0.0, ini[i] - PRE, copiado), min(len(x) / SR, fim[i] + POS)
+        if k + 1 < len(ids): b = min(b, max(a + 0.05, ini[ids[k + 1]] - PRE))
         trecho = x[int(a * SR): int(b * SR)]
         tempos[i] = (pos + (ini[i] - a), pos + (ini[i] - a) + (fim[i] - ini[i]))
         trilha.append(trecho); pos += len(trecho) / SR
@@ -111,12 +122,20 @@ for p in range(5):
                 alvo = pausa_orig
             else:
                 alvo = min(pausa_orig, PAUSA_MAX)
-            # silêncio: o começo da pausa original (respiração) e o resto em silêncio digital
-            meio = x[int(b * SR): int((b + min(pausa_orig, alvo)) * SR)]
-            trilha.append(meio)
-            falta = alvo - len(meio) / SR
-            if falta > 0: trilha.append(np.zeros(int(falta * SR), np.float32))
-            pos += len(meio) / SR + max(0.0, falta)
+            # pausa: se encolhe, corta o MEIO da pausa original (guarda o fim da fala e o começo da próxima);
+            # se cresce (respiro do bip), completa com silêncio no meio
+            prox = max(b, ini[j] - PRE)
+            if pausa_orig >= alvo:
+                meia = alvo / 2
+                partes_p = [x[int(b * SR): int((b + meia) * SR)], x[int((prox - meia) * SR): int(prox * SR)]]
+            else:
+                meia = pausa_orig / 2
+                partes_p = [x[int(b * SR): int((b + meia) * SR)], np.zeros(int((alvo - pausa_orig) * SR), np.float32), x[int((prox - meia) * SR): int(prox * SR)]]
+            for q in partes_p:
+                trilha.append(q); pos += len(q) / SR
+            copiado = prox
+        else:
+            copiado = b
     relatorio.append(f"parte {p + 1}: falas {ids[0]}-{ids[-1]} · cobertura do texto {cobertura:.0%} · {dados['duracao']:.1f}s na voz")
 
 y = np.concatenate(trilha)

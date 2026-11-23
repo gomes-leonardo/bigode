@@ -1,5 +1,5 @@
 // Tempo das falas do roteiro. Agora vem da narração (ElevenLabs): scripts/sincroniza_narracao.py alinha a transcrição
-// de cada parte às falas, encurta as pausas longas, abre o respiro dos "Bip." e grava a trilha (public/audio/narracao.wav)
+// de cada parte às falas, encurta as pausas longas, abre o respiro dos "Bip." e grava a trilha (public/audio/narracao.mp3)
 // com o começo e o fim de cada fala (falas_audio.json). Todo o vídeo é preso a T(fala) e CORTE(fala), então acompanha.
 import dados from "./falas.json";
 import audio from "./falas_audio.json";
@@ -26,5 +26,13 @@ export const T = (id: number, frac = 0) => {
 };
 /** ponto de corte depois da fala `id`: meio da pausa até a próxima */
 export const CORTE = (id: number) => (id + 1 < FALAS.length ? Math.round((FALAS[id].fim + FALAS[id + 1].ini) / 2) : DURACAO);
-/** fala no ar num quadro (ou undefined na pausa) */
-export const falaNoQuadro = (f: number) => FALAS.find((x) => f >= x.ini && f < x.fim);
+/** fala da legenda num quadro: segura na pausa até a próxima fala começar (no máximo 0,6 s depois do fim),
+ * para frase curta não piscar na tela */
+export const falaNoQuadro = (f: number) => {
+  let i = -1;
+  for (let k = 0; k < FALAS.length && FALAS[k].ini <= f; k++) i = k;
+  if (i < 0) return undefined;
+  const x = FALAS[i];
+  const limite = Math.min(i + 1 < FALAS.length ? FALAS[i + 1].ini : Infinity, x.fim + 18);
+  return f < Math.max(x.fim, limite) ? x : undefined;
+};

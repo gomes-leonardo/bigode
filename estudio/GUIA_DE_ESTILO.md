@@ -121,3 +121,12 @@ Todo o trabalho fica nesta pasta (`estudio/`). Cada fase para no fim e espera ap
 - Cronômetro da reta final (`cronometro.tsx`): mostra os segundos anunciados no roteiro (60, 50, 40, 30, 10, Bip) e anda entre um anúncio e outro; fica no canto e vai grande para o centro em cada anúncio, sem cobrir rosto.
 - Passagem de tempo: clarão branco curto (um ano, 32 anos, 32 mil anos) e troca de fundo; lembrança em sépia com moldura clara.
 - Perda de significado: tons de cinza (`grayscale`) sobre a cena e os gráficos; silêncio depois do Bip também tira a cor.
+
+## Narração e efeitos sonoros (cartão infinito)
+- A narração vem do ElevenLabs em partes (até ~2.700 caracteres cada, números por extenso: `roteiros/cartao-infinito-elevenlabs.txt`). As partes podem chegar fora de ordem: `scripts/sincroniza_narracao.py` reconhece cada uma pelo começo do texto.
+- Sincronização: transcrição com tempo por palavra (faster-whisper, modelo small, rodando local) e alinhamento por caracteres com o texto de cada fala; o limite entre duas falas vai para o ponto mais silencioso entre elas. O resultado é `falas_audio.json` (começo e fim de cada fala) e a trilha `public/audio/narracao.mp3` (-16 LUFS).
+- Edição da trilha: pausas acima de 0,7 s encolhem cortando o meio da pausa (nunca o fim de uma palavra ou o começo da próxima); da mão tremendo em diante as pausas ficam como a voz fez; 0,6 s entre as partes.
+- "Bip." sai da voz e vira efeito: a trilha abre um respiro (0,6 s; 0,9 s no Bip final) e o apito sintetizado toca ali, junto do BIP! da tela, sem legenda.
+- Efeitos só onde o roteiro tem um som de verdade (bip, telefone tocando, batida na porta, cliques das câmeras), sintetizados em `scripts/sfx_cartao.py`, sempre abaixo da voz (bip a 28%, a pedido; os outros entre 22% e 40%).
+- Legenda: segura na pausa até a próxima fala (no máximo 0,6 s depois do fim), para frase curta não piscar.
+- Com a voz real o vídeo fica mais longo que a estimativa; onde ficaria mais de 2,5 s sem acontecimento entra um zoom de corte leve (6%) no quadro inteiro, menos na legenda, de preferência no começo de uma fala.

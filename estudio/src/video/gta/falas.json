@@ -1,0 +1,893 @@
+[
+ {
+  "id": 0,
+  "texto": "Téo digita quatro letras no teclado.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Um carro aparece na frente dele.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Não chegou dirigindo.",
+  "paragrafo": 2,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Não foi entregue.",
+  "paragrafo": 2,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Apareceu.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "Um segundo depois, o bairro inteiro deixa de existir.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 1
+ },
+ {
+  "id": 6,
+  "texto": "Então, e se os códigos de GTA funcionassem na vida real?",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 56,
+  "virgulas": 1
+ },
+ {
+  "id": 7,
+  "texto": "A regra é simples.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Você digita, a realidade obedece.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 1
+ },
+ {
+  "id": 9,
+  "texto": "Nenhum código é negado.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "O problema é que a realidade cobra o que o jogo dá de graça.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "Vamos começar pelo código que todo mundo usa primeiro.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 0
+ },
+ {
+  "id": 12,
+  "texto": "Spawnar um veículo.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "No jogo, o carro aparece.",
+  "paragrafo": 9,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 1
+ },
+ {
+  "id": 14,
+  "texto": "O jogo não precisa tirar aquele carro de lugar nenhum.",
+  "paragrafo": 9,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "Ele só desenha.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 15,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "Na vida real, matéria não aparece.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 1
+ },
+ {
+  "id": 17,
+  "texto": "Um carro popular pesa mais ou menos mil e quinhentos quilos.",
+  "paragrafo": 11,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 18,
+  "texto": "Esses mil e quinhentos quilos de aço, vidro e plástico precisam vir de algum lugar.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 83,
+  "virgulas": 1
+ },
+ {
+  "id": 19,
+  "texto": "E existe uma conta que diz exatamente quanto custa criar matéria do nada.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 73,
+  "virgulas": 0
+ },
+ {
+  "id": 20,
+  "texto": "E igual a m c ao quadrado.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 21,
+  "texto": "Energia é igual à massa vezes a velocidade da luz ao quadrado.",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 0
+ },
+ {
+  "id": 22,
+  "texto": "A velocidade da luz é trezentos milhões de metros por segundo.",
+  "paragrafo": 15,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 0
+ },
+ {
+  "id": 23,
+  "texto": "Elevada ao quadrado, esse número fica absurdo.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 1
+ },
+ {
+  "id": 24,
+  "texto": "Fazendo a conta para os mil e quinhentos quilos do carro, você chega em algo próximo de cento e trinta e cinco quintilhões de joules.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 133,
+  "virgulas": 1
+ },
+ {
+  "id": 25,
+  "texto": "Esse número não diz nada sozinho.",
+  "paragrafo": 17,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "Então vamos comparar.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 27,
+  "texto": "A bomba de Hiroshima liberou cerca de sessenta e três trilhões de joules.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 73,
+  "virgulas": 0
+ },
+ {
+  "id": 28,
+  "texto": "Criar um único Gol do nada exige a energia de aproximadamente dois milhões de bombas de Hiroshima.",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 98,
+  "virgulas": 0
+ },
+ {
+  "id": 29,
+  "texto": "Dois milhões.",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 30,
+  "texto": "Para um carro.",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 31,
+  "texto": "Você queria um veículo e apagou o estado de São Paulo.",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 0
+ },
+ {
+  "id": 32,
+  "texto": "E tem um detalhe pior.",
+  "paragrafo": 23,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 33,
+  "texto": "Você pode digitar o código de novo.",
+  "paragrafo": 24,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 35,
+  "virgulas": 0
+ },
+ {
+  "id": 34,
+  "texto": "Téo aprende a lição e vai para o código mais seguro da lista.",
+  "paragrafo": 25,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 0
+ },
+ {
+  "id": 35,
+  "texto": "Invencibilidade.",
+  "paragrafo": 26,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 36,
+  "texto": "No jogo, sua barra de vida não desce.",
+  "paragrafo": 27,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 1
+ },
+ {
+  "id": 37,
+  "texto": "Tiro, queda, explosão, atropelamento.",
+  "paragrafo": 27,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 3
+ },
+ {
+  "id": 38,
+  "texto": "Nada tira um ponto.",
+  "paragrafo": 27,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 39,
+  "texto": "Parece o código perfeito.",
+  "paragrafo": 28,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 0
+ },
+ {
+  "id": 40,
+  "texto": "E é aqui que quase todo mundo erra.",
+  "paragrafo": 28,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 35,
+  "virgulas": 0
+ },
+ {
+  "id": 41,
+  "texto": "Invulnerável não é imortal.",
+  "paragrafo": 29,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 42,
+  "texto": "O código impede que você seja ferido.",
+  "paragrafo": 30,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 43,
+  "texto": "Ele não combina com as outras leis da física, ele só ignora o dano.",
+  "paragrafo": 30,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 67,
+  "virgulas": 1
+ },
+ {
+  "id": 44,
+  "texto": "Seu corpo continua precisando de oxigênio.",
+  "paragrafo": 31,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 45,
+  "texto": "Sem oxigênio chegando ao cérebro, uma pessoa desmaia em cerca de quinze segundos.",
+  "paragrafo": 32,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 81,
+  "virgulas": 1
+ },
+ {
+  "id": 46,
+  "texto": "Téo pula no fundo do mar achando que está protegido.",
+  "paragrafo": 33,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 0
+ },
+ {
+  "id": 47,
+  "texto": "E está.",
+  "paragrafo": 33,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 7,
+  "virgulas": 0
+ },
+ {
+  "id": 48,
+  "texto": "Nada machuca ele.",
+  "paragrafo": 33,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 49,
+  "texto": "Ele só não consegue respirar.",
+  "paragrafo": 34,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 50,
+  "texto": "A invencibilidade mantém o corpo intacto enquanto ele apaga.",
+  "paragrafo": 35,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 51,
+  "texto": "Vamos para o fogo.",
+  "paragrafo": 36,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 52,
+  "texto": "Seu corpo é feito de mais ou menos sessenta por cento de água.",
+  "paragrafo": 37,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 0
+ },
+ {
+  "id": 53,
+  "texto": "Ferida você não fica.",
+  "paragrafo": 38,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 54,
+  "texto": "Mas temperatura não é ferimento, é agitação de molécula.",
+  "paragrafo": 38,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 56,
+  "virgulas": 1
+ },
+ {
+  "id": 55,
+  "texto": "Téo atravessa o incêndio sem um arranhão, cozinhando por dentro.",
+  "paragrafo": 39,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 1
+ },
+ {
+  "id": 56,
+  "texto": "E tem a parte que o jogo mais esconde.",
+  "paragrafo": 40,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 0
+ },
+ {
+  "id": 57,
+  "texto": "Aceleração.",
+  "paragrafo": 41,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 11,
+  "virgulas": 0
+ },
+ {
+  "id": 58,
+  "texto": "No GTA você cai de um prédio, bate no chão e sai andando.",
+  "paragrafo": 42,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 57,
+  "virgulas": 1
+ },
+ {
+  "id": 59,
+  "texto": "Quando você cai, o problema não é a velocidade.",
+  "paragrafo": 43,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 47,
+  "virgulas": 1
+ },
+ {
+  "id": 60,
+  "texto": "É a parada.",
+  "paragrafo": 43,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 11,
+  "virgulas": 0
+ },
+ {
+  "id": 61,
+  "texto": "Um corpo humano em queda livre chega a uns duzentos quilômetros por hora.",
+  "paragrafo": 44,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 73,
+  "virgulas": 0
+ },
+ {
+  "id": 62,
+  "texto": "Parar de duzentos para zero em alguns centímetros de concreto significa uma desaceleração brutal.",
+  "paragrafo": 44,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 97,
+  "virgulas": 0
+ },
+ {
+  "id": 63,
+  "texto": "Pilotos treinados perdem a consciência por volta de cinco vezes a gravidade, quando o sangue deixa de subir para a cabeça.",
+  "paragrafo": 45,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 122,
+  "virgulas": 1
+ },
+ {
+  "id": 64,
+  "texto": "Seus ossos não quebram, porque você é invencível.",
+  "paragrafo": 46,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 1
+ },
+ {
+  "id": 65,
+  "texto": "Seu sangue continua obedecendo à inércia.",
+  "paragrafo": 47,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 66,
+  "texto": "Téo levanta depois da queda, inteiro, e cai de novo.",
+  "paragrafo": 48,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 52,
+  "virgulas": 2
+ },
+ {
+  "id": 67,
+  "texto": "Dessa vez desmaiado.",
+  "paragrafo": 48,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 68,
+  "texto": "O código cumpriu exatamente o que prometeu.",
+  "paragrafo": 49,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 0
+ },
+ {
+  "id": 69,
+  "texto": "Ele só prometeu menos do que você entendeu.",
+  "paragrafo": 50,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 0
+ },
+ {
+  "id": 70,
+  "texto": "Sobrou o último código.",
+  "paragrafo": 51,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 71,
+  "texto": "E é o único que o jogo inverteu.",
+  "paragrafo": 51,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 72,
+  "texto": "Nível de procurado.",
+  "paragrafo": 52,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 73,
+  "texto": "No GTA, estrelas aparecem no canto da tela.",
+  "paragrafo": 53,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 1
+ },
+ {
+  "id": 74,
+  "texto": "Você entra num beco, espera o círculo piscar, e some.",
+  "paragrafo": 53,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 2
+ },
+ {
+  "id": 75,
+  "texto": "A polícia esquece você.",
+  "paragrafo": 54,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 76,
+  "texto": "Na vida real, ninguém esquece.",
+  "paragrafo": 55,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 1
+ },
+ {
+  "id": 77,
+  "texto": "No jogo, sumir de vista é sumir.",
+  "paragrafo": 56,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 1
+ },
+ {
+  "id": 78,
+  "texto": "Fora dele, procura não depende de alguém estar te olhando.",
+  "paragrafo": 56,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 1
+ },
+ {
+  "id": 79,
+  "texto": "Helicópteros usam câmera térmica, e câmera térmica não enxerga sua roupa, enxerga seu calor.",
+  "paragrafo": 57,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 92,
+  "virgulas": 2
+ },
+ {
+  "id": 80,
+  "texto": "Um beco escuro não esconde nada de um sensor que lê temperatura.",
+  "paragrafo": 57,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 0
+ },
+ {
+  "id": 81,
+  "texto": "Seu celular informa a antena mais próxima o tempo todo.",
+  "paragrafo": 58,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 55,
+  "virgulas": 0
+ },
+ {
+  "id": 82,
+  "texto": "Seu carro tem placa.",
+  "paragrafo": 59,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 83,
+  "texto": "E a diferença mais importante é essa: no jogo, as estrelas descem sozinhas.",
+  "paragrafo": 60,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 2
+ },
+ {
+  "id": 84,
+  "texto": "Fora dele, só sobem.",
+  "paragrafo": 61,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 1
+ },
+ {
+  "id": 85,
+  "texto": "Téo entra no beco e espera o círculo piscar.",
+  "paragrafo": 62,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 86,
+  "texto": "O círculo não pisca.",
+  "paragrafo": 63,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 87,
+  "texto": "Então ele entende o que todos os três códigos tinham em comum.",
+  "paragrafo": 64,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 0
+ },
+ {
+  "id": 88,
+  "texto": "No jogo, o código desliga uma regra.",
+  "paragrafo": 65,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 1
+ },
+ {
+  "id": 89,
+  "texto": "Na vida real, nenhuma regra desliga.",
+  "paragrafo": 66,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 1
+ },
+ {
+  "id": 90,
+  "texto": "Elas só param de se aplicar a você, e continuam valendo para tudo em volta.",
+  "paragrafo": 66,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 1
+ },
+ {
+  "id": 91,
+  "texto": "O carro apareceu, e a energia saiu do mundo.",
+  "paragrafo": 67,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 1
+ },
+ {
+  "id": 92,
+  "texto": "O corpo ficou intacto, e o sangue continuou obedecendo à inércia.",
+  "paragrafo": 68,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 65,
+  "virgulas": 1
+ },
+ {
+  "id": 93,
+  "texto": "O rosto sumiu do beco, e continuou no sensor.",
+  "paragrafo": 69,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 1
+ },
+ {
+  "id": 94,
+  "texto": "Código nenhum te tira do universo.",
+  "paragrafo": 70,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 95,
+  "texto": "Ele só te dá uma exceção, e cobra a conta de quem está do lado.",
+  "paragrafo": 70,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 63,
+  "virgulas": 1
+ },
+ {
+  "id": 96,
+  "texto": "Téo fecha o teclado.",
+  "paragrafo": 71,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 97,
+  "texto": "Na tela, ainda pisca o cursor esperando as próximas quatro letras.",
+  "paragrafo": 72,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 1
+ },
+ {
+  "id": 98,
+  "texto": "Então, se funcionasse de verdade, qual código você digitaria?",
+  "paragrafo": 73,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 2
+ }
+]

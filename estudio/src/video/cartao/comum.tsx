@@ -15,6 +15,7 @@ export type PlanoV = Plano & {
   Sobre?: React.FC<{ f: number }>; // gráficos na tela (não seguem a câmera)
   eventos: Evento[];
   semLegenda?: number[]; // falas cuja legenda não aparece (ex.: o título já escreve o texto na tela)
+  semRespiro?: boolean; // sem zoom de corte automático (ex.: tela branca, cartela final)
 };
 
 export const entre = (f: number, a: number, b: number) => suave((f - a) / Math.max(1, b - a));

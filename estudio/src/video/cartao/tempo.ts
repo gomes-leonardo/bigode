@@ -1,28 +1,22 @@
-// Tempo das falas do roteiro (sem áudio ainda): estimado pelo tamanho falado de cada frase.
-// Ritmo calibrado na narração do Téo (ElevenLabs, voz B): 15,6 caracteres/s, 0,42 s entre frases, 0,2 s nas vírgulas,
-// 0,7 s no fim de parágrafo. Tudo é acelerado pelo mesmo fator para o vídeo durar ALVO_S (pedido: 8 a 9 min).
-// Quando a narração chegar, os tempos de cada fala vêm do áudio e o resto do vídeo acompanha sozinho.
+// Tempo das falas do roteiro. Agora vem da narração (ElevenLabs): scripts/sincroniza_narracao.py alinha a transcrição
+// de cada parte às falas, encurta as pausas longas, abre o respiro dos "Bip." e grava a trilha (public/audio/narracao.wav)
+// com o começo e o fim de cada fala (falas_audio.json). Todo o vídeo é preso a T(fala) e CORTE(fala), então acompanha.
 import dados from "./falas.json";
+import audio from "./falas_audio.json";
 
 export const FPS = 30;
-export const ALVO_S = 540;
 export type Fala = { id: number; texto: string; paragrafo: number; fimParagrafo: boolean; citacao: boolean; caracteres: number; virgulas: number; ini: number; fim: number };
 
-const ENTRADA = 0.6, SAIDA = 2.0; // segundos antes da primeira fala e depois da última
-const bruto = (d: (typeof dados)[number]) => d.caracteres / 15.6 + d.virgulas * 0.2;
-const pausa = (d: (typeof dados)[number]) => (d.fimParagrafo ? 0.7 : 0.42);
-const somaBase = dados.reduce((a, d) => a + bruto(d) + pausa(d), 0);
-export const ACELERA = somaBase / (ALVO_S - ENTRADA - SAIDA);
+/** a narração começa meio segundo depois do primeiro quadro; o último plano segura 2 s depois da última fala */
+export const ENTRADA = 0.5;
+const SAIDA = 2.0;
+const porId = new Map(audio.map((a) => [a.id, a]));
 
-export const FALAS: Fala[] = (() => {
-  let t = ENTRADA;
-  return dados.map((d) => {
-    const dur = Math.max(0.42, bruto(d) / ACELERA);
-    const ini = Math.round(t * FPS), fim = Math.round((t + dur) * FPS);
-    t += dur + pausa(d) / ACELERA;
-    return { ...d, ini, fim };
-  });
-})();
+export const FALAS: Fala[] = dados.map((d) => {
+  const a = porId.get(d.id);
+  if (!a) throw new Error(`fala ${d.id} sem tempo na narração`);
+  return { ...d, ini: Math.round((ENTRADA + a.ini) * FPS), fim: Math.round((ENTRADA + a.fim) * FPS) };
+});
 export const DURACAO = FALAS[FALAS.length - 1].fim + Math.round(SAIDA * FPS);
 
 /** quadro dentro da fala `id` (frac 0 = começo, 1 = fim) */

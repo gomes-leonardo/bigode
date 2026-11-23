@@ -20,7 +20,7 @@ const cliques = (de: number, passos: number[], vol: number): Deixa[] => {
 
 export const DEIXAS: Deixa[] = [
   // "Bip." (a maquininha aprovando; no fim, o último bip antes do silêncio)
-  ...SO_SOM.map((id) => ({ de: T(id), som: "bip" as const, vol: 0.8 })),
+  ...SO_SOM.map((id) => ({ de: T(id), som: "bip" as const, vol: 0.28 })),
   // "Seu telefone nunca para de tocar."
   { de: CORTE(183), ate: T(185), som: "telefone", vol: 0.4 },
   // "Seu telefone toca." (o Banco Central)

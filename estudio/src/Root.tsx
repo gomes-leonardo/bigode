@@ -10,6 +10,7 @@ import { CENARIOS_FASE4, Fase4Quadro } from "./fase4/Cenarios";
 import { DURACAO_TESTE_CAMERA, TesteCamera } from "./fase5/TesteCamera";
 import { FIM as FIM_CARTAO, VideoCartao } from "./video/cartao/Video";
 import { FIM as FIM_GTA, VideoGta } from "./video/gta/Video";
+import { ThumbGta } from "./video/gta/Thumb";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -24,6 +25,8 @@ export const RemotionRoot: React.FC = () => (
         <Composition id={`Fase4A-${c}`} component={Fase4Quadro} defaultProps={{ cenario: c, ancoras: true }} durationInFrames={90} fps={FPS} width={W} height={H} />
       </React.Fragment>
     ))}
+    <Still id="ThumbGTA-A" component={ThumbGta} defaultProps={{ variante: "A" as const }} width={W} height={H} />
+    <Still id="ThumbGTA-B" component={ThumbGta} defaultProps={{ variante: "B" as const }} width={W} height={H} />
     <Composition id="CodigosGTA" component={VideoGta} defaultProps={{ legenda: true }} durationInFrames={FIM_GTA + 24} fps={FPS} width={W} height={H} />
     <Composition id="CartaoInfinito" component={VideoCartao} defaultProps={{ legenda: true }} durationInFrames={FIM_CARTAO + 24} fps={FPS} width={W} height={H} />
     <Composition id="Fase5Camera" component={TesteCamera} defaultProps={{ hud: true }} durationInFrames={DURACAO_TESTE_CAMERA} fps={FPS} width={W} height={H} />

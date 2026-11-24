@@ -1,0 +1,187 @@
+Tarefa: gerar no ElevenLabs a narração de um vídeo do YouTube, em 3 partes, e baixar os 3 áudios em MP3.
+
+ONDE
+Site elevenlabs.io, na conta que já está logada. Abra "Text to Speech" (Texto para fala).
+
+CONFIGURAÇÃO (a mesma do vídeo anterior, para a voz continuar igual)
+- Voz: Lucas - Engaging, Captivating and Kind
+- Modelo: Eleven v3
+- Stability: Natural
+- Formato do download: MP3 44.1 kHz 128 kbps
+- Não mexa em mais nada (velocidade, estilo etc.): o que aparecer fica no padrão.
+Se tiver dúvida sobre a voz, abra o histórico (History): as gerações do vídeo anterior começam com "Você passa o seu cartão." e usam essa mesma voz Lucas.
+Antes de gerar CADA parte, confira de novo que a voz é o Lucas e o modelo é o Eleven v3 (o site às vezes troca sozinho).
+
+COMO GERAR (uma parte por vez, na ordem 1, 2, 3)
+1. Apague tudo o que estiver na caixa de texto.
+2. Cole SOMENTE o texto que está entre "INÍCIO DA PARTE" e "FIM DA PARTE", exatamente como está. Não acrescente tags ([pausa], [risos] etc.), não corrija, não troque palavras, não junte partes e não divida nenhuma parte: cada parte tem menos de 2.000 caracteres e cabe em uma geração só.
+3. Clique em Generate (Gerar).
+4. TEMPO, IMPORTANTE: depois de clicar em gerar, espere pelo menos 30 segundos. O ícone de download só aparece quando o áudio termina de processar. Enquanto espera, não clique em gerar de novo (gasta créditos e cria áudio repetido). Se depois dos 30 segundos o download ainda não apareceu, espere mais 30 segundos e confira de novo; repita até aparecer.
+5. Quando o download aparecer, confira a duração no player. O esperado é: Parte 1 com cerca de 1:40, Parte 2 com cerca de 1:45, Parte 3 com cerca de 1:30. Se uma parte sair muito fora disso (menos de 1:15 ou mais de 2:15), se cortar no meio, ou se a voz não for o Lucas falando português do Brasil, gere só aquela parte de novo e espere os 30 segundos outra vez.
+6. Baixe o MP3 (44.1 kHz 128 kbps). O nome do arquivo não importa.
+7. Só comece a próxima parte depois que o download da anterior terminar.
+
+NO FINAL, me responda com: os 3 arquivos baixados, a duração de cada um e se alguma parte precisou ser gerada de novo.
+
+
+===== INÍCIO DA PARTE 1 de 3 (1524 caracteres, cerca de 1:40 de áudio) =====
+
+Téo digita quatro letras no teclado.
+
+Um carro aparece na frente dele.
+
+Não chegou dirigindo. Não foi entregue. Apareceu.
+
+Um segundo depois, o bairro inteiro deixa de existir.
+
+Então, e se os códigos de GTA funcionassem na vida real?
+
+A regra é simples. Você digita, a realidade obedece. Nenhum código é negado.
+
+O problema é que a realidade cobra o que o jogo dá de graça.
+
+Vamos começar pelo código que todo mundo usa primeiro.
+
+Spawnar um veículo.
+
+No jogo, o carro aparece. O jogo não precisa tirar aquele carro de lugar nenhum. Ele só desenha.
+
+Na vida real, matéria não aparece.
+
+Um carro popular pesa mais ou menos mil e quinhentos quilos. Esses mil e quinhentos quilos de aço, vidro e plástico precisam vir de algum lugar.
+
+E existe uma conta que diz exatamente quanto custa criar matéria do nada.
+
+E igual a m c ao quadrado.
+
+Energia é igual à massa vezes a velocidade da luz ao quadrado.
+
+A velocidade da luz é trezentos milhões de metros por segundo. Elevada ao quadrado, esse número fica absurdo.
+
+Fazendo a conta para os mil e quinhentos quilos do carro, você chega em algo próximo de cento e trinta e cinco quintilhões de joules.
+
+Esse número não diz nada sozinho. Então vamos comparar.
+
+A bomba de Hiroshima liberou cerca de sessenta e três trilhões de joules.
+
+Criar um único Gol do nada exige a energia de aproximadamente dois milhões de bombas de Hiroshima.
+
+Dois milhões.
+
+Para um carro.
+
+Você queria um veículo e apagou o estado de São Paulo.
+
+E tem um detalhe pior.
+
+Você pode digitar o código de novo.
+
+===== FIM DA PARTE 1 =====
+
+
+===== INÍCIO DA PARTE 2 de 3 (1634 caracteres, cerca de 1:45 de áudio) =====
+
+Téo aprende a lição e vai para o código mais seguro da lista.
+
+Invencibilidade.
+
+No jogo, sua barra de vida não desce. Tiro, queda, explosão, atropelamento. Nada tira um ponto.
+
+Parece o código perfeito. E é aqui que quase todo mundo erra.
+
+Invulnerável não é imortal.
+
+O código impede que você seja ferido. Ele não combina com as outras leis da física, ele só ignora o dano.
+
+Seu corpo continua precisando de oxigênio.
+
+Sem oxigênio chegando ao cérebro, uma pessoa desmaia em cerca de quinze segundos.
+
+Téo pula no fundo do mar achando que está protegido. E está. Nada machuca ele.
+
+Ele só não consegue respirar.
+
+A invencibilidade mantém o corpo intacto enquanto ele apaga.
+
+Vamos para o fogo.
+
+Seu corpo é feito de mais ou menos sessenta por cento de água.
+
+Ferida você não fica. Mas temperatura não é ferimento, é agitação de molécula.
+
+Téo atravessa o incêndio sem um arranhão, cozinhando por dentro.
+
+E tem a parte que o jogo mais esconde.
+
+Aceleração.
+
+No GTA você cai de um prédio, bate no chão e sai andando.
+
+Quando você cai, o problema não é a velocidade. É a parada.
+
+Um corpo humano em queda livre chega a uns duzentos quilômetros por hora. Parar de duzentos para zero em alguns centímetros de concreto significa uma desaceleração brutal.
+
+Pilotos treinados perdem a consciência por volta de cinco vezes a gravidade, quando o sangue deixa de subir para a cabeça.
+
+Seus ossos não quebram, porque você é invencível.
+
+Seu sangue continua obedecendo à inércia.
+
+Téo levanta depois da queda, inteiro, e cai de novo. Dessa vez desmaiado.
+
+O código cumpriu exatamente o que prometeu.
+
+Ele só prometeu menos do que você entendeu.
+
+===== FIM DA PARTE 2 =====
+
+
+===== INÍCIO DA PARTE 3 de 3 (1360 caracteres, cerca de 1:30 de áudio) =====
+
+Sobrou o último código. E é o único que o jogo inverteu.
+
+Nível de procurado.
+
+No GTA, estrelas aparecem no canto da tela. Você entra num beco, espera o círculo piscar, e some.
+
+A polícia esquece você.
+
+Na vida real, ninguém esquece.
+
+No jogo, sumir de vista é sumir. Fora dele, procura não depende de alguém estar te olhando.
+
+Helicópteros usam câmera térmica, e câmera térmica não enxerga sua roupa, enxerga seu calor. Um beco escuro não esconde nada de um sensor que lê temperatura.
+
+Seu celular informa a antena mais próxima o tempo todo.
+
+Seu carro tem placa.
+
+E a diferença mais importante é essa: no jogo, as estrelas descem sozinhas.
+
+Fora dele, só sobem.
+
+Téo entra no beco e espera o círculo piscar.
+
+O círculo não pisca.
+
+Então ele entende o que todos os três códigos tinham em comum.
+
+No jogo, o código desliga uma regra.
+
+Na vida real, nenhuma regra desliga. Elas só param de se aplicar a você, e continuam valendo para tudo em volta.
+
+O carro apareceu, e a energia saiu do mundo.
+
+O corpo ficou intacto, e o sangue continuou obedecendo à inércia.
+
+O rosto sumiu do beco, e continuou no sensor.
+
+Código nenhum te tira do universo. Ele só te dá uma exceção, e cobra a conta de quem está do lado.
+
+Téo fecha o teclado.
+
+Na tela, ainda pisca o cursor esperando as próximas quatro letras.
+
+Então, se funcionasse de verdade, qual código você digitaria?
+
+===== FIM DA PARTE 3 =====

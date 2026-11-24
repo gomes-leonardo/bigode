@@ -2,23 +2,37 @@
 # 1) alinha a transcrição (palavras com tempo) ao texto de cada fala; 2) acerta os limites de cada fala no ponto mais
 #    silencioso entre uma fala e outra; 3) monta a narração inteira: encurta pausas longas, abre o respiro dos "Bip."
 #    (que saíram da voz e viraram efeito) e junta as partes; 4) grava a trilha e os tempos de cada fala.
-# uso: python3 scripts/sincroniza_narracao.py <asr.json> <falas.json> <saida.wav> <falas_audio.json>
+# uso: python3 scripts/sincroniza_narracao.py <asr.json> <falas.json> <saida.wav> <falas_audio.json> [cartao|gta]
 import json, re, subprocess, sys, unicodedata, difflib
 import numpy as np
 
 SR = 44100
 asr = json.load(open(sys.argv[1], encoding="utf-8"))
 falas = json.load(open(sys.argv[2], encoding="utf-8"))
-SO_SOM = {1, 6, 12, 255}                      # "Bip." viram som: a voz não fala
-GAP_BIP = {1: 0.6, 6: 0.6, 12: 0.6, 255: 0.9}  # respiro em volta de cada bip (s)
-BIP_EM = {1: 0.12, 6: 0.12, 12: 0.12, 255: 0.3}
-PAUSA_MAX = 0.7        # pausas maiores que isso encolhem (vídeo mais vivo)
-DRAMA = 252            # da mão tremendo em diante, as pausas ficam como a voz fez
+VIDEO = sys.argv[5] if len(sys.argv) > 5 else "cartao"
+CONF = {
+    # vídeo 1: cinco partes; os "Bip." viram som; da mão tremendo em diante as pausas ficam como a voz fez
+    "cartao": dict(partes=["Mas, honestamente, o primeiro mês", "Então você vai atrás daquilo", "E existe um custo.", "Você olha para o cartão."],
+                   so_som={1, 6, 12, 255}, gap_bip={1: 0.6, 6: 0.6, 12: 0.6, 255: 0.9}, bip_em={1: 0.12, 6: 0.12, 12: 0.12, 255: 0.3},
+                   drama=252, pausa_fixa={}),
+    # vídeo 2: três partes; pausas pedidas no roteiro (de voz a voz, em segundos): os quatro toques de tecla depois da
+    # fala 0, a tela branca de 1,5 s depois da 5, o silêncio de 1 s antes e depois do "Dois milhões." (28 e 29);
+    # do "Téo fecha o teclado." em diante as pausas ficam como a voz fez
+    "gta": dict(partes=["Téo aprende a lição", "Sobrou o último código"], so_som=set(), gap_bip={}, bip_em={},
+                drama=96, pausa_fixa={0: 1.1, 5: 1.8, 28: 1.0, 29: 1.0}),
+}[VIDEO]
+SO_SOM = CONF["so_som"]          # falas que viram som: a voz não fala
+GAP_BIP = CONF["gap_bip"]        # respiro em volta de cada som (s)
+BIP_EM = CONF["bip_em"]
+PAUSA_MAX = 0.7                  # pausas maiores que isso encolhem (vídeo mais vivo)
+DRAMA = CONF["drama"]
+PAUSA_FIXA = CONF["pausa_fixa"]
 ENTRE_PARTES = 0.6
 
 def ini_parte(texto):
     return next(f["id"] for f in falas if f["texto"].startswith(texto))
-cortes = [0, ini_parte("Mas, honestamente, o primeiro mês"), ini_parte("Então você vai atrás daquilo"), ini_parte("E existe um custo."), ini_parte("Você olha para o cartão."), len(falas)]
+cortes = [0] + [ini_parte(t) for t in CONF["partes"]] + [len(falas)]
+NP = len(cortes) - 1
 
 def norm(s):
     s = unicodedata.normalize("NFD", s.lower())
@@ -40,14 +54,14 @@ def envelope(x, hop=0.01):
 def parecido(a, b):
     return difflib.SequenceMatcher(None, norm(a)[:60], norm(b)[:60], autojunk=False).ratio()
 ordem = []
-for p in range(5):
+for p in range(NP):
     primeira = next(f["texto"] for f in falas[cortes[p]:] if f["id"] not in SO_SOM)
     ordem.append(max(asr, key=lambda k: parecido(" ".join(s[2] for s in asr[k]["segmentos"][:3]), primeira)))
-assert len(set(ordem)) == 5, ordem
+assert len(set(ordem)) == NP, ordem
 
 trilha, tempos, relatorio = [], {}, []
 pos = 0.0  # segundos já escritos na trilha final
-for p in range(5):
+for p in range(NP):
     dados = asr[ordem[p]]
     x = decodifica(dados["arquivo"])
     db, hop = envelope(x)
@@ -118,6 +132,8 @@ for p in range(5):
             if bip is not None:
                 alvo = GAP_BIP[bip]
                 tempos[bip] = (pos + BIP_EM[bip], pos + BIP_EM[bip] + 0.3)
+            elif i in PAUSA_FIXA:  # de voz a voz: tira as folgas PRE e POS que já estão nos trechos
+                alvo = max(0.0, PAUSA_FIXA[i] - PRE - POS)
             elif i >= DRAMA:
                 alvo = pausa_orig
             else:

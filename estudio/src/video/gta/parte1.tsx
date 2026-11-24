@@ -113,9 +113,10 @@ const p2: PlanoV = {
 };
 
 // ------------------------------------------------------------------ 3. um segundo depois, o bairro inteiro deixa de existir (clarão, tela branca, silêncio)
-export const BRANCO = { de: FALAS[5].fim, ate: CORTE(5) };
+/** a tela branca do roteiro: 1,5 s de silêncio total depois de "o bairro inteiro deixa de existir" (corta para o título) */
+export const BRANCO = { de: FALAS[5].fim, ate: Math.min(FALAS[6].ini - 4, FALAS[5].fim + 45) };
 const p3: PlanoV = {
-  nome: "o bairro deixa de existir", de: CORTE(4), ate: CORTE(5), enquadra: { x: 960, y: 600, zoom: 1.0 }, semRespiro: true,
+  nome: "o bairro deixa de existir", de: CORTE(4), ate: BRANCO.ate, enquadra: { x: 960, y: 600, zoom: 1.0 }, semRespiro: true,
   eventos: [
     { f: CORTE(4), tipo: "corte", desc: "o bairro" },
     { f: T(5, fracDe(5, "o bairro")), tipo: "objeto", desc: "o clarão começa na casa do Téo" },
@@ -136,9 +137,9 @@ const p3: PlanoV = {
 
 // ------------------------------------------------------------------ 4. título: e se os códigos de GTA funcionassem na vida real?
 const p4: PlanoV = {
-  nome: "título", de: CORTE(5), ate: CORTE(6), enquadra: { x: 960, y: 560, zoom: 1.0 }, pushIn: 0.08, semLegenda: [6],
+  nome: "título", de: BRANCO.ate, ate: CORTE(6), enquadra: { x: 960, y: 560, zoom: 1.0 }, pushIn: 0.08, semLegenda: [6],
   eventos: [
-    { f: CORTE(5), tipo: "corte", desc: "título" },
+    { f: BRANCO.ate, tipo: "corte", desc: "título" },
     { f: T(6, fracDe(6, "os códigos")), tipo: "objeto", desc: "OS CÓDIGOS DE GTA" },
     { f: T(6, fracDe(6, "funcionassem")), tipo: "objeto", desc: "NA VIDA REAL?" },
   ],

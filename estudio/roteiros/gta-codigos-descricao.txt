@@ -1,0 +1,38 @@
+Já imaginou se os códigos de GTA funcionassem na vida real? 🎮⌨️ Téo digita quatro letras no teclado e um carro aparece na frente dele. Um segundo depois, o bairro inteiro deixa de existir.
+
+Nesta animação "e se", a gente testa três códigos clássicos na vida real: spawnar um veículo, invencibilidade e nível de procurado. No jogo, a regra é simples: você digita e a realidade obedece. Fora dele, a física cobra a conta.
+
+Quanto custa criar um carro do nada pela equação E = mc²? Por que ser invulnerável não te salva no fundo do mar, no fogo ou numa queda de prédio? E por que, fora do jogo, as estrelas de procurado só sobem?
+
+Uma história animada sobre física, energia e consequências. Se funcionasse de verdade, qual código você digitaria?
+
+Capítulos
+00:00 Quatro letras no teclado
+00:27 Código 1: spawnar um veículo
+00:40 Quanto custa criar um carro do nada (E = mc²)
+01:14 Dois milhões de bombas
+01:40 Código 2: invencibilidade
+02:04 O fundo do mar
+02:23 O fogo
+02:38 A queda
+03:25 Código 3: nível de procurado
+03:45 Câmera térmica, antena e placa
+04:09 O que os três códigos têm em comum
+04:31 A conta de quem está do lado
+
+Fontes
+• Velocidade da luz (NIST): https://physics.nist.gov/cuu/Constants/Value/c.html
+• Energia da bomba de Hiroshima, cerca de 15 quilotons (Atomic Heritage Foundation): https://ahf.nuclearmuseum.org/ahf/nuc-history/timeline/
+• Perda de consciência sem sangue chegando ao cérebro: https://pmc.ncbi.nlm.nih.gov/articles/PMC7082775/
+• Água no corpo humano (USGS): https://www.usgs.gov/special-topics/water-science-school/science/water-you-water-and-human-body
+• Velocidade terminal em queda livre (Britannica): https://www.britannica.com/sports/skydiving
+• Tolerância à aceleração, em G (StatPearls): https://www.statpearls.com/point-of-care/31890
+• Celular e registros de antena (Suprema Corte dos EUA, Carpenter v. United States): https://www.supremecourt.gov/opinions/17pdf/16-402_h315.pdf
+
+A conta do carro: E = m·c² = 1.500 kg × (3 × 10⁸ m/s)² ≈ 1,35 × 10²⁰ J. A bomba de Hiroshima liberou cerca de 6,3 × 10¹³ J. Dividindo: cerca de 2,1 milhões de bombas.
+
+Sobre os números: no vídeo eles estão arredondados. Um Gol de verdade pesa perto de 1.000 kg (ficha técnica: https://www.shopcar.com.br/fichatecnica.php?id=1466), e com essa massa a conta dá cerca de 1,4 milhão de bombas. Sem sangue chegando ao cérebro, a perda de consciência costuma vir em 8 a 10 segundos. E a tolerância a G varia muito: uma pessoa comum apaga entre 4,5 e 6 G, e pilotos de caça com traje anti-G aguentam cerca de 9 G.
+
+Qual código você digitaria? Conta nos comentários e se inscreva no canal para mais histórias animadas de "e se"! 🔔
+
+#CódigosDeGTA #ESeVocê #Animação #GTA #Física #Ciência #Curiosidades #HistóriasAnimadas

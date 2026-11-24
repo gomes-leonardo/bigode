@@ -248,29 +248,168 @@ export const Contrato: React.FC<{ miudas?: number }> = ({ miudas = 0 }) => (
     )}
   </g>
 );
-/** silhueta do corpo, com água até `nivel` (0..1) */
-export const CorpoAgua: React.FC<{ nivel: number; quente?: number }> = ({ nivel, quente = 0 }) => {
+/** silhueta do corpo, com água até `nivel` (0..1); `quente` (0..1) faz a água ferver (bolhas subindo) */
+export const CorpoAgua: React.FC<{ nivel: number; quente?: number; f?: number }> = ({ nivel, quente = 0, f = 0 }) => {
   const d = "M 0 -230 C 36 -230 46 -200 46 -176 C 46 -150 30 -134 0 -134 C -30 -134 -46 -150 -46 -176 C -46 -200 -36 -230 0 -230 Z M -70 -120 L 70 -120 L 84 40 L 50 40 L 44 230 L 8 230 L 0 60 L -8 230 L -44 230 L -50 40 L -84 40 Z";
+  const topo = 230 - 460 * lim(nivel);
   return (
     <g>
       <defs><clipPath id="corpo-agua"><path d={d} /></clipPath></defs>
       <path d={d} transform="translate(7 8)" fill={PAPEL} />
       <path d={d} fill="#F4F1EA" />
       <g clipPath="url(#corpo-agua)">
-        <rect x={-100} y={230 - 460 * lim(nivel)} width={200} height={460 * lim(nivel)} fill={quente > 0 ? `rgb(${Math.round(90 + 140 * quente)},${Math.round(165 - 60 * quente)},${Math.round(184 - 110 * quente)})` : "#5AA5B8"} />
+        <rect x={-100} y={topo} width={200} height={460 * lim(nivel)} fill="#5AA5B8" />
+        {quente > 0 && Array.from({ length: 10 }, (_, i) => {
+          const fase = ((f * (0.6 + 1.6 * quente) * 4 + i * 47) % 300) / 300;
+          const y = 220 - fase * (220 - topo);
+          return <circle key={i} cx={((i * 37) % 120) - 60 + Math.sin(f / 4 + i) * 6} cy={y} r={5 + (i % 3) * 3} fill="none" stroke="#FFFFFF" strokeWidth={3} opacity={Math.min(1, quente * 2) * (1 - fase * 0.5)} />;
+        })}
       </g>
       <path d={d} fill="none" stroke={L} strokeWidth={CONTORNO} strokeLinejoin="round" />
     </g>
   );
 };
-/** moléculas que tremem mais conforme a temperatura (0..1) */
+/** moléculas (em grade) que tremem mais conforme a temperatura (0..1) */
 export const Moleculas: React.FC<{ f: number; calor: number }> = ({ f, calor }) => (
   <g>
-    {Array.from({ length: 12 }, (_, i) => {
-      const x = ((i * 97) % 300) - 150, y = ((i * 61) % 200) - 100;
-      const a = 2 + 18 * calor;
-      return <circle key={i} cx={x + Math.sin(f / (3 - 2 * calor) + i) * a} cy={y + Math.cos(f / (2.6 - 1.6 * calor) + i * 2) * a} r={16} fill={calor > 0.5 ? "#E0826E" : "#5AA5B8"} stroke={L} strokeWidth={4} />;
+    {Array.from({ length: 20 }, (_, i) => {
+      const c = i % 5, r = Math.floor(i / 5);
+      const x = (c - 2) * 64 + (r % 2 ? 16 : -16), y = (r - 1.5) * 62;
+      const a = 3 + 20 * calor;
+      return <circle key={i} cx={x + Math.sin(f * (0.35 + 0.9 * calor) + i * 1.7) * a} cy={y + Math.cos(f * (0.4 + 0.8 * calor) + i * 2.3) * a} r={17} fill={calor > 0.5 ? "#E0826E" : "#5AA5B8"} stroke={L} strokeWidth={4} />;
     })}
+  </g>
+);
+/** inércia: uma cápsula (o corpo) desce com o sangue dentro e para no chão; o sangue continua e se espreme embaixo,
+ * deixando a cabeça vazia. k: 0..0,4 desce, 0,4 bate, 0,4..0,75 o sangue segue, depois fica embaixo */
+export const Inercia: React.FC<{ k: number }> = ({ k }) => {
+  const desce = lim(k / 0.4);
+  const yCorpo = -160 + 160 * desce * desce;
+  const seg = lim((k - 0.4) / 0.35);
+  const esp = 1 - Math.pow(1 - seg, 3);
+  const topo = yCorpo - 90 + 200 * esp;
+  return (
+    <g>
+      <line x1={-170} y1={260} x2={170} y2={260} stroke={L} strokeWidth={CONTORNO} strokeLinecap="round" />
+      <defs><clipPath id="capsula"><rect x={-80} y={yCorpo - 120} width={160} height={380} rx={80} /></clipPath></defs>
+      <rect x={-80 + 7} y={yCorpo - 120 + 8} width={160} height={380} rx={80} fill={PAPEL} />
+      <rect x={-80} y={yCorpo - 120} width={160} height={380} rx={80} fill="#F4F1EA" />
+      <g clipPath="url(#capsula)">
+        <path d={`M -90 ${topo} Q -45 ${topo - 14 * Math.sin(seg * Math.PI * 3)} 0 ${topo} T 90 ${topo} L 90 ${yCorpo + 280} L -90 ${yCorpo + 280} Z`} fill="#C0504D" />
+      </g>
+      <rect x={-80} y={yCorpo - 120} width={160} height={380} rx={80} fill="none" stroke={L} strokeWidth={CONTORNO} />
+      <circle cx={0} cy={yCorpo - 40} r={46} fill="none" stroke={L} strokeWidth={INTERNA} strokeDasharray="10 10" />
+      {k < 0.4 && [0, 1, 2].map((i) => <line key={i} x1={-50 + i * 50} y1={yCorpo - 190 - i * 14} x2={-50 + i * 50} y2={yCorpo - 140 - i * 14} stroke={L} strokeWidth={8} strokeLinecap="round" />)}
+      {seg > 0 && seg < 1 && [0, 1].map((i) => <path key={i} d={`M ${-120 - i * 20} ${200 + i * 20} l -30 10 M ${120 + i * 20} ${200 + i * 20} l 30 10`} stroke={L} strokeWidth={7} strokeLinecap="round" />)}
+    </g>
+  );
+};
+/** avião a jato genérico, visto de lado, apontando para a direita */
+export const Jato: React.FC = () => (
+  <g>
+    <path d="M -150 6 L -120 -60 L -96 -60 L -70 -10 Z" transform="translate(7 8)" fill={PAPEL} />
+    <path d="M -160 0 Q -160 -24 -120 -24 L 100 -24 Q 170 -20 190 4 Q 170 22 100 24 L -120 24 Q -160 24 -160 0 Z" transform="translate(7 8)" fill={PAPEL} />
+    <path d="M -150 6 L -120 -66 L -92 -66 L -70 -10 Z" fill="#8A97A8" stroke={L} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M -160 0 Q -160 -24 -120 -24 L 100 -24 Q 170 -20 190 4 Q 170 22 100 24 L -120 24 Q -160 24 -160 0 Z" fill="#B9C3D0" stroke={L} strokeWidth={6} strokeLinejoin="round" />
+    <path d="M 70 -22 Q 100 -50 140 -12 Z" fill="#9ED8F5" stroke={L} strokeWidth={5} strokeLinejoin="round" />
+    <path d="M -40 6 L 40 6 L -30 70 L -70 70 Z" fill="#8A97A8" stroke={L} strokeWidth={6} strokeLinejoin="round" />
+  </g>
+);
+/** olho grande (amêndoa); `fecha` 0..1 abaixa a pálpebra */
+export const Olho: React.FC<{ fecha?: number; px?: number }> = ({ fecha = 0, px = 0 }) => {
+  const d = "M -130 0 Q 0 -100 130 0 Q 0 100 -130 0 Z";
+  return (
+    <g>
+      <path d={d} transform="translate(7 8)" fill={PAPEL} />
+      <defs><clipPath id="olho-grande"><path d={d} /></clipPath></defs>
+      <path d={d} fill="#FFFFFF" />
+      <g clipPath="url(#olho-grande)">
+        <circle cx={px} cy={0} r={46} fill="#5AA5B8" stroke={L} strokeWidth={5} />
+        <circle cx={px} cy={0} r={20} fill={L} />
+        <circle cx={px + 12} cy={-14} r={8} fill="#FFFFFF" />
+        {fecha > 0 && <rect x={-140} y={-110} width={280} height={210 * lim(fecha)} fill="#E9C9A8" stroke={L} strokeWidth={6} />}
+      </g>
+      <path d={d} fill="none" stroke={L} strokeWidth={CONTORNO} strokeLinejoin="round" />
+    </g>
+  );
+};
+/** câmera de vigilância num suporte */
+export const CameraRua: React.FC<{ f: number }> = ({ f }) => (
+  <g>
+    <path d="M -60 -30 L -60 -90 L 40 -90" fill="none" stroke={L} strokeWidth={10} strokeLinecap="round" />
+    <g transform={`rotate(${8 + Math.sin(f / 20) * 10} -60 -30)`}>
+      <rect x={-70 + 6} y={-30 + 7} width={170} height={70} rx={14} fill={PAPEL} />
+      <rect x={-70} y={-30} width={170} height={70} rx={14} fill="#F4F1EA" stroke={L} strokeWidth={CONTORNO} />
+      <rect x={100} y={-20} width={26} height={50} rx={6} fill="#3A3F4B" stroke={L} strokeWidth={5} />
+      <circle cx={-40} cy={-10} r={8} fill={Math.floor(f / 10) % 2 ? "#C0504D" : "#6B2E2A"} />
+    </g>
+  </g>
+);
+/** cartaz de procurado com o rosto do Téo em traço simples */
+export const Cartaz: React.FC = () => (
+  <g>
+    <rect x={-170 + 7} y={-230 + 8} width={340} height={460} rx={8} fill={PAPEL} />
+    <rect x={-170} y={-230} width={340} height={460} rx={8} fill="#F2E3C2" stroke={L} strokeWidth={CONTORNO} />
+    <text x={0} y={-170} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={46} fill="#C0504D">PROCURADO</text>
+    <rect x={-110} y={-140} width={220} height={220} rx={6} fill="#FFFFFF" stroke={L} strokeWidth={5} />
+    <circle cx={0} cy={-40} r={70} fill="#FFFFFF" stroke={L} strokeWidth={7} />
+    <path d="M -36 -66 L -12 -60 M 12 -60 L 36 -66" stroke={L} strokeWidth={8} strokeLinecap="round" />
+    <circle cx={-22} cy={-42} r={7} fill={L} /><circle cx={22} cy={-42} r={7} fill={L} />
+    <path d="M -18 -8 L 18 -8" stroke={L} strokeWidth={6} strokeLinecap="round" />
+    <path d="M -100 80 Q 0 30 100 80" fill="#E0A03E" stroke={L} strokeWidth={6} />
+    <text x={0} y={140} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={40} fill={L}>TÉO</text>
+    <rect x={-120} y={168} width={240} height={14} rx={7} fill="#D9C9A6" />
+    <rect x={-90} y={194} width={180} height={14} rx={7} fill="#D9C9A6" />
+  </g>
+);
+/** galáxia: disco inclinado com dois braços em espiral feitos de pontos */
+export const Galaxia: React.FC<{ f: number }> = ({ f }) => {
+  const giro = f * 0.004;
+  const pontos: React.ReactNode[] = [];
+  [0, 1].forEach((braco) => {
+    for (let i = 0; i < 90; i++) {
+      const t = (i / 90) * 3.4 * Math.PI;
+      const r = 26 * Math.exp(0.25 * t);
+      const a = t + braco * Math.PI + giro;
+      const esp = Math.sin(i * 12.9898) * 18;
+      pontos.push(<circle key={`${braco}-${i}`} cx={(r + esp) * Math.cos(a)} cy={(r + esp) * Math.sin(a) * 0.5} r={2.5 + ((i * 7) % 5)} fill={i % 3 ? "#C9BDF0" : "#FFFFFF"} opacity={0.9 - (i / 90) * 0.5} />);
+    }
+  });
+  return (
+    <g>
+      <defs><radialGradient id="nucleo-galaxia"><stop offset="0" stopColor="#FFF4C9" stopOpacity={1} /><stop offset="0.4" stopColor="#E9D8A6" stopOpacity={0.6} /><stop offset="1" stopColor="#8B7FD1" stopOpacity={0} /></radialGradient></defs>
+      <ellipse rx={430} ry={200} fill="#8B7FD1" opacity={0.12} />
+      {pontos}
+      <ellipse rx={130} ry={70} fill="url(#nucleo-galaxia)" />
+    </g>
+  );
+};
+/** bilhete dourado */
+export const Bilhete: React.FC<{ texto: string }> = ({ texto }) => (
+  <g>
+    <path d="M -180 -70 L 180 -70 L 180 -24 A 24 24 0 0 0 180 24 L 180 70 L -180 70 L -180 24 A 24 24 0 0 0 -180 -24 Z" transform="translate(7 8)" fill={PAPEL} />
+    <path d="M -180 -70 L 180 -70 L 180 -24 A 24 24 0 0 0 180 24 L 180 70 L -180 70 L -180 24 A 24 24 0 0 0 -180 -24 Z" fill="#F2D16B" stroke={L} strokeWidth={CONTORNO} strokeLinejoin="round" />
+    <rect x={-150} y={-48} width={300} height={96} rx={8} fill="none" stroke="#B8902E" strokeWidth={5} strokeDasharray="14 10" />
+    <text x={0} y={16} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={48} fill={L}>{texto}</text>
+  </g>
+);
+/** conta (papel com valor) */
+export const Conta: React.FC = () => (
+  <g>
+    <path d="M -80 -110 L 80 -110 L 80 100 L 60 112 L 40 100 L 20 112 L 0 100 L -20 112 L -40 100 L -60 112 L -80 100 Z" transform="translate(6 7)" fill={PAPEL} />
+    <path d="M -80 -110 L 80 -110 L 80 100 L 60 112 L 40 100 L 20 112 L 0 100 L -20 112 L -40 100 L -60 112 L -80 100 Z" fill="#FFFFFF" stroke={L} strokeWidth={6} strokeLinejoin="round" />
+    <text x={0} y={-62} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={34} fill={L}>CONTA</text>
+    {[0, 1, 2].map((i) => <rect key={i} x={-56} y={-36 + i * 28} width={112} height={10} rx={5} fill="#E4DED2" />)}
+    <text x={0} y={80} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={36} fill="#C0504D">R$ ???</text>
+  </g>
+);
+/** silhueta quente (visão térmica), em forma simples de gente */
+export const SilhuetaQuente: React.FC<{ s?: number }> = ({ s = 1 }) => (
+  <g transform={`scale(${s})`}>
+    <ellipse cx={0} cy={-10} rx={70} ry={150} fill="#E0662E" opacity={0.55} />
+    <circle cx={0} cy={-150} r={42} fill="#F7D35A" />
+    <path d="M -50 -100 Q 0 -120 50 -100 L 56 40 L 30 40 L 26 150 L -26 150 L -30 40 L -56 40 Z" fill="#F2A63E" />
+    <path d="M -24 -90 L 24 -90 L 22 20 L -22 20 Z" fill="#FFF1A8" opacity={0.8} />
   </g>
 );
 /** cérebro simples */
@@ -360,27 +499,48 @@ export const MAR: CenarioDef = (() => {
   const Frente: React.FC<{ t: number }> = () => null;
   return { set, Fundo, Meio, Frente };
 })();
-/** prédio em chamas */
+/** rua com prédios em chamas: fumaça subindo, janelas acesas com fogo saindo por cima */
 export const INCENDIO: CenarioDef = (() => {
   const set = lisoSet(1.2);
   set.id = "incendio";
   set.ancoras = { chao: { tipo: "chao", y: 962, yFundo: 940, x0: 60, x1: 1860 } };
-  const Fundo: React.FC<{ t: number }> = () => (
+  const Fundo: React.FC<{ t: number }> = ({ t }) => (
     <g>
-      <rect x={-MARGEM} y={-MARGEM} width={LARGO} height={1200} fill="#4A2A2A" />
-      {Array.from({ length: 6 }, (_, i) => <circle key={i} cx={200 + i * 330} cy={180 + (i % 2) * 60} r={150} fill="#5E3A36" />)}
+      <defs><linearGradient id="ceu-fogo" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#2A1C20" /><stop offset="1" stopColor="#B8502C" /></linearGradient></defs>
+      <rect x={-MARGEM} y={-MARGEM} width={LARGO} height={1200} fill="url(#ceu-fogo)" />
+      {Array.from({ length: 8 }, (_, i) => {
+        const fase = ((t * 0.12 + i * 0.37) % 1);
+        return <circle key={i} cx={120 + i * 250 + Math.sin(t + i) * 20} cy={300 - fase * 420} r={110 + (i % 3) * 30 + fase * 40} fill="#3B3034" opacity={0.9 * Math.sin(Math.PI * fase)} />;
+      })}
     </g>
   );
+  const Predio: React.FC<{ x: number; w: number; topo: number; t: number; cor: string; semente: number }> = ({ x, w, topo, t, cor, semente }) => {
+    const cols = Math.max(1, Math.floor((w - 40) / 160));
+    const passo = (w - 40) / cols;
+    const linhas = Math.floor((880 - topo - 60) / 190);
+    return (
+      <g>
+        <Papel><Rect x={x} y={topo} width={w} height={960 - topo} fill={cor} stroke={L} strokeWidth={CONTORNO} /></Papel>
+        {Array.from({ length: linhas }, (_, r) => Array.from({ length: cols }, (_, c) => {
+          const wx = x + 20 + c * passo + (passo - 110) / 2, wy = topo + 60 + r * 190;
+          const fogo = (r * 7 + c * 3 + semente) % 3 !== 0;
+          return (
+            <g key={`${r}-${c}`}>
+              <rect x={wx} y={wy} width={110} height={130} rx={6} fill={fogo ? "#F2B04E" : "#3A2A2A"} stroke={L} strokeWidth={INTERNA} />
+              {fogo && <g transform={`translate(${wx + 55} ${wy + 126})`}><Chama f={t * 30} s={0.85} fase={r * 3 + c} /></g>}
+              {fogo && <g transform={`translate(${wx + 55} ${wy + 10})`}><Chama f={t * 30 + 7} s={0.55} fase={r + c * 2} /></g>}
+              <line x1={wx + 55} y1={wy} x2={wx + 55} y2={wy + 130} stroke={L} strokeWidth={INTERNA} />
+            </g>
+          );
+        }))}
+      </g>
+    );
+  };
   const Meio: React.FC<{ t: number }> = ({ t }) => (
     <g>
-      <Papel>
-        <Rect x={-MARGEM} y={120} width={LARGO} height={800} fill="#8E6440" stroke={L} strokeWidth={CONTORNO} />
-        {Array.from({ length: 10 }, (_, i) => <Rect key={i} x={40 + i * 190} y={220 + (i % 2) * 260} width={120} height={150} rx={6} fill="#F2B04E" stroke={L} strokeWidth={INTERNA} />)}
-      </Papel>
-      <Rect x={-MARGEM} y={900} width={LARGO} height={200} fill="#5A4A45" stroke={L} strokeWidth={CONTORNO} semSombra />
-      {Array.from({ length: 10 }, (_, i) => (
-        <g key={i} transform={`translate(${100 + i * 190} ${370 + (i % 2) * 260})`}><Chama f={t * 30} s={0.9} fase={i} /></g>
-      ))}
+      <Predio x={-MARGEM} w={760 + MARGEM} topo={140} t={t} cor="#7A5440" semente={0} />
+      <Predio x={1160} w={760 + MARGEM} topo={220} t={t} cor="#6B4A52" semente={1} />
+      <Rect x={-MARGEM} y={900} width={LARGO} height={200} fill="#4A3C3A" stroke={L} strokeWidth={CONTORNO} semSombra />
     </g>
   );
   const Frente: React.FC<{ t: number }> = () => null;

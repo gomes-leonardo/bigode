@@ -16,7 +16,13 @@ import { COM_AUDIO, DURACAO, ENTRADA, FALAS, FPS, falaNoQuadro } from "./tempo";
 import { Efeitos, SILENCIO } from "./sfx";
 
 const BASE: PlanoV[] = [...PARTE1, ...PARTE2, ...PARTE3];
-const FIGURADOS: Record<number, string[]> = { ...FIGURADOS_P1, ...FIGURADOS_P2, ...FIGURADOS_P3 };
+// substantivos e adjetivos que o verificador lê como verbo: "jogo" (jogar), "seguro" (segurar)
+const NAO_VERBOS: [RegExp, string][] = [[/\bjogo\b/i, "jogar"], [/\bseguro\b/i, "segurar"]];
+const AUTOMATICOS: Record<number, string[]> = Object.fromEntries(
+  FALAS.map((x) => [x.id, NAO_VERBOS.filter(([r]) => r.test(x.texto)).map(([, v]) => v)] as const).filter(([, v]) => v.length > 0),
+);
+const FIGURADOS: Record<number, string[]> = { ...AUTOMATICOS };
+for (const extra of [FIGURADOS_P1, FIGURADOS_P2, FIGURADOS_P3]) for (const [id, vs] of Object.entries(extra)) FIGURADOS[+id] = [...(FIGURADOS[+id] ?? []), ...vs];
 export const FIM = DURACAO;
 
 // zoom de corte (como no vídeo 1): onde ficaria mais de 2,5 s sem acontecimento, aproxima 6% e volta no seguinte

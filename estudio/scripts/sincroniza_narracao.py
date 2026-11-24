@@ -14,12 +14,13 @@ CONF = {
     # vídeo 1: cinco partes; os "Bip." viram som; da mão tremendo em diante as pausas ficam como a voz fez
     "cartao": dict(partes=["Mas, honestamente, o primeiro mês", "Então você vai atrás daquilo", "E existe um custo.", "Você olha para o cartão."],
                    so_som={1, 6, 12, 255}, gap_bip={1: 0.6, 6: 0.6, 12: 0.6, 255: 0.9}, bip_em={1: 0.12, 6: 0.12, 12: 0.12, 255: 0.3},
-                   drama=252, pausa_fixa={}),
+                   drama=252, pausa_fixa={}, janela_esq=0.25, janela_dir=0.25, perto_da_transcricao=False),
     # vídeo 2: três partes; pausas pedidas no roteiro (de voz a voz, em segundos): os quatro toques de tecla depois da
     # fala 0, a tela branca de 1,5 s depois da 5, o silêncio de 1 s antes e depois do "Dois milhões." (28 e 29);
-    # do "Téo fecha o teclado." em diante as pausas ficam como a voz fez
+    # no final, um respiro antes e depois do "Téo fecha o teclado." e antes da pergunta. A busca do ponto de corte vai
+    # mais longe para a direita: a transcrição às vezes cola a palavra seguinte no fim da fala (sem enxergar a pausa)
     "gta": dict(partes=["Téo aprende a lição", "Sobrou o último código"], so_som=set(), gap_bip={}, bip_em={},
-                drama=96, pausa_fixa={0: 1.1, 5: 1.8, 28: 1.0, 29: 1.0}),
+                drama=999, pausa_fixa={0: 1.1, 5: 1.8, 28: 1.0, 29: 1.0, 95: 0.8, 96: 0.8, 97: 1.0}, janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
 }[VIDEO]
 SO_SOM = CONF["so_som"]          # falas que viram som: a voz não fala
 GAP_BIP = CONF["gap_bip"]        # respiro em volta de cada som (s)
@@ -27,6 +28,11 @@ BIP_EM = CONF["bip_em"]
 PAUSA_MAX = 0.7                  # pausas maiores que isso encolhem (vídeo mais vivo)
 DRAMA = CONF["drama"]
 PAUSA_FIXA = CONF["pausa_fixa"]
+JANELA_ESQ = CONF["janela_esq"]  # até onde (s) a busca do silêncio entre duas falas vai antes do fim da fala
+JANELA_DIR = CONF["janela_dir"]  # e depois do começo da seguinte
+# escolhe o corte pelo silêncio mais fundo, mas desconta a distância até a pausa que a transcrição viu (20 dB por segundo
+# fora dela): entre duas pausas curtas parecidas fica a da transcrição; uma pausa funda um pouco depois ainda ganha
+PERTO = CONF["perto_da_transcricao"]
 ENTRE_PARTES = 0.6
 
 def ini_parte(texto):
@@ -99,8 +105,15 @@ for p in range(NP):
     def quadro(t): return int(np.clip(t / hop, 0, len(db) - 1))
     for k in range(len(ids) - 1):
         i, j = ids[k], ids[k + 1]
-        a, b = quadro(min(fim[i], ini[j]) - 0.25), quadro(max(fim[i], ini[j]) + 0.25)
-        c = a + int(np.argmin(db[a:b + 1])) if b > a else a
+        a, b = quadro(min(fim[i], ini[j]) - JANELA_ESQ), quadro(max(fim[i], ini[j]) + JANELA_DIR)
+        if b > a and PERTO:
+            liso = np.convolve(db, np.ones(3) / 3, mode="same")[a:b + 1]
+            t0, t1 = min(fim[i], ini[j]), max(fim[i], ini[j])
+            ts = (a + np.arange(len(liso))) * hop
+            fora = np.maximum(0, np.maximum(t0 - ts, ts - t1))
+            c = a + int(np.argmin(liso + 20 * fora))
+        else:
+            c = a + int(np.argmin(db[a:b + 1])) if b > a else a
         e = c
         while e > quadro(ini[i]) and not voz[e]: e -= 1
         s = c

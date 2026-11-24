@@ -24,6 +24,8 @@ const TEO = PROTAGONISTA;
 /** os quatro toques: na pausa depois da fala 0 */
 export const TOQUES = [0, 1, 2, 3].map((i) => FALAS[0].fim + 3 + i * 6);
 export const LETRAS = ["V", "R", "U", "M"];
+/** o corte para o carro só depois do último toque (antes da fala seguinte começar) */
+const DEPOIS_DAS_TECLAS = Math.min(FALAS[1].ini - 3, Math.max(CORTE(0), TOQUES[3] + 8));
 
 /** Téo atrás da mesa, mãos no teclado */
 const teoNaMesa = (f: number, expr: PersonProps["expr"], digita = false): PersonProps => {
@@ -36,7 +38,7 @@ const teoNaMesa = (f: number, expr: PersonProps["expr"], digita = false): Person
 
 // ------------------------------------------------------------------ 1. Téo digita quatro letras
 const p1: PlanoV = {
-  nome: "Téo digita quatro letras", de: 0, ate: CORTE(0), enquadra: { x: 960, y: 560, zoom: 1.25 },
+  nome: "Téo digita quatro letras", de: 0, ate: DEPOIS_DAS_TECLAS, enquadra: { x: 960, y: 560, zoom: 1.25 },
   eventos: [
     { f: T(0, 0.2), tipo: "pose", desc: "Téo no teclado" },
     ...TOQUES.map((f, i) => ({ f, tipo: "objeto" as const, desc: `tecla ${LETRAS[i]}` })),
@@ -46,7 +48,7 @@ const p1: PlanoV = {
     return <CenaCam cenario={MESA_TEO} f={f} cam={cam} noMeio={<Person {...p} semente={1} />} />;
   },
   Sobre: ({ f }) => {
-    const s = escalaPop(f, T(0, 0.5), CORTE(0) + 6, 6);
+    const s = escalaPop(f, T(0, 0.5), DEPOIS_DAS_TECLAS + 6, 6);
     return s > 0 ? (
       <g transform={`translate(960 840) scale(${s})`}>
         <rect x={-430} y={-110} width={860} height={220} rx={30} fill="#1A1F29" opacity={0.85} />
@@ -70,9 +72,9 @@ const CaminhaoEntrega: React.FC = () => (
   </g>
 );
 const p2: PlanoV = {
-  nome: "um carro aparece na frente dele", de: CORTE(0), ate: CORTE(4), enquadra: { x: 960, y: 600, zoom: 1.0 },
+  nome: "um carro aparece na frente dele", de: DEPOIS_DAS_TECLAS, ate: CORTE(4), enquadra: { x: 960, y: 600, zoom: 1.0 },
   eventos: [
-    { f: CORTE(0), tipo: "corte", desc: "o quarto, mais aberto" },
+    { f: DEPOIS_DAS_TECLAS, tipo: "corte", desc: "o quarto, mais aberto" },
     { f: T(1, fracDe(1, "aparece")), tipo: "objeto", desc: "o carro se materializa" },
     { f: T(2), tipo: "objeto", desc: "não chegou dirigindo: X" },
     { f: T(3), tipo: "objeto", desc: "não foi entregue: caminhão com X", verbo: "entregar" },

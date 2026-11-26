@@ -1,0 +1,79 @@
+Tarefa: gerar no ElevenLabs a narração de um vídeo curto (Shorts/TikTok), em UMA geração só, e baixar o áudio em MP3.
+
+ONDE
+Site elevenlabs.io, na conta que já está logada. Abra "Text to Speech" (Texto para fala).
+
+CONFIGURAÇÃO (a mesma dos vídeos anteriores)
+- Voz: Lucas - Engaging, Captivating and Kind
+- Modelo: Eleven v3
+- Stability: Natural
+- Formato do download: MP3 44.1 kHz 128 kbps
+- Não mexa em mais nada (velocidade, estilo etc.): o que aparecer fica no padrão.
+Antes de gerar, confira que a voz é o Lucas e o modelo é o Eleven v3 (o site às vezes troca sozinho).
+
+COMO GERAR
+1. Apague tudo o que estiver na caixa de texto.
+2. Cole SOMENTE o texto que está entre "INÍCIO DO TEXTO" e "FIM DO TEXTO", exatamente como está. Não acrescente tags ([pausa], [risos] etc.), não corrija e não troque palavras. É uma geração só (cerca de 1.400 caracteres).
+3. Clique em Generate (Gerar).
+4. TEMPO, IMPORTANTE: depois de clicar em gerar, espere pelo menos 30 segundos. O ícone de download só aparece quando o áudio termina de processar. Enquanto espera, não clique em gerar de novo (gasta créditos e cria áudio repetido). Se depois dos 30 segundos o download ainda não apareceu, espere mais 30 segundos e confira de novo; repita até aparecer.
+5. Quando o download aparecer, confira a duração no player: o esperado é cerca de 1:25 (entre 1:10 e 1:40). Se sair muito fora disso, se cortar no meio, ou se a voz não for o Lucas falando português do Brasil, gere de novo e espere os 30 segundos outra vez.
+6. Baixe o MP3 (44.1 kHz 128 kbps). O nome do arquivo não importa.
+
+NO FINAL, me responda com: o arquivo baixado, a duração e se precisou gerar de novo.
+
+
+===== INÍCIO DO TEXTO =====
+
+Estale o dedo agora.
+
+Esse som não veio do seu osso.
+
+Dentro de cada junta do seu corpo existe um líquido grosso, parecido com clara de ovo.
+
+Ele está ali para lubrificar, para que um osso não raspe no outro.
+
+E dentro desse líquido tem gás dissolvido. Oxigênio, nitrogênio, gás carbônico.
+
+Do mesmo jeito que tem gás dissolvido dentro de uma garrafa de refrigerante fechada.
+
+Quando você puxa o dedo, você afasta os dois ossos.
+
+O espaço entre eles aumenta.
+
+E a pressão lá dentro despenca.
+
+Aí acontece exatamente o que acontece quando você abre a garrafa.
+
+O gás não cabe mais dissolvido.
+
+Uma cavidade se abre no meio da sua junta, em menos de um centésimo de segundo.
+
+Esse é o estalo.
+
+Não é osso rachando. Não é cartilagem. É uma bolha de gás nascendo dentro de você.
+
+E tem uma coisa estranha nisso.
+
+Depois que você estala, você não consegue estalar o mesmo dedo de novo na hora.
+
+Você precisa esperar uns vinte minutos.
+
+É o tempo que o gás leva para se dissolver de volta no líquido.
+
+Sua junta está literalmente recarregando.
+
+E aquilo que te falaram a vida inteira, que estalar o dedo dá artrite?
+
+Um médico americano decidiu testar isso nele mesmo.
+
+Por mais de sessenta anos, ele estalou os dedos de uma mão só. Nunca os da outra.
+
+Todo dia. Sessenta anos.
+
+Nenhuma das duas mãos teve artrite.
+
+Ele ganhou um prêmio por isso.
+
+Então, quantas vezes você estalou o dedo enquanto assistia isso?
+
+===== FIM DO TEXTO =====

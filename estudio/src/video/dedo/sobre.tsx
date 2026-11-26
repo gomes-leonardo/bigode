@@ -35,7 +35,7 @@ export const Sobreposicoes: React.FC = () => {
   // gás dissolvido: O₂, N₂, CO₂
   if (f >= T(5) - 2 && f < FALAS[5].fim + 20) {
     [["O₂", 260, 640, "oxigênio"], ["N₂", 540, 560, "nitrogênio"], ["CO₂", 820, 660, "gás carbônico"]].forEach(([t, x, y, w]) => {
-      els.push(<Pilula key={t as string} x={x as number} y={y as number} t={t as string} cor="#9FE3FF" s={pop(f, em(5, (w as string).replace("oxigênio", "Oxigênio")))} />);
+      els.push(<Pilula key={t as string} x={x as number} y={y as number} t={t as string} cor="#9FE3FF" s={1.35 * pop(f, em(5, (w as string).replace("oxigênio", "Oxigênio")))} />);
     });
   }
   // a pressão despenca: manômetro

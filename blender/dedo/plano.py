@@ -69,7 +69,7 @@ def p01():
     anima_puxao(P, 1, q(0.85), 0.0, 0.035)
     P.posiciona(0.035, N)
     j = P.junta
-    cam, mira = L.camera((0.0, 0, 0), (0, 0, 0), lente=70, fstop=3.2)
+    cam, mira = L.camera((0.0, 0, 0), (0, 0, 0), lente=50, fstop=4.0)
     mov_cam(cam, mira, ((0.5, -2.4, 1.2), (0.7, -0.25, 0.0)), ((0.55, -2.1, 1.05), (0.7, -0.25, 0.0)))
 
 
@@ -132,7 +132,7 @@ def p07():
     P.posiciona(0.0, 1)
     anima_puxao(P, q(0.25), N, 0.0, 0.03)
     j = P.junta
-    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=60, fstop=3.2)
+    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=50, fstop=4.0)
     mov_cam(cam, mira, ((-1.2, -1.9, 1.1), (0.6, -0.27, 0.0)), ((-1.0, -1.7, 1.0), (0.6, -0.27, 0.0)))
 
 
@@ -247,7 +247,7 @@ def p16():
     anima_puxao(P, q(0.15), q(0.6), 0.0, 0.012)
     anima_puxao(P, q(0.6), N, 0.012, 0.004)
     j = P.junta
-    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=55, fstop=4.0)
+    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=50, fstop=4.0)
     mov_cam(cam, mira, ((0.6, -1.5, 2.2), (0.65, -0.27, 0.0)), ((0.6, -1.35, 2.0), (0.65, -0.27, 0.0)))
 
 
@@ -259,7 +259,7 @@ def p17():
     anima_puxao(P, q(0.6), q(0.8), 0.003, 0.016, tranco=True)
     anima_puxao(P, q(0.8), N, 0.016, 0.004)
     j = P.junta
-    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=85, fstop=2.8)
+    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=55, fstop=4.0)
     mov_cam(cam, mira, ((1.7, -2.0, 0.9), (0.65, -0.27, 0.0)), ((1.5, -1.8, 0.85), (0.65, -0.27, 0.0)))
 
 
@@ -378,7 +378,7 @@ def p26():
     anima_puxao(P, 1, q(0.85), 0.0, 0.035)
     P.posiciona(0.035, N)
     j = P.junta
-    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=70, fstop=2.8)
+    cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=50, fstop=4.0)
     # termina no mesmo enquadramento em que o plano 1 começa: o vídeo dá a volta sem emenda
     mov_cam(cam, mira, ((0.55, -2.1, 1.05), (0.7, -0.25, 0.0)), ((0.5, -2.4, 1.2), (0.7, -0.25, 0.0)))
 

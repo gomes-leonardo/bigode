@@ -94,7 +94,7 @@ def pele(nome="pele", cor=(0.62, 0.36, 0.25)):
     b = nt.nodes["Principled BSDF"]
     b.inputs["Base Color"].default_value = (*cor, 1)
     b.inputs["Roughness"].default_value = 0.48
-    b.inputs["Subsurface Weight"].default_value = 0.35
+    b.inputs["Subsurface Weight"].default_value = 0.18
     b.inputs["Subsurface Radius"].default_value = (1.0, 0.35, 0.18)
     b.inputs["Subsurface Scale"].default_value = 0.04
     b.inputs["Specular IOR Level"].default_value = 0.45
@@ -383,7 +383,7 @@ class Mao:
     pose: dedo -> (flexão da base, do meio, da ponta) em graus (positivo fecha). puxa: afasta o `dedo_puxado` da palma
     ao longo dele (a junta da base abre). O objeto raiz (self.raiz) posiciona e gira a mão inteira."""
 
-    def __init__(self, nome, mat_pele, lado=1, mat_unha=None, resolucao=0.01, antebraco=True):
+    def __init__(self, nome, mat_pele, lado=1, mat_unha=None, resolucao=0.016, antebraco=True):
         self.nome, self.lado, self.antebraco = nome, lado, antebraco
         self.mb = bpy.data.metaballs.new(nome)
         self.mb.resolution = resolucao * 2.5

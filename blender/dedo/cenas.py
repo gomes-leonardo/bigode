@@ -60,7 +60,7 @@ def ossos_mao(nome, mao, mat):
     """esqueleto da mão em metaballs (falanges com cabeças nas juntas e os metacarpos), seguindo as juntas da mão"""
     mb = bpy.data.metaballs.new(nome)
     mb.resolution = 0.02
-    mb.render_resolution = 0.008
+    mb.render_resolution = 0.013
     mb.threshold = L.LIMIAR
     ob = L.ligar(bpy.data.objects.new(nome, mb), mao.raiz)
     mb.materials.append(mat)

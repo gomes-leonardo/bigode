@@ -2,3 +2,4 @@ node_modules/
 exportacao/*.mp4
 out/
 public/dedo/
+src/video/dedo/clipes.json

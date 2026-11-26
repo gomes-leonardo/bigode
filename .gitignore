@@ -20,3 +20,6 @@ SETUP_PRODUCTION.md
 
 # IDE
 .cursor/
+
+# renders de teste e quadros do Shorts (refazíveis pelos scripts)
+/out/dedo/

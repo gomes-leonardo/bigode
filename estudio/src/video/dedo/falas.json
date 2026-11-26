@@ -1,0 +1,281 @@
+[
+ {
+  "id": 0,
+  "texto": "Estale o dedo agora.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Esse som não veio do seu osso.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Dentro de cada junta do seu corpo existe um líquido grosso, parecido com clara de ovo.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 86,
+  "virgulas": 1
+ },
+ {
+  "id": 3,
+  "texto": "Ele está ali para lubrificar, para que um osso não raspe no outro.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 66,
+  "virgulas": 1
+ },
+ {
+  "id": 4,
+  "texto": "E dentro desse líquido tem gás dissolvido.",
+  "paragrafo": 4,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "Oxigênio, nitrogênio, gás carbônico.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 2
+ },
+ {
+  "id": 6,
+  "texto": "Do mesmo jeito que tem gás dissolvido dentro de uma garrafa de refrigerante fechada.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 84,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "Quando você puxa o dedo, você afasta os dois ossos.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 51,
+  "virgulas": 1
+ },
+ {
+  "id": 8,
+  "texto": "O espaço entre eles aumenta.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "E a pressão lá dentro despenca.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "Aí acontece exatamente o que acontece quando você abre a garrafa.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 65,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "O gás não cabe mais dissolvido.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 12,
+  "texto": "Uma cavidade se abre no meio da sua junta, em menos de um centésimo de segundo.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 79,
+  "virgulas": 1
+ },
+ {
+  "id": 13,
+  "texto": "Esse é o estalo.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "Não é osso rachando.",
+  "paragrafo": 13,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "Não é cartilagem.",
+  "paragrafo": 13,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "É uma bolha de gás nascendo dentro de você.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 0
+ },
+ {
+  "id": 17,
+  "texto": "E tem uma coisa estranha nisso.",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 0
+ },
+ {
+  "id": 18,
+  "texto": "Depois que você estala, você não consegue estalar o mesmo dedo de novo na hora.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 79,
+  "virgulas": 1
+ },
+ {
+  "id": 19,
+  "texto": "Você precisa esperar uns vinte minutos.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 39,
+  "virgulas": 0
+ },
+ {
+  "id": 20,
+  "texto": "É o tempo que o gás leva para se dissolver de volta no líquido.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 63,
+  "virgulas": 0
+ },
+ {
+  "id": 21,
+  "texto": "Sua junta está literalmente recarregando.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 22,
+  "texto": "E aquilo que te falaram a vida inteira, que estalar o dedo dá artrite?",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 70,
+  "virgulas": 1
+ },
+ {
+  "id": 23,
+  "texto": "Um médico americano decidiu testar isso nele mesmo.",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 51,
+  "virgulas": 0
+ },
+ {
+  "id": 24,
+  "texto": "Por mais de sessenta anos, ele estalou os dedos de uma mão só.",
+  "paragrafo": 21,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 1
+ },
+ {
+  "id": 25,
+  "texto": "Nunca os da outra.",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "Todo dia.",
+  "paragrafo": 22,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 9,
+  "virgulas": 0
+ },
+ {
+  "id": 27,
+  "texto": "Sessenta anos.",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 28,
+  "texto": "Nenhuma das duas mãos teve artrite.",
+  "paragrafo": 23,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 35,
+  "virgulas": 0
+ },
+ {
+  "id": 29,
+  "texto": "Ele ganhou um prêmio por isso.",
+  "paragrafo": 24,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 30,
+  "texto": "Então, quantas vezes você estalou o dedo enquanto assistia isso?",
+  "paragrafo": 25,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 1
+ }
+]

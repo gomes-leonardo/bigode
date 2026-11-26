@@ -16,7 +16,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 
 
 # ------------------------------------------------------------------ cena
-def cena_nova(fundo=(0.015, 0.017, 0.025), amostras=6, pct=100, fps=FPS):
+def cena_nova(fundo=(0.015, 0.017, 0.025), amostras=4, pct=100, fps=FPS):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     s = bpy.context.scene
     s.render.engine = "BLENDER_EEVEE"
@@ -187,7 +187,7 @@ def osso_esponjoso(nome="osso_esponjoso"):
     return m
 
 
-def liquido(nome="sinovial", cor=(1.0, 0.62, 0.12), forca=1.0, alpha=0.88):
+def liquido(nome="sinovial", cor=(1.0, 0.62, 0.12), forca=1.0, alpha=1.0):
     """líquido sinovial: dourado translúcido, brilho que corre (ruído 4D animado pelo W)"""
     m, novo = _mat(nome)
     if not novo:
@@ -211,7 +211,8 @@ def liquido(nome="sinovial", cor=(1.0, 0.62, 0.12), forca=1.0, alpha=0.88):
     nt.links.new(ruido.outputs["Fac"], faixa.inputs["Value"])
     nt.links.new(faixa.outputs["Result"], b.inputs["Emission Strength"])
     ruido.name = "fluxo"
-    m.surface_render_method = "BLENDED"
+    if alpha < 1:
+        m.surface_render_method = "BLENDED"
     return m
 
 
@@ -510,6 +511,7 @@ def area(nome, loc, alvo, energia, tam=2.0, cor=(1, 1, 1)):
     ld.energy = energia
     ld.size = tam
     ld.color = cor
+    ld.use_shadow = nome in ("chave", "sol", "costas")  # só a luz principal faz sombra (as outras pesam muito no render)
     ob = ligar(bpy.data.objects.new(nome, ld))
     ob.location = loc
     ob.rotation_euler = (Vector(alvo) - Vector(loc)).to_track_quat("-Z", "Y").to_euler()

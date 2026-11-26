@@ -29,11 +29,11 @@ class Junta:
     def __init__(self, com_pele=True, com_tecido=True, raio_bolha=0.22, n_gas=90, semente=3):
         mat_osso = L.principled("osso", (0.84, 0.76, 0.6), rugosidade=0.45, sss=0.1, raio_sss=(1, 0.8, 0.6))
         mat_esp = L.osso_esponjoso()
-        mat_cart = L.principled("cartilagem", (0.45, 0.7, 0.95), rugosidade=0.15, sss=0.3, raio_sss=(0.6, 0.8, 1.0), coat=1.0)
+        mat_cart = L.principled("cartilagem", (0.45, 0.7, 0.95), rugosidade=0.15, coat=1.0)
         mat_caps = L.principled("capsula", (0.62, 0.1, 0.16), rugosidade=0.28, coat=0.6)
         mat_liq = L.liquido()
         mat_bolha = L.bolha()
-        mat_gas = L.bolha("gas")
+        mat_gas = L.emissivo("gas", (0.85, 0.95, 1.0), 2.5)  # opaco: as transparências custam caro no render
         self.mat_liq = mat_liq
         # --- osso da esquerda (falange proximal): cabeça redonda virada para a direita
         osso_e = _espelha([(-6.0, 0.48), (-2.4, 0.5), (-1.3, 0.62), (-0.62, 0.8), (-0.22, 0.6), (0.0, 0.0)])
@@ -71,7 +71,7 @@ class Junta:
             tec = L.principled("tecido", (0.2, 0.025, 0.035), rugosidade=0.55)
             L.perfil("tecido", [(-7, 1.32), (7, 1.32), (7, -1.32), (-7, -1.32)], 0.3, 0.0, tec, loc=(0, 0.55, 0), suave_cantos=False)
         if com_pele:
-            pele = L.pele("pele_corte")
+            pele = L.principled("pele_corte", (0.62, 0.36, 0.25), rugosidade=0.5)
             for sinal in (1, -1):
                 pts = [(-7, 1.32), (-2, 1.34), (0.25, 1.46), (2.5, 1.34), (7, 1.32), (7, 1.62), (2.5, 1.66), (0.25, 1.8), (-2, 1.66), (-7, 1.62)]
                 L.perfil(f"pele_{sinal}", [(x, z * sinal) for (x, z) in pts], ESP + 0.4, 0.04, pele, loc=(0, 0.1, 0))
@@ -136,6 +136,7 @@ class Junta:
 
 def luzes_junta():
     L.area("chave", (-2.5, -4.0, 4.5), (0.2, 0, 0), 380, 3.0, (1.0, 0.92, 0.82))
-    L.area("contra", (3.0, 2.0, 3.0), (0.2, 0, 0), 700, 3.0, (1.0, 0.35, 0.3))
-    L.area("baixo", (1.0, -3.5, -3.5), (0.2, 0, 0), 120, 4.0, (0.45, 0.65, 1.0))
-    L.ponto("brilho_vao", (0.27, -0.7, 0.0), 10.0, (1.0, 0.75, 0.35), 0.3)
+    for luz in (L.area("contra", (3.0, 2.0, 3.0), (0.2, 0, 0), 700, 3.0, (1.0, 0.35, 0.3)),
+                L.area("baixo", (1.0, -3.5, -3.5), (0.2, 0, 0), 120, 4.0, (0.45, 0.65, 1.0)),
+                L.ponto("brilho_vao", (0.27, -0.7, 0.0), 10.0, (1.0, 0.75, 0.35), 0.3)):
+        luz.data.use_shadow = False  # só a luz principal faz sombra (as outras pesam muito no render)

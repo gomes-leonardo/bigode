@@ -70,7 +70,7 @@ def p01():
     P.posiciona(0.035, N)
     j = P.junta
     cam, mira = L.camera((0.0, 0, 0), (0, 0, 0), lente=70, fstop=3.2)
-    mov_cam(cam, mira, ((j.x - 0.15, j.y - 2.0, 1.05), (j.x + 0.15, j.y, 0.02)), ((j.x - 0.1, j.y - 1.75, 0.92), (j.x + 0.15, j.y, 0.02)))
+    mov_cam(cam, mira, ((0.5, -2.4, 1.2), (0.7, -0.25, 0.0)), ((0.55, -2.1, 1.05), (0.7, -0.25, 0.0)))
 
 
 # ------------------------------------------------------------------ 2. a mesma mão em raio-x: os ossos da junta aparecem
@@ -133,7 +133,7 @@ def p07():
     anima_puxao(P, q(0.25), N, 0.0, 0.03)
     j = P.junta
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=60, fstop=3.2)
-    mov_cam(cam, mira, ((j.x - 1.5, j.y - 1.0, 1.0), (j.x + 0.2, j.y, 0.0)), ((j.x - 1.3, j.y - 0.85, 0.85), (j.x + 0.2, j.y, 0.0)))
+    mov_cam(cam, mira, ((-1.2, -1.9, 1.1), (0.6, -0.27, 0.0)), ((-1.0, -1.7, 1.0), (0.6, -0.27, 0.0)))
 
 
 # ------------------------------------------------------------------ 8. os ossos se afastando, em câmera lenta
@@ -248,7 +248,7 @@ def p16():
     anima_puxao(P, q(0.6), N, 0.012, 0.004)
     j = P.junta
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=55, fstop=4.0)
-    mov_cam(cam, mira, ((j.x + 0.1, j.y - 0.6, 2.1), (j.x + 0.15, j.y, 0.0)), ((j.x + 0.1, j.y - 0.5, 1.85), (j.x + 0.15, j.y, 0.0)))
+    mov_cam(cam, mira, ((0.6, -1.5, 2.2), (0.65, -0.27, 0.0)), ((0.6, -1.35, 2.0), (0.65, -0.27, 0.0)))
 
 
 def p17():
@@ -260,7 +260,7 @@ def p17():
     anima_puxao(P, q(0.8), N, 0.016, 0.004)
     j = P.junta
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=85, fstop=2.8)
-    mov_cam(cam, mira, ((j.x - 0.6, j.y - 1.9, 0.75), (j.x + 0.1, j.y, 0.03)), ((j.x - 0.5, j.y - 1.7, 0.68), (j.x + 0.1, j.y, 0.03)))
+    mov_cam(cam, mira, ((1.7, -2.0, 0.9), (0.65, -0.27, 0.0)), ((1.5, -1.8, 0.85), (0.65, -0.27, 0.0)))
 
 
 # ------------------------------------------------------------------ 18. relógio marcando vinte minutos, acelerado
@@ -319,6 +319,7 @@ def p21():
 def p22():
     L.cena_nova(fundo=(0.01, 0.012, 0.02))
     C.mesa_medico()
+    L.area("costas", (0.6, -3.2, 1.6), (0, -0.25, 0.4), 180, 3.0, (0.85, 0.9, 1.0))
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=40, fstop=4.0)
     mov_cam(cam, mira, ((0.25, -2.6, 0.9), (0, 0.2, 0.45)), ((0.2, -2.1, 0.85), (0, 0.2, 0.45)))
     for f, z in ((1, 0.0), (q(0.5), math.radians(4)), (N, 0.0)):
@@ -344,31 +345,31 @@ def p23():
     for i, k in enumerate((0, 0, 1, 1, 0, 0, 1, 1, 0)):
         D.estala(round(1 + (N - 1) * i / 8), k)
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=35, fstop=5.6)
-    mov_cam(cam, mira, ((0.6, -0.05, 3.2), (0.25, 0, 0)), ((0.6, -0.05, 3.0), (0.25, 0, 0)))
+    mov_cam(cam, mira, ((0.5, -0.35, 3.7), (0.5, 0, 0)), ((0.5, -0.3, 3.45), (0.5, 0, 0)))
 
 
 def p24():
     D = cena_duas()
     L.fundo_gradiente((0.02, 0.025, 0.04), (0.06, 0.07, 0.1), dist=10, tam=40)
-    sol = L.area("sol", (0, 0, 3), (0.2, 0, 0), 400, 2.0, (1, 0.95, 0.85))
-    L.area("ceu", (0.2, 0, 4), (0.2, 0, 0), 60, 6.0, (0.6, 0.7, 1.0))
+    sol = L.area("sol", (0, 0, 3), (0.5, 0, 0), 400, 2.0, (1, 0.95, 0.85))
+    L.area("ceu", (0.5, 0, 4), (0.5, 0, 0), 60, 6.0, (0.6, 0.7, 1.0))
     for i in range(13):
         f = round(1 + (N - 1) * i / 12)
         a = math.radians(-70 + 140 * (i % 3) / 2)
-        sol.location = (2.5 * math.sin(a), -1.0, 2.5 * math.cos(a) + 0.5)
+        sol.location = (0.5 + 2.5 * math.sin(a), -1.0, 2.5 * math.cos(a) + 0.5)
         sol.keyframe_insert("location", frame=f)
         sol.data.energy = 150 if i % 3 == 0 else 450
         sol.data.keyframe_insert("energy", frame=f)
         D.estala(f, 1 if i % 2 else 0)
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=35, fstop=5.6)
-    mov_cam(cam, mira, ((0.6, -0.05, 3.0), (0.25, 0, 0)), ((0.6, -0.05, 3.0), (0.25, 0, 0)))
+    mov_cam(cam, mira, ((0.5, -0.3, 3.45), (0.5, 0, 0)), ((0.5, -0.3, 3.45), (0.5, 0, 0)))
 
 
 # ------------------------------------------------------------------ 25. as duas mãos em raio-x, idênticas
 def p25():
     cena_duas(raio_x=True)
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=35, fstop=8.0)
-    mov_cam(cam, mira, ((0.55, -0.05, 3.4), (0.25, 0, 0)), ((0.5, -0.05, 3.0), (0.25, 0, 0)))
+    mov_cam(cam, mira, ((0.5, -0.35, 3.7), (0.5, 0, 0)), ((0.5, -0.3, 3.3), (0.5, 0, 0)))
 
 
 # ------------------------------------------------------------------ 26. volta ao close do primeiro plano (pergunta final; fecha o loop)
@@ -379,7 +380,7 @@ def p26():
     j = P.junta
     cam, mira = L.camera((0, 0, 0), (0, 0, 0), lente=70, fstop=2.8)
     # termina no mesmo enquadramento em que o plano 1 começa: o vídeo dá a volta sem emenda
-    mov_cam(cam, mira, ((j.x - 0.1, j.y - 1.75, 0.92), (j.x + 0.15, j.y, 0.02)), ((j.x - 0.15, j.y - 2.0, 1.05), (j.x + 0.15, j.y, 0.02)))
+    mov_cam(cam, mira, ((0.55, -2.1, 1.05), (0.7, -0.25, 0.0)), ((0.5, -2.4, 1.2), (0.7, -0.25, 0.0)))
 
 
 # ------------------------------------------------------------------ 27. as cartilagens deslizando (um osso não raspa no outro)

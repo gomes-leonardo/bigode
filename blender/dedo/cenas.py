@@ -317,10 +317,9 @@ class DuasMaos:
         self.D = L.Mao("maoD2", pele, lado=1, mat_unha=unha, antebraco=True)
         self.E.pose(RELAXADA)
         self.D.pose(RELAXADA)
-        self.E.raiz.location = (0.0, 0.62, 0.0)
-        self.E.raiz.rotation_euler = (0, 0, math.radians(100))
-        self.D.raiz.location = (0.0, -0.62, 0.0)
-        self.D.raiz.rotation_euler = (0, 0, math.radians(80))
+        # uma em cima da outra na tela vertical (a esquerda em cima), dedos para a direita
+        self.E.raiz.location = (0.35, 0.6, 0.0)
+        self.D.raiz.location = (0.35, -0.6, 0.0)
         self.raio_x = raio_x
         if raio_x:
             raiox(self.E)

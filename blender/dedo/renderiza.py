@@ -5,7 +5,7 @@ import json, os, subprocess, sys, time
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(os.path.dirname(AQUI))
 PUB = os.path.join(RAIZ, "estudio", "public", "dedo")
-CLIPES = os.path.join(RAIZ, "estudio", "src", "video", "dedo", "clipes.json")
+CLIPES = os.path.join(RAIZ, "estudio", "public", "dedo", "clipes.json")  # junto dos MP4 (fora do git)
 amostras = sys.argv[1] if len(sys.argv) > 1 else "5"
 so = [int(x) for x in sys.argv[2:]]
 planos = json.load(open(os.path.join(AQUI, "render.json")))
@@ -26,7 +26,7 @@ for p in planos:
                     "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", mp4], check=True)
     subprocess.run(["cp", os.path.join(pasta, "q0001.png"), os.path.join(RAIZ, "out", "dedo", "final", f"p{r:02d}_primeiro.png")])
     subprocess.run(["rm", "-rf", pasta])
-    feitos = sorted(set(json.load(open(CLIPES)) + [r]))
+    feitos = sorted(set((json.load(open(CLIPES)) if os.path.exists(CLIPES) else []) + [r]))
     json.dump(feitos, open(CLIPES, "w"))
     print(f"plano {p['plano']} (render {r}): {n} quadros em {time.time() - t:.0f} s · total {time.time() - t0:.0f} s", flush=True)
 print("FIM", flush=True)

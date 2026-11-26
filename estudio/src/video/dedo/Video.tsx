@@ -4,7 +4,6 @@
 import React from "react";
 import { AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, continueRender, delayRender, staticFile, useCurrentFrame } from "remotion";
 import { fontes } from "../../fontes";
-import clipes from "./clipes.json";
 import { PLANOS, type Plano } from "./planos";
 import { COM_AUDIO, DURACAO, ENTRADA, FPS } from "./tempo";
 import { Legendas } from "./legendas";
@@ -12,7 +11,6 @@ import { Sobreposicoes } from "./sobre";
 import { EfeitosDedo } from "./sfx";
 
 export const FIM = DURACAO;
-const prontos = new Set((clipes as number[]).map(Number));
 
 /** zoom de corte: nos planos longos, a cada ~2,6 s o enquadramento pula 12% para perto e volta no seguinte */
 const zoomDoPlano = (p: Plano, f: number) => {
@@ -23,7 +21,7 @@ const zoomDoPlano = (p: Plano, f: number) => {
   return i % 2 === 1 ? 1.12 : 1;
 };
 
-const Clipe: React.FC<{ p: Plano }> = ({ p }) => {
+const Clipe: React.FC<{ p: Plano; prontos: Set<number> }> = ({ p, prontos }) => {
   const f = useCurrentFrame() + p.de;
   const z = zoomDoPlano(p, f);
   const nome = String(p.render).padStart(2, "0");
@@ -35,16 +33,30 @@ const Clipe: React.FC<{ p: Plano }> = ({ p }) => {
   return <Img src={staticFile(`dedo/testes/p${nome}_${qual}.png`)} style={{ ...estilo, transform: `scale(${(z * (1 + 0.05 * u)).toFixed(4)})` }} />;
 };
 
+/** quais planos já têm o MP4 renderizado (public/dedo/clipes.json, escrito pelo blender/dedo/renderiza.py) */
+const usaProntos = () => {
+  const [prontos, setProntos] = React.useState<Set<number> | null>(null);
+  const [h] = React.useState(() => delayRender("clipes"));
+  React.useEffect(() => {
+    fetch(staticFile("dedo/clipes.json"))
+      .then((r) => (r.ok ? r.json() : []))
+      .catch(() => [])
+      .then((l) => { setProntos(new Set((l as number[]).map(Number))); continueRender(h); });
+  }, [h]);
+  return prontos;
+};
+
 export const VideoDedo: React.FC = () => {
   const [h] = React.useState(() => delayRender("fontes"));
   React.useEffect(() => { fontes.then(() => continueRender(h)); }, [h]);
+  const prontos = usaProntos();
   return (
     <AbsoluteFill style={{ backgroundColor: "#000" }}>
       {COM_AUDIO && <Sequence from={Math.round(ENTRADA * FPS)} layout="none"><Audio src={staticFile("audio/dedo-narracao.mp3")} /></Sequence>}
       <EfeitosDedo />
-      {PLANOS.map((p) => (
+      {prontos && PLANOS.map((p) => (
         <Sequence key={p.n} from={p.de} durationInFrames={p.ate - p.de}>
-          <Clipe p={p} />
+          <Clipe p={p} prontos={prontos} />
         </Sequence>
       ))}
       <AbsoluteFill>

@@ -5,6 +5,7 @@ import React from "react";
 import { AbsoluteFill, Audio, Img, OffthreadVideo, Sequence, continueRender, delayRender, staticFile, useCurrentFrame } from "remotion";
 import { fontes } from "../../fontes";
 import { PLANOS, type Plano } from "./planos";
+import renderizados from "./renderizados.json";
 import { COM_AUDIO, DURACAO, ENTRADA, FPS } from "./tempo";
 import { Legendas } from "./legendas";
 import { Sobreposicoes } from "./sobre";
@@ -26,7 +27,10 @@ const Clipe: React.FC<{ p: Plano; prontos: Set<number> }> = ({ p, prontos }) => 
   const z = zoomDoPlano(p, f);
   const nome = String(p.render).padStart(2, "0");
   const estilo: React.CSSProperties = { width: 1080, height: 1920, objectFit: "cover", transform: z !== 1 ? `scale(${z})` : undefined };
-  if (prontos.has(p.render)) return <OffthreadVideo src={staticFile(`dedo/p${nome}.mp4`)} style={estilo} muted />;
+  // o clipe foi renderizado com a duração estimada: toca um pouco mais rápido ou mais devagar para caber na voz real
+  const feitos = (renderizados as Record<string, number>)[String(p.render)] ?? p.ate - p.de;
+  const vel = feitos / Math.max(1, p.ate - p.de);
+  if (prontos.has(p.render)) return <OffthreadVideo src={staticFile(`dedo/p${nome}.mp4`)} style={estilo} muted playbackRate={vel} />;
   // prévia (animatic): os três quadros de teste do Blender, com um zoom lento
   const u = (f - p.de) / Math.max(1, p.ate - p.de);
   const qual = u < 0.34 ? "000" : u < 0.67 ? "050" : "100";

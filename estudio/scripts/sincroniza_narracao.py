@@ -21,11 +21,14 @@ CONF = {
     # mais longe para a direita: a transcrição às vezes cola a palavra seguinte no fim da fala (sem enxergar a pausa)
     "gta": dict(partes=["Téo aprende a lição", "Sobrou o último código"], so_som=set(), gap_bip={}, bip_em={},
                 drama=999, pausa_fixa={0: 1.1, 5: 1.8, 28: 1.0, 29: 1.0, 95: 0.8, 96: 0.8, 97: 1.0}, janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
+    # Shorts do dedo: uma parte só, pausas curtas (ritmo de vídeo curto)
+    "dedo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={}, pausa_max=0.3,
+                 janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
 }[VIDEO]
 SO_SOM = CONF["so_som"]          # falas que viram som: a voz não fala
 GAP_BIP = CONF["gap_bip"]        # respiro em volta de cada som (s)
 BIP_EM = CONF["bip_em"]
-PAUSA_MAX = 0.7                  # pausas maiores que isso encolhem (vídeo mais vivo)
+PAUSA_MAX = CONF.get("pausa_max", 0.7)  # pausas maiores que isso encolhem (vídeo mais vivo)
 DRAMA = CONF["drama"]
 PAUSA_FIXA = CONF["pausa_fixa"]
 JANELA_ESQ = CONF["janela_esq"]  # até onde (s) a busca do silêncio entre duas falas vai antes do fim da fala

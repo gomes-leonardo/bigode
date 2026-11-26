@@ -78,7 +78,7 @@ class Junta:
         # --- gás dissolvido: bolinhas no vão, na profundidade da frente do líquido
         rnd = random.Random(semente)
         self.gas = []
-        y_gas = 0.1 - ESP * 0.35 - 0.012
+        y_gas = 0.1 - ESP * 0.35 - 0.04 - 0.025  # logo na frente da face do líquido (que tem chanfro de 0,04)
         for i in range(n_gas):
             x = rnd.uniform(-0.25, 0.85)
             z = rnd.uniform(-0.95, 0.95)

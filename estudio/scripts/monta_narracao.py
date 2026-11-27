@@ -33,6 +33,10 @@ CONF = {
     # que para, na maquininha que falha (meio segundo de silêncio) e antes do fecho
     "pix": dict(dentro=0.24, paragrafo=0.32,
                 depois={2: 0.35, 3: 0.4, 4: 0.4, 8: 0.45, 9: 0.6, 11: 1.2, 12: 0.4, 13: 0.35}),
+    # todo mundo pulando ao mesmo tempo: as mesmas pausas, com respiro antes e depois do "Mas não.", no "como se nada
+    # tivesse acontecido", no "o problema é o depois" e antes do fecho
+    "pulo": dict(dentro=0.24, paragrafo=0.32,
+                 depois={0: 0.35, 2: 0.45, 3: 0.55, 5: 0.4, 7: 0.6, 8: 0.3, 9: 0.6, 10: 0.5, 11: 0.45}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

@@ -1,0 +1,119 @@
+[
+ {
+  "id": 0,
+  "texto": "Já imaginou se todo mundo do planeta pulasse ao mesmo tempo?",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "A primeira ideia é um terremoto.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "A Terra saindo do lugar.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Mas não.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Mesmo se os mais de oito bilhões de pessoas se reunissem num lugar só e pulassem juntas, a Terra quase não se mexeria.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 118,
+  "virgulas": 1
+ },
+ {
+  "id": 5,
+  "texto": "Ela é mais de dez trilhões de vezes mais pesada que a gente.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 6,
+  "texto": "O chão desceria menos do que a largura de um átomo.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 51,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "Quando todo mundo caísse, ela voltaria, como se nada tivesse acontecido.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 72,
+  "virgulas": 2
+ },
+ {
+  "id": 8,
+  "texto": "O pulo não é o problema.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "O problema é o depois.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "Mais de oito bilhões de pessoas no mesmo pedaço de chão, sem comida, sem água, tentando voltar pra casa.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 104,
+  "virgulas": 3
+ },
+ {
+  "id": 11,
+  "texto": "A Terra segue quieta, na mesma órbita.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 1
+ },
+ {
+  "id": 12,
+  "texto": "Todo mundo pulando ao mesmo tempo quase não empurra o planeta.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 0
+ }
+]

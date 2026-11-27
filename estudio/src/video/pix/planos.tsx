@@ -220,7 +220,7 @@ export const PLANOS: Plano[] = [
           <Fundo tema="mapa" />
           <MapaBR x={540} y={860} k={20.5} apaga={prog(f, E.silencio[1], CORTE(12) - 4)} f={f} />
           <Etiqueta x={540} y={300} t="1 DIA" k={k8(f, E.silencio[1] + 2)} tam={70} />
-          <Contador x={540} y={1430} texto={`US$ ${Math.round(340 * k)} MI`} tam={110} w={760} cor={AMARELO} />
+          <Contador x={540} y={1430} texto={`${k >= 1 ? "≈ " : ""}US$ ${Math.round(340 * k)} MI`} tam={100} w={880} cor={AMARELO} />
         </>
       );
     },

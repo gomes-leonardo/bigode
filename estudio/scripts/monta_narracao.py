@@ -25,6 +25,10 @@ CONF = {
     # na troca de ponta, no predador, no corte para você e no bipe que te acorda
     "pato": dict(dentro=0.24, paragrafo=0.32,
                  depois={2: 0.4, 4: 0.45, 7: 0.35, 9: 0.6, 10: 0.5, 11: 0.5, 13: 0.6, 14: 0.3}),
+    # o sexto sentido: as mesmas pausas dos últimos, com respiro no toque do nariz, na queda das ondas, no "o sinal chega."
+    # (uma pausa no ponto) e no rosto em branco
+    "sexto": dict(dentro=0.24, paragrafo=0.32,
+                  depois={2: 0.35, 3: 0.5, 5: 0.35, 6: 0.45, 8: 0.5, 9: 0.4, 10: 0.45, 11: 0.5, 13: 0.45, 14: 0.5}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

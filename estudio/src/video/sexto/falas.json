@@ -1,0 +1,146 @@
+[
+ {
+  "id": 0,
+  "texto": "Já imaginou se o ser humano evoluísse um sexto sentido?",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 55,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "A escola ensina que são cinco.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Mas você já tem mais.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Fecha os olhos e toca o nariz.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Isso é um sentido: você sabe onde está o seu corpo, sem olhar.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 62,
+  "virgulas": 2
+ },
+ {
+  "id": 5,
+  "texto": "Outro é o equilíbrio, escondido no ouvido.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 1
+ },
+ {
+  "id": 6,
+  "texto": "E talvez exista mais um, que você não sente.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 1
+ },
+ {
+  "id": 7,
+  "texto": "O cérebro humano já reage ao campo magnético da Terra.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Quando esse campo gira, as ondas do cérebro caem, como se ele tivesse percebido alguma coisa.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 93,
+  "virgulas": 2
+ },
+ {
+  "id": 9,
+  "texto": "Mas ninguém no teste sentiu nada.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "O sinal chega.",
+  "paragrafo": 9,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "A sensação, não.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 1
+ },
+ {
+  "id": 12,
+  "texto": "Pássaros usam isso pra se orientar no voo.",
+  "paragrafo": 10,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "A gente, ainda não.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 1
+ },
+ {
+  "id": 14,
+  "texto": "Se um dia esse sinal virasse uma sensação, você apontaria o norte de olhos fechados.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 84,
+  "virgulas": 1
+ },
+ {
+  "id": 15,
+  "texto": "Um sexto sentido.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ }
+]

@@ -1,25 +1,41 @@
-Tarefa: gerar no ElevenLabs a narração de um vídeo curto (Shorts/TikTok), em UMA geração só, e baixar o áudio em MP3.
+Tarefa: gerar no ElevenLabs a narração de um vídeo curto (Shorts/TikTok), em UMA geração só, com uma voz NOVA (não a dos vídeos anteriores), e baixar o áudio em MP3.
 
 ONDE
-Site elevenlabs.io, na conta que já está logada. Abra "Text to Speech" (Texto para fala).
+Site elevenlabs.io, na conta que já está logada.
 
-CONFIGURAÇÃO (a mesma dos vídeos anteriores)
-- Voz: Lucas - Engaging, Captivating and Kind
+PASSO 1: ESCOLHER A VOZ NOVA
+Desta vez NÃO use a voz "Lucas - Engaging, Captivating and Kind". Escolha outra voz na biblioteca de vozes:
+1. Abra "Voices" e depois "Voice Library" (Biblioteca de vozes / Explore).
+2. Filtre por idioma Portuguese e sotaque Brazilian (português do Brasil). Se houver filtro de uso, escolha "Narrative & Story" ou "Social Media". Ordene pelas mais usadas ou em alta.
+3. Ouça a prévia de até 5 vozes e escolha a que soar mais natural para um vídeo de curiosidades:
+   - português do Brasil nativo: sem sotaque de Portugal e sem sotaque de inglês;
+   - voz de narrador: clara, animada, ritmo ágil, sem gritar e sem cara de locução de propaganda antiga;
+   - pode ser masculina ou feminina.
+4. Não escolha voz que imite pessoa famosa, celebridade ou personagem conhecido.
+5. Adicione a voz escolhida à conta ("Add to my voices" / "Use voice"). Não apague nenhuma voz que já esteja na conta. Se o site pedir para pagar, mudar de plano ou apagar outra voz para liberar espaço, PARE e me avise, sem fazer nada disso.
+
+PASSO 2: TESTE RÁPIDO DA VOZ
+1. Abra "Text to Speech" (Texto para fala), selecione a voz nova e confira a configuração abaixo.
+2. Gere só esta frase de teste: Procura qualquer anúncio de relógio. Qualquer um.
+3. Espere o áudio aparecer (até 30 segundos) e ouça. Se a voz mudou de sotaque, soou robótica ou estranha no Eleven v3, volte ao passo 1 e teste a próxima voz. No máximo 3 testes, para não gastar créditos.
+
+CONFIGURAÇÃO (igual aos vídeos anteriores, só a voz muda)
+- Voz: a voz nova escolhida no passo 1
 - Modelo: Eleven v3
 - Stability: Natural
 - Formato do download: MP3 44.1 kHz 128 kbps
 - Não mexa em mais nada (velocidade, estilo etc.): o que aparecer fica no padrão.
-Antes de gerar, confira que a voz é o Lucas e o modelo é o Eleven v3 (o site às vezes troca sozinho).
+Antes de gerar, confira que a voz selecionada é a nova (e não o Lucas) e que o modelo é o Eleven v3 (o site às vezes troca sozinho).
 
-COMO GERAR
-1. Apague tudo o que estiver na caixa de texto.
+PASSO 3: GERAR A NARRAÇÃO
+1. Apague tudo o que estiver na caixa de texto (inclusive a frase de teste).
 2. Cole SOMENTE o texto que está entre "INÍCIO DO TEXTO" e "FIM DO TEXTO", exatamente como está. Não acrescente tags ([pausa], [risos] etc.), não corrija e não troque palavras. É uma geração só (cerca de 1.500 caracteres).
 3. Clique em Generate (Gerar).
 4. TEMPO, IMPORTANTE: depois de clicar em gerar, espere pelo menos 30 segundos. O ícone de download só aparece quando o áudio termina de processar. Enquanto espera, não clique em gerar de novo (gasta créditos e cria áudio repetido). Se depois dos 30 segundos o download ainda não apareceu, espere mais 30 segundos e confira de novo; repita até aparecer.
-5. Quando o download aparecer, confira a duração no player: o esperado é cerca de 1:30 (entre 1:15 e 1:45). Se sair muito fora disso, se cortar no meio, ou se a voz não for o Lucas falando português do Brasil, gere de novo e espere os 30 segundos outra vez.
+5. Quando o download aparecer, confira a duração no player: o esperado é cerca de 1:30 (entre 1:10 e 1:50, porque cada voz tem um ritmo). Se sair muito fora disso, se cortar no meio, ou se a voz não for a nova falando português do Brasil, gere de novo e espere os 30 segundos outra vez.
 6. Baixe o MP3 (44.1 kHz 128 kbps). O nome do arquivo não importa.
 
-NO FINAL, me responda com: o arquivo baixado, a duração e se precisou gerar de novo.
+NO FINAL, me responda com: o arquivo baixado, a duração, se precisou gerar de novo e o NOME EXATO da voz escolhida (e o Voice ID, se aparecer), para eu poder usar a mesma voz nos próximos vídeos.
 
 
 ===== INÍCIO DO TEXTO =====

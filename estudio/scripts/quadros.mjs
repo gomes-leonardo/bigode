@@ -9,7 +9,13 @@ import fs from "node:fs";
 const args = process.argv.slice(2);
 const varios = args[0] === "--varios";
 const [id, saida, ...qs] = varios ? [null, args[1], ...args.slice(2)] : args;
-const browserExecutable = "/home/user/bigode/dada-dor/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell";
+// o primeiro navegador sem janela que existir nesta máquina (o do dada-dor some quando o container é recriado)
+const browserExecutable = [
+  process.env.REMOTION_CHROME,
+  "/home/user/bigode/dada-dor/node_modules/.remotion/chrome-headless-shell/linux64/chrome-headless-shell-linux64/chrome-headless-shell",
+  "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell",
+  "/opt/pw-browsers/headless_shell_as_downloaded/chrome-headless-shell",
+].find((c) => c && fs.existsSync(c)) ?? null;
 const raiz = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 fs.mkdirSync(saida, { recursive: true });
 const serveUrl = await bundle({ entryPoint: path.join(raiz, "src/index.ts"), publicDir: path.join(raiz, "public") });

@@ -1,6 +1,7 @@
 // Tempo das falas do Shorts "por que todo relógio de propaganda marca 10h10" (30 fps, vertical).
 // Sem áudio: estimado com a voz Lucas (vídeo 1): fala = 0,0523 s por caractere + 0,227 s por vírgula + 0,156 s; pausas
-// curtas de Shorts (0,18 s entre frases, 0,26 s entre parágrafos). Com áudio, os tempos vêm da narração sincronizada.
+// curtas de Shorts (0,18 s entre frases, 0,26 s entre parágrafos). Com áudio, os tempos vêm da narração: voz Thalita
+// (Microsoft), gerada fala por fala por scripts/gera_narracao_edge.py e montada com as pausas por scripts/monta_narracao.py.
 import dados from "./falas.json";
 import audio from "./falas_audio.json";
 

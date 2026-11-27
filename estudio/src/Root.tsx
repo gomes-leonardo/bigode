@@ -19,6 +19,7 @@ import { FIM as FIM_SOM, VideoSom } from "./video/som/Video";
 import { CapaCoracao, FIM as FIM_CORACAO, VideoCoracao } from "./video/coracao/Video";
 import { CapaPato, FIM as FIM_PATO, VideoPato } from "./video/pato/Video";
 import { CapaSexto, FIM as FIM_SEXTO, VideoSexto } from "./video/sexto/Video";
+import { CapaPix, FIM as FIM_PIX, VideoPix } from "./video/pix/Video";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -38,6 +39,8 @@ export const RemotionRoot: React.FC = () => (
     <Composition id="Relogio1010" component={VideoRelogio} durationInFrames={FIM_RELOGIO} fps={30} width={1080} height={1920} />
     <Composition id="SextoSentido" component={VideoSexto} durationInFrames={FIM_SEXTO} fps={30} width={1080} height={1920} />
     <Still id="SextoCapa" component={CapaSexto} width={1080} height={1920} />
+    <Composition id="PixSemInternet" component={VideoPix} durationInFrames={FIM_PIX} fps={30} width={1080} height={1920} />
+    <Still id="PixCapa" component={CapaPix} width={1080} height={1920} />
     <Composition id="PatoMetade" component={VideoPato} durationInFrames={FIM_PATO} fps={30} width={1080} height={1920} />
     <Still id="PatoCapa" component={CapaPato} width={1080} height={1920} />
     <Composition id="Coracao20" component={VideoCoracao} durationInFrames={FIM_CORACAO} fps={30} width={1080} height={1920} />

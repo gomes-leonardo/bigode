@@ -1,0 +1,137 @@
+[
+ {
+  "id": 0,
+  "texto": "Já imaginou se você ficasse sem internet por três meses?",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 56,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "A primeira coisa que vem na cabeça é o tédio.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Sem mensagem, sem mapa, sem filme.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 2
+ },
+ {
+  "id": 3,
+  "texto": "Mas o problema maior é o dinheiro.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "No celular, o Pix só funciona com conexão.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 1
+ },
+ {
+  "id": 5,
+  "texto": "Num dia recorde, foram mais de trezentos e treze milhões de transações.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 71,
+  "virgulas": 1
+ },
+ {
+  "id": 6,
+  "texto": "No ano passado, quase oitenta bilhões.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 1
+ },
+ {
+  "id": 7,
+  "texto": "Mais de trinta e cinco trilhões de reais.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Em três meses, isso movimenta quase nove trilhões de reais.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 59,
+  "virgulas": 1
+ },
+ {
+  "id": 9,
+  "texto": "Sem conexão, essa roda para.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 1
+ },
+ {
+  "id": 10,
+  "texto": "E não é só o Pix.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "Máquina de cartão, banco no celular, entrega: muita coisa cai junto.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 68,
+  "virgulas": 3
+ },
+ {
+  "id": 12,
+  "texto": "Só um dia já sairia por uns trezentos e quarenta milhões de dólares pro país.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 77,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "Três meses não é férias da tela.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 32,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "É três meses sem internet.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ }
+]

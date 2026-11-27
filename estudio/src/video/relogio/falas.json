@@ -1,0 +1,263 @@
+[
+ {
+  "id": 0,
+  "texto": "Procura qualquer anúncio de relógio.",
+  "paragrafo": 0,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Qualquer um.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Agora olha a hora que ele está marcando.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Dez e dez.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 10,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Não é coincidência.",
+  "paragrafo": 3,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "É quase todo relógio, de quase toda marca, há décadas.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 2
+ },
+ {
+  "id": 6,
+  "texto": "E tem três motivos.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "O primeiro é simetria.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Nessa posição, os dois ponteiros formam um V quase perfeito.",
+  "paragrafo": 6,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 1
+ },
+ {
+  "id": 9,
+  "texto": "O olho humano gosta de simetria, e lê aquilo como equilíbrio.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 1
+ },
+ {
+  "id": 10,
+  "texto": "O segundo motivo é que esse V abre um espaço vazio bem no meio, logo abaixo do número doze.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 91,
+  "virgulas": 1
+ },
+ {
+  "id": 11,
+  "texto": "E o que costuma estar escrito exatamente ali?",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 0
+ },
+ {
+  "id": 12,
+  "texto": "A marca.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 8,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "Os ponteiros não estão marcando uma hora.",
+  "paragrafo": 10,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "Eles estão emoldurando o logotipo.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "O terceiro motivo é o mais prático de todos.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "Nessa posição, os ponteiros ficam longe da janelinha da data e dos mostradores pequenos, que normalmente ficam nas laterais e embaixo.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 134,
+  "virgulas": 2
+ },
+ {
+  "id": 17,
+  "texto": "Dez e dez é a única hora que mostra o relógio inteiro sem tapar nada.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 69,
+  "virgulas": 0
+ },
+ {
+  "id": 18,
+  "texto": "E ainda tem um quarto motivo, que ninguém prova mas o mercado inteiro repete: esse V apontando pra cima lembra um sorriso.",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 122,
+  "virgulas": 2
+ },
+ {
+  "id": 19,
+  "texto": "Agora, o que você talvez já tenha ouvido, e é mentira.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 54,
+  "virgulas": 2
+ },
+ {
+  "id": 20,
+  "texto": "Não tem nada a ver com a hora em que Lincoln levou o tiro.",
+  "paragrafo": 16,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 0
+ },
+ {
+  "id": 21,
+  "texto": "Nem com o Kennedy.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 18,
+  "virgulas": 0
+ },
+ {
+  "id": 22,
+  "texto": "Nem com a bomba de Hiroshima.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 23,
+  "texto": "Essas histórias circulam há anos e nenhuma se sustenta.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 55,
+  "virgulas": 0
+ },
+ {
+  "id": 24,
+  "texto": "É só design.",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 12,
+  "virgulas": 0
+ },
+ {
+  "id": 25,
+  "texto": "E tem uma empresa que quebra a regra de propósito.",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "A Apple marca nove e quarenta e um nos anúncios de iPhone.",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 0
+ },
+ {
+  "id": 27,
+  "texto": "Porque foi mais ou menos a hora em que o primeiro iPhone foi mostrado no palco, em dois mil e sete.",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 99,
+  "virgulas": 1
+ },
+ {
+  "id": 28,
+  "texto": "Então, da próxima vez que você passar na frente de uma vitrine de relógio, você vai conseguir não olhar?",
+  "paragrafo": 23,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 104,
+  "virgulas": 2
+ }
+]

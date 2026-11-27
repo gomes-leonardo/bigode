@@ -1,0 +1,308 @@
+[
+ {
+  "id": 0,
+  "texto": "Você está dirigindo no GTA.",
+  "paragrafo": 0,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Olha pela janela e a cidade está viva.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Carro passando, gente andando na calçada, cachorro atravessando a rua.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 70,
+  "virgulas": 2
+ },
+ {
+  "id": 3,
+  "texto": "Agora gira a câmera.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 20,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "Tudo aquilo deixou de existir.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "Não ficou fora da tela.",
+  "paragrafo": 4,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 23,
+  "virgulas": 0
+ },
+ {
+  "id": 6,
+  "texto": "Deixou de ser calculado.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "Isso tem nome.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 14,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "A câmera do jogo enxerga dentro de uma pirâmide invisível.",
+  "paragrafo": 6,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 58,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "Tudo que está dentro dela é desenhado.",
+  "paragrafo": 6,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 38,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "Tudo que está fora é simplesmente ignorado.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 43,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "Se não dá pra ver, não existe motivo pra calcular.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 1
+ },
+ {
+  "id": 12,
+  "texto": "E tem uma segunda camada.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 25,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "Se um prédio está na sua frente, tudo que está atrás dele também não é desenhado.",
+  "paragrafo": 9,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 81,
+  "virgulas": 1
+ },
+ {
+  "id": 14,
+  "texto": "Mesmo estando dentro da pirâmide.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "O jogo descobre o que está escondido e desiste de desenhar.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 59,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "Mas o mais estranho não é o que some.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 17,
+  "texto": "É o que fica.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 13,
+  "virgulas": 0
+ },
+ {
+  "id": 18,
+  "texto": "Aquele prédio lá no fundo, que você vê de longe?",
+  "paragrafo": 13,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 1
+ },
+ {
+  "id": 19,
+  "texto": "Ele não é o mesmo prédio de perto.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 34,
+  "virgulas": 0
+ },
+ {
+  "id": 20,
+  "texto": "De longe, ele é uma caixa com uma textura colada.",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 1
+ },
+ {
+  "id": 21,
+  "texto": "Conforme você chega perto, o jogo troca aquilo por um modelo mais detalhado.",
+  "paragrafo": 15,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 76,
+  "virgulas": 1
+ },
+ {
+  "id": 22,
+  "texto": "E depois por outro, melhor ainda.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 33,
+  "virgulas": 1
+ },
+ {
+  "id": 23,
+  "texto": "Você está sempre vendo a versão mais barata que ainda engana os seus olhos.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 0
+ },
+ {
+  "id": 24,
+  "texto": "E agora a parte que incomoda de verdade.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 40,
+  "virgulas": 0
+ },
+ {
+  "id": 25,
+  "texto": "As pessoas na calçada.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "A maioria delas não é ninguém.",
+  "paragrafo": 19,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 27,
+  "texto": "Elas são criadas quando você chega perto, e apagadas quando você se afasta.",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 1
+ },
+ {
+  "id": 28,
+  "texto": "Se você virar a câmera e olhar de novo, aquela pessoa não está mais lá.",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 71,
+  "virgulas": 1
+ },
+ {
+  "id": 29,
+  "texto": "E a que estiver no lugar dela não é a mesma.",
+  "paragrafo": 21,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 30,
+  "texto": "É outra, criada do zero.",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 1
+ },
+ {
+  "id": 31,
+  "texto": "Mundo aberto não é um mundo.",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 32,
+  "texto": "É uma casca que se constrói em volta de você e se destrói atrás de você, o tempo inteiro.",
+  "paragrafo": 23,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 89,
+  "virgulas": 1
+ },
+ {
+  "id": 33,
+  "texto": "Quantas pessoas já foram apagadas nas suas costas?",
+  "paragrafo": 24,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ }
+]

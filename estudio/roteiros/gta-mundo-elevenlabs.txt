@@ -1,0 +1,77 @@
+Tarefa: gerar no ElevenLabs a narração de um vídeo curto (Shorts/TikTok), em UMA geração só, e baixar o áudio em MP3.
+
+ONDE
+Site elevenlabs.io, na conta que já está logada. Abra "Text to Speech" (Texto para fala).
+
+CONFIGURAÇÃO (a mesma dos vídeos anteriores com o Lucas)
+- Voz: Lucas - Engaging, Captivating and Kind
+- Modelo: Eleven v3
+- Stability: Natural
+- Formato do download: MP3 44.1 kHz 128 kbps
+- Não mexa em mais nada (velocidade, estilo etc.): o que aparecer fica no padrão.
+Antes de gerar, confira que a voz é o Lucas e o modelo é o Eleven v3 (o site às vezes troca sozinho).
+
+COMO GERAR
+1. Apague tudo o que estiver na caixa de texto.
+2. Cole SOMENTE o texto que está entre "INÍCIO DO TEXTO" e "FIM DO TEXTO", exatamente como está. Não acrescente tags ([pausa], [risos] etc.), não corrija e não troque palavras. É uma geração só (cerca de 1.500 caracteres).
+3. Clique em Generate (Gerar).
+4. TEMPO, IMPORTANTE: depois de clicar em gerar, espere pelo menos 30 segundos. O ícone de download só aparece quando o áudio termina de processar. Enquanto espera, não clique em gerar de novo (gasta créditos e cria áudio repetido). Se depois dos 30 segundos o download ainda não apareceu, espere mais 30 segundos e confira de novo; repita até aparecer.
+5. Quando o download aparecer, confira a duração no player: o esperado é cerca de 1:30 (entre 1:15 e 1:45). Se sair muito fora disso, se cortar no meio, ou se a voz não for o Lucas falando português do Brasil, gere de novo e espere os 30 segundos outra vez.
+6. Baixe o MP3 (44.1 kHz 128 kbps). O nome do arquivo não importa.
+
+NO FINAL, me responda com: o arquivo baixado, a duração e se precisou gerar de novo.
+
+
+===== INÍCIO DO TEXTO =====
+
+Você está dirigindo no GTA. Olha pela janela e a cidade está viva.
+
+Carro passando, gente andando na calçada, cachorro atravessando a rua.
+
+Agora gira a câmera.
+
+Tudo aquilo deixou de existir.
+
+Não ficou fora da tela. Deixou de ser calculado.
+
+Isso tem nome.
+
+A câmera do jogo enxerga dentro de uma pirâmide invisível. Tudo que está dentro dela é desenhado. Tudo que está fora é simplesmente ignorado.
+
+Se não dá pra ver, não existe motivo pra calcular.
+
+E tem uma segunda camada.
+
+Se um prédio está na sua frente, tudo que está atrás dele também não é desenhado. Mesmo estando dentro da pirâmide.
+
+O jogo descobre o que está escondido e desiste de desenhar.
+
+Mas o mais estranho não é o que some.
+
+É o que fica.
+
+Aquele prédio lá no fundo, que você vê de longe? Ele não é o mesmo prédio de perto.
+
+De longe, ele é uma caixa com uma textura colada.
+
+Conforme você chega perto, o jogo troca aquilo por um modelo mais detalhado. E depois por outro, melhor ainda.
+
+Você está sempre vendo a versão mais barata que ainda engana os seus olhos.
+
+E agora a parte que incomoda de verdade.
+
+As pessoas na calçada.
+
+A maioria delas não é ninguém. Elas são criadas quando você chega perto, e apagadas quando você se afasta.
+
+Se você virar a câmera e olhar de novo, aquela pessoa não está mais lá.
+
+E a que estiver no lugar dela não é a mesma. É outra, criada do zero.
+
+Mundo aberto não é um mundo.
+
+É uma casca que se constrói em volta de você e se destrói atrás de você, o tempo inteiro.
+
+Quantas pessoas já foram apagadas nas suas costas?
+
+===== FIM DO TEXTO =====

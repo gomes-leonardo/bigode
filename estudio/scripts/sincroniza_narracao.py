@@ -2,7 +2,7 @@
 # 1) alinha a transcrição (palavras com tempo) ao texto de cada fala; 2) acerta os limites de cada fala no ponto mais
 #    silencioso entre uma fala e outra; 3) monta a narração inteira: encurta pausas longas, abre o respiro dos "Bip."
 #    (que saíram da voz e viraram efeito) e junta as partes; 4) grava a trilha e os tempos de cada fala.
-# uso: python3 scripts/sincroniza_narracao.py <asr.json> <falas.json> <saida.wav> <falas_audio.json> [cartao|gta]
+# uso: python3 scripts/sincroniza_narracao.py <asr.json> <falas.json> <saida.wav> <falas_audio.json> [cartao|gta|dedo|gtamundo]
 import json, re, subprocess, sys, unicodedata, difflib
 import numpy as np
 
@@ -24,6 +24,8 @@ CONF = {
     # Shorts do dedo: uma parte só, pausas curtas (ritmo de vídeo curto)
     "dedo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={}, pausa_max=0.3,
                  janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
+    "gtamundo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={}, pausa_max=0.3,
+                     janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
 }[VIDEO]
 SO_SOM = CONF["so_som"]          # falas que viram som: a voz não fala
 GAP_BIP = CONF["gap_bip"]        # respiro em volta de cada som (s)

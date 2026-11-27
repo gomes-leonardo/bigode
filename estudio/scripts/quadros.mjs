@@ -16,14 +16,16 @@ const browserExecutable = [
   "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell",
   "/opt/pw-browsers/headless_shell_as_downloaded/chrome-headless-shell",
 ].find((c) => c && fs.existsSync(c)) ?? null;
+// WebGL por software (cenas em three.js): REMOTION_GL=swangle
+const chromiumOptions = { gl: process.env.REMOTION_GL ?? null };
 const raiz = path.resolve(path.dirname(new URL(import.meta.url).pathname), "..");
 fs.mkdirSync(saida, { recursive: true });
 const serveUrl = await bundle({ entryPoint: path.join(raiz, "src/index.ts"), publicDir: path.join(raiz, "public") });
 const pedidos = qs.map((q) => (varios ? { id: q.split("@")[0], frame: Number(q.split("@")[1]) } : { id, frame: Number(q) }));
 const comps = {};
 for (const p of pedidos) {
-  comps[p.id] ??= await selectComposition({ serveUrl, id: p.id, browserExecutable });
+  comps[p.id] ??= await selectComposition({ serveUrl, id: p.id, browserExecutable, chromiumOptions });
   const output = path.join(saida, varios ? `${p.id}.png` : `q${String(p.frame).padStart(4, "0")}.png`);
-  await renderStill({ composition: comps[p.id], serveUrl, output, frame: p.frame, browserExecutable, imageFormat: "png", logLevel: "error" });
+  await renderStill({ composition: comps[p.id], serveUrl, output, frame: p.frame, browserExecutable, chromiumOptions, imageFormat: "png", logLevel: "error" });
   console.log(output);
 }

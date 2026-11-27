@@ -7,12 +7,16 @@
     "tsc": "tsc --noEmit -p ."
   },
   "dependencies": {
+    "@react-three/fiber": "^9.8.2",
     "@remotion/cli": "4.0.541",
     "@remotion/fonts": "4.0.541",
     "@remotion/media": "4.0.541",
+    "@remotion/three": "4.0.541",
+    "@types/three": "^0.187.0",
     "react": "19.3.1",
     "react-dom": "19.3.1",
-    "remotion": "4.0.541"
+    "remotion": "4.0.541",
+    "three": "^0.187.0"
   },
   "devDependencies": {
     "@types/react": "19.3.0",

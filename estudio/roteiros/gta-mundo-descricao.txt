@@ -1,0 +1,21 @@
+O mundo do GTA só existe onde você olha. 🎮👀 Gira a câmera e a cidade que estava ali deixa de ser desenhada; o prédio do fundo é uma caixa com uma imagem colada; e a pessoa da calçada que você deixou para trás foi apagada e trocada por outra.
+
+Os nomes técnicos do que aparece no vídeo:
+• Frustum culling: a "pirâmide invisível" da câmera. O que está fora dela não é desenhado.
+• Occlusion culling: o que está escondido atrás de um prédio também não é desenhado, mesmo dentro da pirâmide.
+• LOD (nível de detalhe): o mesmo objeto em várias versões, da mais barata (de longe) à mais detalhada (de perto).
+• Streaming: o mundo é carregado por regiões em volta do jogador e descarregado atrás dele.
+
+Onde o vídeo simplifica:
+• O que para de acontecer fora da câmera é o desenho (a renderização). Muita coisa fora de vista continua sendo simulada: física, som, trânsito por perto e a lógica das missões.
+• Quem é criado e apagado é a população de fundo. Personagens de missão e quem o roteiro do jogo marca continuam existindo.
+• O jeito de esconder o que está atrás de outra coisa muda de jogo para jogo e de motor para motor.
+• A cidade, os carros e as pessoas do vídeo são genéricos, feitos de caixas e cápsulas. Nenhuma imagem do jogo foi usada.
+
+Para se aprofundar:
+• Estudo dos gráficos do GTA V (Adrian Courrèges): https://adriancourreges.com/blog/2015/11/02/gta-v-graphics-study-part-2
+• Ex-programador da Rockstar explica como os carros aparecem e somem nos GTAs antigos (Obbe Vermeij): https://libertycity.net/news/8122-how-cars-appear-and-disappear-in-the.html
+
+Quantas pessoas já foram apagadas nas suas costas? Conta nos comentários e se inscreva para mais curiosidades! 🔔
+
+#GTA #GTA6 #GameDev #Curiosidades #Shorts #Games #ComoFunciona

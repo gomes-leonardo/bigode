@@ -15,6 +15,7 @@ import { FIM as FIM_DEDO, VideoDedo } from "./video/dedo/Video";
 import { FolhaRelogios } from "./video/relogio/Folha";
 import { FIM as FIM_RELOGIO, VideoRelogio } from "./video/relogio/Video";
 import { FIM as FIM_GTAMUNDO, VideoGtaMundo } from "./video/gtamundo/Video";
+import { FIM as FIM_SOM, VideoSom } from "./video/som/Video";
 
 export const RemotionRoot: React.FC = () => (
   <>
@@ -32,6 +33,7 @@ export const RemotionRoot: React.FC = () => (
     <Still id="ThumbGTA-A" component={ThumbGta} defaultProps={{ variante: "A" as const }} width={W} height={H} />
     <Still id="ThumbGTA-B" component={ThumbGta} defaultProps={{ variante: "B" as const }} width={W} height={H} />
     <Composition id="Relogio1010" component={VideoRelogio} durationInFrames={FIM_RELOGIO} fps={30} width={1080} height={1920} />
+    <Composition id="SomReal" component={VideoSom} durationInFrames={FIM_SOM} fps={30} width={1080} height={1920} />
     <Composition id="GtaMundo" component={VideoGtaMundo} durationInFrames={FIM_GTAMUNDO} fps={30} width={1080} height={1920} />
     <Still id="RelogioFolha" component={FolhaRelogios} width={1080} height={1920} />
     <Composition id="DedoEstala" component={VideoDedo} durationInFrames={FIM_DEDO} fps={24} width={1080} height={1920} />

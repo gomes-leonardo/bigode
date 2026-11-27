@@ -12,6 +12,11 @@ CONF = {
     "relogio": dict(dentro=0.24, paragrafo=0.32,
                     depois={1: 0.42, 2: 0.5, 3: 0.5, 11: 0.45, 12: 0.42, 18: 0.4, 23: 0.4, 24: 0.5, 27: 0.42}),
     # o mundo do GTA: respiro na virada da câmera, no "deixou de existir", nas revelações e antes da pergunta final
+    # quase nenhum som é real: as mesmas pausas do 10h10 (a versão que soou mais natural), com espaço depois de cada
+    # prova para o som ser ouvido sozinho (o motor, a gravação fixa, as camadas, os passos, osso, chuva, fogo, o sabre)
+    "som": dict(dentro=0.24, paragrafo=0.32,
+                depois={0: 0.35, 1: 0.4, 3: 0.45, 7: 0.5, 10: 0.45, 11: 0.85, 13: 0.6, 15: 0.45, 16: 0.6, 17: 0.75, 18: 0.75,
+                        19: 0.75, 20: 0.9, 22: 0.5, 23: 1.0, 24: 0.35, 26: 0.6}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

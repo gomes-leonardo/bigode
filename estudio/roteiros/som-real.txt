@@ -1,0 +1,45 @@
+O som do motor no GTA não é um motor.
+
+E não dá pra ser.
+
+Uma gravação de carro acelerando é uma coisa fixa. Ela começa, acontece e termina.
+
+Mas no jogo quem decide a aceleração é você.
+
+Você pisa, solta, pisa de novo. O som precisa seguir o seu pé em tempo real.
+
+Nenhuma gravação faz isso.
+
+Então o que eles fazem é outra coisa.
+
+Gravam o motor parado, em várias rotações diferentes. Uma amostra em cada faixa.
+
+E o jogo monta o som ao vivo, misturando essas camadas conforme o giro sobe e desce.
+
+O que você ouve nunca existiu numa pista. Foi construído no momento em que você pisou.
+
+E se você acha que isso é coisa de videogame, o cinema faz há muito mais tempo.
+
+Aquele passo que você ouve no filme não é do ator.
+
+É de uma pessoa num estúdio, assistindo a cena e andando em caixas de areia, de pedra, de madeira, no mesmo ritmo.
+
+Osso quebrando costuma ser legume sendo torcido.
+
+Chuva costuma ser grão caindo em superfície fina.
+
+Fogo costuma ser plástico sendo amassado perto do microfone.
+
+E o mais estranho de todos.
+
+O sabre de luz não substitui som nenhum, porque a coisa não existe.
+
+Ele foi montado a partir de duas coisas que estavam na sala: o zumbido de um motor de projetor antigo e o chiado que uma televisão faz quando você chega perto demais com o microfone.
+
+Juntaram as duas e inventaram um som que o mundo inteiro reconhece.
+
+A regra é quase sempre essa.
+
+O som verdadeiro soa errado. O falso soa real.
+
+Quantos sons você acha que já ouviu na vida achando que eram de verdade?

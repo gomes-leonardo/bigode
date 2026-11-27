@@ -1,0 +1,254 @@
+[
+ {
+  "id": 0,
+  "texto": "O som do motor no GTA não é um motor.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "E não dá pra ser.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Uma gravação de carro acelerando é uma coisa fixa.",
+  "paragrafo": 2,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Ela começa, acontece e termina.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 1
+ },
+ {
+  "id": 4,
+  "texto": "Mas no jogo quem decide a aceleração é você.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 5,
+  "texto": "Você pisa, solta, pisa de novo.",
+  "paragrafo": 4,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 31,
+  "virgulas": 2
+ },
+ {
+  "id": 6,
+  "texto": "O som precisa seguir o seu pé em tempo real.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "Nenhuma gravação faz isso.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Então o que eles fazem é outra coisa.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "Gravam o motor parado, em várias rotações diferentes.",
+  "paragrafo": 7,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 53,
+  "virgulas": 1
+ },
+ {
+  "id": 10,
+  "texto": "Uma amostra em cada faixa.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "E o jogo monta o som ao vivo, misturando essas camadas conforme o giro sobe e desce.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 84,
+  "virgulas": 1
+ },
+ {
+  "id": 12,
+  "texto": "O que você ouve nunca existiu numa pista.",
+  "paragrafo": 9,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 0
+ },
+ {
+  "id": 13,
+  "texto": "Foi construído no momento em que você pisou.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "E se você acha que isso é coisa de videogame, o cinema faz há muito mais tempo.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 79,
+  "virgulas": 1
+ },
+ {
+  "id": 15,
+  "texto": "Aquele passo que você ouve no filme não é do ator.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 16,
+  "texto": "É de uma pessoa num estúdio, assistindo a cena e andando em caixas de areia, de pedra, de madeira, no mesmo ritmo.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 114,
+  "virgulas": 4
+ },
+ {
+  "id": 17,
+  "texto": "Osso quebrando costuma ser legume sendo torcido.",
+  "paragrafo": 13,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 48,
+  "virgulas": 0
+ },
+ {
+  "id": 18,
+  "texto": "Chuva costuma ser grão caindo em superfície fina.",
+  "paragrafo": 14,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 0
+ },
+ {
+  "id": 19,
+  "texto": "Fogo costuma ser plástico sendo amassado perto do microfone.",
+  "paragrafo": 15,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 20,
+  "texto": "E o mais estranho de todos.",
+  "paragrafo": 16,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 21,
+  "texto": "O sabre de luz não substitui som nenhum, porque a coisa não existe.",
+  "paragrafo": 17,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 67,
+  "virgulas": 1
+ },
+ {
+  "id": 22,
+  "texto": "Ele foi montado a partir de duas coisas que estavam na sala: o zumbido de um motor de projetor antigo e o chiado que uma televisão faz quando você chega perto demais com o microfone.",
+  "paragrafo": 18,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 182,
+  "virgulas": 1
+ },
+ {
+  "id": 23,
+  "texto": "Juntaram as duas e inventaram um som que o mundo inteiro reconhece.",
+  "paragrafo": 19,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 67,
+  "virgulas": 0
+ },
+ {
+  "id": 24,
+  "texto": "A regra é quase sempre essa.",
+  "paragrafo": 20,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 25,
+  "texto": "O som verdadeiro soa errado.",
+  "paragrafo": 21,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 26,
+  "texto": "O falso soa real.",
+  "paragrafo": 21,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 17,
+  "virgulas": 0
+ },
+ {
+  "id": 27,
+  "texto": "Quantos sons você acha que já ouviu na vida achando que eram de verdade?",
+  "paragrafo": 22,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 72,
+  "virgulas": 0
+ }
+]

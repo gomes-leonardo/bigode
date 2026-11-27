@@ -1,0 +1,21 @@
+Quase nenhum som que você ouve é real. 🔊 O motor do jogo é montado ao vivo a partir de várias gravações, o passo do filme é feito por alguém num estúdio, e o som mais famoso do cinema foi inventado juntando um projetor e uma televisão.
+
+Os nomes por trás do vídeo:
+• Motor nos jogos: os carros são gravados em rotações fixas (normalmente num dinamômetro, com o carro parado e o motor sob carga) e o jogo mistura essas camadas conforme o giro, com crossfade e mudança de tom. Hoje também se usa síntese granular, que remonta o som explosão por explosão.
+• Foley: o nome da arte de refazer em estúdio os sons do filme (passos, roupa, objetos) vem de Jack Foley, que trabalhou na Universal e ajudou o cinema na passagem para o som.
+• Legume no lugar de osso: aipo (salsão) quebrado é um truque clássico de foley; em O Grande Lebowski, por exemplo, foi o som de ossos quebrando.
+• Plástico no lugar de fogo: amassar celofane ou plástico perto do microfone dá o crepitar do fogo; gravação de fogo de verdade costuma decepcionar.
+• Sabre de luz: criado por Ben Burtt para Star Wars (1977). O zumbido veio dos motores de projetores antigos da sala de projeção da universidade em que ele estudava; o chiado, de um cabo de microfone que captou o tubo de imagem de uma televisão quando ele passou perto. Os dois não estavam na mesma sala: o vídeo simplifica.
+
+Os sons do vídeo foram todos sintetizados para ele (nenhuma gravação de filme ou jogo foi usada). O motor foi montado do mesmo jeito que os jogos fazem: cinco camadas de giro misturadas ao vivo.
+
+Fontes:
+• Motor por camadas de rotação (Audiokinetic, Wwise): https://www.audiokinetic.com/en/loop-based-car-engine-design-with-wwise-part-2
+• Como os jogos gravam motores (Game Developer): https://gamedeveloper.com/audio/capturing-engine-sounds-for-games
+• Jack Foley (Britannica): https://www.britannica.com/art/Foley-artist
+• Objetos do dia a dia em foley, inclusive celofane para fogo (Storyblocks): https://www.storyblocks.com/resources/blog/foley-sfx-everyday-household-objects/
+• Ben Burtt e o som do sabre de luz (Mental Floss): https://www.mentalfloss.com/article/72003/meet-man-who-gave-lightsaber-its-hum
+
+Quantos sons você acha que já ouviu achando que eram de verdade? Conta nos comentários e se inscreva para mais episódios de "O que o jogo faz escondido"! 🔔
+
+#SoundDesign #Foley #Games #GTA #Cinema #Curiosidades #Shorts #ComoFunciona

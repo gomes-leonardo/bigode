@@ -24,7 +24,7 @@ CONF = {
     # Shorts do dedo: uma parte só, pausas curtas (ritmo de vídeo curto)
     "dedo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={}, pausa_max=0.3,
                  janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
-    "gtamundo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={}, pausa_max=0.3,
+    "gtamundo": dict(partes=[], so_som=set(), gap_bip={}, bip_em={}, drama=999, pausa_fixa={3: 0.45, 32: 0.5}, pausa_max=0.3,
                      janela_esq=0.4, janela_dir=0.5, perto_da_transcricao=True),
 }[VIDEO]
 SO_SOM = CONF["so_som"]          # falas que viram som: a voz não fala

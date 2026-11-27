@@ -1,0 +1,137 @@
+[
+ {
+  "id": 0,
+  "texto": "Já imaginou se o seu coração batesse vinte vezes por segundo?",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "É assim o coração de um beija-flor voando.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "Mais de mil e duzentas batidas por minuto.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "O seu bate umas setenta.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 4,
+  "texto": "No seu peito, isso seria um desastre.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 37,
+  "virgulas": 1
+ },
+ {
+  "id": 5,
+  "texto": "Entre uma batida e outra, o coração precisa de tempo pra encher de sangue.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 74,
+  "virgulas": 1
+ },
+ {
+  "id": 6,
+  "texto": "Rápido demais, ele bate vazio.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 1
+ },
+ {
+  "id": 7,
+  "texto": "O sangue para de chegar no cérebro, e você apaga em segundos.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 61,
+  "virgulas": 1
+ },
+ {
+  "id": 8,
+  "texto": "O beija-flor aguenta de dia.",
+  "paragrafo": 7,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ },
+ {
+  "id": 9,
+  "texto": "O perigo pra ele é a noite.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 27,
+  "virgulas": 0
+ },
+ {
+  "id": 10,
+  "texto": "Ele gasta tanta energia que poderia morrer de fome dormindo.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 0
+ },
+ {
+  "id": 11,
+  "texto": "Então ele quase desliga.",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 24,
+  "virgulas": 0
+ },
+ {
+  "id": 12,
+  "texto": "O corpo esfria, e o coração despenca pra umas cinquenta batidas por minuto.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 75,
+  "virgulas": 1
+ },
+ {
+  "id": 13,
+  "texto": "De manhã, ele treme, esquenta… e acelera de novo.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 49,
+  "virgulas": 2
+ },
+ {
+  "id": 14,
+  "texto": "Pra vinte vezes por segundo.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 28,
+  "virgulas": 0
+ }
+]

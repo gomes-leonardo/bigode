@@ -17,6 +17,10 @@ CONF = {
     "som": dict(dentro=0.24, paragrafo=0.32,
                 depois={0: 0.35, 1: 0.4, 3: 0.45, 7: 0.5, 10: 0.45, 11: 0.85, 13: 0.6, 15: 0.45, 16: 0.6, 17: 0.75, 18: 0.75,
                         19: 0.75, 20: 0.9, 22: 0.5, 23: 1.0, 24: 0.35, 26: 0.6}),
+    # o coração que bate 20 vezes por segundo: as pausas do Short do som, com respiro no apagão (tela preta), na noite,
+    # no "quase desliga" e um silêncio longo depois das cinquenta batidas (o único momento calmo do vídeo)
+    "coracao": dict(dentro=0.24, paragrafo=0.32,
+                    depois={3: 0.45, 6: 0.35, 7: 0.8, 9: 0.45, 11: 0.65, 12: 1.3, 13: 0.25}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

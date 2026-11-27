@@ -437,9 +437,11 @@ export const PLANOS: Plano[] = [
 
 /** cartões dos mitos: Lincoln, Kennedy, Hiroshima, com a hora real; riscados um por um */
 const CARTOES: { nome: string; hora: string; aparece: () => number; risca: () => number; y: number }[] = [
-  { nome: "LINCOLN", hora: "TIRO ~22H15", aparece: () => em(20, "Lincoln"), risca: () => em(20, "levou o tiro") + 8, y: 520 },
-  { nome: "KENNEDY", hora: "TIRO 12H30", aparece: () => em(21, "Kennedy"), risca: () => FALAS[21].fim + 4, y: 860 },
-  { nome: "HIROSHIMA", hora: "BOMBA 8H15", aparece: () => em(22, "Hiroshima"), risca: () => FALAS[22].fim + 4, y: 1200 },
+  // horários conferidos: Lincoln baleado por volta das 22h15 (14/4/1865); Kennedy às 12h30 (22/11/1963, hora de Dallas);
+  // Hiroshima às 8h15 (6/8/1945, hora local). O 10h10 nos anúncios só virou padrão décadas depois de Lincoln.
+  { nome: "LINCOLN", hora: "TIRO ~22H15 · 1865", aparece: () => em(20, "Lincoln"), risca: () => em(20, "levou o tiro") + 8, y: 520 },
+  { nome: "KENNEDY", hora: "TIRO 12H30 · 1963", aparece: () => em(21, "Kennedy"), risca: () => FALAS[21].fim + 4, y: 860 },
+  { nome: "HIROSHIMA", hora: "BOMBA 8H15 · 1945", aparece: () => em(22, "Hiroshima"), risca: () => FALAS[22].fim + 4, y: 1200 },
 ];
 const Cartoes: React.FC<{ f: number }> = ({ f }) => (
   <g>
@@ -454,7 +456,7 @@ const Cartoes: React.FC<{ f: number }> = ({ f }) => (
           <text y={-14} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={96} fill="#1A1A1A">{c.nome}</text>
           <text y={82} textAnchor="middle" fontFamily={FONTE} fontWeight={800} fontSize={62} fill="#8A1C1C">{c.hora}</text>
           {r > 0 && <line x1={-360} y1={60} x2={-360 + 720 * r} y2={-60} stroke="#FF3B30" strokeWidth={24} strokeLinecap="round" />}
-          {r >= 1 && <g transform="translate(300 -150) rotate(10)"><rect x={-130} y={-44} width={260} height={84} rx={14} fill="#FF3B30" stroke="#000" strokeWidth={6} /><text y={20} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={54} fill="#FFFFFF">≠ 10H10</text></g>}
+          {r >= 1 && <g transform="translate(300 -150) rotate(10)"><rect x={-130} y={-44} width={260} height={84} rx={14} fill="#FF3B30" stroke="#000" strokeWidth={6} /><text y={20} textAnchor="middle" fontFamily={FONTE} fontWeight={900} fontSize={54} fill="#FFFFFF">MITO</text></g>}
         </g>
       );
     })}

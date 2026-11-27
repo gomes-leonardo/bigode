@@ -21,6 +21,10 @@ CONF = {
     # no "quase desliga" e um silêncio longo depois das cinquenta batidas (o único momento calmo do vídeo)
     "coracao": dict(dentro=0.24, paragrafo=0.32,
                     depois={3: 0.45, 6: 0.35, 7: 0.8, 9: 0.45, 11: 0.65, 12: 1.3, 13: 0.25}),
+    # o pato que dorme com metade do cérebro: as mesmas pausas do coração, com respiro onde o olho abre ("plim"),
+    # na troca de ponta, no predador, no corte para você e no bipe que te acorda
+    "pato": dict(dentro=0.24, paragrafo=0.32,
+                 depois={2: 0.4, 4: 0.45, 7: 0.35, 9: 0.6, 10: 0.5, 11: 0.5, 13: 0.6, 14: 0.3}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

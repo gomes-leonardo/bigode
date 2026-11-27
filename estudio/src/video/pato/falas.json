@@ -1,0 +1,146 @@
+[
+ {
+  "id": 0,
+  "texto": "Já imaginou se você dormisse a noite inteira com um olho aberto?",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 64,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "O pato faz isso.",
+  "paragrafo": 1,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 2,
+  "texto": "E não é insônia.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 16,
+  "virgulas": 0
+ },
+ {
+  "id": 3,
+  "texto": "Quando eles dormem em fila, os do meio fecham os dois olhos.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 1
+ },
+ {
+  "id": 4,
+  "texto": "Os das pontas, não.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 19,
+  "virgulas": 1
+ },
+ {
+  "id": 5,
+  "texto": "O olho virado pra fora fica aberto, vigiando.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 1
+ },
+ {
+  "id": 6,
+  "texto": "E a metade do cérebro ligada a esse olho continua acordada.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 59,
+  "virgulas": 0
+ },
+ {
+  "id": 7,
+  "texto": "A outra metade dorme.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 21,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "Na ponta, eles passam um terço do sono assim.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 45,
+  "virgulas": 1
+ },
+ {
+  "id": 9,
+  "texto": "Troca o pato de ponta, e ele troca o olho.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 42,
+  "virgulas": 1
+ },
+ {
+  "id": 10,
+  "texto": "Se aparece um predador, ele reage em menos de um quinto de segundo.",
+  "paragrafo": 8,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 67,
+  "virgulas": 1
+ },
+ {
+  "id": 11,
+  "texto": "E você acha que não faz isso?",
+  "paragrafo": 9,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 29,
+  "virgulas": 0
+ },
+ {
+  "id": 12,
+  "texto": "Na primeira noite num lugar novo, um lado do seu cérebro dorme mais leve que o outro.",
+  "paragrafo": 10,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 85,
+  "virgulas": 1
+ },
+ {
+  "id": 13,
+  "texto": "É ele que te acorda com qualquer barulho estranho.",
+  "paragrafo": 11,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 50,
+  "virgulas": 0
+ },
+ {
+  "id": 14,
+  "texto": "Metade de você fica de guarda.",
+  "paragrafo": 12,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 30,
+  "virgulas": 0
+ },
+ {
+  "id": 15,
+  "texto": "Só falta abrir o olho.",
+  "paragrafo": 12,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 0
+ }
+]

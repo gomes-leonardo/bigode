@@ -11,6 +11,10 @@ CONF = {
     # nas viradas (antes do "Dez e dez", depois da pergunta da marca, no "É só design" e antes da pergunta final)
     "relogio": dict(dentro=0.24, paragrafo=0.32,
                     depois={1: 0.42, 2: 0.5, 3: 0.5, 11: 0.45, 12: 0.42, 18: 0.4, 23: 0.4, 24: 0.5, 27: 0.42}),
+    # o mundo do GTA: respiro na virada da câmera, no "deixou de existir", nas revelações e antes da pergunta final
+    "gtamundo": dict(dentro=0.2, paragrafo=0.27,
+                     depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
+                             30: 0.45, 31: 0.36, 32: 0.55}),
 }
 pasta, falas, saida, tempos_json, video = sys.argv[1:6]
 cfg = CONF[video]

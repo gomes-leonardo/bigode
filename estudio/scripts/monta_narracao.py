@@ -37,6 +37,10 @@ CONF = {
     # tivesse acontecido", no "o problema é o depois" e antes do fecho
     "pulo": dict(dentro=0.24, paragrafo=0.32,
                  depois={0: 0.35, 2: 0.45, 3: 0.55, 5: 0.4, 7: 0.6, 8: 0.3, 9: 0.6, 10: 0.5, 11: 0.45}),
+    # baratas extintas: pausas curtas (vídeo de até 45 s, gancho logo no começo), com respiro depois do gancho, da virada
+    # "longe da sua casa", das vespas que somem e antes do fecho que volta ao começo (loop)
+    "baratas": dict(dentro=0.22, paragrafo=0.3,
+                    depois={0: 0.3, 1: 0.4, 3: 0.32, 6: 0.42, 8: 0.42, 9: 0.28}),
     "gtamundo": dict(dentro=0.2, paragrafo=0.27,
                      depois={2: 0.36, 3: 0.5, 4: 0.4, 6: 0.36, 11: 0.36, 15: 0.4, 17: 0.4, 20: 0.36, 23: 0.45, 24: 0.42,
                              30: 0.45, 31: 0.36, 32: 0.55}),

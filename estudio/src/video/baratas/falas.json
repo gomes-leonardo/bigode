@@ -1,0 +1,101 @@
+[
+ {
+  "id": 0,
+  "texto": "Só umas trinta das quatro mil e seiscentas espécies de barata vivem perto da gente.",
+  "paragrafo": 0,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 83,
+  "virgulas": 0
+ },
+ {
+  "id": 1,
+  "texto": "Se todas fossem extintas, o estrago seria longe da sua casa.",
+  "paragrafo": 1,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 60,
+  "virgulas": 1
+ },
+ {
+  "id": 2,
+  "texto": "Lá no mato, elas reciclam o que morreu: folha, madeira, bicho morto.",
+  "paragrafo": 2,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 68,
+  "virgulas": 4
+ },
+ {
+  "id": 3,
+  "texto": "Pelo cocô, devolvem ao solo o nitrogênio dessa comida, e as plantas usam pra crescer.",
+  "paragrafo": 3,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 85,
+  "virgulas": 2
+ },
+ {
+  "id": 4,
+  "texto": "E elas mesmas viram comida de pássaros, lagartos, roedores e vespas.",
+  "paragrafo": 4,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 68,
+  "virgulas": 2
+ },
+ {
+  "id": 5,
+  "texto": "Tem vespa que só cria os filhotes em barata.",
+  "paragrafo": 5,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 44,
+  "virgulas": 0
+ },
+ {
+  "id": 6,
+  "texto": "Sem baratas, essas vespas sumiriam junto.",
+  "paragrafo": 5,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 41,
+  "virgulas": 1
+ },
+ {
+  "id": 7,
+  "texto": "Quem come barata teria menos comida.",
+  "paragrafo": 6,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 36,
+  "virgulas": 0
+ },
+ {
+  "id": 8,
+  "texto": "E a floresta, menos adubo.",
+  "paragrafo": 6,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 26,
+  "virgulas": 1
+ },
+ {
+  "id": 9,
+  "texto": "Perto da gente, sumiriam umas trinta espécies.",
+  "paragrafo": 7,
+  "fimParagrafo": false,
+  "citacao": false,
+  "caracteres": 46,
+  "virgulas": 1
+ },
+ {
+  "id": 10,
+  "texto": "Na natureza, milhares.",
+  "paragrafo": 7,
+  "fimParagrafo": true,
+  "citacao": false,
+  "caracteres": 22,
+  "virgulas": 1
+ }
+]
